@@ -353,8 +353,15 @@
   \typeout{Copyright}
   \null\vfil
   \begin{center}
-  \bf\large\copyright\ \@author\ \ \@year\ \\
-  ALL RIGHTS RESERVED
+  \bf\large\copyright\ \@author\ \ \@year\
+  \\[0.25cm]
+  \includegraphics[width=1cm]{cc_icons/by.eps}
+  \includegraphics[width=1cm]{cc_icons/cc.eps}
+  \includegraphics[width=1cm]{cc_icons/sa.eps}
+  \\
+  The text of this work is licensed under a
+  \href{https://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
+  Attribution-ShareAlike 4.0 International license}.
   \end{center}
   \vfil\newpage
 }
