@@ -3,7 +3,7 @@ LATEXMK=latexmk
 MAIN=thesis_masters
 MAIN_PDF=$(MAIN).pdf
 MAIN_TEX=$(MAIN).tex
-HELPER_FILES=makefile thesis.bib my_definitions.tex
+HELPER_FILES=makefile thesis.bib my_definitions.tex mnthesis.cls
 CHAPTERS:=$(wildcard ./chapters/*.tex)
 FIGURES := $(wildcard figures/*.pdf)
 
