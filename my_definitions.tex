@@ -1,7 +1,7 @@
 % The point of the whole thesis
 \newcommand{\phistar}{\phi * }
 
-% TODO Notes
+% TODO Notes and placeholders
 \newcommand\TODO[1]{\textcolor{red}{TODO: #1}}
 
 % Units
@@ -10,6 +10,7 @@
 \newcommand{\meters}{\unit{m}}
 \newcommand{\Tesla}{\unit{T}}
 \newcommand{\ns}{\unit{ns}}
+\newcommand{\kilotonne}{\unit{kt}}
 
 % Energies
 \newcommand{\keV}{\ensuremath{\,\text{ke\hspace{-.08em}V}}\xspace}
@@ -32,6 +33,17 @@
 
 % Luminosity
 \newcommand{\luminosity}{\mathcal{L}\xspace}
+
+% Coordinates
+\newcommand{\coord}[1]{\ensuremath{#1}\xspace}
+\newcommand{\coordNS}[1]{\ensuremath{#1}}
+\newcommand{\coordx}{\coord{x}}
+\newcommand{\coordy}{\coord{y}}
+\newcommand{\coordz}{\coord{z}}
+\newcommand{\xaxis}{\coordNS{x}\text{-axis}\xspace}
+\newcommand{\yaxis}{\coordNS{y}\text{-axis}\xspace}
+\newcommand{\zaxis}{\coordNS{z}\text{-axis}\xspace}
+\newcommand{\xyplane}{\coordNS{x}--\coordNS{y}~\text{plane}\xspace}
 
 % Generators
 \newcommand{\MADGRAPH}{\textsc{MadGraph}\xspace}
@@ -56,6 +68,7 @@
 \newcommand{\PPM}{{\mathrm{ppm}}}
 \newcommand{\ENR}{{\mathrm{GeV}}}
 \newcommand{\MOM}{{\mathrm{GeV/c}}}
+\newcommand{\logn}{{\mathrm{ln}}}
 
 \newcommand{\CONT}{\noindent}
 \newcommand{\FIG}{Fig.\ }

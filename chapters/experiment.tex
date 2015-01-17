@@ -6,6 +6,8 @@
 \section{The Large Hadron Collider}
 \label{lhc_section}
 
+\TODO{LHC Graphic of accelerator chain}
+
 The Large Hadron Collider (LHC) is the worlds highest energy and largest
 particle accelerator with a maximum design luminosity of 14\TeV and a radius of
 2804\meters \cite{bruning2004}. It collides protons on protons. In 2012, when
@@ -44,29 +46,68 @@ There is room for 2808 bunches in LHC, although in 2012 there were only
 \TODO{how many bunches?}.
 
 The LHC is also the highest luminosity collider in the world. The instantaneous
-luminosity is given by 
+luminosity is given by
 \begin{equation}
     \luminosity=fn\frac{N^{2}}{\sigma}
-\end{equation} where $f$ is the frequency of interaction (which is fixed by the
-LHC's circumference), $n$ is the number of bunches in a beam, $N$ is the
-number of protons per bunch (with the $N^{2}$ coming from the assumption that
-there are the same number of protons in the two colliding bunches), and
-$\sigma$ is the area profile of the beams. Although a higher luminosity means
-more particles are produced and more data can be collected, the maximum
-luminosity is limited by several practical factors. The first factor is cost; a
-higher luminosity general requires a more expensive machine as the ring is
-either made larger or the technology needed to run the machine is made more
-complex. The second is the challenge that higher luminosities present to the
-analyzers. The luminosity can be increased by increasing the number of protons
-in a bunch or by squeezing the bunches more tightly, but eventually the
-probability of getting multiple proton-proton interactions per bunch crossing
-becomes large, leading to a phenomenon known as pileup. These extra interactions
-add additional particles to the detector and can make it difficult to separate
-interesting events from uninteresting background. The luminosity can also be
-increased by increasing the number of bunches in the machine, but this
-decreases the time between the collisions and leads to a phenomenon known as
-out of time pileup which can also obscure interesting events. In 2012, the
-optimal luminosity was achieved by running with bunches spaced by 50\ns instead
-of the design nominal bunch spacing of 25\ns. The decision to use this bunch
-spacing was driven by \linactwo which had trouble injecting high population
-bunches.
+\end{equation}
+where $f$ is the frequency of interaction (which is fixed by the LHC's
+circumference), $n$ is the number of bunches in a beam, $N$ is the number of
+protons per bunch (with the $N^{2}$ coming from the assumption that there are
+the same number of protons in the two colliding bunches), and $\sigma$ is the
+area profile of the beams. Although a higher luminosity means more particles
+are produced and more data can be collected, the maximum luminosity is limited
+by several practical factors. The first factor is cost; a higher luminosity
+general requires a more expensive machine as the ring is either made larger or
+the technology needed to run the machine is made more complex. The second is
+the challenge that higher luminosities present to the analyzers. The luminosity
+can be increased by increasing the number of protons in a bunch or by squeezing
+the bunches more tightly, but eventually the probability of getting multiple
+proton-proton interactions per bunch crossing becomes large, leading to a
+phenomenon known as pileup. These extra interactions add additional particles
+to the detector and can make it difficult to separate interesting events from
+uninteresting background. The luminosity can also be increased by increasing
+the number of bunches in the machine, but this decreases the time between the
+collisions and leads to a phenomenon known as out of time pileup which can also
+obscure interesting events. In 2012, the optimal luminosity was achieved by
+running with bunches spaced by 50\ns instead of the design nominal bunch
+spacing of 25\ns. The decision to use this bunch spacing was driven by
+\linactwo which had trouble injecting high population bunches.
+
+\section{The Compact Muon Solenoid}
+\label{cms_section}
+
+\TODO{CMS cutaway detector picture \label{cms_cutaway_fig}}
+
+The Compact Muon Solenoid (CMS) is one of two general purpose particle
+detectors built on the LHC ring \cite{cmstdr1}\cite{cmstdr2}. CMS is designed
+to detect the very high energy, sub-atomic particles that are produced in the
+LHC's proton-proton collisions. CMS is designed to have a high acceptance and
+efficiency for these collisions. Here acceptance indicates the area in both
+physical space as well as the area in energy and momentum space in which the
+detector can detect particles. Efficiency is the probability that a particle in
+CMS's acceptance region is properly measured. In order to have a high
+acceptance and efficiency, CMS must be both large---to cover a large area of
+physical space---and dense---to cover a large area in momentum and energy
+space. CMS is \TODO{21\meters in length, 15\meters in diameter, and weighs
+14\kilotonne}.
+
+CMS is built as a series of nested, finite cylinders, where each cylinder is a
+separate subdetector. The beams enter the detector along the axis of the
+cylinder. The collision point is in the center. There are a pair of endcaps on
+either side of the cylinder to increase the acceptance of the detector. The
+endcaps and central region of the cylinder (call the barrel) overlap to prevent
+particles from escaping undetected through the crack. A cutaway of the detector
+is shown in \FIG~\ref{cms_cutaway_fig}.
+
+The coordinate system used by CMS is as follows: the origin is the nominal
+interaction point at the center of CMS, the \xaxis is defined to point to the
+center of the LHC ring, the \yaxis is defined as vertically up, and the \zaxis
+points counter-clockwise and tangent to the LHC ring such that it forms a
+right-handed coordinate system with the \xaxis and \yaxis. CMS uses a
+cylindrical coordinate system with coordinates ($\eta$, $\phi$). The azimuthal
+angel $\phi$ is in the \xyplane while $\eta$ is the pseudorapidity defined by
+\begin{equation}
+    \eta = -\logn \tan \frac{\theta}{2}
+\end{equation}
+
+where $\theta$ is the polar angle with respects to the \zaxis.
