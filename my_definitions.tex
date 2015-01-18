@@ -2,15 +2,20 @@
 \newcommand{\phistar}{\phi * }
 
 % TODO Notes and placeholders
-\newcommand\TODO[1]{\textcolor{red}{TODO: #1}}
+%\newcommand\TODO[1]{\textcolor{red}{TODO: #1}}
+\newcommand\TODO[1]{{\textbf{TODO:} #1}}
 
 % Units
 \newcommand{\unit}[1]{\ensuremath{\text{\,#1}}\xspace}
 \newcommand{\MHz}{\unit{MHz}}
 \newcommand{\meters}{\unit{m}}
+\newcommand{\centimeters}{\unit{cm}}
+\newcommand{\micrometers}{\unit{$\mu$m}}
 \newcommand{\Tesla}{\unit{T}}
 \newcommand{\ns}{\unit{ns}}
 \newcommand{\kilotonne}{\unit{kt}}
+\newcommand{\degrees}{\ensuremath{^{\circ}}\xspace}
+\newcommand{\millirads}{\unit{mrad}}
 
 % Energies
 \newcommand{\keV}{\ensuremath{\,\text{ke\hspace{-.08em}V}}\xspace}
@@ -43,7 +48,10 @@
 \newcommand{\xaxis}{\coordNS{x}\text{-axis}\xspace}
 \newcommand{\yaxis}{\coordNS{y}\text{-axis}\xspace}
 \newcommand{\zaxis}{\coordNS{z}\text{-axis}\xspace}
+\newcommand{\coordrphi}{\coordNS{r}--\coord{\phi}}
 \newcommand{\xyplane}{\coordNS{x}--\coordNS{y}~\text{plane}\xspace}
+\newcommand{\rphiplane}{\coordrphi~\text{plane}\xspace}
+\newcommand{\rzplane}{\coordNS{r}--\coordNS{z}~\text{plane}\xspace}
 
 % Generators
 \newcommand{\MADGRAPH}{\textsc{MadGraph}\xspace}
@@ -63,11 +71,8 @@
 \newcommand{\COS}{{\mathrm{cos}}}
 \newcommand{\SIN}{{\mathrm{sin}}}
 \newcommand{\DOF}{{\mathrm{dof}}}
-\newcommand{\MSEC}{\mu{\mathrm{s}}}
 \newcommand{\NS}{\mathrm{ns}}
 \newcommand{\PPM}{{\mathrm{ppm}}}
-\newcommand{\ENR}{{\mathrm{GeV}}}
-\newcommand{\MOM}{{\mathrm{GeV/c}}}
 \newcommand{\logn}{{\mathrm{ln}}}
 
 \newcommand{\CONT}{\noindent}

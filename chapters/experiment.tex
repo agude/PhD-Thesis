@@ -48,7 +48,7 @@ There is room for 2808 bunches in LHC, although in 2012 there were only
 The LHC is also the highest luminosity collider in the world. The instantaneous
 luminosity is given by
 \begin{equation}
-    \luminosity=fn\frac{N^{2}}{\sigma}
+    \TODO{\luminosity=fn\frac{N^{2}}{\sigma}}
 \end{equation}
 where $f$ is the frequency of interaction (which is fixed by the LHC's
 circumference), $n$ is the number of bunches in a beam, $N$ is the number of
@@ -105,9 +105,106 @@ center of the LHC ring, the \yaxis is defined as vertically up, and the \zaxis
 points counter-clockwise and tangent to the LHC ring such that it forms a
 right-handed coordinate system with the \xaxis and \yaxis. CMS uses a
 cylindrical coordinate system with coordinates ($\eta$, $\phi$). The azimuthal
-angel $\phi$ is in the \xyplane while $\eta$ is the pseudorapidity defined by
+angel $\phi$ is in the \xyplane measured from the \xaxis while $\eta$ is the
+pseudorapidity defined by
 \begin{equation}
     \eta = -\logn \tan \frac{\theta}{2}
 \end{equation}
-
 where $\theta$ is the polar angle with respects to the \zaxis.
+
+\subsection{Inner Tracking System}
+
+\TODO{$\eta$ coverage, electric field, performance}
+
+The inner tracking system, referred to as the tracker, is the subdetector
+closest to the interaction point. The tracker's primary purpose is to measure
+the charge of particles, the momentum of these same particles, and the location
+of interaction vertices---both the primary vertex, the various secondary
+proton-proton vertices from pileup, and the vertices of long-lived particles
+like b mesons. The tracker consists two types of silicon detectors: silicon
+pixels and silicon strips.
+
+\subsubsection{Pixel Tracker}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/pixel_layout.pdf}
+    \caption{A cross-sectional view of the CMS pixel Tracker.}
+    \label{fig:pixel_layout}
+\end{figure}
+
+The silicon pixels are used in the region closest to the beam pipe where the
+particle flux is the highest and hence the finest granularity is needed. Their
+primary purpose is to very accurately locate the primary and secondary vertices
+in a collision.
+
+There are three barrel layers of the pixel tracker at radii of of 4.3, 7.3, and
+10.2\centimeters, each with a length of 53\centimeters. There are two endcap
+annular disks as well placed at $|\coordz|=$ 34.5 and 46.5\centimeters. Each of
+these disks has an inner radius of 6\centimeters and an outer radius of
+15\centimeters.
+
+Each pixel has an area of $100 \times 150 \micrometers^{2}$, but the resolution
+of the tracker is better than that because of charge sharing. If a charged
+particle ionizes multiple pixels, then a weighted average of the charges can be
+used to get sub-pixel resolution on the location of the hit. In order to
+increase the charge sharing, a large Lorentz angle (23\degrees) is used. The
+blades which make up the endcap disks are fanned out in a turbine-like geometry
+with a rotation of 20\degrees to benefit from the same effect. The layout of
+the pixel detector is show in \FIG~\ref{fig:pixel_layout}.
+
+\subsubsection{Strip Tracker}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/strip_layout.jpg}
+    \caption{A quarter cross-section view of the CMS strip tracker.}
+    \label{fig:strip_layout}
+\end{figure}
+
+The silicon strips are used further from the beam pipe than the pixels and
+cover a much large radius from the beam pipe. The strip tracker has 200 times
+the area of the pixel tracker, and so it was not economically feasible to use
+the more expensive pixel detectors in this region. The strips' primary purpose
+is to measure the momentum and curvature of the charged particles by extending
+the tracker's coverage over a larger radius.
+
+Although the strips provide only two points in space to locate a hit (as
+compared to three for the pixels), this coarser geometry is adequate because of
+the much lower particle flux in this region of the detector. For the momentum,
+the location of the hit in the \rphiplane is the most important information,
+and so the strips are aligned parallel to the magnetic field. \TODO{Explain
+more?}
+
+The strip tracker is itself divided into multiple components. In the barrel
+there is the TIB (Tracker Inner Barrel) and the TOB (Tracker Outer Barrel). The
+TIB consists of four layers and has coverage up to $|\coordz|<$ 65\centimeters.
+The silicon sensors making up the TIB have a strip pitch which varies between
+80 to 120\micrometers and have a thickness of 320\micrometers. The first two
+layers are constructed with a double layer of modules with a stereo angle of
+100\millirads, providing information about the location of the hit in both the
+\coordrphi and \rzplane. The TOB consists of six layers and has coverage up to
+$|\coordz|<$ 110\centimeters. The TOB has a strip pitch which varies between
+120 and 180\micrometers and have a thickness of 500\micrometers. The thicker
+sensors are able to be used in this region because the radiation levels are
+lower. Having a thicker sensors helps to maintain a high signal-to-noise ratio.
+Just like the TIB, the first two layers of the TOB are also build with a double
+layer of modules with a stereo angle of 100\millirads.
+
+The ends of the strip tracker consists of the TEC (Tracker Endcap) and the TID
+(Tracker Inner Disk). The TEC consists of nine disks in the region
+120\centimeters $< |\coordz| <$ 280\centimeters. The TID consists of three
+disks in between the end of the TIB and the start of the TEC. The TEC and TID
+consist of modules arrayed in rings around the beam line, with the face of each
+module pointed towards the interaction point so that they have varying
+orientations depending on their distance from the interaction point. The first
+two rings of the TID and the first, second, and fifth rings of the TEC are
+build with double layer of modules. The modules in the TID and the first three
+disks of the TEC have a thickness of 320\micrometers while the rest of the
+modules in the TEC have a thickness of 500\micrometers. The strip pitch in the
+TID and the first three disks of the TEC have a strip pitch which varies
+between 97 and 143\micrometers while the rest of the modules in the TEC have a
+strip pitch between 143 and 183\micrometers. The layout of the entire tracker,
+including the strip tracker, is shown in \FIG~\ref{fig:strip_layout}.
+
+\subsection{Electromagnetic Calorimeter}
