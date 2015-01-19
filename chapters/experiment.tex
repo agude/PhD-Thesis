@@ -209,6 +209,58 @@ including the strip tracker, is shown in \FIG~\ref{fig:strip_layout}.
 
 \subsection{Electromagnetic Calorimeter}
 
+\TODO{cross-section fig for ECAL \label{fig:ecal_layout}}
+
+The electromagnetic calorimeter (ECAL) in CMS is built around the tracker. It's
+primary purpose is to measure the energy of electrons and photons. ECAL's
+design was motivated by the need to measure the \higgstogammagamma decay. In
+order to have suitable energy resolution, most of the energy of the particle
+must be contained within the calorimeter, and so ECAL had to be very dense. In
+order to separate the highly boosted photons, ECAL needed to have fine
+granularity. Due to the high luminosity of the LHC, ECAL had to be radiation
+hard.
+
+In order to meet the three design goals, ECAL is made out of 75848
+scintillating lead tungstate (\leadtungstate) crystals: 61200 in the barrel,
+and 7324 in each of the two endcaps. The radiation length in lead tungstate is
+short ($\radlength = 0.89\centimeters$) allowing ECAL to be compact (a
+necessity since it must fit within the solenoid) but still contain $\approx
+25\radlength$ of scintillator. The Moli\`{e}re radius is also small
+(2.2\centimeters) allowing showers to be contained within each crystal. Lead
+tungstate is also radiation hard (up to 10\megarads). While lead tungstate has
+a fast response (80\% of light is given off within 25\ns), it does not produce
+very much light ($30 \photon / \MeV$) and so sensitive photodetectors that can
+operate within a strong magnetic field are required. In the barrel avalanche
+photodiodes are used, and in the endcaps vacuum phototriodes are used.
+
+The ECAL barrel detector (EB) has an inner radius of 129\centimeters and covers
+a pseudorapidity range from $0 < |\eta| < 1.479$. It is composed of 36
+identical ``supermodules'' each covering half the barrel's length and 1/18th of
+the barrel's circumference. The crystals used in the EB have a front face
+cross-section of $22 \times 22\millimeters^{2}$ and a length of
+230\millimeters. They cover 1\degrees in $\Delta \eta$ and $\Delta \phi$. The
+crystals are tilted with their axis 3\degrees off from the vertex region in
+order to obscure the small gaps between crystals from particles leaving the
+interaction point.
+
+The ECAL endcap detectors (EE) are located with their front face at
+$|z|=314\centimeters$ and cover a pseudorapidity range of $1.479 < |\eta| <
+3.0$. Each endcap is composed of two ``Dees'' consisting of semi-circular
+aluminum plates with crystals mounted on them. The crystals used in the EE have
+a front face cross-section of $28.6 \times 28.6\millimeters^{2}$ and a length
+of 220\millimeters. Unlike in EB, where the crystals are arranged in an
+\coordetaphi~grid, the crystals in EE are arranged in an \coordxy~grid. Like
+the EB crystals, the EE crystals also off-point from the vertex region.
+
+In addition to EB and EE, there is a smaller subdetector, the preshower, placed
+in front of EE. It is made of lead and silicon and has higher granularity then
+EE. It was designed to help differentiate \pitogammagamma decays from
+\higgstogammagamma decays, but has proven to unsuitable for this purpose. 
+
+The layout of ECAL is shown in \FIG~\ref{fig:ecal_layout}.
+
+\subsection{Hadronic Calorimeter}
+
 \subsection{Magnet}
 
 The central feature of CMS, both from a design stand point and structurally, is
