@@ -266,6 +266,51 @@ The layout of ECAL is shown in \FIG~\ref{fig:ecal_layout}.
 
 \subsection{Hadronic Calorimeter}
 
+The hadronic calorimeter (HCAL) in CMS is built around ECAL and inside the
+solenoid. HCAL's primary purpose is to measure the energy of the various
+strongly-interacting particles created by the collision. HCAL must have good
+containment of hadronic particles so that the missing transverse energy, \MET,
+of an event can be accurately measured. This variable is useful for identifying
+non-interacting particles like neutrinos, dark matter, or other long-lived
+exotic particles.
+
+HCAL is a sampling calorimeter which is appealing because that allowed it to be
+made compact (and HCAL must fit within the magnet), cheap (ECAL was expensive,
+so savings elsewhere were necessary), and with good enough resolution, since
+the resolution is dominated by the hadronic over electromagnetic (\HOverE)
+correction anyway. This correction arises from the fact that the detector
+response from electromagnetic interactions is different than for hadronic
+interactions, and from the fact that there are statistical fluctuations in the
+number of neutral pions---which decay to two photons and so interact
+electromagnetically---and charged pions---which interact hadronically---which
+make up a hadronic shower in HCAL on an event-by-event basis. These differences
+are corrected for in aggregate, with the effect of broadening the calorimeter's
+resolution.
+
+\subsubsection{Hadron Barrel, Hadron Endcaps, and Hadron Outer}
+
+The hadron barrel (HB) and hadron endcaps (HE) detectors are constructed of
+alternating layers of absorber and scintillators. The absorber is made of brass
+because it has a short interaction length, is easy to machine, and is
+nonmagnetic. In between plastic scintillator tiles read out with embedded
+wavelength-shifting fibers. The wavelength-shifting fibers are spliced to clear
+fibers outside the scintillator which carry the signal to the readout system.
+The light is readout by multi-channel hybrid photodiodes. The hadron outer (HO)
+detector is a layer of plastic scintillator on the outside of the solenoid
+before the muon systems begin. It serves as a ``tail catcher'' by measuring the
+hadronic energy leaking through HCAL and interacting with the magnet.
+
+HB consists of 72 segments of 32 towers with each segment covering a
+pseudorapidity range from $0 < |\eta| < 1.4$. The size of each tower is $\Delta
+\eta \times \Delta \phi = 0.087 \times 0.087$. In HB there are 15 brass plates,
+each with a thickness of 5\centimeters and two stainless steel plates, one on
+the inner face and one on the outer face to add mechanical strength. The first
+scintillator plate has a thickness of 9\millimeters, all others have a
+thickness of 3.7\millimeters. HE, unlike EE, is constructed to form a grid in
+\coordetaphi. It covers a rapidity region from $1.3 < |\eta| < 3$. For the
+lowest values of $\eta$ its channel size roughly matches the barrel, but this
+size grows at higher $\eta$.
+
 \subsection{Magnet}
 
 The central feature of CMS, both from a design stand point and structurally, is
