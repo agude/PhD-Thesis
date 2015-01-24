@@ -353,3 +353,74 @@ the tracker) that are mounted within it. The calorimeters and the tracker are
 mounted within the solenoid in order minimize the un-instrumented mass---where
 particles could lose energy due to interactions---between the calorimeters and
 the collision region.
+
+\subsection{Muon System}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/muon_layout.pdf}
+    \caption{A cross-sectional view of the CMS muon system.}
+    \label{fig:muon_layout}
+\end{figure}
+
+The muon system is the outer most subdetector of CMS. Its primary purpose is
+to assist in measuring high momentum muons and allow triggering on muons.
+Without the muon system, no triggering on muons would be possible because they
+are minimum ionizing particles in the calorimeters and the tracker can not be
+unpacked fast enough to use in triggering. For high energy muons ($\pt > 200$),
+a combination of the tracker and muon system provides the most accurate
+measurement because of the increased lever arm provided by the muon system. The
+muon chambers are built within the iron return yolks and as such are outside
+the primary magnetic field provided inside the solenoid, but are within the
+return field.
+
+The muon systems much cover a very large surface area, $25,000\meters^{2}$, and
+so gaseous detectors are used in order to keep the cost down. Three types of
+gaseous detectors are used in the muon system: drift tube (DT) chambers,
+cathode strip chambers (CSC), and resistive plate chambers (RPC).
+
+DTs are gas ionization detectors with an anode wire strung down the center of
+each tube which act as the cathode. The wire collects the ionization charged
+caused by a muon passing through the tube. By using a timing and pulse shape
+measurement, the DTs can achieve a point resolution of $\approx
+200\micrometers$ leading to a position resolution in $\phi$ of 100\micrometers
+and a direction measurement good to approximately 1\millirads. The maximum
+drift length in the DTs is 2\centimeters.
+
+The RPCs are constructed of two parallel high-voltage plates. When a muon
+passes through it causes an electron cascade that is collected on the anode,
+which is divided into strips to allow the position of the cascade to be
+measured. RPCs have worse position resolution than the DTs, but are much
+faster because they have a shorted drift length, with a timing response of
+$\approx 1\ns$.
+
+The CSCs are flat gas chambers with parallel anode wires running the length on
+one side, and cathode wires on the other side running orthogonal to the anodes.
+A prompt signal is provided by the anode wires, while a weighted average of the
+image charge on the cathode provides a slower but more precise location. The
+anode signal is used in triggering at \Lone while the cathodes are used for
+final reconstruction. The spatial resolution of $\approx 200\micrometers$
+($100\micrometers$ in the first ring of the first endcap disk) and the angular
+resolution in $\phi$ is $\approx 2\millirads$.
+
+In the barrel region ($|\eta| < 1.2$) DTs are used because the induced neutron
+background is low, the muon rate is low, and the magnetic field is low. RPCs
+are also used in the barrel to augment the DTs. The barrel consists of four
+layers of muon stations in five wheels corresponding to the five wheels making
+up the iron return yolk. Each wheel has 12 sectors that cover 30\degrees. The
+chambers are staggered such that a high energy muon produced near the boundary
+must cross 3 of the 4 layers. Of the three inner layers has 12 chambers, and
+the 4th layer has 2 chambers in the bottom and top sectors, and so has 14
+chambers in total. The first three layers are aligned to measure in \coordrphi
+and \coordz, while the 4th layer measures only in \coordrphi. Each chamber
+consists of 12 planes of DTs with 2 RPCs---1 on the front and 1 on the
+back---in the first two layers, and 1 RPC---on the front---for the second two
+layers.
+
+In the endcap region the higher magnetic field, neutron background, and muon
+flux make DTs ineffective and so CSCs are used instead. There are three disks
+of CSCs chambers with RPCs sandwiched between disks of the iron return yolk in
+the rapidity range $|\eta| < 1.6$. After that range there are only CSCs
+chambers. There are 6 CSCs per chamber.
+
+The layout of the muon system is shown in \FIG~\ref{fig:muon_layout}.
