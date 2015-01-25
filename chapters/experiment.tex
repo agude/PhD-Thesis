@@ -240,7 +240,7 @@ scintillating lead tungstate (\leadtungstate) crystals: 61200 in the barrel,
 and 7324 in each of the two endcaps. The radiation length in lead tungstate is
 short ($\radlength = 0.89\centimeters$) allowing ECAL to be compact (a
 necessity since it must fit within the solenoid) but still contain $\approx
-25\radlength$ of scintillator. The Moli\`{e}re radius is also small
+25\radlength$ of scintillator. The \Moliere radius is also small
 (2.2\centimeters) allowing showers to be contained within each crystal. Lead
 tungstate is also radiation hard (up to 10\megarads). While lead tungstate has
 a fast response (80\% of light is given off within 25\ns), it does not produce
@@ -434,3 +434,49 @@ the rapidity range $|\eta| < 1.6$. After that range there are only CSCs
 chambers. There are 6 CSCs per chamber.
 
 The layout of the muon system is shown in \FIG~\ref{fig:muon_layout}.
+
+\subsection{The Trigger}
+
+The trigger's job is to select the interesting physics events from all of the
+collisions happening in CMS. The trigger must be able to handle the full bunch
+crossing rate at the LHC of 40\megahertz (although it only ran at 20\megahertz
+in 2012). The trigger accomplishes this by using a two level design. The first
+level, the \Lone (L1) trigger, consists of custom hardware cuts the
+20\megahertz of collisions down to about 100\kilohertz. These events are then
+passed to the second level of the trigger, the high-level trigger (HLT), which
+uses software running on commodity hardware to select 1\kilohertz of events.
+
+\subsubsection{The \Lone Trigger}
+
+The L1 trigger is implemented in custom hardware because it must be incredibly
+fast. Each event is given just 3.2\microseconds to travel from the detector to
+the service cavern and be accepted or rejected by the L1 trigger. Of this time,
+less than 1\microseconds is given for the L1 trigger to make its decision. The
+L1 trigger only uses information from the muon system and the calorimeters; it
+does not use information from the tracker as it takes too long for this
+data to be assembled and transfered. The L1 trigger makes use of ``trigger
+primitive'' objects---muons, electrons, photons, and jets---built with lower
+granularity data than is used for a full reconstruction. It also makes use of a
+few global sums including \ET and \MET.
+
+While a decision is being made, the data from the collision is stored in a
+hardware buffer. If the L1 trigger selects the event, the data are moved from
+the buffer and sent to the central DAQ system where it is held until all the
+data is assembled, at which point it is sent to one of the computers that makes
+up HLT.
+
+\subsubsection{The High-Level Trigger}
+
+The HLT is implemented in the same software that is used for offline analyses.
+Running the same analysis software as is used offline allows HLT to access the
+full range of data from every part of the detector and use any reconstruction
+or selection algorithm available offline. This allows very sophisticated
+triggers to be written, and additionally allows triggers to be easily modified
+as conditions change. The HLT is designed so that the simplest triggers are run
+first, with more sophisticated---and hence computationally expensive---triggers
+running later if needed.
+
+HLT runs on a server farm consisting of commodity hardware. There are currently
+around 10000 processor cores in the HLT farm. By using commodity server
+hardware, HLT benefits from the rapid speed and power advances that are being
+made in commercial computing.
