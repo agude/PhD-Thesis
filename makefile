@@ -1,6 +1,6 @@
 LATEXMK=latexmk
 
-MAIN=thesis_masters
+MAIN=thesis
 MAIN_PDF=$(MAIN).pdf
 MAIN_TEX=$(MAIN).tex
 HELPER_FILES=makefile thesis.bib my_definitions.tex mnthesis.cls
