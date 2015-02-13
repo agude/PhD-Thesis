@@ -1,4 +1,53 @@
-% event_selection.tex: Select of showering and tracking events:
-
 \chapter{Event Selection}
 \label{event_selection_chapter}
+
+This chapter details the requirements used to select events for the analysis.
+It also covers the data used and the Monte Carlo (MC) used. The final state we
+are considering is \Ztoee.
+
+\section{Data and Monte Carlo}
+
+\subsection{Data}
+
+\TODO{Figure of lumis \label{fig:2012_luminosity}}
+
+The data used in this analysis were collected by the CMS detector in 2012 at a
+center of mass energy of \rootseight. The LHC delivered 23 \fbinv of integrated
+luminosity during the year as seen in \FIG~\ref{fig:2012_luminosity}. This
+period was divided into four eras called 2012A, B, C, and D. During an era, the
+LHC run parameters are kept roughly static to allow for consistent data taking
+conditions. In between eras, maintenance and minor upgrades are performed on
+the LHC in order to deliver higher luminosity. After accounting for detector
+dead time and beam quality, \GoodLumiNumber of integrated luminosity are used
+for physics analysis.
+
+The data collected by CMS are split into smaller datasets based on the physics
+objects contained within the events. This allows analyses to use only one or
+two datasets, instead of requiring them to deal with the entirety of the CMS
+data (which is petabyte scale, and hence too large for most institutes to store
+locally). The HLT sorts events into the various datasets based on the triggers
+that the event fired. In this manner, and event can end up in multiple datasets
+if it fired multiple triggers. This analysis uses the \SingleElectron dataset
+which was collected with the HLT trigger \SingleElectronTrigger. These datasets
+were reconstructed---converted from raw detector response into physics
+objects---in January, 2013, in order to make use of the most recent
+calibrations derived from the entire 2012 run. A summary of the datasets used
+are listed in \TAB~\ref{table:datasets}.
+
+\begin{table}[h]
+\centering
+\begin{center}
+    \begin{tabular}{ | l | c | c |}
+    \hline
+	Dataset Name                          & Run Range      & Luminosity       \\ \hline
+	/SingleElectron/Run2012A-22Jan2013-v1 & 190456--193621 & $889.362 \pbinv$ \\ \hline
+	/SingleElectron/Run2012B-22Jan2013-v1 & 193833--196531 & $4.429 \fbinv$   \\ \hline
+	/SingleElectron/Run2012C-22Jan2013-v1 & 198022--203742 & $7.152 \fbinv$   \\ \hline
+	/SingleElectron/Run2012D-22Jan2013-v1 & 203777--208686 & $7.318 \fbinv$   \\ \hline
+    \end{tabular}
+\end{center}
+\caption{
+    The datasets used in this analysis.
+}
+\label{table:datasets}
+\end{table}
