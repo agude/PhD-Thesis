@@ -51,3 +51,44 @@ are listed in \TAB~\ref{table:datasets}.
 }
 \label{table:datasets}
 \end{table}
+
+Although there is a \DoubleElectron dataset which uses a trigger designed to
+find Z bosons, this analysis uses the \SingleElectron dataset selected with the
+\SingleElectronTrigger trigger. The primary motivation behind using this
+trigger was to allow a direct comparison with a similar \phistar analysis being
+performed by CMS which used \Ztomumu events selected with a single muon
+trigger. The single electron trigger requires an electron with $\pt > 27$ which
+passes Working Point 80 (\WPEighty), a set of cuts on lepton isolation and
+shower shape designed to be 80\% efficient on electrons. The cuts that make up
+\WPEighty are listed in \TAB~\ref{table:wp80}. This trigger had the lowest \pt
+threshold of any single electron trigger that was unprescaled run during 2012.
+To prescale a trigger means to apply a rate reduction by randomly throwing out
+a certain fraction of events in order to keep the total trigger rate
+manageable; as this trigger was unprescaled, no events were discarded in this
+manner.
+
+\begin{table}[h]
+\centering
+\label{table:wp80}
+\begin{center}
+    \begin{tabular}{ | c | c | c |} \hline
+        Value                      & EB     & EE     \\ \hline
+        $|\eta| <$                 & 1.4791 & 2.65   \\
+        $\pt >$                    & 27     & 27     \\
+        $\sigmaietaieta <$         & 0.1    & 0.03   \\
+        ECAL Iso $/ \et <$         & 0.15   & 0.1    \\
+        $H/E <$                    & 0.1    & 0.05   \\
+        HCAL Iso $/ \et <$         & 0.1    & 0.1    \\
+        Pixel Matching $\ge$       & 1      & 1      \\
+        $|\ooeoop| <$              & 0.05   & 0.05   \\
+        $|\Delta \eta| <$          & 0.007  & 0.007  \\
+        $|\Delta \phi| <$          & 0.06   & 0.03   \\ \hline
+    \end{tabular}
+\end{center}
+\caption{
+    The selection requirements for the \SingleElectronTrigger trigger for
+    electrons which end up in the barrel region or the endcap region of ECAL.
+}
+\end{table}
+
+\TODO{Put variables in an electron reconstruction chapter.}
