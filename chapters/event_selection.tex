@@ -1,6 +1,44 @@
 \chapter{Event Selection}
 \label{event_selection_chapter}
 
+\section{Acceptance}
+
+The acceptance region is a definition of what events, assuming that there are
+no limitations due to the detector design, we include in our analysis. It is
+essential to define an acceptance region so that our final result can be
+compared to other measurements and to theory without forcing other groups to
+attempt to correct for our experimental effects. The acceptance region defines
+what sort of physics results we can make statements about, and also determines
+the value of the effective cross-section of the \Z.
+
+Our acceptance is defined by the kinematics of the two electrons and the mass
+of the Z boson. One of the electrons, called the \CentralElectron, is required
+to have $\pt > 30 \GeV$ and to be within the central region of the detector
+(hence the name) with $|\eta| < 2.1$. The other electron, called the
+\ExtendedElectron, has looser requirements; it must have $\pt > 20 \GeV$ and is
+not required to be as central with $|\eta| < 2.4$. The requirements on the
+\CentralElectron were selected in conjunction with the \Ztomumu measurement of
+\phistar at CMS so that that measurement and this one could be easily combined
+into a joint measurement. The pseudorapidity limit was selected to match the
+most efficient region of CMS's single muon trigger, while the transverse
+momentum threshold was dictated by threshold on single electron trigger. The
+pseudorapidity limit on the \ExtendedElectron was chosen to keep all of the
+electrons within the region covered by the tracker (which allows a better
+angular measurement than ECAL alone), while the transverse momentum threshold
+was selected because for $\pt < 20 \GeV$ the rate of fake electrons increases.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/dielectron_mass_7tev.png}
+    \caption{The spectrum of \ee events as measured by CMS in 2010.}
+    \label{fig:ee_spectrum}
+\end{figure}
+
+There are other particles, like the \jpsi, that decay to \ee pairs as shown in
+\FIG~\ref{fig:ee_spectrum}. Fortunately, none of these other particles are near
+the \Z in mass, and so we can eliminate them from our acceptance by requiring a
+mass near the \Z peak. We therefore define our mass window around the nominal
+\Z mass of $90 \GeV$, extending from $60 \GeV$ to $120 \GeV$.
 This chapter details the requirements used to select events for the analysis.
 It also covers the data used and the Monte Carlo (MC) used. The final state we
 are considering is \Ztoee.
@@ -92,3 +130,7 @@ manner.
 \end{table}
 
 \TODO{Put variables in an electron reconstruction chapter.}
+
+The events from the \SingleElectron sample are further filtered for quality. A
+centrally produced list of good luminosity segements is used to select only
+events in which the part of the detector was malfunctioning or disabled.
