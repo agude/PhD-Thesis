@@ -1,6 +1,10 @@
 \chapter{Event Selection}
 \label{event_selection_chapter}
 
+This chapter details the requirements used to select events for the analysis.
+It also covers the data used and the Monte Carlo (MC) used. The final state we
+are considering is \Ztoee.
+
 \section{Acceptance}
 
 The acceptance region is a definition of what events, assuming that there are
@@ -39,25 +43,27 @@ There are other particles, like the \jpsi, that decay to \ee pairs as shown in
 the \Z in mass, and so we can eliminate them from our acceptance by requiring a
 mass near the \Z peak. We therefore define our mass window around the nominal
 \Z mass of $90 \GeV$, extending from $60 \GeV$ to $120 \GeV$.
-This chapter details the requirements used to select events for the analysis.
-It also covers the data used and the Monte Carlo (MC) used. The final state we
-are considering is \Ztoee.
 
 \section{Data and Monte Carlo}
 
 \subsection{Data}
 
-\TODO{Figure of lumis \label{fig:2012_luminosity}}
-
 The data used in this analysis were collected by the CMS detector in 2012 at a
 center of mass energy of \rootseight. The LHC delivered 23 \fbinv of integrated
 luminosity during the year as seen in \FIG~\ref{fig:2012_luminosity}. This
-period was divided into four eras called 2012A, B, C, and D. During an era, the
-LHC run parameters are kept roughly static to allow for consistent data taking
-conditions. In between eras, maintenance and minor upgrades are performed on
-the LHC in order to deliver higher luminosity. After accounting for detector
-dead time and beam quality, \GoodLumiNumber of integrated luminosity are used
-for physics analysis.
+period was divided into four run eras called 2012A, B, C, and D. During an era,
+the LHC run parameters are kept roughly static to allow for consistent data
+taking conditions. In between eras, maintenance and minor upgrades are
+performed on the LHC in order to deliver higher luminosity.
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/2012_lumi.pdf}
+    \caption{ The integrate luminosity per day delivered and recorded by CMS in
+        2012. The flat periods in May, July, and September correspond to the
+        boundaries between the run eras. }
+    \label{fig:2012_luminosity}
+\end{figure}
 
 The data collected by CMS are split into smaller datasets based on the physics
 objects contained within the events. This allows analyses to use only one or
@@ -133,4 +139,6 @@ manner.
 
 The events from the \SingleElectron sample are further filtered for quality. A
 centrally produced list of good luminosity segements is used to select only
-events in which the part of the detector was malfunctioning or disabled.
+events in which the part of the detector was malfunctioning or disabled. After
+accounting for detector dead time and beam quality, \GoodLumiNumber of
+integrated luminosity are used for physics analysis.
