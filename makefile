@@ -20,7 +20,12 @@ force:
 	touch .refresh
 	$(MAKE) $(MAIN_PDF)
 
-.PHONY: clean force all
+.PHONY: clean force all tidy
 
+# Clean up all the regeneratable files except for the final document (the .pdf)
+tidy:
+	$(LATEXMK) -c $(MAIN_TEX)
+
+# Clean up all the regeneratable files, including the final document
 clean:
 	$(LATEXMK) -C $(MAIN_TEX)
