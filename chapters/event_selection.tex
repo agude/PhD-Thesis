@@ -83,11 +83,11 @@ are listed in \TAB~\ref{table:datasets}.
 \begin{center}
     \begin{tabular}{ | l | c | c |}
     \hline
-	Dataset Name                          & Run Range      & Luminosity       \\ \hline
-	/SingleElectron/Run2012A-22Jan2013-v1 & 190456--193621 & $889.362 \pbinv$ \\ \hline
-	/SingleElectron/Run2012B-22Jan2013-v1 & 193833--196531 & $4.429 \fbinv$   \\ \hline
-	/SingleElectron/Run2012C-22Jan2013-v1 & 198022--203742 & $7.152 \fbinv$   \\ \hline
-	/SingleElectron/Run2012D-22Jan2013-v1 & 203777--208686 & $7.318 \fbinv$   \\ \hline
+    Dataset Name                          & Run Range      & Luminosity       \\ \hline
+    /SingleElectron/Run2012A-22Jan2013-v1 & 190456--193621 & $889.362 \pbinv$ \\ \hline
+    /SingleElectron/Run2012B-22Jan2013-v1 & 193833--196531 & $4.429 \fbinv$   \\ \hline
+    /SingleElectron/Run2012C-22Jan2013-v1 & 198022--203742 & $7.152 \fbinv$   \\ \hline
+    /SingleElectron/Run2012D-22Jan2013-v1 & 203777--208686 & $7.318 \fbinv$   \\ \hline
     \end{tabular}
 \end{center}
 \caption{
@@ -114,7 +114,7 @@ manner.
 \begin{table}[h]
 \centering
 \begin{center}
-    \begin{tabular}{ | c | c | c |} \hline
+    \begin{tabular}{ | c | c c |} \hline
         Value                      & EB     & EE     \\ \hline
         $|\eta| <$                 & 1.4791 & 2.65   \\
         $\pt >$                    & 27     & 27     \\
@@ -138,7 +138,44 @@ manner.
 \TODO{Put variables in an electron reconstruction chapter.}
 
 The events from the \SingleElectron sample are further filtered for quality. A
-centrally produced list of good luminosity segements is used to select only
+centrally produced list of good luminosity segments is used to select only
 events in which the part of the detector was malfunctioning or disabled. After
 accounting for detector dead time and beam quality, \GoodLumiNumber of
 integrated luminosity are used for physics analysis.
+
+\subsection{Monte Carlo}
+
+This analysis makes use of numerous simulated data samples---colloquially
+referred to as Monte Carlo (MC)---in order to estimate backgrounds and signal
+yields, derive scale factors, and correct for the effects of bin migration on
+the final measurement. All the MC used in this analysis were central generated
+by the CMS collaboration. A \DYtoee signal sample and a $\ttbar\text{+jets}$
+background sample were generated with \MADGRAPH \cite{alwall2014}. Diboson
+($\Z\Z$, $\W\Z$, $\W\W$) background samples and a \DYtotautau background sample
+were generated with \PYTHIA \cite{sjostran2006}. Background samples consisting
+of $\tbar \W$ and $t \W$ were generated using \POWHEG
+\cite{nason2004}\cite{alioli2010}\cite{re2011}. The details of these samples
+are listed in \TAB~\ref{table:mc}.
+
+\begin{table}[h]
+\centering
+\begin{center}
+    \begin{tabular}{ | l | l c c |}
+    \hline
+    Process                                &  Generator & $\sigma$, pb & Events $(\times 10^{6})$ \\ \hline
+    \DYtoee                                &  \MADGRAPH & 1966.7       & 30.460 \\
+    \DYtotautau                            &  \PYTHIA   & 1966.7       & 3.297  \\
+    \ttbar                                 &  \MADGRAPH & 23.64        & 3.984  \\
+    $t \rightarrow \W+b \rightarrow X$     &  \POWHEG   & 11.1         & 0.498  \\
+    $\tbar \rightarrow \W+b \rightarrow X$ &  \POWHEG   & 11.1         & 0.493  \\
+    $\W\W$                                 &  \PYTHIA   & 54.84        & 10.000 \\
+    $\W\Z$                                 &  \PYTHIA   & 33.21        & 10.000 \\
+    $\Z\Z$                                 &  \PYTHIA   & 17.7         & 9.800  \\ \hline
+    \end{tabular}
+\end{center}
+\caption{
+    The MC samples used in this analysis. \TODO{Update the Cross sections and
+    put in the numbers and whether they're LO, NLO, or NNLO}.
+}
+\label{table:mc}
+\end{table}
