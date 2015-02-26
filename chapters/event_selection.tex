@@ -179,3 +179,19 @@ are listed in \TAB~\ref{table:mc}.
 }
 \label{table:mc}
 \end{table}
+
+After the generation step, MC is sent through a full detector simulation
+which uses \GEANTfour \cite{agostinelli2003} to mimic the detector response.
+This detector response is reconstructed using the full CMS reconstruction chain
+to produce MC files that are in a format identical to actual data.
+
+MC events have actual data events overlaid on top of them to better match the
+conditions found in actual running. These overlaid events come from the minimum
+bias dataset, which is selected with a minimum of conditions on order to
+select events that are "typical" of proton-proton collisions. Additional events
+are overlaid in order to simulate pileup. The number of pileup events overlaid
+is drawn from a distribution that is expected to match the distribution seen in
+data. Of course it is not possible to perfectly predict the data distribution
+and so a reweighting technique is used to match the MC distribution to the
+data. The distribution in MC is compared to that in data and a weight is
+assigned to each MC event to force the distributions to match.
