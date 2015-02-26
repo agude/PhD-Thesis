@@ -149,7 +149,7 @@ This analysis makes use of numerous simulated data samples---colloquially
 referred to as Monte Carlo (MC)---in order to estimate backgrounds and signal
 yields, derive scale factors, and correct for the effects of bin migration on
 the final measurement. All the MC used in this analysis were central generated
-by the CMS collaboration. A \DYtoee signal sample and a $\ttbar\text{+jets}$
+by the CMS collaboration. A \DYtoll signal sample and a $\ttbar\text{+jets}$
 background sample were generated with \MADGRAPH \cite{alwall2014}. Diboson
 ($\Z\Z$, $\W\Z$, $\W\W$) background samples and a \DYtotautau background sample
 were generated with \PYTHIA \cite{sjostran2006}. Background samples consisting
@@ -162,35 +162,35 @@ are listed in \TAB~\ref{table:mc}.
 \begin{center}
     \begin{tabular}{ | l | l c c |}
     \hline
-    Process                                &  Generator & $\sigma$, pb & Events $(\times 10^{6})$ \\ \hline
-    \DYtoee                                &  \MADGRAPH & 1966.7       & 30.460 \\
-    \DYtotautau                            &  \PYTHIA   & 1966.7       & 3.297  \\
-    \ttbar                                 &  \MADGRAPH & 23.64        & 3.984  \\
-    $t \rightarrow \W+b \rightarrow X$     &  \POWHEG   & 11.1         & 0.498  \\
-    $\tbar \rightarrow \W+b \rightarrow X$ &  \POWHEG   & 11.1         & 0.493  \\
-    $\W\W$                                 &  \PYTHIA   & 54.84        & 10.000 \\
-    $\W\Z$                                 &  \PYTHIA   & 33.21        & 10.000 \\
-    $\Z\Z$                                 &  \PYTHIA   & 17.7         & 9.800  \\ \hline
+    Process                                &  Generator & $\sigma$, pb  & Events $(\times 10^{6})$ \\ \hline
+    \DYtoll                                &  \MADGRAPH & 3531.9 (NNLO) & 30.460 \\
+    \DYtotautau                            &  \PYTHIA   & 1966.7 (\TODO{??})       & 3.297  \\
+    \ttbar                                 &  \MADGRAPH & 23.64         & 3.984  \\
+    $t \rightarrow \W+b \rightarrow X$     &  \POWHEG   & 11.1          & 0.498  \\
+    $\tbar \rightarrow \W+b \rightarrow X$ &  \POWHEG   & 11.1          & 0.493  \\
+    $\W\W$                                 &  \PYTHIA   & 54.84         & 10.000 \\
+    $\W\Z$                                 &  \PYTHIA   & 33.21         & 10.000 \\
+    $\Z\Z$                                 &  \PYTHIA   & 17.7          & 9.800  \\ \hline
     \end{tabular}
 \end{center}
 \caption{
-    The MC samples used in this analysis. \TODO{Update the Cross sections and
-    put in the numbers and whether they're LO, NLO, or NNLO}.
+    Summary of the MC samples used in this analysis. All cross sections are NLO
+    unless otherwise stated. \TODO{Is pythia NLO?}
 }
 \label{table:mc}
 \end{table}
 
-After the generation step, MC is sent through a full detector simulation
-which uses \GEANTfour \cite{agostinelli2003} to mimic the detector response.
-This detector response is reconstructed using the full CMS reconstruction chain
-to produce MC files that are in a format identical to actual data.
+After the generation step, MC is sent through a full detector simulation which
+uses \GEANTfour \cite{agostinelli2003} to mimic the detector response. This
+detector response is reconstructed using the full CMS reconstruction chain to
+produce MC files that are in a format identical to actual data.
 
 MC events have actual data events overlaid on top of them to better match the
 conditions found in actual running. These overlaid events come from the minimum
-bias dataset, which is selected with a minimum of conditions on order to
-select events that are "typical" of proton-proton collisions. Additional events
-are overlaid in order to simulate pileup. The number of pileup events overlaid
-is drawn from a distribution that is expected to match the distribution seen in
+bias dataset, which is selected with a minimum of conditions on order to select
+events that are "typical" of proton-proton collisions. Additional events are
+overlaid in order to simulate pileup. The number of pileup events overlaid is
+drawn from a distribution that is expected to match the distribution seen in
 data. Of course it is not possible to perfectly predict the data distribution
 and so a reweighting technique is used to match the MC distribution to the
 data. The distribution in MC is compared to that in data and a weight is
