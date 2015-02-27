@@ -40,3 +40,58 @@ constructed with \pt from the tracker and \ET from ECAL, but for electrons with
 higher energy the ECAL energy alone is used to avoid issues introduced by
 possible poor fits in the tracker. The $\eta$ and $\phi$ of all electron
 candidates, regardless of energy, is taken from the track.
+
+\section{Electron Variables}
+
+Reconstructed electrons have multiple variables that indicate their quality.
+These variables are broken down into three main categories:
+
+\begin{description}
+    \item[Isolation:] \hfill \\
+        These variables measures how much energy from other particles is
+        deposited near the electron in the detector and are used to help reject
+        jets.
+    \item[Identification (ID):] \hfill \\
+        These variables quantify how much like an electron the reconstructed
+        particle looks like and are used to reject pions and other charged
+        particles.
+    \item[Conversion Rejection:] \hfill \\
+        These variables are used to reject electrons from \photontoee
+        conversions.
+\end{description}
+
+\subsection{Isolation}
+
+Hadronic jets sometimes produce electrons in the numerous decays happening
+within them. These electrons can be rejected by looking at the sum of the
+energy in the tacker, ECAL, and HCAL around the electron, as electrons in jets
+will have a large amount of energy surrounding them, whereas electrons from \Z
+decays will tend to be isolated.
+
+\TODO{We use several ISOs: ptiso / $pt_{e}$ in tight, and ECAL and HCAL iso for
+the trigger.}
+
+\subsection{Identification}
+
+The shape of the electromagnetic shower in the calorimeters is used to
+discriminate between electrons and other particles. Electrons generally have
+very narrow showers whereas hadronic particles have wide showers. The size of
+the shower in $\eta$ is given by \sigmaietaieta. Electron showers are mostly
+contained within ECAL and so the ratio of energy around the hit in HCAL over
+the energy around the hit in ECAL, \HOverE, is also used to parameterize the
+shower shape.
+
+The matching of the track with the supercluster in \coordetaphi space is given
+by \dphiin and \detain.  The compatibility of energy of the supercluster and
+the momentum of the track is given by \ooeoop. Using these variables photons
+can be rejected as they interact in ECAL but leave no track in the tracker.
+
+\subsection{Conversion Rejection}
+
+Conversions generally happen away from the vertex and so the distances of the
+hits in the track from the vertex are useful quantities to reject conversions.
+The transversal and longitudinal separation between the track and the primary
+vertex are given by $d_{0}$ and $d_{z}$. Conversions generally happen deep in
+the tracker and so tracks from them will have missing layers, given by \nmiss.
+Conversions also have low vertex fit probability, \pvtx, indicating that their
+track likely did not come from the primary vertex.
