@@ -143,6 +143,7 @@ accounting for detector dead time and beam quality, \GoodLumiNumber of
 integrated luminosity are used for physics analysis.
 
 \subsection{Monte Carlo}
+\label{ssec:monte_carlo}
 
 This analysis makes use of numerous simulated data samples---colloquially
 referred to as Monte Carlo (MC)---in order to estimate backgrounds and signal
@@ -251,6 +252,8 @@ No charge requirements are applied as even the same sign electron sample is
 dominated by actual \Z decays as demonstrated by the large peak in the \mee
 distribution.
 
+\TODO{Plots: Electron plots: $\eta$, \pt}
+
 \subsection{\Z Selection}
 
 The \Z boson decays too quickly to leave any direct signal in the detector, so
@@ -259,3 +262,59 @@ is described in \SEC~\ref{ssec:electron_selection}. In events where the two
 electrons pass the selection, the \Z is constructed by taking the sum of the
 electrons four-vectors. The resulting invariant mass of the \Z must be within
 the region set by the acceptance ($60 < \mee < 120$).
+
+\TODO{Plots: Z plots: \mee, Y, $Z_{\pt}$}
+
+\section{Background Estimation}
+
+The distribution of background events is estimated using the MC samples
+discussed in \SEC~\ref{ssec:monte_carlo}, with the exception of QCD related
+backgrounds, which are computed using data. The various MC samples are
+reweighed so that they have equivalent luminosity to the data and the event
+selection requirements are applied to them. The number of events that survive
+the selection are taken as the number in our data, and are subtracted off from
+the data events.
+
+\begin{table}[h]
+\centering
+\begin{center}
+    \begin{tabular}{ | l | r | r |}
+    \hline
+    Process           & of total & of background \\ \hline
+    Signal: $\DYtoee$ &  99.53\% & N.A. \\ \hline
+    \ttbar            &   0.14\% & 30.9\% \\ \hline
+    $\Z\Z$            &   0.13\% & 27.2\% \\ \hline
+    $\W\Z$            &   0.12\% & 25.9\% \\ \hline
+    $\W\W$            &   0.03\% &  6.8\% \\ \hline
+    $\DYtotautau$     &   0.03\% &  5.8\% \\ \hline
+    $t\W + \tbar\W$   &   0.02\% &  3.4\% \\ \hline
+    \end{tabular}
+\end{center}
+\caption{
+    Data sample composition as a percentage of the total, as well as the
+    backgrounds as a percentage of all background events.
+    \TODO{Add QCD}
+}
+\label{table:bg_percentages}
+\end{table}
+
+Overall, the selection requirements discussed in the previous sections leave a
+very pure sample of \Z boson events. 99.5\% of events are signal. The fraction
+of events from each of the considered backgrounds is listed in
+\TAB~\ref{table:bg_percentages}
+
+\subsection{QCD Background Estimation}
+
+The centrally produced QCD MC does not have enough events to make an accurate
+estimation of the QCD background in this analysis so instead a data driven
+method is employed. The same requirements as discussed in
+\SEC~\ref{ssec:electron_selection} are applied to both the data and the MC
+samples with the additional requirement that both electrons must have the same
+sign. The MC samples are then weighted to match the luminosity of the data and
+their events are subtracted. The remaining events still have a large
+contribution from the \Z (see \FIG~\ref{fig:same_sign_z_peak}) and so we reject
+events that fall within the \mee acceptance region of $60 < \mee < 120$.
+\TODO{Are we just taking this number, or do we fit and integrate?}
+
+\TODO{Same sign \mee peak plot before and after subtraction.
+\label{fig:same_sign_z_peak}}
