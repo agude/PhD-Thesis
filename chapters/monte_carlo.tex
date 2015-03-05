@@ -187,3 +187,25 @@ with the probability of the other electron firing the trigger.
 }
 \label{trigger_eff_mc}
 \end{table}
+
+\section{Electron Dressing}
+
+Electrons emit bremsstrahlung photons as they bend in CMS's magnetic field.
+Photons which impact ECAL near to the location of the electron impact are
+summed into the electron's energy as described in
+\SEC~\ref{sec:electron_reconstruction}. In order to more closely match the
+generator quantities to the reconstructed electrons that we observe, a process
+known as \dressing is applied to create \dressedelectrons.
+
+The three definitions of generator electrons are as follows:
+
+\begin{description}
+    \item[Born] A generator electron immediately after the \Ztoee decay
+    \item[Bare] A generator electron after it has shed all of its
+        bremsstrahlung photons
+    \item[Dressed] A bare electron, but with its bremsstrahlung photons added
+        back in vector sum if they are within $\Delta R < 0.1$ of the electron
+\end{description}
+
+Generator level selection requirements are applied to dress electrons in this
+analysis, for example, when selecting MC events to use for unfolding.
