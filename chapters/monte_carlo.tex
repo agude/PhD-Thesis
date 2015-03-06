@@ -88,11 +88,43 @@ no background in MC). The resulting SF are given in
 
 \subsection{Electron Identification}
 
+Not all electrons which are reconstructed pass the ID criteria used in this
+analysis, specifically, \EGMEDIUM and \EGTIGHT, the details of which are
+covered in \SEC~\ref{ssec:electron_selection}. The efficiency of going from a
+reconstructed electron to one which passes the identification criteria is
+measured centrally by the CMS collaboration using \TnP \cite{cms_an_2014-055}.
+
+The events used for this measurement were selected using two triggers: \\
+\TnPTrigger, which is described above, and \TnPTriggerSecond, which requires
+one electron with $\pt > 17 \GeV$ and tight isolation and ID requirements while
+also requiring a reconstructed second electron (as opposed to a supercluster as
+required by the first trigger) with $\pt > 8 \GeV$. It further requires a
+dielectron invariant mass of $\mee > 50 \GeV$.
+
+The tag electrons are required to pass \EGTIGHT, have $\pt > 25 \GeV$, and
+$|\eta| < 2.5$; they are rejected if they fall in the seem between EB and EE
+($1.4442 < |\eta| < 1.566$). The tag is not required to match the trigger.
+Probe electrons have the same $\eta$ requirements as tags, but are only
+required to have $\pt > 10 \GeV$. Passing probes pass the ID criteria under
+investigation, failing probes fail the ID criteria. The invariant mass of the
+tag and probe pair is required to be near the \Z mass peak ($60 \GeV < \mee <
+120 \GeV$). The electrons are required to have charges of opposite sign. In MC,
+the probe is only required to be matched to a generator electron with $\Delta R
+< 0.2$.
+
+The efficiencies are then calculated by fitting the \mee distributions using a
+template constructed with a \Ztoee MC sample and an exponential background. The
+three categories (passing probes, failing probes, and all probes) are then
+simultaneously fit with this template and the number of fitted signal events is
+used to derive an efficiency. A simple count of events is used for the MC
+efficiency instead of a fit. The resulting SF are given in
+\TABS~\ref{table:tight_scale_factor} and \ref{table:medium_scale_factor}.
+
 \begin{table}[h]
 \centering
 \begin{center}
     \begin{tabular}{ | c | c | c | c | c |} \hline
-	$|\eta|$                   & 20--30 \GeV               & 30--40 \GeV & 40--50 \GeV               & 50--200 \GeV \\ \hline
+	$|\eta|$                   & 20--30 \GeV               & 30--40 \GeV               & 40--50 \GeV               & 50--200 \GeV \\ \hline
 	$\numrange{0.0}{0.8}$      & $0.960_{-0.003}^{+0.003}$ & $0.978_{-0.001}^{+0.001}$ & $0.981_{-0.001}^{+0.001}$ & $0.982_{-0.002}^{+0.002}$ \\ \hline
 	$\numrange{0.8}{1.4442}$   & $0.936_{-0.004}^{+0.004}$ & $0.958_{-0.002}^{+0.002}$ & $0.969_{-0.001}^{+0.001}$ & $0.969_{-0.002}^{+0.002}$ \\ \hline
 	$\numrange{1.4442}{1.566}$ & $0.933_{-0.017}^{+0.015}$ & $0.907_{-0.008}^{+0.008}$ & $0.904_{-0.004}^{+0.004}$ & $0.926_{-0.011}^{+0.011}$ \\ \hline
@@ -110,7 +142,7 @@ no background in MC). The resulting SF are given in
 \centering
 \begin{center}
     \begin{tabular}{ | c | c | c | c | c |} \hline
-	$|\eta|$                   & 20--30 \GeV               & 30--40 \GeV & 40--50 \GeV               & 50--200 \GeV \\ \hline
+	$|\eta|$                   & 20--30 \GeV               & 30--40 \GeV               & 40--50 \GeV               & 50--200 \GeV \\ \hline
 	$\numrange{0.0}{0.8}$      & $0.986_{-0.001}^{+0.002}$ & $1.002_{-0.001}^{+0.001}$ & $1.005_{-0.001}^{+0.001}$ & $1.004_{-0.001}^{+0.001}$ \\ \hline
 	$\numrange{0.8}{1.4442}$   & $0.959_{-0.003}^{+0.003}$ & $0.980_{-0.001}^{+0.001}$ & $0.988_{-0.001}^{+0.001}$ & $0.988_{-0.002}^{+0.002}$ \\ \hline
 	$\numrange{1.4442}{1.566}$ & $0.967_{-0.013}^{+0.007}$ & $0.950_{-0.007}^{+0.006}$ & $0.958_{-0.005}^{+0.005}$ & $0.966_{-0.009}^{+0.009}$ \\ \hline
@@ -124,8 +156,6 @@ no background in MC). The resulting SF are given in
 }
 \label{table:medium_scale_factor}
 \end{table}
-
-\TODO{http://cms.cern.ch/iCMS/jsp/db\_notes/noteInfo.jsp?cmsnoteid=CMS\%20AN-2014/055}
 
 \subsection{Single Electron Trigger}
 
