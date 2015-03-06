@@ -29,6 +29,44 @@ in data divided by the same efficiency as measured on MC:
 
 \subsection{Electron Reconstruction}
 
+Electron reconstruction begins with the assembly of a supercluster in ECAL, and
+ends with the matching of a supercluster to a track in the tracker. The details
+of Electron reconstruction are described in
+\SEC~\ref{sec:electron_reconstruction}. The efficiency of an electron with $\pt
+> 20 \GeV$ depositing enough energy in ECAL to be reconstructed into a
+supercluster is very high, although the efficiency must be measured in
+simulation as there is no more basic object with which to perform \TnP to
+measure it in data. SF for matching a track given that a supercluster has
+already been found are provided by the collaboration
+\cite{gsf_scale_factors_2013}.
+
+The events used to measure the reconstruction SF are selected with the
+dedicated electron \TnP Trigger: \TnPTrigger. This trigger requires one
+electron with $\pt > 20 \GeV$ which must also pass very tight isolation and ID
+requirements while requiring only a low energy ($\et > 4 \GeV$) supercluster as
+the other leg. The trigger rate is kept down by requiring that the invariant
+mass of these two objects is greater than $50 \GeV$.
+
+These events are further required to pass a set of offline selection
+requirements. The tag electron is required to pass \EGTIGHT, have $\pt > 25
+\GeV$, and $|\eta| < 2.5$. Electrons are rejected if they fall in the seem
+between EB and EE ($1.4442 < |\eta| < 1.566$). The tag must also be matched to
+the tight leg of the \TnP trigger. The probe supercluster has minimal
+requirements applied; it is required to have tracker isolation $< 0.15$. For
+the MC sample, the tag is only required to be matched to a generator level
+electron with $\Delta R < 0.2$. Additionally, the event was required to have
+low \particleflow missing energy $\PFMET < 20 \GeV$. \TODO{Explain PF MET?}
+
+The events were binned in terms of probe's $\pt$ and $\eta$ as well as whether
+the probe passed or failed. In each bin the \mee distribution was constructed
+and a template consisting of the sum of a Gaussian smeared \Ztoee MC sample and
+an exponential background was fitted. The number of events predicted by the
+signal fit on the passing sample, failing sample, and sum of the two samples
+was used to get the efficiency. A similar process was performed on MC, although
+instead of a fit a simple counting of passing events was performed (as there is
+no background in MC). The resulting SF are given in
+\TAB~\ref{table:gsf_scale_factor}.
+
 \begin{table}[h]
 \centering
 \begin{center}
@@ -47,8 +85,6 @@ in data divided by the same efficiency as measured on MC:
 }
 \label{table:gsf_scale_factor}
 \end{table}
-
-\TODO{https://twiki.cern.ch/twiki/bin/viewauth/CMS/EgCommissioningAndPhysicsDeliverables}
 
 \subsection{Electron Identification}
 
