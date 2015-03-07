@@ -1,0 +1,57 @@
+\chapter{Unfolding}
+\label{chatper:unfolding}
+
+Particle detectors are incredibly sophisticated machines designed to make
+precise measurements of the various decay products created during the
+collisions. However, there are physical limitations that prevent a perfect
+measurement from being made. The finite energy, momentum, and position
+resolution of the various subdetectors impose limitations on the final
+measurements. In order to allow our measurement to be compared to theoretical
+predictions, we correct for these detector effects with a process known as
+unfolding.
+
+We unfold in two steps: first the data are unfolded to correct for bin
+migration, second we correct for the imperfect efficiency of the trigger and
+reconstruction. The data are unfolded against the three definitions of gen
+electrons: born, dressed, and bare as described in
+\SEC~\ref{sec:electron_dressing}. Results in this chapter are shown with
+dressed electrons, born and bare electrons are given in \APP\TODO{Born, Bare
+Appendix}.
+
+\section{Bin Migration}
+\label{sec:bin_migration}
+
+The finite resolution of CMS's angular position measurements leads to a finite
+resolution of the reconstructed \phistar distribution. Events which at the
+generator level would have ended up in a certain \phistar bin may instead
+migrate to one of the neighboring bins.
+
+MC events are used to create a response matrix that describes how generator
+level events are reconstructed in CMS. Through unfolding this matrix is
+inverted, allowing us to transform the data to remove the undesired bin
+migration. This matrix is shown in \FIG~\ref{fig:bin_migration_matrix}. The
+amount of bin migration, as measured by the off-diagonal elements, is 5.5\%.
+
+\TODO{Bin migration plot that is the input to \RooUnfold
+\label{fig:bin_migration_matrix}.}
+
+\RooUnfold is used to perform the unfolding \cite{adye_2011}. It implements
+Bayes' theorem as described in \cite{dagostini_1995}, and iteratively applies
+it to invert the response matrix. \RooUnfold uses a limited number of
+iterations in order to terminate the algorithm before finding the true (but
+highly unstable) inverse. Four iterations are used in this analysis.
+
+\section{Efficiency Correction}
+
+Not every event which should be detected by CMS is. Some events are lost at
+each stage of event selection and reconstruction. These lost events must be
+corrected for in order to accurately compare our results to theory. We
+therefore apply corrections for the reconstruction efficiency, the electron ID
+efficiency, and the trigger efficiency. The calculations of these efficiencies
+are discussed in detail in \SECS~\ref{ssec:sf_reconstruction},
+\ref{ssec:sf_id}, and \ref{ssec:sf_trigger}.
+
+The efficiency corrections are applied after the bin migration corrections. The
+correction factors are derived for each \phistar bin using the \Ztoee \MADGRAPH
+sample discussed in \SEC~\ref{ssec:monte_carlo}. \TODO{Expand after talking to
+Nicole.}
