@@ -191,11 +191,14 @@ $|\eta| < 2.1$ than the SF is simply that given by \EQ~\ref{eq:sf}, but if both
 electrons pass those requirements than either could have fired the trigger, and
 the SF is given by:
 
-\begin{equation}
-    \label{eq:sf_double}
-    \text{SF}_{1\text{ or }2} = \frac{1 - \left( \effdata_{0} \right) \left(
-    \effdata_{1} \right)} {1 - \left( \effmc_{0} \right) \left( \effmc_{1}
-    \right)}
+\begin{equation} \label{eq:sf_double}
+    \text{SF}_{1 \text{ or } 2}
+    =
+    \frac{
+        1 - \left( 1 - \effdata_{0} \right) \left( 1 - \effdata_{1} \right)
+    } {
+        1 - \left( 1 - \effmc_{0} \right) \left( 1 - \effmc_{1} \right)
+    }
 \end{equation}
 
 Where $\effdata_{0,1}$ is the efficiency as measured in data for the 0th and
