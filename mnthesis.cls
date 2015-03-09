@@ -274,7 +274,7 @@
       \centering\bf
       \ifdraft {
         DRAFT VERSION CREATED ON \uppercase\expandafter{\today}\\
-      }\else 
+      }\else
         A \ifphd{DISSERTATION}\else{THESIS}\fi\ \\
         SUBMITTED TO THE FACULTY OF THE GRADUATE SCHOOL \\
         OF THE UNIVERSITY OF MINNESOTA \\
@@ -335,7 +335,7 @@
 % The signature, title, copywrite, and abstract pages
 \newcommand\beforepreface {
 %  \ifabstract {
-  \ifacknowledgements {  
+  \ifacknowledgements {
     \c@page1 % set page counter so that next is 1
     \pagestyle{empty}
 
@@ -346,12 +346,12 @@
 % Copywrite page
     \ifcopyright\copyrightp\fi
 
-%Acknowledgements 
+%Acknowledgements
 
-  \pagenumbering{roman}    
-  \pagestyle{plain} 
+  \pagenumbering{roman}
+  \pagestyle{plain}
   \ifacknowledgements
-  
+
     \unnumberedsection{Acknowledgements}
 
 %    \addcontentsline{toc}{chapter}{Acknowledgements}
@@ -363,15 +363,15 @@
 %    \end{center}
 %    \vskip 8bp
 
-    \@acknowledgements\fi   
-  \vfil\newpage  
-  }  
+    \@acknowledgements\fi
+  \vfil\newpage
+  }
 
 %Dedication
 
-% \pagenumbering{roman}     
+% \pagenumbering{roman}
   \ifdedication
-  
+
     \unnumberedsection{Dedication}
 
 %    \addcontentsline{toc}{chapter}{Dedication}
@@ -383,9 +383,9 @@
 %    \end{center}
 %    \vskip 8bp
 
-    \@dedication\fi   
-  \vfil\newpage  
-    
+    \@dedication\fi
+  \vfil\newpage
+
 
 
 % An abstract to be bound into the thesis
@@ -423,7 +423,7 @@
 %    \unnumberedsection{Acknowledgements}
 %    \@acknowledgements
 %  \fi
-%  \ifdedication 
+%  \ifdedication
 %    \unnumberedsection{Dedication}
 %    \@dedication
 %   \fi
@@ -452,8 +452,8 @@
     \listoftables
     \let\addvspace=\saveaddvspace
   \fi
-  
- 
+
+
   \iffigures
     \addvspace{10bp}
     \let\saveaddvspace=\addvspace
@@ -461,7 +461,7 @@
     \listoffigures
     \let\addvspace=\saveaddvspace
   \fi
-  
+
   \ifabbreviationspage {
     \def\baselinestretch{1}
     \@normalsize
@@ -570,7 +570,7 @@
   \if@restonecol\twocolumn\fi
 }
 
-\renewcommand{\bibname}{References} 
+\renewcommand{\bibname}{References}
 \renewenvironment{thebibliography}[1]
      {\chapter*{\bibname}%
       \addcontentsline{toc}{chapter}{\bibname}
