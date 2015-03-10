@@ -46,27 +46,15 @@ produce MC files that are in a format identical to actual data.
 
 MC events have actual data events overlaid on top of them to better match the
 conditions found in actual running. These overlaid events come from the minimum
-bias dataset, which is selected with a minimum of conditions on order to select
-events that are "typical" of proton-proton collisions. Additional events are
-overlaid in order to simulate pileup. The number of pileup events overlaid is
-drawn from a distribution that is expected to match the distribution seen in
-data. Of course it is not possible to perfectly predict the data distribution
-and so a reweighting technique is used to match the MC distribution to the
-data. The distribution in MC is compared to that in data and a weight is
-assigned to each MC event to force the distributions to match.
-
-\section{Tag and Probe}
-
-Tag and Probe (\TnP) is a minimally biased method of calculating the efficiency
-of some process that is applied. \TnP takes advantage of the well known mass
-and narrow width of the \Z boson to select a set of electrons for which very
-few selection requirements have been applied. This is done by finding one
-high-quality electron, the tag, and another minimally biased object, the probe,
-that could be an electron. The invariant mass of these objects is computed and
-if it is near the \Z mass peak, it is very likely that the probe is also an
-electron. These probe electrons then have further selection requirements
-applied to them, and the fraction that pass is taken as the efficiency of that
-selection step.
+bias dataset, which is selected with a minimum of requirements imposed on the
+event in order to select events that are ``typical'' of proton-proton
+collisions. Additional events are overlaid in order to simulate pileup. The
+number of pileup events overlaid is drawn from a distribution that is expected
+to match the distribution seen in data. Of course, it is not possible to
+perfectly predict the data distribution and so a reweighting technique is used
+to match the MC distribution to the data. The distribution in MC is compared to
+that in data and the ratio of these distributions is assigned as a weight to
+each MC event to force the distributions to match.
 
 \section{Scale Factors}
 
@@ -81,6 +69,19 @@ in data divided by the same efficiency as measured on MC:
     \text{SF} = \frac{\effdata}{\effmc}
 \end{equation}
 
+\subsection{Tag and Probe}
+
+Tag and Probe (\TnP) is a minimally biased method of calculating the efficiency
+of some analysis process. \TnP takes advantage of the well known mass and
+narrow width of the \Z boson to select a set of electrons for which very few
+selection requirements have been applied. This is done by finding one
+high-quality electron, the tag, and another minimally biased object, the probe,
+that could be an electron. The invariant mass of these objects is computed and
+if it is near the \Z mass peak, it is very likely that the probe is also an
+electron. These probe electrons then have further selection requirements
+applied to them, and the fraction that pass is taken as the efficiency of that
+selection step.
+
 \subsection{Electron Reconstruction}
 \label{ssec:sf_reconstruction}
 
@@ -89,10 +90,10 @@ ends with the matching of a supercluster to a track in the tracker. The details
 of Electron reconstruction are described in
 \SEC~\ref{sec:electron_reconstruction}. The efficiency of an electron with $\pt
 > 20 \GeV$ depositing enough energy in ECAL to be reconstructed into a
-supercluster is very high, although the efficiency must be measured in
-simulation as there is no more basic object with which to perform \TnP to
-measure it in data. SF for matching a track given that a supercluster has
-already been found are provided by the collaboration
+supercluster is very high, although the exact efficiency must be measured in
+MC as there is no more basic object with which to perform \TnP to measure it in
+data. SF for matching a track given that a supercluster has already been found
+were measured centrally by the CMS collaboration using \TnP
 \cite{gsf_scale_factors_2013}.
 
 The events used to measure the reconstruction SF are selected with the
@@ -145,8 +146,8 @@ no background in MC). The resulting SF are given in
 \label{ssec:sf_id}
 
 Not all electrons which are reconstructed pass the ID criteria used in this
-analysis, specifically, \EGMEDIUM and \EGTIGHT, the details of which are
-covered in \SEC~\ref{ssec:electron_selection}. The efficiency of going from a
+analysis, specifically \EGMEDIUM and \EGTIGHT, the details of which are covered
+in \SEC~\ref{ssec:electron_selection}. The efficiency of going from a
 reconstructed electron to one which passes the identification criteria is
 measured centrally by the CMS collaboration using \TnP \cite{cms_an_2014-055}.
 
@@ -222,24 +223,24 @@ boundaries of \{30, 40, 50, 70, 250\} in \pt and \{-2.1, -2.0, -1.556, -1.442,
 -0.8, 0., 0.8, 1.442, 1.556, 2.0, 2.1\} in $\eta$.
 
 Both the tag electron and the probe electron are required to satisfy $|\eta| <
-2.1$, $\pt > 30$, and to pass \EGTIGHT requirements. It is required that the
-pair have an invariant mass \MassRange. The tag electron is required to
-be matched to an electron that fired the trigger with $\Delta R < 0.3$. There
-is no requirement placed on the charge of the electron pair. Events with three
-or more electrons are rejected.
+2.1$, $\pt > 30$, and to pass \EGTIGHT requirements. The pair must have an
+invariant mass such that \MassRange. The tag electron is required to be matched
+to an electron that fired the trigger with $\Delta R < 0.3$. There is no
+requirement placed on the charge of the electron pair. Events with three or
+more electrons are rejected.
 
 Probes are considered passing if they are also matched to an electron that
 fired the trigger with $\Delta R < 0.3$, and failing otherwise. The efficiency
 in each bin is the number of passing probes divided by the number of failing
-probes. In an individual event, both electrons are tried as a tag so that an
-event may contribute to the efficiency measurement twice if both electrons pass
-the tag requirements.
+probes using a simple count. In an individual event, both electrons are tried
+as a tag so that an event may contribute to the efficiency measurement twice if
+both electrons pass the tag requirements.
 
 The efficiency is computed in exactly the same way on the \MADGRAPH sample. The
 MC events are reweighted for pileup, reconstruction efficiency, and
-identification efficiency before the efficiency is measured. The measured
-efficiencies for data and MC are listed in \TABS~\ref{trigger_eff_data} and
-\ref{trigger_eff_mc}, respectively.
+identification efficiency before the trigger efficiency is measured. The
+measured efficiencies for data and MC are listed in
+\TABS~\ref{trigger_eff_data} and \ref{trigger_eff_mc}, respectively.
 
 In the case of the trigger, because either electron could cause the event to
 pass, the SFs can not be computed for each bin, but instead must be computed
