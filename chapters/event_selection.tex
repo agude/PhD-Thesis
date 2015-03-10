@@ -44,9 +44,7 @@ the \Z in mass, and so we can eliminate them from our acceptance by requiring a
 mass near the \Z peak. We therefore define our mass window around the nominal
 \Z mass of $91 \GeV$, extending from $60 \GeV$ to $120 \GeV$.
 
-\section{Data and Monte Carlo}
-
-\subsection{Data}
+\section{Data}
 
 The data used in this analysis were collected by the CMS detector in 2012 at a
 center of mass energy of \rootseight. The LHC delivered 23 \fbinv of integrated
@@ -141,60 +139,6 @@ centrally produced list of good luminosity segments is used to select only
 events in which the part of the detector was malfunctioning or disabled. After
 accounting for detector dead time and beam quality, \GoodLumiNumber of
 integrated luminosity are used for physics analysis.
-
-\subsection{Monte Carlo}
-\label{ssec:monte_carlo}
-
-This analysis makes use of numerous simulated data samples---colloquially
-referred to as Monte Carlo (MC)---in order to estimate backgrounds and signal
-yields, derive scale factors, and correct for the effects of bin migration on
-the final measurement. All the MC used in this analysis were central generated
-by the CMS collaboration. A \DYtoll signal sample and a $\ttbar\text{+jets}$
-background sample were generated with \MADGRAPH \cite{alwall2014}. Diboson
-($\Z\Z$, $\W\Z$, $\W\W$) background samples and a \DYtotautau background sample
-were generated with \PYTHIA \cite{sjostran2006}. Background samples consisting
-of $\tbar \W$ and $t \W$ were generated using \POWHEG
-\cite{nason2004}\cite{alioli2010}\cite{re2011}. The details of these samples
-are listed in \TAB~\ref{table:mc}.
-
-\begin{table}[h]
-\centering
-\begin{center}
-    \begin{tabular}{ | l | l c c |}
-    \hline
-    Process                                &  Generator & $\sigma$, pb  & Events $(\times 10^{6})$ \\ \hline
-    \DYtoll                                &  \MADGRAPH & 3531.9 (NNLO) & 30.460 \\
-    \DYtotautau                            &  \PYTHIA   & 1966.7 (\TODO{??})       & 3.297  \\
-    \ttbar                                 &  \MADGRAPH & 23.64         & 3.984  \\
-    $t \rightarrow \W+b \rightarrow X$     &  \POWHEG   & 11.1          & 0.498  \\
-    $\tbar \rightarrow \W+b \rightarrow X$ &  \POWHEG   & 11.1          & 0.493  \\
-    $\W\W$                                 &  \PYTHIA   & 54.84         & 10.000 \\
-    $\W\Z$                                 &  \PYTHIA   & 33.21         & 10.000 \\
-    $\Z\Z$                                 &  \PYTHIA   & 17.7          & 9.800  \\ \hline
-    \end{tabular}
-\end{center}
-\caption{
-    Summary of the MC samples used in this analysis. All cross sections are NLO
-    unless otherwise stated. \TODO{Is pythia NLO?}
-}
-\label{table:mc}
-\end{table}
-
-After the generation step, MC is sent through a full detector simulation which
-uses \GEANTfour \cite{agostinelli2003} to mimic the detector response. This
-detector response is reconstructed using the full CMS reconstruction chain to
-produce MC files that are in a format identical to actual data.
-
-MC events have actual data events overlaid on top of them to better match the
-conditions found in actual running. These overlaid events come from the minimum
-bias dataset, which is selected with a minimum of conditions on order to select
-events that are "typical" of proton-proton collisions. Additional events are
-overlaid in order to simulate pileup. The number of pileup events overlaid is
-drawn from a distribution that is expected to match the distribution seen in
-data. Of course it is not possible to perfectly predict the data distribution
-and so a reweighting technique is used to match the MC distribution to the
-data. The distribution in MC is compared to that in data and a weight is
-assigned to each MC event to force the distributions to match.
 
 \section{Object Selection}
 
