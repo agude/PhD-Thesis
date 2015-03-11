@@ -1,7 +1,8 @@
-% experiment.tex: Chapter describing the experiment
-
 \chapter{The CMS Experiment}
 \label{experiment_chapter}
+
+\TODO{Jeremy suggests focusing the chapter more on the subdectors we use: ECAL
+and Tracker}
 
 \section{The Large Hadron Collider}
 \label{lhc_section}
@@ -13,27 +14,27 @@
     \label{fig:lhc_layout}
 \end{figure}
 
-The Large Hadron Collider (LHC) is the worlds highest energy and largest
-particle accelerator with a maximum design center of mass energy of 14\TeV and
-a radius of 2804\meters \cite{bruning2004}. It collides protons on protons. In
-2012, when LHC most recently produced collisions, it had a center of mass
-energy of 7\TeV; when it turns back on in 2015 after upgrades it will run at
-13\TeV. The LHC is located near Geneva, Switzerland, although it is so large
-that parts of the accelerator (including \pointfive, where the CMS detector is
-located) are in France.
+The Large Hadron Collider (LHC) is the world's highest energy and largest
+particle accelerator with a maximum design center-of-mass energy of 14\TeV and
+a radius of 2804\meters \cite{bruning2004}. It collides protons on protons, as
+well as protons on ionized lead (\Pb) and \Pb on \Pb. In 2012, when LHC most
+recently produced collisions, it had a center of mass energy of 8\TeV; when it
+turns back on in 2015 after upgrades, it will run at 13\TeV. The LHC is located
+near Geneva, Switzerland, although it is so large that most of the accelerator
+(including \pointfive, where the CMS detector is located) is in France.
 
 A number of smaller accelerators are used together in series to accelerate
 protons to the energies necessary to be injected into the LHC. The first step
-is a linear accelerator, \linactwo, which accelerates protons from rest to to
+is a linear accelerator, \linactwo, which accelerates protons from rest to
 50\MeV. These protons are then injected into a chain of three circular
 accelerators, each injecting into the next. The first of these accelerators is
 the Proton Synchrotron Booster (PSB) which accelerates the protons to 1.4\GeV.
 The second is the Proton Synchrotron (PS) which accelerates the protons to
-26\GeV. The third and final accelerator in the Super Proton Synchrotron (SPS)
+26\GeV. The third and final accelerator is the Super Proton Synchrotron (SPS)
 which accelerates the protons to 450\GeV and injects directly into the LHC.
 
 Bunches of protons are accelerated using this system and injected into the LHC
-to form two, counter-rotating beams. When the desired number of bunches have
+to form two counter-rotating beams. When the desired number of bunches have
 been injected into the LHC, the LHC accelerates them to 4\TeV. When the beams
 have reached their nominal energy, they are focused and brought into collision
 at four different points on the ring where the various experiments (\ALICE,
@@ -41,42 +42,55 @@ at four different points on the ring where the various experiments (\ALICE,
 accelerator chain is shown in \FIG~\ref{fig:lhc_layout}.
 
 The beams are steered around the accelerator ring by a series of
-superconducting, dipole magnets. When running at a center of mass energy of
-8\TeV, these magnets operate at roughly 7.5\Tesla. There are also quadrapole
-and some higher order magnets around the ring used to focus the beams. The
-bunches of protons are accelerated by 16 superconducting radio frequency
-cavities. These cavities accelerate slower protons while slowing faster ones,
-thereby keeping the proton bunches compact in both real and momentum space.
-There is room for 2808 bunches in LHC, although in 2012 there were only
-\TODO{how many bunches?}.
+superconducting, dipole magnets. When running at a center-of-mass energy of
+8\TeV, these magnets operate at roughly 7.5\Tesla. There are also quadrapoles
+and some higher order magnets around the ring used to focus the beams \TODO{and
+correct for lattice defects}. The bunches of protons are accelerated by 16
+superconducting radio frequency cavities. These cavities accelerate slower
+protons while slowing faster ones, thereby keeping the proton bunches compact
+in both real and momentum space. There is room for 2808 bunches in LHC
+separated by 25\ns, although in 2012 50\ns spacing was used and so there were
+only 1374 bunches of which 1368 were brought into collision at CMS and \ATLAS.
 
 The LHC is also the highest luminosity collider in the world. The instantaneous
 luminosity is given by
 \begin{equation}
-    \TODO{\luminosity=fn\frac{N^{2}}{\sigma}}
+    \luminosity = f n \frac{N^{2}}{\sigma}
 \end{equation}
 where $f$ is the frequency of interaction (which is fixed by the LHC's
 circumference), $n$ is the number of bunches in a beam, $N$ is the number of
 protons per bunch (with the $N^{2}$ coming from the assumption that there are
 the same number of protons in the two colliding bunches), and $\sigma$ is the
-area profile of the beams. Although a higher luminosity means more particles
-are produced and more data can be collected, the maximum luminosity is limited
-by several practical factors. The first factor is cost; a higher luminosity
-general requires a more expensive machine as the ring is either made larger or
-the technology needed to run the machine is made more complex. The second is
-the challenge that higher luminosities present to the analyzers. The luminosity
-can be increased by increasing the number of protons in a bunch or by squeezing
-the bunches more tightly, but eventually the probability of getting multiple
-proton-proton interactions per bunch crossing becomes large, leading to a
-phenomenon known as pileup. These extra interactions add additional particles
-to the detector and can make it difficult to separate interesting events from
-uninteresting background. The luminosity can also be increased by increasing
-the number of bunches in the machine, but this decreases the time between the
-collisions and leads to a phenomenon known as out of time pileup which can also
-obscure interesting events. In 2012, the optimal luminosity was achieved by
-running with bunches spaced by 50\ns instead of the design nominal bunch
-spacing of 25\ns. The decision to use this bunch spacing was driven by
-\linactwo which had trouble injecting high population bunches.
+area profile of the beams. 
+
+Although a higher luminosity means more particles are produced and more data
+can be collected, the maximum luminosity is limited by several practical
+factors. The first factor is cost; a higher luminosity general requires a more
+expensive machine as the ring is either made larger or the technology needed to
+run the machine is made more complex. The cost of the detectors also increases
+as they require more channels to separate the larger number of particles,
+faster readout to deal with the increased event rate, and higher bandwidth to
+read out the larger numbers of channels. The second is the challenge that
+higher luminosities present to the analyzers. The luminosity can be increased
+by increasing the number of protons in a bunch or by squeezing the bunches more
+tightly, but eventually the probability of getting multiple proton-proton
+interactions per bunch crossing becomes large, leading to a phenomenon known as
+pileup. These extra interactions add additional particles to the detector and
+can make it difficult to separate interesting events from uninteresting
+background. The luminosity can also be increased by increasing the number of
+bunches in the machine, but this decreases the time between the collisions and
+leads to a phenomenon known as out-of-time pileup which can also obscure
+interesting events. The third factor is that high radiation doses damage the
+detectors. Plastic and crystal scintillators darken while silicon detectors
+become noisy. This forces the detectors to replace their components more
+frequently.
+
+In 2012, the optimal luminosity was achieved by running with bunches spaced by
+50\ns instead of the design nominal bunch spacing of 25\ns. This larger bunch
+spacing was chosen because at smaller spacing the bunches were destabilized by
+electron clouds---clouds of electrons knocked out of the beam pipe by the
+beam's synchrotron radiation, as well as secondary electrons freed when the
+photoelectrons impact their surroundings.
 
 \section{The Compact Muon Solenoid}
 \label{cms_section}
