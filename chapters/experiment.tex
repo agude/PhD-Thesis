@@ -102,7 +102,7 @@ photoelectrons impact their surroundings.
     \label{fig:cms_cutaway}
 \end{figure}
 
-The Compact Muon Solenoid (CMS) is one of two general purpose particle
+The Compact Muon Solenoid (CMS) is one of two general-purpose particle
 detectors built on the LHC ring \cite{cms_tdr_1}\cite{cms_tdr_2}. CMS is
 designed to detect the very high energy, sub-atomic particles that are produced
 in the LHC's proton-proton collisions. CMS is designed to have a high
@@ -146,7 +146,7 @@ field points along the \zaxis.
 The inner tracking system, referred to as the tracker, is the subdetector
 closest to the interaction point. The tracker's primary purpose is to measure
 the charge of particles, the momentum of these same particles, and the location
-of interaction vertices---both the primary vertex, the various secondary
+of interaction vertices---both the primary vertex, the various additional
 proton-proton vertices from pileup, and the vertices of long-lived particles
 like b mesons. The tracker consists two types of silicon detectors: silicon
 pixels and silicon strips.
@@ -166,10 +166,10 @@ primary purpose is to very accurately locate the primary and secondary vertices
 in a collision.
 
 There are three barrel layers of the pixel tracker at radii of of 4.3, 7.3, and
-10.2\centimeters, each with a length of 53\centimeters. There are two endcap
-annular disks as well placed at $|\coordz|=$ 34.5 and 46.5\centimeters. Each of
-these disks has an inner radius of 6\centimeters and an outer radius of
-15\centimeters.
+10.2\centimeters, each with a length of 53\centimeters. At each end, there are
+two endcap annular disks as well placed at $|\coordz|=$ 34.5 and
+46.5\centimeters. Each of these disks has an inner radius of 6\centimeters and
+an outer radius of 15\centimeters.
 
 Each pixel has an area of $100 \times 150 \micrometers^{2}$, but the resolution
 of the tracker is better than that because of charge sharing. If a charged
@@ -178,7 +178,7 @@ used to get sub-pixel resolution on the location of the hit. In order to
 increase the charge sharing, a large Lorentz angle (23\degrees) is used. The
 blades which make up the endcap disks are fanned out in a turbine-like geometry
 with a rotation of 20\degrees to benefit from the same effect. The layout of
-the pixel detector is show in \FIG~\ref{fig:pixel_layout}.
+the pixel detector is shown in \FIG~\ref{fig:pixel_layout}.
 
 \subsubsection{Strip Tracker}
 
@@ -215,7 +215,7 @@ $|\coordz|<$ 110\centimeters. The TOB has a strip pitch which varies between
 120 and 180\micrometers and have a thickness of 500\micrometers. The thicker
 sensors are able to be used in this region because the radiation levels are
 lower. Having a thicker sensors helps to maintain a high signal-to-noise ratio.
-Just like the TIB, the first two layers of the TOB are also build with a double
+Just like the TIB, the first two layers of the TOB are also built with a double
 layer of modules with a stereo angle of 100\millirads.
 
 The ends of the strip tracker consists of the TEC (Tracker Endcap) and the TID
@@ -226,7 +226,7 @@ consist of modules arrayed in rings around the beam line, with the face of each
 module pointed towards the interaction point so that they have varying
 orientations depending on their distance from the interaction point. The first
 two rings of the TID and the first, second, and fifth rings of the TEC are
-build with double layer of modules. The modules in the TID and the first three
+built with double layer of modules. The modules in the TID and the first three
 disks of the TEC have a thickness of 320\micrometers while the rest of the
 modules in the TEC have a thickness of 500\micrometers. The strip pitch in the
 TID and the first three disks of the TEC have a strip pitch which varies
@@ -284,10 +284,10 @@ of 220\millimeters. Unlike in EB, where the crystals are arranged in an
 \coordetaphi~grid, the crystals in EE are arranged in an \coordxy~grid. Like
 the EB crystals, the EE crystals also off-point from the vertex region.
 
-In addition to EB and EE, there is a smaller subdetector, the preshower, placed
-in front of EE. It is made of lead and silicon and has higher granularity then
-EE. It was designed to help differentiate \pitogammagamma decays from
-\higgstogammagamma decays, but has proven to unsuitable for this purpose.
+In addition to EB and EE, there is a smaller subdetector, the preshower (ES),
+placed in front of EE. It is made of lead and silicon and has higher
+granularity then EE. It was designed to help differentiate \pitogammagamma
+decays from \higgstogammagamma decays.
 
 The layout of ECAL is shown in \FIG~\ref{fig:ecal_layout}.
 
@@ -326,24 +326,25 @@ resolution.
 The hadron barrel (HB) and hadron endcaps (HE) detectors are constructed of
 alternating layers of absorber and scintillators. The absorber is made of brass
 because it has a short interaction length, is easy to machine, and is
-nonmagnetic. In between plastic scintillator tiles read out with embedded
-wavelength-shifting fibers. The wavelength-shifting fibers are spliced to clear
-fibers outside the scintillator which carry the signal to the readout system.
-The light is readout by multi-channel hybrid photodiodes. The hadron outer (HO)
-detector is a layer of plastic scintillator on the outside of the solenoid
-before the muon systems begin. It serves as a ``tail catcher'' by measuring the
-hadronic energy leaking through HCAL and interacting with the magnet.
+nonmagnetic. In between, the showers are sampled by plastic scintillator tiles
+read out with embedded wavelength-shifting fibers. The wavelength-shifting
+fibers are spliced to clear fibers outside the scintillator which carry the
+signal to the readout system. The light is readout by multi-channel hybrid
+photodiodes. The hadron outer (HO) detector is a layer of plastic scintillator
+on the outside of the solenoid before the muon systems begin. It serves as a
+``tail catcher'' by measuring the hadronic energy leaking through HCAL and
+interacting with the magnet.
 
-HB consists of 72 segments of 32 towers with each segment covering a
-pseudorapidity range from $0 < |\eta| < 1.4$. The size of each tower is $\Delta
-\eta \times \Delta \phi = 0.087 \times 0.087$. In HB there are 15 brass plates,
-each with a thickness of 5\centimeters and two stainless steel plates, one on
-the inner face and one on the outer face to add mechanical strength. The first
-scintillator plate has a thickness of 9\millimeters, all others have a
-thickness of 3.7\millimeters. HE, unlike EE, is constructed to form a grid in
-\coordetaphi. It covers a rapidity region from $1.3 < |\eta| < 3$. For the
-lowest values of $\eta$ its channel size roughly matches the barrel, but this
-size grows at higher $\eta$.
+%HB consists of 72 segments of 32 towers with each segment covering a
+%pseudorapidity range from $0 < |\eta| < 1.4$. The size of each tower is $\Delta
+%\eta \times \Delta \phi = 0.087 \times 0.087$. In HB there are 15 brass plates,
+%each with a thickness of 5\centimeters and two stainless steel plates, one on
+%the inner face and one on the outer face to add mechanical strength. The first
+%scintillator plate has a thickness of 9\millimeters, all others have a
+%thickness of 3.7\millimeters. HE, unlike EE, is constructed to form a grid in
+%\coordetaphi. It covers a rapidity region from $1.3 < |\eta| < 3$. For the
+%lowest values of $\eta$ its channel size roughly matches the barrel, but this
+%size grows at higher $\eta$.
 
 \subsubsection{Hadron Forward}
 
@@ -366,29 +367,28 @@ The layout of HCAL is shown in \FIG~\ref{fig:hcal_layout}.
 
 \subsection{Magnet}
 
-The central feature of CMS, both from a design stand point and structurally, is
+The central feature of CMS, both from a design standpoint and structurally, is
 the large superconducting solenoid magnet. A high strength magnetic field is
 required in CMS in order to achieve a momentum resolution of $\Delta \momentum
 / \momentum \approx 10\%$ for muons with $\momentum = 1 \TeVc$. The momentum of
 these muons must be measured using their curvature in the tracker and the muon
-chambers are they are minimum ionizing particles in the calorimeters.
-Additionally, the magnetic field allows the charge of particles to be measured
-by the direction in which their tracks curve. The solenoid provides a magnetic
-field for all of the components inside the bore of the magnet. The fringing
-fields are collected and returns by the iron return yolks which also support
-the muon chambers. In this way a field is provided for the muon chambers
-without requiring an additional magnet.
+chambers. Additionally, the magnetic field allows the charge of particles to be
+measured by the direction in which their tracks curve. The solenoid provides a
+magnetic field for all of the components inside the bore of the magnet. The
+fringing fields are collected and returned by the iron return yokes which also
+support the muon chambers. In this way a field is provided for the muon
+chambers without requiring an additional magnet.
 
 The solenoid is 12.9\meters long with an inner bore of 5.9\meters. It generates
 a 3.8\tesla field using 2168 turns of conductor which carry 19.5\kiloamps. The
 total stored energy is 2.7\gigajoules. The solenoid is encased in aluminum to
 help dissipate heat and add strength. This entire assembly is enclosed in a
-steel cryostat. The cryostat must be exceptionally strong because it not only
-supports the solenoid, but also all of the barrel subdetectors (HCAL, ECAL, and
-the tracker) that are mounted within it. The calorimeters and the tracker are
-mounted within the solenoid in order minimize the un-instrumented mass---where
-particles could lose energy due to interactions---between the calorimeters and
-the collision region.
+stainless steel cryostat. The cryostat must be exceptionally strong because it
+not only supports the solenoid, but also all of the barrel subdetectors (HCAL,
+ECAL, and the tracker) that are mounted within it. The calorimeters and the
+tracker are mounted within the solenoid in order minimize the un-instrumented
+mass---where particles could lose energy due to interactions---between the
+calorimeters and the collision region.
 
 \subsection{Muon System}
 
@@ -399,18 +399,17 @@ the collision region.
     \label{fig:muon_layout}
 \end{figure}
 
-The muon system is the outer most subdetector of CMS. Its primary purpose is
-to assist in measuring high momentum muons and allow triggering on muons.
-Without the muon system, no triggering on muons would be possible because they
-are minimum ionizing particles in the calorimeters and the tracker can not be
-unpacked fast enough to use in triggering. For high energy muons ($\pt > 200$),
-a combination of the tracker and muon system provides the most accurate
+The muon system is the outer most subdetector of CMS. Its primary purpose is to
+assist in measuring high momentum muons and allow triggering on muons. Without
+the muon system, no triggering on muons would be possible because they are
+minimum ionizing particles in the calorimeters and the tracker can not be read
+out quickly enough to use in triggering. For high energy muons ($\pt > 200
+\GeV$), a combination of the tracker and muon system provides the most accurate
 measurement because of the increased lever arm provided by the muon system. The
-muon chambers are built within the iron return yolks and as such are outside
-the primary magnetic field provided inside the solenoid, but are within the
-return field.
+muon chambers are built within the iron return yokes and as such are outside
+the primary magnetic field provided inside the solenoid.
 
-The muon systems much cover a very large surface area, $25,000\meters^{2}$, and
+The muon systems must cover a very large surface area, $25,000\meters^{2}$, and
 so gaseous detectors are used in order to keep the cost down. Three types of
 gaseous detectors are used in the muon system: drift tube (DT) chambers,
 cathode strip chambers (CSC), and resistive plate chambers (RPC).
@@ -427,7 +426,7 @@ The RPCs are constructed of two parallel high-voltage plates. When a muon
 passes through it causes an electron cascade that is collected on the anode,
 which is divided into strips to allow the position of the cascade to be
 measured. RPCs have worse position resolution than the DTs, but are much
-faster because they have a shorted drift length, with a timing response of
+faster because they have a shorter drift length, with a timing response of
 $\approx 1\ns$.
 
 The CSCs are flat gas chambers with parallel anode wires running the length on
@@ -443,7 +442,7 @@ In the barrel region ($|\eta| < 1.2$) DTs are used because the induced neutron
 background is low, the muon rate is low, and the magnetic field is low. RPCs
 are also used in the barrel to augment the DTs. The barrel consists of four
 layers of muon stations in five wheels corresponding to the five wheels making
-up the iron return yolk. Each wheel has 12 sectors that cover 30\degrees. The
+up the iron return yoke. Each wheel has 12 sectors that cover 30\degrees. The
 chambers are staggered such that a high energy muon produced near the boundary
 must cross 3 of the 4 layers. Of the three inner layers has 12 chambers, and
 the 4th layer has 2 chambers in the bottom and top sectors, and so has 14
@@ -455,7 +454,7 @@ layers.
 
 In the endcap region the higher magnetic field, neutron background, and muon
 flux make DTs ineffective and so CSCs are used instead. There are three disks
-of CSCs chambers with RPCs sandwiched between disks of the iron return yolk in
+of CSCs chambers with RPCs sandwiched between disks of the iron return yoke in
 the rapidity range $|\eta| < 1.6$. After that range there are only CSCs
 chambers. There are 6 CSCs per chamber.
 
@@ -480,10 +479,11 @@ the service cavern and be accepted or rejected by the L1 trigger. Of this time,
 less than 1\microseconds is given for the L1 trigger to make its decision. The
 L1 trigger only uses information from the muon system and the calorimeters; it
 does not use information from the tracker as it takes too long for this
-data to be assembled and transfered. The L1 trigger makes use of ``trigger
+data to be assembled and transfered. \TODO{The L1 trigger makes use of ``trigger
 primitive'' objects---muons, electrons, photons, and jets---built with lower
-granularity data than is used for a full reconstruction. It also makes use of a
-few global sums including \ET and \MET.
+granularity data than is used for a full reconstruction.}\TODO{Jeremy says TPs
+and stubs?? are used to make the objects.} It also makes use of a few global
+sums including \ET and \MET.
 
 While a decision is being made, the data from the collision is stored in a
 hardware buffer. If the L1 trigger selects the event, the data are moved from
@@ -503,6 +503,6 @@ first, with more sophisticated---and hence computationally expensive---triggers
 running later if needed.
 
 HLT runs on a server farm consisting of commodity hardware. There are currently
-around 10000 processor cores in the HLT farm. By using commodity server
+around 10,000 processor cores in the HLT farm. By using commodity server
 hardware, HLT benefits from the rapid speed and power advances that are being
 made in commercial computing.
