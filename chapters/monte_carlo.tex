@@ -12,9 +12,10 @@ by the CMS collaboration. A \DYtoll signal sample and a $\ttbar\text{+jets}$
 background sample were generated with \MADGRAPH \cite{alwall2014}. Diboson
 ($\Z\Z$, $\W\Z$, $\W\W$) background samples and a \DYtotautau background sample
 were generated with \PYTHIA \cite{sjostran2006}. Background samples consisting
-of $\tbar \W$ and $t \W$ were generated using \POWHEG
-\cite{nason2004}\cite{alioli2010}\cite{re2011}. The details of these samples
-are listed in \TAB~\ref{table:mc}.
+of $\tbar \W$, $t \W$, and $\DYtotautau$ were generated using \POWHEG
+\cite{nason2004}\cite{alioli2010}\cite{re2011}. A secondary signal MC was also
+generated with \POWHEG. The details of these samples are listed in
+\TAB~\ref{table:mc}.
 
 \begin{table}[h]
 \centering
@@ -23,7 +24,8 @@ are listed in \TAB~\ref{table:mc}.
     \hline
     Process                                &  Generator & $\sigma$, pb  & Events $(\times 10^{6})$ \\ \hline
     \DYtoll                                &  \MADGRAPH & 3531.9 (NNLO) & 30.460 \\
-    \DYtotautau                            &  \PYTHIA   & 1966.7 (\TODO{??})       & 3.297  \\
+    \DYtoee                                &  \POWHEG   & 1966.7 (\TODO{??}) & 3.297\\
+    \DYtotautau                            &  \POWHEG   & 1966.7 (\TODO{??})       & 3.297  \\
     \ttbar                                 &  \MADGRAPH & 23.64         & 3.984  \\
     $t \rightarrow \W+b \rightarrow X$     &  \POWHEG   & 11.1          & 0.498  \\
     $\tbar \rightarrow \W+b \rightarrow X$ &  \POWHEG   & 11.1          & 0.493  \\
@@ -34,7 +36,7 @@ are listed in \TAB~\ref{table:mc}.
 \end{center}
 \caption{
     Summary of the MC samples used in this analysis. All cross sections are NLO
-    unless otherwise stated. \TODO{Is pythia NLO?}
+    unless otherwise stated. \TODO{Is POWHEG NLO?}
 }
 \label{table:mc}
 \end{table}
