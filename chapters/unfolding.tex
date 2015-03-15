@@ -41,6 +41,47 @@ it to invert the response matrix. \RooUnfold uses a limited number of
 iterations in order to terminate the algorithm before finding the true (but
 highly unstable) inverse. Four iterations are used in this analysis.
 
+\subsection{Closure Tests}
+
+This unfolding procedure was tested in several ways using the two signal MC
+samples discussed in \SEC~\ref{ssec:monte_carlo}. First, the reconstructed
+\phistar distributions from the \MADGRAPH and \POWHEG sample were unfolded
+using their own generator level quantities and compared to their generator
+level \phistar distributions. The results of this test are shown
+\FIG~\ref{fig:unfolded_vs_true_in_mc}.
+
+\TODO{Figure 8 from the AN \label{fig:unfolded_vs_true_in_mc}}
+
+Second, each MC signal sample was also divided into two independent halves.
+The reconstructed \phistar distribution in each half was unfolded using the
+generator level quantities from the other half. The two halves were then
+compared to each other. The results of this test are shown in
+\FIG~\ref{fig:half_vs_half_unfolding}.
+
+\TODO{Figure 9 from the AN \label{fig:half_vs_half_unfolding}}
+
+Third and finally, the reconstructed \phistar distribution in the \MADGRAPH
+MC was unfolded with the generator level quantities from the \POWHEG sample and
+vice versa. The results of this test are shown in
+\FIG~\ref{fig:cross_mc_unfolding}.
+
+\TODO{Figure 10 from the AN \label{fig:cross_mc_unfolding}}
+
+In most cases the results are consistent within the assigned statistical error
+bars. However, in the case of the \MADGRAPH sample unfolded with \POWHEG, there
+is disagreement between in the low \phistar bins. This is due \RooUnfold under
+estimating the uncertainties, as discussed below.
+
+\subsection{Statistical Uncertainties}
+\label{ssec:unfolding_statistical_uncertainties}
+
+The uncertainties shown in \FIGS~\ref{fig:unfolded_vs_true_in_mc},
+\ref{fig:half_vs_half_unfolding}, and \ref{fig:cross_mc_unfolding} are the
+statistical uncertainties returned by \RooUnfold. These uncertainties only take
+the number of events in the reconstructed distribution into account; they do
+not account for the number of generator level events used to create the
+response matrix.
+
 \section{Efficiency Correction}
 
 Not every event which should be detected by CMS is. Some events are lost at
