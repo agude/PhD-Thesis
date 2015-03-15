@@ -47,11 +47,23 @@ Not every event which should be detected by CMS is. Some events are lost at
 each stage of event selection and reconstruction. These lost events must be
 corrected for in order to accurately compare our results to theory. We
 therefore apply corrections for the reconstruction efficiency, the electron ID
-efficiency, and the trigger efficiency. The calculations of these efficiencies
-are discussed in detail in \SECS~\ref{ssec:sf_reconstruction},
-\ref{ssec:sf_id}, and \ref{ssec:sf_trigger}.
+efficiency, and the trigger efficiency.
 
 The efficiency corrections are applied after the bin migration corrections. The
 correction factors are derived for each \phistar bin using the \Ztoee \MADGRAPH
-sample discussed in \SEC~\ref{ssec:monte_carlo}. \TODO{Expand after talking to
-Nicole.}
+sample discussed in \SEC~\ref{ssec:monte_carlo}. Two sets of events are
+selected. The first set, the ``acceptance set'', is created by applying the
+acceptance definition discussed in \SEC~\ref{sec:acceptance}) to the generator
+level quantities in the MC. The second set, the ``final selection set'', is
+created by selecting MC events by applying the full analysis selection to the
+reconstructed level quantities in the MC. The efficiency in each \phistar bin
+is calculated by counting the number of events in the ``final selection set''
+in a bin, and dividing by the number of events in the same bin in the
+``acceptance set''. This gives us an average efficiency composed of all the
+efficiencies of the events in the bin.
+
+The main advantage of using this average efficiency instead of correcting each
+event's efficiency individually is that any correlations between the various
+efficiencies are automatically taken into account in this process.
+
+\TODO{Add plots from AN when they're finalized.}
