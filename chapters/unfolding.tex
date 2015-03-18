@@ -141,7 +141,7 @@ shows the original bin migration matrix.}
 At large \phistar values the uncertainty calculated with the toy MC method goes
 to \num{0}. This is because there are no off-diagonal bins in this region of
 the original bin migration matrix and so no off-diagonal bins are allowed to
-appear due to our flucutaions. This problem is greated reduced as we use more
+appear due to our fluctuations. This problem is greatly reduced as we use more
 generator level events to construct the matrix, as can be seen in
 \FIGS~\ref{fig:50000_propegation_unfolding} and
 \ref{fig:full_propegation_unfolding}.
@@ -152,6 +152,37 @@ generator level events to construct the matrix, as can be seen in
 The total statistical uncertainty due to the bin migration unfolding is the
 sum of the uncertainty reported by \RooUnfold due to the number of events in
 the data and the uncertainty calculated using the toy MC method in quadrature.
+
+\subsection{Systematic Uncertainties}
+\label{ssec:unfolding_systematic_uncertainties}
+
+The unfolding to correct for bin migration is dependent on the way in which the
+bin migration is simulated in MC. Differences in the \phistar distribution
+between MC and data can lead to systematic uncertainties in the unfolded data.
+Two such potential differences between the MC and the data are considered. The
+first potential difference is in the shape of the \phistar distribution, and
+the second is in the resolution of the \phistar distribution.
+
+One of the advantages of the Bayesian unfolding method used in this analysis is
+that it, unlike a simpler bin-by-bin correction, is theoretically insensitive
+to the distribution of \phistar at the generator level. In fact, \DAgostini
+recommends using a flat generated distribution as one easy method of ensuring
+that there are enough generated events in each bin \cite{dagostini_1995}.
+\TODO{Cite twice in same chapter?} We use this recommendation as the basis for
+a test of the systematic uncertainty. The \phistar distribution at the
+generator level in the \MADGRAPH sample is inserted into a histogram with bin
+widths of $\phistar = 0.011$. Each bin is weighted with a weight equal to the
+inverse number of events in the bin so that the distribution is flattened. The
+full \POWHEG sample is then unfolded using this \MADGRAPH distribution.
+\TODO{The response matrix from this modified \MADGRAPH distribution is show in
+  \FIG~\ref{fig:flat_unfolding}. The ratio of the unfolded \POWHEG distribution
+over the generated distribution is shown as well.} This ratio uses only the
+uncertainties provided by \RooUnfold and so underestimates the total
+uncertainty. No deviation from \num{1} is seen, and so no systematic
+uncertainty is assigned for the shape of the generator level \phistar
+distribution.
+
+\TODO{Figure 16 from the AN \label{fig:flat_unfolding}}
 
 \section{Efficiency Correction}
 
