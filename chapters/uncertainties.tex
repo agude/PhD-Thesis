@@ -12,7 +12,7 @@ would lead to a systematic uncertainty on the angle measurement. The magnitude
 of this systematic is estimated by using the position of the ECAL supercluster
 associated with the electron to calculate the electron's position instead of
 using the track. The new supercluster-only position is then used to calculate a
-new \phistarSC that depends only on the ECAL alignment.
+new \phistarSC that does not depend on the alignment of the tracker.
 
 The position of the supercluster does not take into account the amount the
 bending of the electron due to the magnetic field. While $\eta$ is unchanged by
@@ -22,10 +22,10 @@ the supercluster, $\phisc$. This correction is given by
 \EQ~\ref{eq:b_field_correction} where $q$ is the charge of the electron, \pt is
 the transverse momentum of the electron, $B$ is the magnitude of the magnetic
 field, and \Reffective is the effective radius of ECAL as a function of $\eta$
-as given in \EQ~\ref{eq:effective_radius}. The charge and momentum come from
-the electron matched to the supercluster, and although they are determined in
-combination with the tracker, they are far less susceptible to the small scale
-misalignments of the tracker that we are considering.
+and $\theta$ as given in \EQ~\ref{eq:effective_radius}. The charge and momentum
+come from the electron matched to the supercluster, and although they are
+determined in combination with the tracker, they are far less susceptible to
+the small scale misalignments of the tracker that we are considering.
 
 \begin{equation}\label{eq:b_field_correction}
     \sin \left( \phisc - \phizero \right)
