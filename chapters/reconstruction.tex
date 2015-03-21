@@ -5,14 +5,14 @@
 \label{sec:electron_reconstruction}
 
 Reconstruction of electrons in CMS is complicated by the fact that electrons,
-because of their low mass and the high magnetic field, emit bremsstrahlung
-photon which must be accounted for. Additionally, the amount of material in
-front of ECAL causes many electrons begin showering before entering ECAL,
+because of their low mass and the high magnetic field, emit photon which must
+be accounted for in the final energy sum. Additionally, the amount of material
+in front of ECAL causes many electrons begin showering before entering ECAL,
 adding additional scattered energy deposits that must be included in the final
 sum. Information about the material in front of ECAL is given in
 \FIG~\ref{fig:tracker_material}\cite{cms_tracker_2014}.
 
-\begin{figure}[tb]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/tracker_material_budget.png}
     \caption{
@@ -25,39 +25,48 @@ sum. Information about the material in front of ECAL is given in
 
 The reconstruction of electrons with $\pt > 20 \GeV$ in CMS starts with an
 electron-like cluster of energy in ECAL \cite{eg_reco_2010}. In order to
-account for energy lost to bremsstrahlung photons, additional clusters at
-constant $\eta$ but changing $\phi$ are added together to form superclusters
-\cite{baffioni_2007}. \TODO{A bit about how various deposites of energy are
+account for energy lost to photon radiation, additional clusters at constant
+$\eta$ but changing $\phi$ are added together to form superclusters
+\cite{baffioni_2007}. \TODO{A bit about how various deposits of energy are
 connected to form the supercluster.}
 
-From these superclusters, a point on the tracker where the electron is likely
+From these superclusters, a volume in the tracker where the electron is likely
 to have come from is determined by propagating the energy weighted mean
 position of the supercluster back through the magnetic field. This spot is then
 used to seed  track finding algorithm in the pixel layer. Hits in the tracker
 are searched from starting at the innermost layer and working outward. In order
-to account for the changing track shape of the track as the electron loses
-energy from interacting with the tracker material, a ``Gaussian Sum Filter''
-(GSF) is used \cite{adam_2005}. Low energy electrons ($\ET < 15 \GeV$) are
-constructed with \pt from the tracker and \ET from ECAL. For higher energy
-electrons, the ECAL energy is used without the tracker \pt to avoid issues
-introduced by the possiblity poor fits in the tracker. The $\eta$ and $\phi$ of
-all electron candidates, regardless of energy, is taken from the track.
+to account for the changing shape of the track as the electron loses energy
+from interacting with the tracker material, a ``Gaussian Sum Filter'' (GSF)
+\cite{adam_2005} is used rather than the simpler Kalman filter used for muons
+and hadrons. Low energy electrons ($\ET < 15 \GeV$) are constructed with \pt
+from the tracker and \ET from ECAL. For higher energy electrons, the ECAL
+energy is used without the tracker \pt to avoid issues introduced by the
+possible poor fits in the tracker. The $\eta$ and $\phi$ of all electron
+candidates, regardless of energy, is taken from the track by projecting back to
+the interaction point.
 
 \section{Energy Corrections}
 
-Additional corrections were performed to improve the energy resolution of the
-electrons used in this analysis. These corrections were centrally produced by
-the CMS collaboration using a multivariate regression trained on \Ztoee and
-\higgstoZZ MC \cite{cms_an_2012-327}. The regression used a boosted decision
-tree trained on 41 different variables parameterizing electron shower shape,
-the electron track, and the location of the shower in EB. The algorithm was
-trained separately for EB and EE electrons. In order to prevent over-training
-the MC samples were split in half, with one half used for training and the
-other half used for validation. Electrons used in the regression were required
-to have low radiated energy fraction ($< 0.01$) as determined by the generator
-level MC and $\pt > 7 \GeV$. The target variable was the ratio of the gen level
-bare electron energy over the reconstructed energy. This correction was applied
-to both the data and the reconstructed MC electrons used in this analysis.
+Although the measurement of \phistar is insensitive to the energy of the
+electrons, the energy still plays a role in determining the electron \pt and
+hence whether an event passes the selection criteria used in this analysis
+(discussed in \SEC~\ref{ssec:electron_selection}). Therefore, it is important
+to accurately measure this quantity, even if it does not directly effect the
+final observable. To this end, a set of centrally produced electron energy
+corrections are applied to both the data and the reconstructed MC quantities.
+
+The corrections were calculated using a multivariate regression trained on
+\Ztoee and \higgstoZZ MC \cite{cms_an_2012-327}. The regression used a boosted
+decision tree trained on 41 different variables parameterizing electron shower
+shape, the electron track, and the location of the shower in EB. The algorithm
+was trained separately for EB and EE electrons. In order to prevent
+over-training the MC samples were split in half, with one half used for
+training and the other half used for validation. Electrons used in the
+regression were required to have low radiated energy fraction ($< 0.01$) as
+determined by the generator level MC and $\pt > 7 \GeV$. The target variable
+was the ratio of the gen level bare electron energy over the reconstructed
+energy. This correction was applied to both the data and the reconstructed MC
+electrons used in this analysis.
 
 \section{Electron Variables}
 \label{sec:electron_variables}
@@ -91,65 +100,67 @@ The isolations used in the trigger (\SingleElectronTrigger) are defined as
 follows:
 
 \begin{equation}
-    \HCALISO = \DeltaRSum \ETHCAL
+    \HCALISO = \DeltaRSum \EHCAL
 \end{equation}
 
 \begin{equation}
-    \ECALISO = \DeltaRSum \ETECAL - \ETSC
+    \ECALISO = \DeltaRSum \EECAL - \ESC
 \end{equation}
 
 Where \DeltaRSum is a sum on the energy in a $\Delta R < 0.3$ cone around the
-supercluster location, \ETHCAL is the energy in HCAL, \ETECAL is the energy in
-ECAL, and \ETSC is the energy of the supercluster, which is subtracted out of
+supercluster location, \EHCAL is the energy in HCAL, \EECAL is the energy in
+ECAL, and \ESC is the energy of the supercluster, which is subtracted out of
 the ECAL isolation sum. No subtraction is applied to the HCAL isolation as we
 expect all of the electron's energy to be contained in ECAL.
 
 A different isolation variable is defined for offline selection that is more
 expensive to compute but takes advantage of the tracker as well as ECAL and
-HCAL. This isolation uses a \particleflow\cite{particle_flow_2010} technique 
+HCAL. This isolation uses a \particleflow\cite{particle_flow_2010} technique
 which is a method of reconstructing jets that uses information for every
 subdetector and tries to reconstruct the individual particles in a jet by
 matching them to their responses in the various subdetectors. To keep the
-algorithm simple, \particleflow categorizes every particle into one of four
-types: photons, electrons, muons, and pions. A photon is a particle with energy
-only deposited in ECAL. An electron is a particle with an ECAL energy deposit
-and a track. A muon is a track in the central tracker matched to a track in the
-muon system. A pion is any energy cluster in HCAL with a matching ECAL cluster
-and track. These particle flow jets are used to calculate an energy per area
-due to pileup, $\rho$, in the detector which is used to remove the pileup
-contribution from the isolation sum. The \particleflow isolation, $\PFISO$, is
-given by:
+algorithm simple, \particleflow categorizes every particle into one of five
+types: photons, electrons, muons, charged hadrons, and neutral hadrons. A
+photon is a particle with energy only deposited in ECAL. An electron is a
+particle with an ECAL energy deposit and a track. A muon is a track in the
+central tracker matched to a track in the muon system. A charged hadron is any
+energy cluster in HCAL with a matching ECAL cluster and track. A neutral hadron
+is any energy cluster in HCAL with a matching ECAL cluster without a matching
+track. These particle flow jets are used to calculate an energy per area due to
+pileup, $\rho$, in the detector which is used to remove the pileup contribution
+from the isolation sum. The \particleflow isolation, $\PFISO$, is given by:
 
 \begin{equation}
-    \PFISO = \DeltaRSum \left(\ptTrack + \ETECAL + \ETHCAL\right) - \ptElectron
-    - \ETSC - 0.3^{2} \pi \rho
+    \PFISO = \DeltaRSum \left(\ptTrack + \EECAL + \EHCAL\right) - \ptElectron
+    - \ESC - 0.3^{2} \pi \rho
 \end{equation}
 
 Where the variables are the same as above, with the addition of \ptTrack, which
 is the \pt of all tracks in the tracker, \ptElectron, which is the \pt of the
-electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy from
-pileup in a cone of $\Delta R < 0.3$ around the electron.
+electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
+around the electron calculated from particle flow.
 
 \subsection{Identification}
 
 The shape of the electromagnetic shower in the calorimeters is used to
 discriminate between electrons and other particles. Electrons generally have
 very narrow showers whereas hadronic particles have wide showers. The size of
-the shower in $\eta$ is given by \sigmaietaieta. Electron showers are mostly
-contained within ECAL and so the ratio of energy around the hit in HCAL over
-the energy around the hit in ECAL, \HOverE, is also used to parameterize the
-shower shape.
+the shower in $\eta$ is characterized by \sigmaietaieta. Electron showers are
+mostly contained within ECAL and so the ratio of energy around the hit in HCAL
+over the energy around the hit in ECAL, \HOverE, is also used to parameterize
+the shower shape.
 
-The matching of the track with the supercluster in \coordetaphi space is given
-by \dphiin and \detain.  The compatibility of energy of the supercluster and
-the momentum of the track is given by \ooeoop. Using these variables photons
-can be rejected as they interact in ECAL but leave no track in the tracker.
+The distance between the track and the supercluster in \coordetaphi space is
+given by \dphiin and \detain. The compatibility of energy of the supercluster
+and the momentum of the track is parameterized by \ooeoop. Using these
+variables photons can be rejected as they interact in ECAL but leave no track
+in the tracker.
 
 \subsection{Conversion Rejection}
 
 Conversions generally happen away from the vertex and so the distances of the
 hits in the track from the vertex are useful quantities to reject conversions.
-The transversal and longitudinal separation between the track and the primary
+The transverse and longitudinal separation between the track and the primary
 vertex are given by $d_{0}$ and $d_{z}$. Conversions generally happen deep in
 the tracker and so tracks from them will have missing layers, given by \nmiss.
 Conversions also have low vertex fit probability, \pvtx, indicating that their
