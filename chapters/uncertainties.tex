@@ -1,2 +1,51 @@
 \chapter{Uncertainties}
 \label{chapter:uncertainties}
+
+
+\subsection{Electron Angular Position Uncertainty}
+
+Since \phistar depends on the angles between the two electrons, it is sensitive
+to mismeasurement of these angles. As discussed in
+\SEC~\ref{sec:electron_reconstruction}, the position of a reconstructed
+electron comes from the tracker, and therefore misalignment of the tracker
+would lead to a systematic uncertainty on the angle measurement. The magnitude
+of this systematic is estimated by using the position of the ECAL supercluster
+associated with the electron to calculate the electron's position instead of
+using the track. The new supercluster-only position is then used to calculate a
+new \phistarSC that depends only on the ECAL alignment.
+
+The position of the supercluster does not take into account the amount the
+bending of the electron due to the magnetic field. While $\eta$ is unchanged by
+the pretense of the field, $\phi$ is changed. A correction is applied to $\phi$
+to find the angle at the interaction point, $\phizero$, based on the angle of
+the supercluster, $\phisc$. This correction is given by
+\EQ~\ref{eq:b_field_correction} where $q$ is the charge of the electron, \pt is
+the transverse momentum of the electron, $B$ is the magnitude of the magnetic
+field, and \Reffective is the effective radius of ECAL as a function of $\eta$
+as given in \EQ~\ref{eq:effective_radius}. The charge and momentum come from
+the electron matched to the supercluster, and although they are determined in
+combination with the tracker, they are far less susceptible to the small scale
+misalignments of the tracker that we are considering.
+
+\begin{equation}\label{eq:b_field_correction}
+    \sin \left( \phisc - \phizero \right)
+    =
+    - \Reffective \frac{q B}{2 \pt}
+\end{equation}
+
+\begin{equation}\label{eq:effective_radius}
+    \Reffective
+    =
+    \left\{
+        \begin{array}{ll}
+            1.29 \meters & \text{if } |\eta| < 1.4442 \\
+            3.14 \meters \times \tan \left(\coord{\theta}\right) & \text{otherwise}
+        \end{array}
+    \right.
+\end{equation}
+
+The resulting \phistarSC distribution is compatible within statistical
+uncertainties with the \phistar distribution and so no systematic uncertainty
+is assigned for the angular position.
+
+\TODO{Plot of \phistar vs \phistarSC?}
