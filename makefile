@@ -13,7 +13,7 @@ all: $(MAIN_PDF)
 .refresh:
 	touch .refresh
 
-$(MAIN_PDF): $(MAIN_TEX) $(HELPER_FILES) $(CHAPTERS) .refresh
+$(MAIN_PDF): $(MAIN_TEX) $(HELPER_FILES) $(CHAPTERS) $(FIGURES) .refresh
 	$(LATEXMK) -pdf $(MAIN_TEX) 
 
 force:
