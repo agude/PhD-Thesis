@@ -138,7 +138,44 @@ from the isolation sum. The \particleflow isolation, $\PFISO$, is given by:
 Where the variables are the same as above, with the addition of \ptTrack, which
 is the \pt of all tracks in the tracker, \ptElectron, which is the \pt of the
 electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
-around the electron calculated from particle flow.
+around the electron calculated from particle flow. A comparison of the
+distribution of \PFISO in a minimally biased ensemble of electrons from events
+selected with a muon trigger and the same distribution in the \MADGRAPH signal
+sample is shown in \FIG~\ref{fig:pf_iso}; a similar comparisons distributions
+of \HCALISO and \ECALISO are shown in \FIGS~\ref{fig:hcal_iso} and
+\ref{fig:ecal_iso}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/iso.pdf}
+    \caption{
+        The \particleflow isolation variable distribution for all electrons
+        with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of events selected
+        with a muon trigger (circles) and in \MADGRAPH \Ztoee MC (triangles).
+    }
+    \label{fig:pf_iso}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/hcal_iso.pdf}
+        \caption{}
+        \label{fig:hcal_iso}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/ecal_iso.pdf}
+        \caption{}
+        \label{fig:ecal_iso}
+    \end{subfigure}
+    \caption{
+        The HCAL (top) and ECAL (bottom) isolation variable distributions for
+        all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
+        events selected with a muon trigger (circles) and in \MADGRAPH \Ztoee
+        MC (triangles).
+    }
+    \label{fig:hcal_ecal_isos}
+\end{figure}
 
 \subsection{Identification}
 
@@ -154,7 +191,64 @@ The distance between the track and the supercluster in \coordetaphi space is
 given by \dphiin and \detain. The compatibility of energy of the supercluster
 and the momentum of the track is parameterized by \ooeoop. Using these
 variables photons can be rejected as they interact in ECAL but leave no track
-in the tracker.
+in the tracker. A comparison of the distribution of $\HOverE$ is shown in
+\FIG~\ref{fig:he}; compairisons of the distributions of $\sigmaietaieta$ and of
+$\ooeoop$ are shown in \FIGS~\ref{fig:sieie} and \ref{fig:ooeoop}; comparisons
+of the distributions of $\detain$ and $\dphiin$ are shown in
+\FIGS~\ref{fig:deta} and \ref{fig:dphi}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/he.pdf}
+    \caption{
+        The \HOverE variable distribution for all electrons with $\pt > 20
+        \GeV$ and $|\eta| < 2.4$ in a set of events selected with a muon
+        trigger (circles) and in \MADGRAPH \Ztoee MC (triangles).
+    }
+    \label{fig:he}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/sigma_ieta_ieta.pdf}
+        \caption{}
+        \label{fig:sieie}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/1oe_1op.pdf}
+        \caption{}
+        \label{fig:ooeoop}
+    \end{subfigure}
+    \caption{
+        The $\sigmaietaieta$ (top) and $\ooeoop$ (bottom) variable
+        distributions for all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$
+        in a set of events selected with a muon trigger (circles) and in
+        \MADGRAPH \Ztoee MC (triangles).
+    }
+    \label{fig:sieie_ooeoop}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/deta.pdf}
+        \caption{}
+        \label{fig:deta}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/dphi.pdf}
+        \caption{}
+        \label{fig:dphi}
+    \end{subfigure}
+    \caption{
+        The $\detain$ (top) and $\dphiin$ (bottom) variable distributions for
+        all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
+        events selected with a muon trigger (circles) and in \MADGRAPH \Ztoee
+        MC (triangles).
+    }
+    \label{fig:dtrack}
+\end{figure}
 
 \subsection{Conversion Rejection}
 
@@ -164,4 +258,27 @@ The transverse and longitudinal separation between the track and the primary
 vertex are given by $d_{0}$ and $d_{z}$. Conversions generally happen deep in
 the tracker and so tracks from them will have missing layers, given by \nmiss.
 Conversions also have low vertex fit probability, \pvtx, indicating that their
-track likely did not come from the primary vertex.
+track likely did not come from the primary vertex. A comparison of the
+distributions of $d_{0}$ and of $d_{z}$ are shown in \FIGS~\ref{fig:d0} and
+\ref{fig:dz}.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/d0.pdf}
+        \caption{}
+        \label{fig:d0}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.65\textwidth}
+        \includegraphics[width=\textwidth]{figures/dz.pdf}
+        \caption{}
+        \label{fig:dz}
+    \end{subfigure}
+    \caption{
+        The $d_{0}$ (top) and $d_{z}$ (bottom) variable distributions for all
+        electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of events
+        selected with a muon trigger (circles) and in \MADGRAPH \Ztoee MC
+        (triangles).
+    }
+    \label{fig:d0_dz}
+\end{figure}
