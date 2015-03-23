@@ -1,20 +1,21 @@
 \chapter{Event Selection}
 \label{event_selection_chapter}
 
-This chapter details the requirements used to select events for the analysis.
-It also covers the data used and the Monte Carlo (MC) used. The final state we
-are considering is \Ztoee.
+In this chapter we discuss the acceptance region for this analysis, as well as
+how events are selected both by the detector and for the analysis. Additionally
+we discuss the background that makes it through the selection process.
 
 \section{Acceptance}
 \label{sec:acceptance}
 
 The acceptance region is a definition of what events, assuming that there are
-no limitations due to the detector design, we include in our analysis. It is
-essential to define an acceptance region so that our final result can be
-compared to other measurements and to theory without forcing other groups to
-attempt to correct for our experimental effects. The acceptance region defines
-what sort of physics results we can make statements about, and also determines
-the value of the effective cross-section of the \Z.
+no limitations due to the detector design, are include in the analysis. The
+acceptance region is what the final result of this analysis will be corrected
+to, ensuring that other measurements and theoretical predictions can be
+compared to our results without having to account for the detector response.
+The acceptance region defines what sort of physics results we can make
+statements about, and also determines the value of the effective cross-section
+of the \Z.
 
 Our acceptance is defined by the kinematics of the two electrons and the mass
 of the Z boson. One of the electrons, called the \CentralElectron, is required
@@ -52,15 +53,15 @@ center of mass energy of \rootseight. The LHC delivered 23 \fbinv of integrated
 luminosity during the year as seen in \FIG~\ref{fig:2012_luminosity}. This
 period was divided into four run eras called 2012A, B, C, and D. During an era,
 the LHC run parameters are kept roughly static to allow for consistent data
-taking conditions. In between eras, maintenance and minor upgrades are
+taking conditions. In between eras, maintenance and minor upgrades were
 performed on the LHC in order to deliver higher luminosity.
 
 \begin{figure}[tb]
     \centering
     \includegraphics[width=\textwidth]{figures/2012_lumi.pdf}
-    \caption{ The integrate luminosity per day delivered and recorded by CMS in
+    \caption{The integrate luminosity per day delivered and recorded by CMS in
         2012. The flat periods in May, July, and September correspond to the
-        boundaries between the run eras. }
+        boundaries between the run eras.}
     \label{fig:2012_luminosity}
 \end{figure}
 
@@ -69,7 +70,7 @@ objects contained within the events. This allows analyses to use only one or
 two datasets, instead of requiring them to deal with the entirety of the CMS
 data (which is petabyte scale, and hence too large for most institutes to store
 locally). The HLT sorts events into the various datasets based on the triggers
-that the event fired. In this manner, and event can end up in multiple datasets
+that the event fired. In this manner, an event can end up in multiple datasets
 if it fired multiple triggers. This analysis uses the \SingleElectron dataset
 which was collected with the HLT trigger \SingleElectronTrigger. These datasets
 were reconstructed---converted from raw detector response into physics
@@ -90,7 +91,8 @@ are listed in \TAB~\ref{table:datasets}.
     \end{tabular}
 \end{center}
 \caption{
-    The datasets used in this analysis.
+    The datasets used in this analysis. \TODO{Run range isn't useful, dates
+    might be.}
 }
 \label{table:datasets}
 \end{table}
@@ -102,13 +104,13 @@ trigger was to allow a direct comparison with a similar \phistar analysis being
 performed by CMS which used \Ztomumu events selected with a single muon
 trigger. The single electron trigger requires an electron with $\pt > 27$ which
 passes Working Point 80 (\WPEighty), a set of selection requirements on lepton
-isolation and shower shape designed to be 80\% efficient on electrons. The
-requirements that make up \WPEighty are listed in \TAB~\ref{table:wp80}. This
-trigger had the lowest \pt threshold of any single electron trigger that was
-unprescaled run during 2012. To prescale a trigger means to apply a rate
-reduction by randomly throwing out a certain fraction of events in order to
-keep the total trigger rate manageable; as this trigger was unprescaled, no
-events were discarded in this manner.
+isolation and shower shape designed to be 80\% efficient in selecting real
+electrons. The requirements that make up \WPEighty are listed in
+\TAB~\ref{table:wp80}. This trigger had the lowest \pt threshold of any single
+electron trigger that was unprescaled run during 2012. To prescale a trigger
+means to apply a rate reduction by randomly throwing out a certain fraction of
+events in order to keep the total trigger rate manageable; as this trigger was
+unprescaled, no events were discarded in this manner.
 
 \begin{table}[h]
 \centering
@@ -137,7 +139,7 @@ events were discarded in this manner.
 
 The events from the \SingleElectron sample are further filtered for quality. A
 centrally produced list of good luminosity segments is used to select only
-events in which the part of the detector was malfunctioning or disabled. After
+events in which no part of the detector was malfunctioning or disabled. After
 accounting for detector dead time and beam quality, \GoodLumiNumber of
 integrated luminosity are used for physics analysis.
 
@@ -146,17 +148,16 @@ integrated luminosity are used for physics analysis.
 \subsection{Electron Selection}
 \label{ssec:electron_selection}
 
-The requirements used to select electrons offline are selected to be tighter
-than the requirements used in the trigger in order to make calculating the
-various efficiencies easier. For an event to be considered it must have at
-least two electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ which are the
-looser bounds used in our acceptance. If three or more electrons pass this
-initial requirement, only the two highest \pt electrons are considered. One of
-these electrons must be within $|\eta| < 2.1$ and it must also have $\pt > 30
-\GeV$.
+The requirements used to select electrons are chosen to be tighter than the
+requirements used at the trigger level in order to make calculating the various
+efficiencies easier. For an event to be considered it must have at least two
+electrons that pass the acceptance requirements for \ExtendedElectrons: $\pt >
+20 \GeV$ and $|\eta| < 2.4$. If three or more electrons pass this initial
+requirement, only the two wit the highest \pt are considered. One of these two
+electrons must be within $|\eta| < 2.1$ and it must also have $\pt > 30 \GeV$.
 
 There are several centrally defined ``cut based identification'' requirements
-used in offline electron selection at CMS. We use two of these, referred to as
+used in electron selection at CMS. We use two of these, referred to as
 \EGMEDIUM and \EGTIGHT, with \EGTIGHT having stricter requirements than
 \EGMEDIUM. The exact definition of these requirements are given in
 \TAB~\ref{table:eg_cuts}.
@@ -187,13 +188,14 @@ used in offline electron selection at CMS. We use two of these, referred to as
 \label{table:eg_cuts}
 \end{table}
 
-A \CentralElectron is required to pass \EGTIGHT and to be matched to one of the
-electrons that passed \SingleElectronTrigger with $\Delta R < 0.3$. The other
-electron must pass \EGMEDIUM. If both electrons are \CentralElectrons, then
-only one of them need pass \EGTIGHT, but this same electron must also match the
-trigger; the other \CentralElectron need only pass \EGMEDIUM.
+A \CentralElectron in the event is required to pass \EGTIGHT and to be matched
+to one of the electrons that passed \SingleElectronTrigger with $\Delta R <
+0.3$. The other electron must pass \EGMEDIUM. If both electrons are
+\CentralElectrons, then only one of them need pass \EGTIGHT, but this same
+electron must also match the trigger; the other \CentralElectron need only pass
+\EGMEDIUM.
 
-No charge requirements are applied as even the same sign electron sample is
+No charge requirement is applied as even the same sign electron sample is
 dominated by actual \Z decays as demonstrated by the large peak in the \mee
 distribution.
 
@@ -288,12 +290,16 @@ and \ref{fig:z_rapidity}.
 \section{Background Estimation}
 
 The distribution of background events is estimated using the MC samples
-discussed in \SEC~\ref{ssec:monte_carlo}, with the exception of QCD related
-backgrounds, which are computed using data. The various MC samples are
-reweighed so that they have equivalent luminosity to the data and the event
-selection requirements are applied to them. The number of events that survive
-the selection are taken as the number in our data, and are subtracted off from
-the data events.
+discussed in \SEC~\ref{ssec:monte_carlo}, with the \TODO{exception of QCD
+related backgrounds, which are computed using data}. The various MC samples are
+reweighed so that they have equivalent luminosity to the data. The MC datasets
+also have various corrections applied which are discussed in
+\SEC~\ref{sec:scale_factors}. These scale factors are applied as weights to
+each MC event in order to make them better match the data.
+
+After the reweighting, the selection requirements are applied to to the MC. The
+number of events that survive the selection are taken as the number in our
+data, and are subtracted off from the data events.
 
 \begin{table}[h]
 \centering
@@ -336,13 +342,14 @@ reproduce the various backgrounds.
 
 Events for the \emu sample are selected from data taken with the
 \SingleMuonTrigger. This trigger required a single muon with $\pt > 24 \GeV$
-and $|\eta| < 2.1$. Offline, events are required to have one muon with $\pt >
-25 \GeV$ and $|\eta| < 2.1$ and one electron with $\pt > 20 \GeV$ and $|\eta| <
-2.4$. In order to further suppress \Z decays, events are rejected if there is a
-third lepton of either flavor with $\pt > 20 \GeV$ and $|\eta| < 2.4$.
-\TODO{\FIG~\ref{} shows a comparison of the MC and data in the control region.
-} Although no deviations from \num{1} are seen in the ratio, the ratio is taken
-as a SF to correct the previously listed backgrounds in each bin.
+and $|\eta| < 2.1$. Events selected from the dataset provided by this trigger
+are required to have one muon with $\pt > 25 \GeV$ and $|\eta| < 2.1$ and one
+electron with $\pt > 20 \GeV$ and $|\eta| < 2.4$. In order to further suppress
+\Z decays, events are rejected if there is a third lepton of either flavor with
+$\pt > 20 \GeV$ and $|\eta| < 2.4$. \TODO{\FIG~\ref{} shows a comparison of the
+MC and data in the control region. } Although no deviations from \num{1} are
+seen in the ratio, the ratio is taken as a SF to correct the previously listed
+backgrounds in each bin.
 
 \TODO{Insert emu plot.}
 
