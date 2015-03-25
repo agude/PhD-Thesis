@@ -346,12 +346,22 @@ and $|\eta| < 2.1$. Events selected from the dataset provided by this trigger
 are required to have one muon with $\pt > 25 \GeV$ and $|\eta| < 2.1$ and one
 electron with $\pt > 20 \GeV$ and $|\eta| < 2.4$. In order to further suppress
 \Z decays, events are rejected if there is a third lepton of either flavor with
-$\pt > 20 \GeV$ and $|\eta| < 2.4$. \TODO{\FIG~\ref{} shows a comparison of the
-MC and data in the control region. } Although no deviations from \num{1} are
-seen in the ratio, the ratio is taken as a SF to correct the previously listed
-backgrounds in each bin.
+$\pt > 20 \GeV$ and $|\eta| < 2.4$. \TODO{\FIG~\ref{fig:emu_background_check}
+shows a comparison of the MC and data in the control region. } Although no
+deviations from \num{1} are seen in the ratio, the ratio is taken as a SF to
+correct the previously listed backgrounds in each bin.
 
-\TODO{Insert emu plot.}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/phistar_emu.pdf}
+    \caption{
+        The \phistar distribution of events from the \emu control sample. The
+        data (points) match the MC (histograms) expectation well. The ratio,
+        shown in the bottom plot, is taken as a SF and used to correct the
+        backgrounds in each bin.
+    }
+    \label{fig:emu_background_check}
+\end{figure}
 
 \TODO{Does this go in the uncertainty section? "This method could not be used
     to calibrate the $\Z\Z$ and $\Z\W$ background MC samples as they contain
