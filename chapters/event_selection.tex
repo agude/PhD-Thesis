@@ -332,6 +332,8 @@ different production mechanism as opposed to single \Z boson events. The
 fraction of events from each of the considered backgrounds is listed in
 \TAB~\ref{table:bg_percentages}.
 
+\TODO{Put \phistar plot with backgrounds.}
+
 \subsection{\emu Control Samples}
 
 Many of the backgrounds---specifically $\ttbar$, $\W\W$, $\DYtotautau$, and
@@ -375,11 +377,42 @@ estimation of the QCD background in this analysis so instead a data driven
 method is employed. The same requirements as discussed in
 \SEC~\ref{ssec:electron_selection} are applied to both the data and the MC
 samples with the additional requirement that both electrons must have the same
-sign. The MC samples are then weighted to match the luminosity of the data and
-their events are subtracted. The remaining events still have a large
-contribution from the \Z (see \FIG~\ref{fig:same_sign_z_peak}) and so we reject
-events that fall within the \mee acceptance region of \MassRange.
-\TODO{Are we just taking this number, or do we fit and integrate?}
+sign. This additional selection requirement removes most of the signal while
+removing only half of the expected QCD background. This is because the QCD
+processes are independent and hence there is no correlation between the charge
+of the two leptons.
 
-\TODO{Same sign \mee peak plot before and after subtraction.
-\label{fig:same_sign_z_peak}}
+The data and MC are divided into subsamples with each subsample corresponding
+to a bin in the \phistar distribution. The \mee distribution of the events in
+each data subsample is fit with a combination of an MC template and an analytic
+QCD background function.
+
+The MC templates used in the fit are created by reweighting each MC sample to
+have the same luminosity as the data. These MC samples are then added together to
+form a combined MC sample that includes both the MC \MADGRAPH signal sample and
+the various background MC samples. The shape of this combined sample in each
+\phistar bin is taken as a template when fitting the corresponding bin in data.
+
+The analytic QCD background function, $\BGFunc$, is the same function used by
+Haupt to model the QCD background in his \Ztoee shape measurement
+\cite{haupt_2011}. It is composed of a falling exponential---which fits the
+general shape of the QCD distribution---multiplied by a complementary error
+function---which cuts off the exponential at low mass. The exact form of this
+function is given by \EQ~\ref{eq:haupt_function}. The sum of the template and
+the background function is given by \EQ~\ref{eq:qcd_fit_function}.
+
+The background due to QCD in each \phistar bin is taken to be the integral of
+the analytic background component from \MassRange. \TODO{Two example fits are
+shown in \FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
+\APP~\ref{app:qcd_fits}.}
+
+\begin{equation}\label{eq:haupt_function}
+    \BGFuncArgs = e^{- \gamma x} \erfc \left( \frac{\varepsilon - x}{\delta} \right)
+\end{equation}
+
+\begin{equation}\label{eq:qcd_fit_function}
+    \alpha \, \MCTemplate + \beta \, \BGFuncArgs
+\end{equation}
+
+\TODO{\label{fig:same_sign_z_peak}}
+\TODO{Example fits, appendix of all fits. \label{fig:qcd_example_fits}}
