@@ -425,4 +425,27 @@ shown in \FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
 \end{equation}
 
 \TODO{\label{fig:same_sign_z_peak}}
-\TODO{Example fits, appendix of all fits. \label{fig:qcd_example_fits}}
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\linewidth]{figures/qcd_fits/qcd_fit_plot_for_01.pdf}
+        \caption{}
+        \label{fig:qcd_fit_example_01}
+    \end{subfigure}%
+    % The comment right after suppresses white space that would push the images
+    % to new lines
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\linewidth]{figures/qcd_fits/qcd_fit_plot_for_34.pdf}
+        \caption{}
+        \label{fig:qcd_fit_example_34}
+    \end{subfigure}
+    \caption{
+       Examples of the QCD data-driven background fits for the first and last
+       \phistar bins. The data are shown as points with error bars, MC template
+       as a dashed histogram, the analytic QCD background function as the
+       dashed line, and the sum of the template and function as a solid
+       histogram. The full set of plots are shown in \APP~\ref{app:qcd_fits}.
+    }
+    \label{fig:qcd_example_fits}
+\end{figure}
