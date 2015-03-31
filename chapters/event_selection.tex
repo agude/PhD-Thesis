@@ -411,11 +411,6 @@ function---which cuts off the exponential at low mass. The exact form of this
 function is given by \EQ~\ref{eq:haupt_function}. The sum of the template and
 the background function is given by \EQ~\ref{eq:qcd_fit_function}.
 
-The background due to QCD in each \phistar bin is taken to be the integral of
-the analytic background component from \MassRange. \TODO{Two example fits are
-shown in \FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
-\APP~\ref{app:qcd_fits}.}
-
 \begin{equation}\label{eq:haupt_function}
     \BGFuncArgs = e^{- \gamma x} \erfc \left( \frac{\varepsilon - x}{\delta} \right)
 \end{equation}
@@ -424,7 +419,25 @@ shown in \FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
     \alpha \, \MCTemplate + \beta \, \BGFuncArgs
 \end{equation}
 
-\TODO{\label{fig:same_sign_z_peak}}
+The background due to QCD in each \phistar bin is taken to be the integral of
+the analytic background component from \MassRange multiplied by two. The factor
+of two comes from the fact that the estimate was performed using only same-sign
+events while the full analysis accepts both same- and opposite-sign events
+which are equally likely due to QCD. The these integrals are shown in
+\FIG~\ref{fig:qcd_phistar}. Two example fits are shown in
+\FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
+\APP~\ref{app:qcd_fits}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/qcd_phistar.pdf}
+    \caption{
+        The integral of the analytic background function, \BGFunc, in each
+        \phistar bin. The number has been multiplied by two to account for the
+        fact that we accept both same- and opposite-sign events.
+    }
+    \label{fig:qcd_phistar}
+\end{figure}
 
 \begin{figure}[!htbp]
     \centering
@@ -449,3 +462,4 @@ shown in \FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
     }
     \label{fig:qcd_example_fits}
 \end{figure}
+
