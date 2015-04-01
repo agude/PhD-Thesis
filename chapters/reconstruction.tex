@@ -45,28 +45,69 @@ possible poor fits in the tracker. The $\eta$ and $\phi$ of all electron
 candidates, regardless of energy, is taken from the track by projecting back to
 the interaction point.
 
-\section{Energy Corrections}
+\section{Additional Corrections}
 
 Although the measurement of \phistar is insensitive to the energy of the
 electrons, the energy still plays a role in determining the electron \pt and
 hence whether an event passes the selection criteria used in this analysis
 (discussed in \SEC~\ref{ssec:electron_selection}). Therefore, it is important
 to accurately measure this quantity, even if it does not directly effect the
-final observable. To this end, a set of centrally produced electron energy
-corrections are applied to both the data and the reconstructed MC quantities.
+final observable. To this end, two sets of centrally produced electron energy
+and momentum corrections are applied to both the data and the reconstructed MC
+quantities.
 
-The corrections were calculated using a multivariate regression trained on
-\Ztoee and \higgstoZZ MC \cite{cms_an_2012-327}. The regression used a boosted
-decision tree trained on 41 different variables parameterizing electron shower
-shape, the electron track, and the location of the shower in EB. The algorithm
-was trained separately for EB and EE electrons. In order to prevent
-over-training the MC samples were split in half, with one half used for
+\subsection{Regression}
+
+The first set of corrections were calculated using a multivariate regression
+trained on \Ztoee and \higgstoZZ MC \cite{cms_an_2012-327}. The regression used
+a boosted decision tree trained on 41 different variables parameterizing
+electron shower shape, the electron track, and the location of the shower in
+EB. The algorithm was trained separately for EB and EE electrons. In order to
+prevent over-training the MC samples were split in half, with one half used for
 training and the other half used for validation. Electrons used in the
 regression were required to have low radiated energy fraction ($< 0.01$) as
 determined by the generator level MC and $\pt > 7 \GeV$. The target variable
 was the ratio of the gen level bare electron energy over the reconstructed
 energy. This correction was applied to both the data and the reconstructed MC
 electrons used in this analysis.
+
+\subsection{Energy Scale and Resolution}
+
+The second set of corrections were calculated with \Ztoee MC using two
+independent methods \cite{cms_an_2013-253}. The first method was used to
+correct for the energy scale while the second method was used to correct for
+the resolution.
+
+In the first method, the MC sample and the data were fit with the convolution
+of a Breit-Wigner with a Crystal Ball (CB) function. The CB function is used to
+model the resolution of the detector and losses due to bremsstrahlung from the
+material in front of ECAL. It consists of a Gaussian with a power-law low-side
+tail. It was first used by the Crystal Ball Collaboration \cite{oreglia_1980}.
+The Breit--Wigner function models the analytic shape predicted for the \Z mass
+resonance. The parameters of the Breit--Wigner were fixed to the nominal values
+from the Particle Data Group: $\MZ = 91.188 \GeV$, $\GammaZ = 2.495 \GeV$. The
+parameters of the CB function were free parameters in the fit.
+
+The scale correction is both time dependent and $\eta$ dependent and so fits
+were performed separately in four pseudorapidity bins in various run ranges.
+The peak of the CB function in data and MC were compared with the relative
+shift taken as the scale correction, $\Delta P$, given by
+\EQ~\ref{eq:scale_correction}.
+
+\begin{equation} \label{eq:scale_correction}
+    \Delta P = \frac{\Delta m_{\text{data}} - \Delta m_{\text{MC}}}{\MZ}
+\end{equation}
+
+In the second method, two categories of electrons are defined: showering
+electrons ($\RNine < 0.94$) and non-showering electrons ($\RNine > 0.94$). A
+probability density function (PDF) is created using the \Ztoee MC. For each
+event in the PDF, the supercluster energy is modified by applying a Gaussian
+multiplicative factor $1+\Delta P$ with a standard deviation of $\Delta \sigma$,
+where $\Delta P$ is the scale correction and $\Delta \sigma$ models the
+resolution. The resolution parameter was selected for each of the two types of
+electrons, the four pseudorapidity bins, and various run ranges using a
+likelihood maximization. In the EB pseudorapidity bins, there were enough
+events to bin in \ET and so these corrections are also \ET dependent.
 
 \section{Electron Variables}
 \label{sec:electron_variables}
