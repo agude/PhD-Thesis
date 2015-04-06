@@ -205,7 +205,8 @@ octets are not unique, but a commonly used definition is listed in
 \begin{table}[h]
 \centering
 \begin{center}
-    \begin{tabular}{ c  c }
+    \begin{tabular}{c  c}
+        %\toprule
         $\left( \xxbar{r}{b} + \xxbar{b}{r} \right) / \sqrt{2}$ &
         $-i \left( \xxbar{r}{b} - \xxbar{b}{r} \right) / \sqrt{2}$ \\
         $\left( \xxbar{r}{g} + \xxbar{g}{r} \right) / \sqrt{2}$ &
@@ -214,6 +215,7 @@ octets are not unique, but a commonly used definition is listed in
         $-i \left( \xxbar{b}{g} - \xxbar{g}{b} \right) / \sqrt{2}$ \\
         $\left( \xxbar{r}{r} - \xxbar{b}{b} \right) / \sqrt{2}$ &
         $\left( \xxbar{r}{r} - 2\xxbar{b}{b} + \xxbar{g}{g} \right) / \sqrt{6}$ \\
+        %\bottomrule
     \end{tabular}
     \caption{
         One of the possible color-octets. The colors are red ($r$), blue ($b$),
@@ -243,13 +245,16 @@ decay modes and their branching fraction are listed in
 \begin{table}[h]
 \centering
 \begin{center}
-    \begin{tabular}{ l  r }
-        Mode & Fraction $\left( \Gamma_{i} / \Gamma \right)$ \\ \hline
+    \begin{tabular}{l  r}
+        \toprule
+        Mode & Fraction $\left( \Gamma_{i} / \Gamma \right)$ \\
+        \midrule
         $\Ztoqq$ & $69.91 \pm 0.06\%$ \\
         $\Ztoee$ & $3.363 \pm 0.004\%$ \\
         $\Ztomumu$ & $3.366 \pm 0.007\%$ \\
         $\Ztotautau$ & $3.370 \pm 0.008\%$ \\
         $\Ztonunu$ & $20.00 \pm 0.06\%$ \\
+        \bottomrule
     \end{tabular}
     \caption{
         Selected decay modes of the \Z boson.
