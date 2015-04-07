@@ -165,7 +165,9 @@ detector response is reconstructed using the full CMS reconstruction chain to
 produce MC files in a format identical to actual data.
 
 \TODO{Jeremy says MC is overlaid with minibias MC. As many as 200 events are
-used at a time.}
+used at a time. Not every minimum bias MC event has a vertex, and we also add
+them for about 25 crossings before and 3 after. They are drawn from a template.
+This is the True number of PU in mc.}
 
 MC events have actual data events overlaid on top of them to better match the
 conditions found in actual running. These overlaid events come from the minimum
@@ -222,7 +224,11 @@ follows:
 
 \begin{equation}
     \label{eq:eff}
-    \eff = \frac{\nobs_{\pass}}{\nobs_{\total}}
+    \eff = \frac{
+        \text{n}^{\text{obs.}}_{\text{pass}}
+    }{
+        \text{n}^{\text{obs.}}_{\text{total}}
+    }
 \end{equation}
 
 \subsection{Single Electron Trigger}
@@ -507,8 +513,8 @@ most theoretical results will provide.
 
 Bare generator level electrons are born electrons after they have radiated all
 of their FSR photons. This definition most closely matches how muons are
-measured in a detector. The momentum of a muon is measured using only its
-track and hence any photons are ignored.
+measured in a detector. The momentum of a muon is measured using only its track
+and hence any photons are ignored.
 
 Dressed generator level electrons are bare electrons with their FSR photons
 added back in vector sum. The photons are only added if they are within a cone
