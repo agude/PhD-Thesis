@@ -495,33 +495,30 @@ efficiency instead of a fit. The resulting scale factors are given in
     \label{fig:fsr_diagram}
 \end{figure}
 
-After the \Ztoee decay, the electrons can radiate photons in a process known as
-as final state radiation (FSR). The diagram of this process is shown in
-\FIG~\ref{fig:fsr_diagram}. Some theoretical models will want to neglect FSR
-while others will attempt to include it in order to better predict what the
-experiments will measure. What is measured depends on the lepton being measured
-and on the detector. In the case of electrons in CMS, what is measured is a
-supercluster which includes the energy of nearby photons. Muons, on the other
-hand, are minimum ionizing particles and so their momentum is measured using
-the tracker and muon chambers but not ECAL, and so there is no contribution
-from photons.
+After the \Ztoee decay, the decay electrons can radiate photons in a process
+known as as final state radiation (FSR). The diagram of this process is shown
+in \FIG~\ref{fig:fsr_diagram}. Different measurements and theories treat FSR
+differently, and so we define three types of generator level electron that each
+account for FSR in a different manner: born, bare, and dressed.
 
-In order to accommodate comparison of our results to other measurements and
-theoretical models, regardless of how those models treat FSR, we define three
-different types of generator level electron in MC. Each of these three
-definitions is then used whenever generator MC is used in the analysis in order
-to produce three different final results. This is done to make it easy to
-compare our results to theoretical models regardless of how the models handle
-FSR. The three definitions of generator electrons are as follows:
+Born generator level electrons are electrons directly after the \Ztoee decay
+before the electrons have radiated any FSR photons. This definition is what
+most theoretical results will provide.
 
-\begin{description}
-    \item[Born] A generator electron immediately after the \Ztoee decay and
-        before and FSR. These electrons are what are predicted by models that
-        neglect FSR.
-    \item[Bare] A generator electron after it has shed all of its FSR photons.
-        These electrons match how muons are measured and so are more easily
-        comparable to muon results.
-    \item[Dressed] A bare electron, but with its FSR photons added back in
-        vector sum if they are within $\Delta R < 0.1$ of the electron. These
-        electrons closely match the electrons measured at CMS.
-\end{description}
+Bare generator level electrons are born electrons after they have radiated all
+of their FSR photons. This definition most closely matches how muons are
+measured in a detector. The momentum of a muon is measured using only its
+track and hence any photons are ignored.
+
+Dressed generator level electrons are bare electrons with their FSR photons
+added back in vector sum. The photons are only added if they are within a cone
+of size $\Delta R < 0.1$ around the electron. This definition most closely
+matches how electrons are measured in a detector; the energy of the electron is
+measured using a calorimeter which also integrates the nearby photons into the
+measurement.
+
+Whenever generator level quantities are used, for example when performing the
+unfolding as discussed in \CHP~\ref{chapter:unfolding}, all three definitions
+of generator level electron are used. This allows three final results to be
+computed, one with each definition, allowing easy comparison of our results to
+other experiments and theoretical models.
