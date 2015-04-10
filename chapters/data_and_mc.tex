@@ -164,23 +164,16 @@ uses \GEANTfour \cite{agostinelli2003} to mimic the detector response. This
 detector response is reconstructed using the full CMS reconstruction chain to
 produce MC files in a format identical to actual data.
 
-\TODO{Jeremy says MC is overlaid with minibias MC. As many as 200 events are
-used at a time. Not every minimum bias MC event has a vertex, and we also add
-them for about 25 crossings before and 3 after. They are drawn from a template.
-This is the True number of PU in mc.}
-
-MC events have actual data events overlaid on top of them to better match the
-conditions found in actual running. These overlaid events come from the minimum
-bias dataset, which is selected with a minimum of requirements imposed on the
-event in order to select events that are ``typical'' of proton-proton
-collisions. Additional events are overlaid in order to simulate pileup. The
-number of pileup events overlaid is drawn from a distribution that is expected
-to match the distribution seen in data. \TODO{Jeremy says about the next part:
-"Oh really?"} Of course, it is not possible to
-perfectly predict the data distribution and so a reweighting technique is used
-to match the MC distribution to the data. The distribution in MC is compared to
-that in data and the ratio of these distributions is assigned as a weight to
-each MC event to force the distributions to match.
+MC events have additional simulated minimum-bias events overlaid on top of them
+to better match the conditions found in actual running. These minimum-bias
+events attempt to simulate what a typical proton-proton interaction looks like
+in the detector and are used to mimic pileup. The number of pileup events to be
+added is drawn from a distribution decided upon before data is taken and so it
+events must be reweighted after the data taking period is over to make the
+number of pileup in MC match the same quantity in data. The data distribution
+is calculated based on the instantaneous luminosity and the inelastic
+proton-proton cross section. The ratio of these measurements is used to
+reweight the MC.
 
 \section{Scale Factors}
 \label{sec:scale_factors}
