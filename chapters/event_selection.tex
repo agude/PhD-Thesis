@@ -288,10 +288,12 @@ and $|\eta| < 2.1$. Events selected from the dataset provided by this trigger
 are required to have one muon with $\pt > 25 \GeV$ and $|\eta| < 2.1$ and one
 electron with $\pt > 20 \GeV$ and $|\eta| < 2.4$. In order to further suppress
 \Z decays, events are rejected if there is a third lepton of either flavor with
-$\pt > 20 \GeV$ and $|\eta| < 2.4$. \TODO{\FIG~\ref{fig:emu_background_check}
-shows a comparison of the MC and data in the control region. } Although no
-deviations from \num{1} are seen in the ratio, the ratio is taken as a SF to
-correct the previously listed backgrounds in each bin.
+$\pt > 20 \GeV$ and $|\eta| < 2.4$. \FIG~\ref{fig:emu_background_check} shows a
+comparison of the MC and data in the control region. Although no deviations
+from \num{1} are seen in the ratio, the ratio is taken as a scale factor to
+correct the previously listed backgrounds in each bin. A compairison of the
+\Ztomumu MC samples before and after this scale factor is applied is shown in
+\FIG~\ref{fig:emu_after_correction}.
 
 \begin{figure}[!htbp]
     \centering
@@ -301,10 +303,25 @@ correct the previously listed backgrounds in each bin.
     ]{
         The \phistar distribution of events from the \emu control sample. The
         data (points) match the MC (histograms) expectation well. The ratio,
-        shown in the bottom plot, is taken as a SF and used to correct the
-        backgrounds in each bin.
+        shown in the bottom plot, is taken as a scale factors and used to
+        correct the backgrounds in each bin.
     }
     \label{fig:emu_background_check}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/emu_check.pdf}
+    \caption[
+        The \phistar distribution of \Ztomumu events in MC before and after the
+        \emu correction.
+    ]{
+        The \phistar distribution of \Ztomumu events in MC before and after the
+        \emu correction. The samples without the \emu derived scale factors
+        applied are shown in the histograms, while the points show the sum of
+        all the MC samples after the scale factors are applied.
+    }
+    \label{fig:emu_after_correction}
 \end{figure}
 
 \TODO{Does this go in the uncertainty section? "This method could not be used
