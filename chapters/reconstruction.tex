@@ -25,12 +25,16 @@ sum. Information about the material in front of ECAL is given in
     \label{fig:tracker_material}
 \end{figure}
 
-The reconstruction of electrons with $\pt > 20 \GeV$ in CMS starts with an
-electron-like cluster of energy in ECAL \cite{eg_reco_2010}. In order to
-account for energy lost to photon radiation, additional clusters at constant
-$\eta$ but changing $\phi$ are added together to form superclusters
-\cite{baffioni_2007}. \TODO{A bit about how various deposits of energy are
-connected to form the supercluster.}
+The reconstruction of electrons with $\pt > 20 \GeV$ in CMS begins with a
+``seed'' cluster of energy deposits in ECAL that has the right shape to be an
+electron \cite{eg_reco_2010}. As an electron bends in the magnetic field, it
+takes a helictical path at constant $\eta$ but changing $\phi$. Any photons
+radiated by the electron will lie along this path. These photons must be added
+together with the electron in order to accurately measure its energy, and so
+additional clusters on the same path as the seed cluster are connected to form
+a ``supercluster'' \cite{baffioni_2007}. A supercluster, therefore, includes
+the energy deposit from the electron as well as the energy from its nearby
+photons.
 
 From these superclusters, a volume in the tracker where the electron is likely
 to have come from is determined by propagating the energy weighted mean
