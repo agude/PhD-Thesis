@@ -331,6 +331,8 @@ correct the previously listed backgrounds in each bin. A compairison of the
 
 \subsection{QCD Background Estimation}
 
+\TODO{Mention \QCDjets and \wjets}
+
 The centrally produced QCD MC does not have enough events to make an accurate
 estimation of the QCD background in this analysis so instead a data driven
 method is employed. The same requirements as discussed in
@@ -372,23 +374,10 @@ The background due to QCD in each \phistar bin is taken to be the integral of
 the analytic background component from \MassRange multiplied by two. The factor
 of two comes from the fact that the estimate was performed using only same-sign
 events while the full analysis accepts both same- and opposite-sign events
-which are equally likely due to QCD. The these integrals are shown in
-\FIG~\ref{fig:qcd_phistar}. Two example fits are shown in
+which are equally likely due to QCD. Two example fits are shown in
 \FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
-\APP~\ref{app:qcd_fits}.
-
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=\textwidth]{figures/qcd_phistar.pdf}
-    \caption[
-        The integral of the analytic background function in each \phistar bin.
-    ]{
-        The integral of the analytic background function, \BGFunc, in each
-        \phistar bin. The number has been multiplied by two to account for the
-        fact that we accept both same- and opposite-sign events.
-    }
-    \label{fig:qcd_phistar}
-\end{figure}
+\APP~\ref{app:qcd_fits}. The estimated QCD and \wjets background in each
+\phistar bin are showing in \FIG~\ref{fig:qcd_phistar}.
 
 \begin{figure}[!htbp]
     \centering
@@ -414,4 +403,17 @@ which are equally likely due to QCD. The these integrals are shown in
        histogram. The full set of plots are shown in \APP~\ref{app:qcd_fits}.
     }
     \label{fig:qcd_example_fits}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/qcd_phistar.pdf}
+    \caption[
+        The integral of the analytic background function in each \phistar bin.
+    ]{
+        The integral of the analytic background function, \BGFunc, in each
+        \phistar bin. The number has been multiplied by two to account for the
+        fact that we accept both same- and opposite-sign events.
+    }
+    \label{fig:qcd_phistar}
 \end{figure}
