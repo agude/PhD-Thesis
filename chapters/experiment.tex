@@ -149,15 +149,16 @@ field points along the \zaxis.
 
 \subsection{Inner Tracking System}
 
-\TODO{$\eta$ coverage, electric field, performance}
-
 The inner tracking system, referred to as the tracker, is the subdetector
 closest to the interaction point. The tracker's primary purpose is to measure
 the charge of particles, the momentum of these same particles, and the location
 of interaction vertices---both the primary vertex, the various additional
 proton-proton vertices from pileup, and the vertices of long-lived particles
 like b mesons. The tracker consists two types of silicon detectors: silicon
-pixels and silicon strips.
+pixels and silicon strips. The tracker covers a pseudorapidity range of $|\eta|
+< 2.4$. The pseudorapidity coverage of the tracker is the determining factor
+behind the $|\eta|$ bounds used in our acceptance definition, discussed in
+\SEC~\ref{sec:acceptance}.
 
 \subsubsection{Pixel Tracker}
 
@@ -196,7 +197,7 @@ the pixel detector is shown in \FIG~\ref{fig:pixel_layout}.
     \centering
     \includegraphics[width=\textwidth]{figures/strip_layout.jpg}
     \caption{
-        A quarter cross-section view of the CMS strip tracker.
+        A quarter cross-section view of the CMS tracker.
     }
     \label{fig:strip_layout}
 \end{figure}
@@ -212,8 +213,7 @@ Although the strips provide only two points in space to locate a hit (as
 compared to three for the pixels), this coarser geometry is adequate because of
 the much lower particle flux in this region of the detector. For the momentum,
 the location of the hit in the \rphiplane is the most important information,
-and so the strips are aligned parallel to the magnetic field. \TODO{Explain
-more?}
+and so the strips are aligned parallel to the magnetic field.
 
 The strip tracker is itself divided into multiple components. In the barrel
 there is the TIB (Tracker Inner Barrel) and the TOB (Tracker Outer Barrel). The
@@ -247,6 +247,7 @@ strip pitch between 143 and 183\micrometers. The layout of the entire tracker,
 including the strip tracker, is shown in \FIG~\ref{fig:strip_layout}.
 
 \subsection{Electromagnetic Calorimeter}
+\label{ssec:ecal}
 
 \begin{figure}[!htbp]
     \centering
@@ -309,6 +310,7 @@ decays from \higgstogammagamma decays.
 The layout of ECAL is shown in \FIG~\ref{fig:ecal_layout}.
 
 \subsection{Hadronic Calorimeter}
+\label{ssec:hcal}
 
 \begin{figure}[!htbp]
     \centering
