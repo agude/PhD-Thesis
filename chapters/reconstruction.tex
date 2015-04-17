@@ -247,31 +247,20 @@ The distance between the track and the supercluster in \coordetaphi space is
 given by \dphiin and \detain. The compatibility of energy of the supercluster
 and the momentum of the track is parameterized by \ooeoop. Using these
 variables photons can be rejected as they interact in ECAL but leave no track
-in the tracker. A comparison of the distribution of $\HOverE$ is shown in
-\FIG~\ref{fig:he}; comparisons of the distributions of $\sigmaietaieta$ and of
-$\ooeoop$ are shown in \FIGS~\ref{fig:sieie} and \ref{fig:ooeoop}; comparisons
-of the distributions of $\detain$ and $\dphiin$ are shown in
-\FIGS~\ref{fig:deta} and \ref{fig:dphi}.
+in the tracker.
 
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=\StackedPlotWidth]{figures/e_reco_var_he.pdf}
-    \caption[
-        Distributions of \HOverE variable in data and MC.
-    ]{
-        The \HOverE variable distribution for all electrons with $\pt > 20
-        \GeV$ and $|\eta| < 2.4$ in a set of events selected with a muon
-        trigger and in \MADGRAPH \Ztoee MC.
-    }
-    \label{fig:he}
-\end{figure}
+Comparisons of the distributions of $\HOverE$ and \ooeoop are shown in
+\FIG~\ref{fig:he} and \ref{fig:ooeoop}; comparisons of the distributions of
+$\sigmaietaieta$ in EB and in EE are shown in \FIGS~\ref{fig:sieie_eb} and
+\ref{fig:sieie_ee}; comparisons of the distributions of $\detain$ and $\dphiin$
+are shown in \FIGS~\ref{fig:deta} and \ref{fig:dphi}.
 
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{\StackedPlotWidth}
-        \includegraphics[width=\textwidth]{figures/e_reco_var_sigma_ieta_ieta.pdf}
+        \includegraphics[width=\textwidth]{figures/e_reco_var_he.pdf}
         \caption{}
-        \label{fig:sieie}
+        \label{fig:he}
     \end{subfigure}
     \begin{subfigure}[b]{\StackedPlotWidth}
         \includegraphics[width=\textwidth]{figures/e_reco_var_1oe_1op.pdf}
@@ -279,14 +268,35 @@ of the distributions of $\detain$ and $\dphiin$ are shown in
         \label{fig:ooeoop}
     \end{subfigure}
     \caption[
-        Distributions of $\sigmaietaieta$ and $\ooeoop$ in data and MC.
+        Distributions of \HOverE and \ooeoop in data and MC.
     ]{
-        The $\sigmaietaieta$ (top) and $\ooeoop$ (bottom) variable
-        distributions for all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$
-        in a set of events selected with a muon trigger and in \MADGRAPH \Ztoee
-        MC.
+        The \HOverE and \ooeoop variable distributions for all electrons with
+        $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of events selected with a
+        muon trigger and in \MADGRAPH \Ztoee MC.
     }
-    \label{fig:sieie_ooeoop}
+    \label{fig:he_ooeoop}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\StackedPlotWidth}
+        \includegraphics[width=\textwidth]{figures/e_reco_var_sigma_ieta_ieta_eb.pdf}
+        \caption{}
+        \label{fig:sieie_eb}
+    \end{subfigure}
+    \begin{subfigure}[b]{\StackedPlotWidth}
+        \includegraphics[width=\textwidth]{figures/e_reco_var_sigma_ieta_ieta_ee.pdf}
+        \caption{}
+        \label{fig:sieie_ee}
+    \end{subfigure}
+    \caption[
+        Distributions of $\sigmaietaieta$ in EB and EE in data and MC.
+    ]{
+        The $\sigmaietaieta$ variable distribution in EB (top) and EE (bottom)
+        for all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
+        events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
+    }
+    \label{fig:sieie}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -321,7 +331,8 @@ the tracker and so tracks from them will have missing layers, given by \nmiss.
 Conversions also have low vertex fit probability, \pvtx, indicating that their
 track likely did not come from the primary vertex. A comparison of the
 distributions of $d_{0}$ and of $d_{z}$ are shown in \FIGS~\ref{fig:d0} and
-\ref{fig:dz}.
+\ref{fig:dz}; a comparison of the distribution of \nmiss is shown in
+\FIG~\ref{fig:nmiss}.
 
 \begin{figure}[!htbp]
     \centering
@@ -343,4 +354,17 @@ distributions of $d_{0}$ and of $d_{z}$ are shown in \FIGS~\ref{fig:d0} and
         selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:d0_dz}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\StackedPlotWidth]{figures/e_reco_var_nmiss.pdf}
+    \caption[
+        Distributions of \nmiss in data and MC.
+    ]{
+        The \nmiss distribution for all electrons with $\pt > 20 \GeV$ and
+        $|\eta| < 2.4$ in a set of events selected with a muon trigger and in
+        \MADGRAPH \Ztoee MC.
+    }
+    \label{fig:nmiss}
 \end{figure}
