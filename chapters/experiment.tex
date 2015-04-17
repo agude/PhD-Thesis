@@ -1,11 +1,8 @@
 \chapter{The CMS Experiment}
 \label{experiment_chapter}
 
-\TODO{Jeremy suggests focusing the chapter more on the subdectors we use: ECAL
-and Tracker}
-
 \section{The Large Hadron Collider}
-\label{lhc_section}
+\label{sec:lhc}
 
 \begin{figure}[!htbp]
     \centering
@@ -50,13 +47,13 @@ accelerator chain is shown in \FIG~\ref{fig:lhc_layout}.
 The beams are steered around the accelerator ring by a series of
 superconducting, dipole magnets. When running at a center-of-mass energy of
 8\TeV, these magnets operate at roughly 7.5\Tesla. There are also quadrapoles
-and some higher order magnets around the ring used to focus the beams \TODO{and
-correct for lattice defects}. The bunches of protons are accelerated by 16
-superconducting radio frequency cavities. These cavities accelerate slower
-protons while slowing faster ones, thereby keeping the proton bunches compact
-in both real and momentum space. There is room for 2808 bunches in LHC
-separated by 25\ns, although in 2012 50\ns spacing was used and so there were
-only 1374 bunches of which 1368 were brought into collision at CMS and \ATLAS.
+to focus the beam and some higher order magnets around the ring to correct for
+lattice defects. The bunches of protons are accelerated by 16 superconducting
+radio frequency cavities. These cavities accelerate slower protons while
+slowing faster ones, thereby keeping the proton bunches compact in both real
+and momentum space. There is room for 2808 bunches in LHC separated by 25\ns,
+although in 2012 50\ns spacing was used and so there were only 1374 bunches of
+which 1368 were brought into collision at CMS and \ATLAS.
 
 The LHC is also the highest luminosity collider in the world. The instantaneous
 luminosity is given by
@@ -99,7 +96,7 @@ beam's synchrotron radiation, as well as secondary electrons freed when the
 photoelectrons impact their surroundings.
 
 \section{The Compact Muon Solenoid}
-\label{cms_section}
+\label{sec:cms}
 
 \begin{figure}[!htbp]
     \centering
@@ -431,10 +428,10 @@ calorimeters and the collision region.
 \end{figure}
 
 The muon system is the outer most subdetector of CMS. Its primary purpose is to
-assist in measuring high momentum muons and allow triggering on muons. Without
-the muon system, no triggering on muons would be possible because they are
-minimum ionizing particles in the calorimeters and the tracker can not be read
-out quickly enough to use in triggering. For high energy muons ($\pt > 200
+assist in measuring high momentum muons and to allow triggering on muons.
+Without the muon system, no triggering on muons would be possible because they
+are minimum ionizing particles in the calorimeters and the tracker can not be
+read out quickly enough to use in triggering. For high energy muons ($\pt > 200
 \GeV$), a combination of the tracker and muon system provides the most accurate
 measurement because of the increased lever arm provided by the muon system. The
 muon chambers are built within the iron return yokes and as such are outside
@@ -510,16 +507,17 @@ the service cavern and be accepted or rejected by the L1 trigger. Of this time,
 less than 1\microseconds is given for the L1 trigger to make its decision. The
 L1 trigger only uses information from the muon system and the calorimeters; it
 does not use information from the tracker as it takes too long for this
-data to be assembled and transfered. \TODO{The L1 trigger makes use of ``trigger
-primitive'' objects---muons, electrons, photons, and jets---built with lower
-granularity data than is used for a full reconstruction.}\TODO{Jeremy says TPs
-and stubs?? are used to make the objects.} It also makes use of a few global
-sums including \ET and \MET.
+data to be assembled and transfered. From the calorimeters the L1 trigger gets
+the sum of energy in a fixed array of \fivebyfive crystals in ECAL as well as
+the energy behind each array in HCAL. From the muon chambers the L1 trigger
+gets a short vector from each detector indication the location of a hit in the
+chamber and the direction the particle was traveling in. The L1 trigger also
+makes use of a few global sums including \ET and \MET.
 
-While a decision is being made, the data from the collision is stored in a
+While a decision is being made, the data from the collision are stored in a
 hardware buffer. If the L1 trigger selects the event, the data are moved from
 the buffer and sent to the central DAQ system where it is held until all the
-data is assembled, at which point it is sent to one of the computers that makes
+data are assembled, at which point it is sent to one of the computers that makes
 up HLT.
 
 \subsubsection{The High-Level Trigger}
