@@ -355,7 +355,31 @@ supercluster location, \EHCAL is the energy in HCAL, \EECAL is the energy in
 ECAL, and \ESC is the energy of the supercluster, which is subtracted out of
 the ECAL isolation sum. No subtraction is applied to the HCAL isolation as we
 expect all of the electron's energy to be contained in ECAL. Both isolation
-values are normalized by the \et of the electron.
+values are normalized by the \et of the electron. Comparisons of the \HCALISO
+and \ECALISO distributions between all electrons and for signal electrons are
+shown in \FIGS~\ref{fig:hcal_iso} and \ref{fig:ecal_iso}, respectively.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\StackedPlotWidth}
+        \includegraphics[width=\textwidth]{figures/e_reco_var_hcal_iso.pdf}
+        \caption{}
+        \label{fig:hcal_iso}
+    \end{subfigure}
+    \begin{subfigure}[b]{\StackedPlotWidth}
+        \includegraphics[width=\textwidth]{figures/e_reco_var_ecal_iso.pdf}
+        \caption{}
+        \label{fig:ecal_iso}
+    \end{subfigure}
+    \caption[
+        Distributions of HCAL and ECAL isolation variables in data and MC.
+    ]{
+        The HCAL (top) and ECAL (bottom) isolation variable distributions for
+        all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
+        events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
+    }
+    \label{fig:hcal_ecal_isos}
+\end{figure}
 
 A different isolation variable is defined for selection of events in this
 analysis that is more expensive to compute but takes advantage of the tracker
@@ -385,10 +409,8 @@ is the \pt of all tracks in the tracker, \ptElectron, which is the \pt of the
 electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
 around the electron due to pileup calculated from particle flow. The
 \particleflow isolation is normalized by the \pt of the electron. A comparison
-of the distribution of \PFISO in a sample of minimally-biased electrons in the
-\MADGRAPH signal sample is shown in \FIG~\ref{fig:pf_iso}; a similar
-comparisons distributions of \HCALISO and \ECALISO are shown in
-\FIGS~\ref{fig:hcal_iso} and \ref{fig:ecal_iso}.
+of the \PFISO distributions between all electrons and for signal electrons is
+shown in \FIG~\ref{fig:pf_iso}.
 
 \begin{figure}[!htbp]
     \centering
@@ -401,28 +423,6 @@ comparisons distributions of \HCALISO and \ECALISO are shown in
         with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:pf_iso}
-\end{figure}
-
-\begin{figure}[!htbp]
-    \centering
-    \begin{subfigure}[b]{\StackedPlotWidth}
-        \includegraphics[width=\textwidth]{figures/e_reco_var_hcal_iso.pdf}
-        \caption{}
-        \label{fig:hcal_iso}
-    \end{subfigure}
-    \begin{subfigure}[b]{\StackedPlotWidth}
-        \includegraphics[width=\textwidth]{figures/e_reco_var_ecal_iso.pdf}
-        \caption{}
-        \label{fig:ecal_iso}
-    \end{subfigure}
-    \caption[
-        Distributions of HCAL and ECAL isolation variables in data and MC.
-    ]{
-        The HCAL (top) and ECAL (bottom) isolation variable distributions for
-        all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
-        events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
-    }
-    \label{fig:hcal_ecal_isos}
 \end{figure}
 
 \section{Cut Based Identification}
