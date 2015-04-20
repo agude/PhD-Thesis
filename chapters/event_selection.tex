@@ -61,52 +61,13 @@ electrons that pass the acceptance requirements for \ExtendedElectrons: $\pt >
 requirement, only the two wit the highest \pt are considered. One of these two
 electrons must be within $|\eta| < 2.1$ and it must also have $\pt > 30 \GeV$.
 
-There are several centrally defined ``cut based identification'' requirements
-used in electron selection at CMS. We use two of these, referred to as
-\EGMEDIUM and \EGTIGHT, with \EGTIGHT having stricter requirements than
-\EGMEDIUM. The exact definition of these requirements are given in
-\TAB~\ref{table:eg_cuts}.
-
-\begin{table}[h]
-\centering
-\spacerows{1.2}
-\begin{center}
-    \begin{tabular}{@{}l r r r r r@{}}
-        \toprule
-        \multirow{2}{*}{Variable}     & \multicolumn{2}{c}{\EGTIGHT} & \phantom{abc}   & \multicolumn{2}{c}{\EGMEDIUM} \\
-        \cmidrule{2-3}
-        \cmidrule{5-6}
-                                      & \multicolumn{1}{c}{EB} & \multicolumn{1}{c}{EE} && \multicolumn{1}{c}{EB} & \multicolumn{1}{c}{EE} \\
-        \midrule
-        $\detain <$                   & 0.004     & 0.005     && 0.004     & 0.007 \\
-        $\dphiin <$                   & 0.03      & 0.02      && 0.06      & 0.03 \\
-        $\sigmaietaieta <$            & 0.01      & 0.03      && 0.01      & 0.03 \\
-        $\HOverE <$                   & 0.12      & 0.10      && 0.12      & 0.10 \\
-        $d_{0} <$                     & 0.02      & 0.02      && 0.02      & 0.02 \\
-        $d_{z} <$                     & 0.1       & 0.1       && 0.1       & 0.1 \\
-        $|\ooeoop| <$                 & 0.05      & 0.05      && 0.05      & 0.05 \\
-        $\pvtx <$                     & $10^{-6}$ & $10^{-6}$ && $10^{-6}$ & $10^{-6}$ \\
-        $\nmiss \le$                  & 0         & 0         && 1         & 1 \\
-        $\PFISO / \pt^{\text{e}} <$   & 0.10      & 0.10      && 0.15      & 0.15 \\
-        \bottomrule
-    \end{tabular}
-\end{center}
-\caption[
-    Identification and isolation requirements for \EGTIGHT and \EGMEDIUM.
-]{
-    Identification and isolation requirements for \EGTIGHT and \EGMEDIUM
-    requirements in the ECAL barrel (EB) and ECAL endcap (EE).
-    The variables used are detailed in \SEC~\ref{sec:electron_variables}.
-}
-\label{table:eg_cuts}
-\end{table}
-
 A \CentralElectron in the event is required to pass \EGTIGHT and to be matched
 to one of the electrons that passed \SingleElectronTrigger with $\Delta R <
 0.3$. The other electron must pass \EGMEDIUM. If both electrons are
 \CentralElectrons, then only one of them need pass \EGTIGHT, but this same
 electron must also match the trigger; the other \CentralElectron need only pass
-\EGMEDIUM.
+\EGMEDIUM. The definitions of \EGMEDIUM and \EGTIGHT are discussed in
+\SEC~\ref{sec:cut_based_id}.
 
 No charge requirement is applied as even the same sign electron sample is
 dominated by actual \Z decays as demonstrated by the large peak in the \mee
