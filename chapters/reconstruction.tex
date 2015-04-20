@@ -140,6 +140,19 @@ These variables are broken down into three main categories:
         electrons within jets.
 \end{description}
 
+The following subsections contain plots of some of the most important electron
+variables as well as a discussion of there use in selection electrons from
+\Ztoee decays. The data shown on the plots consists of every electron in the
+\SingleMuon dataset with $|\eta| < 2.4$ and $\pt > 20 \GeV$. This dataset was
+used because the trigger that selects events for it makes no selection on the
+electron variables and therefore the electrons in the set represent a sample of
+minimally-biased electrons. The MC electrons are from the \MADGRAPH \DYtoll
+sample with the same kinematic requirements are applied as are used on the
+data, with the additional requirement that the event must contain a generator
+level \Ztoee decay. These selections give us a data sample that is indicative
+of the general distribution of all electrons in CMS events, while the MC sample
+shows what electrons look like in events this analysis uses.
+
 \subsection{Identification}
 
 The shape of the electromagnetic shower in the calorimeters is used to
@@ -328,11 +341,10 @@ Where the variables are the same as above, with the addition of \ptTrack, which
 is the \pt of all tracks in the tracker, \ptElectron, which is the \pt of the
 electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
 around the electron due to pileup calculated from particle flow. A comparison
-of the distribution of \PFISO in a minimally biased ensemble of electrons from
-events selected with a muon trigger and the same distribution in the \MADGRAPH
-signal sample is shown in \FIG~\ref{fig:pf_iso}; a similar comparisons
-distributions of \HCALISO and \ECALISO are shown in \FIGS~\ref{fig:hcal_iso}
-and \ref{fig:ecal_iso}.
+of the distribution of \PFISO in a sample of minimally-biased electrons in the
+\MADGRAPH signal sample is shown in \FIG~\ref{fig:pf_iso}; a similar
+comparisons distributions of \HCALISO and \ECALISO are shown in
+\FIGS~\ref{fig:hcal_iso} and \ref{fig:ecal_iso}.
 
 \begin{figure}[!htbp]
     \centering
