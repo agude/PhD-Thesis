@@ -176,44 +176,11 @@ shows what electrons look like in events this analysis uses.
 The shape of the electromagnetic shower in the calorimeters is used to
 discriminate between electrons and other particles. Electrons generally have
 very narrow showers whereas hadronic particles have wide showers. The size of
-the shower in $\eta$ is characterized by \sigmaietaieta. Electron showers are
-mostly contained within ECAL and so the ratio of energy around the hit in HCAL
-over the energy around the hit in ECAL, \HOverE, is also used to parameterize
-the shower shape.
-
-The distance between the track and the supercluster in \coordetaphi space is
-given by \dphiin and \detain. The compatibility of energy of the supercluster
-and the momentum of the track is parameterized by \ooeoop. Using these
-variables photons can be rejected as they interact in ECAL but leave no track
-in the tracker.
-
-Comparisons of the distributions of $\HOverE$ and \ooeoop are shown in
-\FIG~\ref{fig:he} and \ref{fig:ooeoop}; comparisons of the distributions of
-$\sigmaietaieta$ in EB and in EE are shown in \FIGS~\ref{fig:sieie_eb} and
-\ref{fig:sieie_ee}; comparisons of the distributions of $\detain$ and $\dphiin$
-are shown in \FIGS~\ref{fig:deta} and \ref{fig:dphi}.
-
-\begin{figure}[!htbp]
-    \centering
-    \begin{subfigure}[b]{\StackedPlotWidth}
-        \includegraphics[width=\textwidth]{figures/e_reco_var_he.pdf}
-        \caption{}
-        \label{fig:he}
-    \end{subfigure}
-    \begin{subfigure}[b]{\StackedPlotWidth}
-        \includegraphics[width=\textwidth]{figures/e_reco_var_1oe_1op.pdf}
-        \caption{}
-        \label{fig:ooeoop}
-    \end{subfigure}
-    \caption[
-        Distributions of \HOverE and \ooeoop in data and MC.
-    ]{
-        The \HOverE and \ooeoop variable distributions for all electrons with
-        $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of events selected with a
-        muon trigger and in \MADGRAPH \Ztoee MC.
-    }
-    \label{fig:he_ooeoop}
-\end{figure}
+the shower in $\eta$ is characterized by \sigmaietaieta. Charge exchange events
+often have a higher \sigmaietaieta than real electrons because the proton is
+can be knocked loose by the interaction and leaves a broader shower.
+Comparisons of the \sigmaietaieta distributions between all electrons and for
+signal electrons for both EB and EE are shown in \FIG~\ref{fig:sieie}.
 
 \begin{figure}[!htbp]
     \centering
@@ -237,6 +204,34 @@ are shown in \FIGS~\ref{fig:deta} and \ref{fig:dphi}.
     \label{fig:sieie}
 \end{figure}
 
+Electron showers are mostly contained within ECAL and so the ratio of energy
+around the hit in HCAL over the energy around the hit in ECAL, \HOverE, is also
+used to parameterize the shower shape. Charge exchange events often have higher
+\HOverE than electrons because the loose proton can escape and enter HCAL. A
+comparison of the \HOverE distributions between all electrons and for signal
+electrons is shown in \FIG~\ref{fig:he}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\StackedPlotWidth]{figures/e_reco_var_he.pdf}
+    \caption[
+        Distributions of \HOverE in data and MC.
+    ]{
+        The \HOverE distributions for all electrons with $\pt > 20 \GeV$ and
+        $|\eta| < 2.4$ in a set of events selected with a muon trigger and in
+        \MADGRAPH \Ztoee MC.
+    }
+    \label{fig:he}
+\end{figure}
+
+The distance between the track and the supercluster in \coordetaphi space is
+given by \dphiin and \detain. Real electrons have small values of \dphiin and
+\detain because the electron caused both the track and the supercluster, but
+coincidence events are equally as likely to have a large track separation as a
+small one because each element comes from an independent object. Comparisons of
+the \dphiin and \detain distributions between all electrons and for signal
+electrons are shown in \FIGS~\ref{fig:deta} and \ref{fig:dphi}, respectively.
+
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{\StackedPlotWidth}
@@ -257,6 +252,31 @@ are shown in \FIGS~\ref{fig:deta} and \ref{fig:dphi}.
         events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:dtrack}
+\end{figure}
+
+The compatibility of energy of the supercluster and the momentum of the track
+is parameterized by \ooeoop. Electrons will have \ooeoop near \num{0} because
+their momentum and energy, having been measured for the same object, will
+agree. Charge exchange events will have positive \ooeoop as their momentum is
+measured in the tracker before the interaction (and hence measures the full
+momentum of the \pionplus) but their energy is measured in ECAL after the
+interaction and hence after the proton has carried away some of the energy.
+Coincidence events, because the energy and momentum are measured from
+independent objects, can take both positive and negative values of \ooeoop. A
+comparison of the \ooeoop distributions between all electrons and for signal
+electrons is shown in \FIG~\ref{fig:ooeoop}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\StackedPlotWidth]{figures/e_reco_var_1oe_1op.pdf}
+    \caption[
+        Distributions of \ooeoop in data and MC.
+    ]{
+        The \ooeoop distributions for all electrons with $\pt > 20 \GeV$ and
+        $|\eta| < 2.4$ in a set of events selected with a muon trigger and in
+        \MADGRAPH \Ztoee MC.
+    }
+    \label{fig:ooeoop}
 \end{figure}
 
 \subsection{Conversion Rejection}
