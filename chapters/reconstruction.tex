@@ -123,16 +123,34 @@ corrections are also \ET dependent.
 \section{Electron Variables}
 \label{sec:electron_variables}
 
-Reconstructed electrons have multiple variables that indicate their quality.
-These variables are broken down into three main categories:
+Not everything reconstructed as an electron in CMS is a real electron. One
+source of fake electrons is a process referred to as charge exchange:
+$\ChargeExchange \to 2 \photon + \proton$. In this process, a charged pion
+interacts with a nuclear neutron which convert to a neutral pion and a proton
+where the neutral pion quickly decays to two photons. If this process happens
+in the outer layers of the track, it can result in a track (from the charged
+pion) pointing at a supercluster with a shape similar to a photon or electron
+shower (from the two photons) which will often be reconstructed as an electron.
+Another source of fake electrons is coincidence events where a photon impacts
+ECAL near the track left by another charged particle.
+
+Not every electron is equally likely to be from a \Ztoee decay; many electrons
+detected in CMS come from other processes. One such process is photon
+conversion, \PhotonConversion, where a photon in the presence of a nucleus
+converts to two electrons. Another source of electrons is from QCD jets which
+can sometimes produce an electron in their numerous decays.
+
+There are several electron variables defined in order to allow the separation
+of these lower quality and fake electrons from the electrons from \Ztoee
+decays. These variables are broken down into three categories:
 
 \begin{description}
     \item[Identification (ID):] \hfill \\
         These variables quantify how much like an electron the reconstructed
-        particle looks and are used to reject pions and other charged
-        particles.
+        particle looks and are used to reject fake electrons like those from
+        charge exchange.
     \item[Conversion Rejection:] \hfill \\
-        These variables are used to reject electrons from \photontoee
+        These variables are used to reject electrons from \PhotonConversion
         conversions.
     \item[Isolation:] \hfill \\
         These variables measures how much energy from other particles is
@@ -141,7 +159,7 @@ These variables are broken down into three main categories:
 \end{description}
 
 The following subsections contain plots of some of the most important electron
-variables as well as a discussion of there use in selection electrons from
+variables as well as a discussion of their use in selection electrons from
 \Ztoee decays. The data shown on the plots consists of every electron in the
 \SingleMuon dataset with $|\eta| < 2.4$ and $\pt > 20 \GeV$. This dataset was
 used because the trigger that selects events for it makes no selection on the
