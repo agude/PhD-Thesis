@@ -4,12 +4,15 @@
 \section{Electron Reconstruction}
 \label{sec:electron_reconstruction}
 
-Reconstruction of electrons in CMS is complicated by the fact that electrons,
-because of their low mass and the high magnetic field, emit photon which must
-be accounted for in the final energy sum. Additionally, the amount of material
-in front of ECAL causes many electrons begin showering before entering ECAL,
-adding additional scattered energy deposits that must be included in the final
-sum. Information about the material in front of ECAL is given in
+Reconstruction of electrons in CMS is complicated by the fact that the tracker
+has a large material budget and so electrons must pass through up to two
+radiation lengths of material before reaching ECAL. Electrons emit photons when
+they interact with matter in a process known as bremsstrahlung. These photons
+are then separated from the electron as they do not bend in the magnetic field
+while the electron does. In order to accurately reconstruct the energy of the
+electron, these photons must be accounted for in the final energy sum, and this
+is what the electron reconstruction algorithm attempts to do. Information about
+the material in front of ECAL is given in
 \FIG~\ref{fig:tracker_material}\cite{cms_tracker_2014}.
 
 \begin{figure}[!htbp]
@@ -34,13 +37,13 @@ together with the electron in order to accurately measure its energy, and so
 additional clusters on the same path as the seed cluster are connected to form
 a ``supercluster'' \cite{baffioni_2007}. A supercluster, therefore, includes
 the energy deposit from the electron as well as the energy from its nearby
-photons.
+photons at constant $\eta$.
 
 From these superclusters, a volume in the tracker where the electron is likely
-to have come from is determined by propagating the energy weighted mean
+to have come from is determined by propagating the energy-weighted mean
 position of the supercluster back through the magnetic field. This spot is then
-used to seed a track finding algorithm in the pixel layer. Hits in the tracker
-are searched from starting at the innermost layer and working outward. In order
+used to seed a track-finding algorithm in the pixel layer. Hits in the tracker
+are searched for starting at the innermost layer and working outward. In order
 to account for the changing shape of the track as the electron loses energy
 from interacting with the tracker material, a ``Gaussian Sum Filter'' (GSF)
 \cite{adam_2005} is used rather than the simpler Kalman filter used for muons
