@@ -281,16 +281,15 @@ electrons is shown in \FIG~\ref{fig:ooeoop}.
 
 \subsection{Conversion Rejection}
 
-Conversions generally happen away from the vertex and so the distances of the
-hits in the track from the vertex are useful quantities to reject conversions.
-The transverse and longitudinal separation between the track and the primary
-vertex are given by $d_{0}$ and $d_{z}$. Conversions generally happen deep in
-the tracker and so tracks from them will have missing layers, given by \nmiss.
-Conversions also have low vertex fit probability, \pvtx, indicating that their
-track likely did not come from the primary vertex. A comparison of the
-distributions of $d_{0}$ and of $d_{z}$ are shown in \FIGS~\ref{fig:d0} and
-\ref{fig:dz}; a comparison of the distribution of \nmiss is shown in
-\FIG~\ref{fig:nmiss}.
+Photon conversions generally happen away from the primary vertex and so the
+distances of the hits in the track from the vertex are useful quantities to
+reject conversions. The transverse and longitudinal separation between the
+track and the primary vertex are given by \dzero and \dz. In addition to
+the raw distance of the track from the primary vertex, there is also a fit
+probability, \pvtx, which indicates the probability that a track came from the
+primary vertex. This variable is also used to reject conversions. Comparisons
+of the \dzero and \dz distributions between all electrons and for signal
+electrons are shown in \FIGS~\ref{fig:d0} and \ref{fig:dz}, respectively.
 
 \begin{figure}[!htbp]
     \centering
@@ -305,14 +304,19 @@ distributions of $d_{0}$ and of $d_{z}$ are shown in \FIGS~\ref{fig:d0} and
         \label{fig:dz}
     \end{subfigure}
     \caption[
-        Distributions of $d_{0}$ and $d_{z}$ in data and MC.
+        Distributions of \dzero and \dz in data and MC.
     ]{
-        The $d_{0}$ (top) and $d_{z}$ (bottom) variable distributions for all
+        The \dzero (top) and \dz (bottom) variable distributions for all
         electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of events
         selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:d0_dz}
 \end{figure}
+
+Conversions generally happen after the photon passes through several layers of
+the tracker and so their tracks will have missing layers, the number of which
+is given by \nmiss. A comparison of the \nmiss distributions between all
+electrons and for signal electrons is shown in \FIG~\ref{fig:nmiss}.
 
 \begin{figure}[!htbp]
     \centering
@@ -445,8 +449,8 @@ used in electron selection at CMS. We use two of these, referred to as
         $\dphiin <$                   & 0.03      & 0.02      && 0.06      & 0.03 \\
         $\sigmaietaieta <$            & 0.01      & 0.03      && 0.01      & 0.03 \\
         $\HOverE <$                   & 0.12      & 0.10      && 0.12      & 0.10 \\
-        $d_{0} <$                     & 0.02      & 0.02      && 0.02      & 0.02 \\
-        $d_{z} <$                     & 0.1       & 0.1       && 0.1       & 0.1 \\
+        $\dzero <$                    & 0.02      & 0.02      && 0.02      & 0.02 \\
+        $\dz <$                       & 0.1       & 0.1       && 0.1       & 0.1 \\
         $|\ooeoop| <$                 & 0.05      & 0.05      && 0.05      & 0.05 \\
         $\pvtx <$                     & $10^{-6}$ & $10^{-6}$ && $10^{-6}$ & $10^{-6}$ \\
         $\nmiss \le$                  & 0         & 0         && 1         & 1 \\
