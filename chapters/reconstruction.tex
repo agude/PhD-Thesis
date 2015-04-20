@@ -339,18 +339,19 @@ The isolations used in the trigger (\SingleElectronTrigger) are defined as
 follows:
 
 \begin{equation}
-    \HCALISO = \DeltaRSum \EHCAL
+    \HCALISO = \frac{\DeltaRSum \EHCAL}{\etElectron}
 \end{equation}
 
 \begin{equation}
-    \ECALISO = \DeltaRSum \EECAL - \ESC
+    \ECALISO = \frac{\DeltaRSum \EECAL - \ESC}{\etElectron}
 \end{equation}
 
 Where \DeltaRSum is a sum on the energy in a $\Delta R < 0.3$ cone around the
 supercluster location, \EHCAL is the energy in HCAL, \EECAL is the energy in
 ECAL, and \ESC is the energy of the supercluster, which is subtracted out of
 the ECAL isolation sum. No subtraction is applied to the HCAL isolation as we
-expect all of the electron's energy to be contained in ECAL.
+expect all of the electron's energy to be contained in ECAL. Both isolation
+values are normalized by the \et of the electron.
 
 A different isolation variable is defined for selection of events in this
 analysis that is more expensive to compute but takes advantage of the tracker
@@ -371,14 +372,15 @@ detector which is used to remove the pileup contribution from the isolation
 sum. The \particleflow isolation, $\PFISO$, is given by:
 
 \begin{equation}
-    \PFISO = \DeltaRSum \left(\ptTrack + \EECAL + \EHCAL\right) - \ptElectron
-    - \ESC - 0.3^{2} \pi \rho
+    \PFISO = \DeltaRSum \frac{\left(\ptTrack + \EECAL + \EHCAL\right) - \ptElectron
+    - \ESC - 0.3^{2} \pi \rho}{\ptElectron}
 \end{equation}
 
 Where the variables are the same as above, with the addition of \ptTrack, which
 is the \pt of all tracks in the tracker, \ptElectron, which is the \pt of the
 electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
-around the electron due to pileup calculated from particle flow. A comparison
+around the electron due to pileup calculated from particle flow. The
+\particleflow isolation is normalized by the \pt of the electron. A comparison
 of the distribution of \PFISO in a sample of minimally-biased electrons in the
 \MADGRAPH signal sample is shown in \FIG~\ref{fig:pf_iso}; a similar
 comparisons distributions of \HCALISO and \ECALISO are shown in
@@ -448,7 +450,7 @@ used in electron selection at CMS. We use two of these, referred to as
         $|\ooeoop| <$                 & 0.05      & 0.05      && 0.05      & 0.05 \\
         $\pvtx <$                     & $10^{-6}$ & $10^{-6}$ && $10^{-6}$ & $10^{-6}$ \\
         $\nmiss \le$                  & 0         & 0         && 1         & 1 \\
-        $\PFISO / \pt^{\text{e}} <$   & 0.10      & 0.10      && 0.15      & 0.15 \\
+        $\PFISO <$                    & 0.10      & 0.10      && 0.15      & 0.15 \\
         \bottomrule
     \end{tabular}
 \end{center}
