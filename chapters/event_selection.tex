@@ -428,25 +428,91 @@ This unfolding procedure was tested in several ways using the two signal MC
 samples discussed in \SEC~\ref{ssec:monte_carlo}. First, the reconstructed
 \phistar distributions from the \MADGRAPH and \POWHEG sample were unfolded
 using their own generator level quantities and compared to their generator
-level \phistar distributions. The results of this test are shown
-\FIG~\ref{fig:unfolded_vs_true_in_mc}.
+level \phistar distributions.
+The result of this test for \MADGRAPH is shown
+in \FIG~\ref{fig:unfolding_madgraph_with_madgraph}, while the result for
+\POWHEG is shown in \FIG~\ref{fig:unfolding_powheg_with_powheg}.
 
-\TODO{Figure 8 from the AN \label{fig:unfolded_vs_true_in_mc}}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_MM.pdf}
+        \caption{}
+        \label{fig:unfolding_madgraph_with_madgraph}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_PP.pdf}
+        \caption{}
+        \label{fig:unfolding_powheg_with_powheg}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution
+        and the true generated \phistar distribution in \Ztoee
+        events generated with \MADGRAPH (left) and \POWHEG (right) for events
+        passing our event selection. The unfolding was done with the same
+        \MADGRAPH (left) and \POWHEG (right) sample.
+    }
+    \label{fig:unfolded_vs_true_in_mc}
+\end{figure}
 
-Second, each MC signal sample was also divided into two independent halves.
-The reconstructed \phistar distribution in each half was unfolded using the
+Second, each MC signal sample was also divided into two independent halves. The
+reconstructed \phistar distribution in each half was unfolded using the
 generator level quantities from the other half. The two halves were then
-compared to each other. The results of this test are shown in
-\FIG~\ref{fig:half_vs_half_unfolding}.
+compared to each other. The result of this test for \MADGRAPH is shown in
+\FIG~\ref{fig:unfolding_madgraph_with_madgraph_halves}, while the result for
+\POWHEG is shown in \FIG~\ref{fig:unfolding_powheg_with_powheg_halves}.
 
-\TODO{Figure 9 from the AN \label{fig:half_vs_half_unfolding}}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_M1M2.pdf}
+        \caption{}
+        \label{fig:unfolding_madgraph_with_madgraph_halves}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_P1P2.pdf}
+        \caption{}
+        \label{fig:unfolding_powheg_with_powheg_halves}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution in two (circular and square
+        points) statistically independent samples of \Ztoee events generated
+        with \MADGRAPH (left) and \POWHEG (right) for events passing our event
+        selection. Each reconstructed \phistar distribution was unfolded using
+        the statistically independent sample produced by the same generator.
+    }
+    \label{fig:half_vs_half_unfolding}
+\end{figure}
 
-Third and finally, the reconstructed \phistar distribution in the \MADGRAPH
-MC was unfolded with the generator level quantities from the \POWHEG sample and
-vice versa. The results of this test are shown in
-\FIG~\ref{fig:cross_mc_unfolding}.
+Third and finally, the reconstructed \phistar distribution in the \MADGRAPH MC
+was unfolded with the generator level quantities from the \POWHEG sample and
+vice versa. The result of unfolding \POWHEG with \MADGRAPH is shown in
+\FIG~\ref{fig:unfolding_powheg_with_madgraph}, while the result of unfolding
+\MADGRAPH with \POWHEG is shown in
+\FIG~\ref{fig:unfolding_madgraph_with_powheg}.
 
-\TODO{Figure 10 from the AN \label{fig:cross_mc_unfolding}}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_MP.pdf}
+        \caption{}
+        \label{fig:unfolding_powheg_with_madgraph}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_PM.pdf}
+        \caption{}
+        \label{fig:unfolding_madgraph_with_powheg}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution in \Ztoee events generated
+        with \POWHEG (left) and \MADGRAPH (right) for events passing our event
+        selection. The unfolding was done with the \MADGRAPH (left) and \POWHEG
+        (right) sample.
+    }
+    \label{fig:cross_mc_unfolding}
+\end{figure}
 
 In most cases the results are consistent within the assigned statistical error
 bars. However, in the case of the \MADGRAPH sample unfolded with \POWHEG, there
@@ -467,27 +533,65 @@ provided by \RooUnfold where the uncertainties are based only on the diagonal
 elements. We tested the effects of this simplification on the uncertainties
 using two tests discussed below.
 
-In the first test, each bin in the \phistar distribution was regenerated from a
-Gaussian with the value of the original bin as the mean and the value of the
-statistical uncertainty on the bin from the original distribution as the
-standard deviation. Using this process, \num{500} \phistar distributions were
-generated, giving us \num{501} total distributions as the original distribution
-was also used. These distributions were then unfolded using the full \MADGRAPH
-sample. The results are shown in \FIG~\ref{fig:toy_unfolding_results} where the
-\TODO{triangle points} are the median value of the 501 distributions, and the
-error bars show the extent of the value in the central 68.2\% of the
-distributions. These are compared to the errors provided by \RooUnfold. Both
-methods lead to identical results.
+In the first test, each bin in the \POWHEG \phistar distribution was
+regenerated from a Gaussian with the value of the original bin as the mean and
+the value of the statistical uncertainty on the bin from the original
+distribution as the standard deviation. Using this process, \num{500} \phistar
+distributions were generated, giving us \num{501} total distributions as the
+original distribution was also used. These distributions were then unfolded
+using the full \MADGRAPH sample. The results are shown in
+\FIG~\ref{fig:toy_unfolding_results} where the square points are the median
+value of the 501 distributions, and the error bars show the extent of the value
+in the central 68.2\% of the distributions. These are compared to the errors
+provided by \RooUnfold. Both methods lead to identical results.
 
-\TODO{Figure 11 from the AN \label{fig:toy_unfolding_results}}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\SideBySidePlotWidth]{figures/BinM_MP_ALL.pdf}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution for \Ztoee events generated
+        with \POWHEG. The unfolding was done with the \MADGRAPH sample. The
+        distribution shown with circular points shows the results using the
+        uncertainty propagation included in the \RooUnfold package. The
+        distribution shown with square points is obtained by unfolding 500 toy
+        MC variations of the reconstructed \phistar distribution.
+    }
+    \label{fig:toy_unfolding_results}
+\end{figure}
 
 In a second test, \num{5000} and \num{50000} randomly selected events from the
 \POWHEG sample were used instead of the data, and the same 501 distributions
-were constructed in the same manner as above. The results of this test are
-shown in \FIG~\ref{fig:toy_powheg_unfolding_results}. As expected, when fewer
-events are used the uncertainties reported by \RooUnfold are larger.
+were constructed in the same manner as above. The results of the test with
+\num{5000} events is shown in \FIG~\ref{fig:unfolding_5000}, while the result
+of the test with \num{50000} events is shown in \FIG~\ref{fig:unfolding_50000}.
+As expected, when fewer events are used the uncertainties reported by
+\RooUnfold are larger.
 
-\TODO{Figure 12 from the AN \label{fig:toy_powheg_unfolding_results}}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_MP_5000.pdf}
+        \caption{}
+        \label{fig:unfolding_5000}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_MP_50000.pdf}
+        \caption{}
+        \label{fig:unfolding_50000}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution for \num{5000} (left) and
+        \num{50000} (right) \Ztoee events generated with \POWHEG. The unfolding
+        was done with the \MADGRAPH sample. The distribution shown with
+        circular points shows the results using the uncertainty propagation
+        included in the \RooUnfold package. The distribution shown with square
+        points is obtained by unfolding 500 toy MC variations of the
+        reconstructed \phistar distribution.
+    }
+    \label{fig:toy_powheg_unfolding_results}
+\end{figure}
 
 While \RooUnfold properly handles the statistical uncertainty due to the number
 of events in the data being unfolded, it does not account for statistical
@@ -509,15 +613,54 @@ other bins are fluctuated using a Gaussian with mean equal to the number of
 events in the original bin and standard deviation equal to the statistical
 uncertainty on the original bin. The reconstructed \phistar distribution from
 the full \MADGRAPH sample is then unfolded with each of the \num{501} bin
-migration matrices. \TODO{The results are shown in
-\FIG~\ref{fig:5000_propegation_unfolding}. The top left plot shows the
-uncertainties from \RooUnfold as compared to the uncertainties derived using
-the toy MC method. The lower left plot shows the extent of the \phistar bin
-values generated by the ensemble of tow MC bin migration matrices. The top
-right shows the pull of the bins in the top left plot. The bottom right plot
-shows the original bin migration matrix.}
+migration matrices. The results are shown in
+\FIG~\ref{fig:5000_propegation_unfolding}.
+Figure~\ref{fig:unfolding_madgraph_with_5000} shows the uncertainties from
+\RooUnfold as compared to the uncertainties derived using the toy MC method.
+Figure~\ref{fig:toy_mc_5000} shows the extent of the \phistar bin values
+generated by the ensemble of tow MC bin migration matrices.
+Figure~\ref{fig:pull_5000} shows the pull of the bins in
+\FIG~\ref{fig:unfolding_madgraph_with_5000}.
+Figure~\ref{fig:bin_migration_5000} shows the original bin migration matrix.
 
-\TODO{Figure 13 from the AN \label{fig:5000_propegation_unfolding}}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_PM_5000.pdf}
+        \caption{}
+        \label{fig:unfolding_madgraph_with_5000}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/Pull_5000.pdf}
+        \caption{}
+        \label{fig:pull_5000}
+    \end{subfigure}
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/ToyMC_PM_5000.pdf}
+        \caption{}
+        \label{fig:toy_mc_5000}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_P_5000.pdf}
+        \caption{}
+        \label{fig:bin_migration_5000}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution for \Ztoee events generated
+        with \MADGRAPH is shown in (a). The unfolding was done with \num{5000}
+        events from the \POWHEG sample. The distribution shown with circular
+        points shows the results using the uncertainty propagation included in
+        the \RooUnfold package. The distribution shown with square points is
+        obtained by unfolding separately using 500 toy MC variations of the bin
+        migration matrix. The pull of the bins in (a) are shown in (b). All
+        \num{500} unfolded toy MC variations and the initial nominal
+        distribution used to produce (a) are shown in (c). The bin migration
+        matrix based on \num{5000} events from the \POWHEG sample, used to
+        produce (a) is shown in (d).
+    }
+\label{fig:5000_propegation_unfolding}
+\end{figure}
 
 At large \phistar values the uncertainty calculated with the toy MC method goes
 to \num{0}. This is because there are no off-diagonal bins in this region of
@@ -527,8 +670,83 @@ generator level events to construct the matrix, as can be seen in
 \FIGS~\ref{fig:50000_propegation_unfolding} and
 \ref{fig:full_propegation_unfolding}.
 
-\TODO{Figure 14 from the AN \label{fig:50000_propegation_unfolding}}
-\TODO{Figure 15 from the AN \label{fig:full_propegation_unfolding}}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_PM_50000.pdf}
+        \caption{}
+        \label{fig:unfolding_madgraph_with_50000}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/Pull_50000.pdf}
+        \caption{}
+        \label{fig:pull_50000}
+    \end{subfigure}
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/ToyMC_PM_50000.pdf}
+        \caption{}
+        \label{fig:toy_mc_50000}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_P_50000.pdf}
+        \caption{}
+        \label{fig:bin_migration_50000}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution for \Ztoee events generated
+        with \MADGRAPH is shown in (a). The unfolding was done with \num{50000}
+        events from the \POWHEG sample. The distribution shown with circular
+        points shows the results using the uncertainty propagation included in
+        the \RooUnfold package. The distribution shown with square points is
+        obtained by unfolding separately using 500 toy MC variations of the bin
+        migration matrix. The pull of the bins in (a) are shown in (b). All
+        \num{500} unfolded toy MC variations and the initial nominal
+        distribution used to produce (a) are shown in (c). The bin migration
+        matrix based on \num{50000} events from the \POWHEG sample, used to
+        produce (a) is shown in (d).
+    }
+\label{fig:50000_propegation_unfolding}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_PM_ALL.pdf}
+        \caption{}
+        \label{fig:unfolding_madgraph_with_all}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/Pull_ALL.pdf}
+        \caption{}
+        \label{fig:pull_all}
+    \end{subfigure}
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/ToyMC_PM_ALL.pdf}
+        \caption{}
+        \label{fig:toy_mc_all}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_P_ALL.pdf}
+        \caption{}
+        \label{fig:bin_migration_all}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution for \Ztoee events generated
+        with \MADGRAPH is shown in (a). The unfolding was done with all events
+        from the \POWHEG sample. The distribution shown with circular points
+        shows the results using the uncertainty propagation included in the
+        \RooUnfold package. The distribution shown with square points is
+        obtained by unfolding separately using 500 toy MC variations of the bin
+        migration matrix. The pull of the bins in (a) are shown in (b). All
+        \num{500} unfolded toy MC variations and the initial nominal
+        distribution used to produce (a) are shown in (c). The bin migration
+        matrix based on all events from the \POWHEG sample, used to produce (a)
+        is shown in (d).
+    }
+\label{fig:full_propegation_unfolding}
+\end{figure}
 
 The total statistical uncertainty due to the bin migration unfolding is the
 sum of the uncertainty reported by \RooUnfold due to the number of events in
@@ -554,16 +772,38 @@ a test of the systematic uncertainty. The \phistar distribution at the
 generator level in the \MADGRAPH sample is inserted into a histogram with bin
 widths of $\phistar = 0.011$. Each bin is weighted with a weight equal to the
 inverse number of events in the bin so that the distribution is flattened. The
-full \POWHEG sample is then unfolded using this \MADGRAPH distribution.
-\TODO{The response matrix from this modified \MADGRAPH distribution is show in
-  \FIG~\ref{fig:flat_unfolding}. The ratio of the unfolded \POWHEG distribution
-over the generated distribution is shown as well.} This ratio uses only the
-uncertainties provided by \RooUnfold and so underestimates the total
+full \POWHEG sample is then unfolded using this \MADGRAPH distribution. The
+response matrix from this modified \MADGRAPH distribution is show in
+\FIG~\ref{fig:unfolding_flat_bin_migration}. The ratio of the unfolded \POWHEG
+distribution over the generated distribution is shown in
+\FIG~\ref{fig:unfolding_flat_powheg_unfolded_with_madgraph}. This ratio uses
+only the uncertainties provided by \RooUnfold and so underestimates the total
 uncertainty. No deviation from \num{1} is seen, and so no systematic
 uncertainty is assigned for the shape of the generator level \phistar
 distribution.
 
-\TODO{Figure 16 from the AN \label{fig:flat_unfolding}}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_MP_flat.pdf}
+        \caption{}
+        \label{fig:unfolding_flat_powheg_unfolded_with_madgraph}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_M_flat.pdf}
+        \caption{}
+        \label{fig:unfolding_flat_bin_migration}
+    \end{subfigure}
+    \caption{
+        The ratio between the unfolded reconstructed \phistar distribution and
+        the true generated \phistar distribution for \Ztoee events generated
+        with \POWHEG is shown on the left. The unfolding was done with the
+        \MADGRAPH sample in which all events were reweighed inversely
+        proportional to generated \phistar distribution. The bin migration
+        matrix for the reweighed \MADGRAPH sample is shown on the right.
+    }
+    \label{fig:flat_unfolding}
+\end{figure}
 
 Differences in the resolution can arises due to differences in how the
 detector is simulated and how the detector responds in reality. Various
@@ -572,6 +812,7 @@ data; these are discussed in \SEC~\ref{sec:scale_factors}. The uncertainties
 from these corrections are discussed in \CHP~\ref{chapter:uncertainties}.
 
 \subsection{Efficiency Correction}
+\TODO{Update this section to reflect AN:7.2}
 
 Not every event which should be detected by CMS is. Some events are lost at
 each stage of event selection and reconstruction. These lost events must be
@@ -595,5 +836,3 @@ efficiencies of the events in the bin.
 The main advantage of using this average efficiency instead of correcting each
 event's efficiency individually is that any correlations between the various
 efficiencies are automatically taken into account in this process.
-
-\TODO{Add plots from AN when they're finalized.}
