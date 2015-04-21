@@ -405,16 +405,35 @@ Appendix}.
 The finite resolution of CMS's angular position measurements leads to a finite
 resolution of the reconstructed \phistar distribution. Events which at the
 generator level would have ended up in a certain \phistar bin may instead
-migrate to one of the neighboring bins.
+migrate to one of the neighboring bins. The \phistar reconstruction resolution,
+defined as $\left( \phistarGen - \phistarReco \right) / \phistarGen$, is shown
+in \FIG~\ref{fig:phistar_resolution}.
 
 MC events are used to create a response matrix that describes how generator
-level events are reconstructed in CMS. Through unfolding this matrix is
+level events are reconstructed in CMS. This matrix is shown in
+\FIG~\ref{fig:bin_migration_matrix}. The amount of bin migration, as measured
+by the off-diagonal elements, is 5.5\%. Through unfolding this matrix is
 inverted, allowing us to transform the data to remove the undesired bin
-migration. This matrix is shown in \FIG~\ref{fig:bin_migration_matrix}. The
-amount of bin migration, as measured by the off-diagonal elements, is 5.5\%.
+migration.
 
-\TODO{Bin migration plot that is the input to \RooUnfold
-\label{fig:bin_migration_matrix}.}
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/DPhistar_M.pdf}
+        \caption{}
+        \label{fig:phistar_resolution}
+    \end{subfigure}% Make side by side
+    \begin{subfigure}[b]{\SideBySidePlotWidth}
+        \includegraphics[width=\textwidth]{figures/BinM_M.pdf}
+        \caption{}
+        \label{fig:bin_migration_matrix}
+    \end{subfigure}
+    \caption{
+        The \phistar reconstruction resolution (left) and bin migration (right)
+        in \Ztoee events generated with \MADGRAPH passing our event selection.
+    }
+    \label{fig:unfolded_vs_true_in_mc}
+\end{figure}
 
 \RooUnfold is used to perform the unfolding \cite{adye_2011}. It implements
 Bayes' theorem as described in \cite{dagostini_1995}, and iteratively applies
@@ -812,7 +831,6 @@ data; these are discussed in \SEC~\ref{sec:scale_factors}. The uncertainties
 from these corrections are discussed in \CHP~\ref{chapter:uncertainties}.
 
 \subsection{Efficiency Correction}
-\TODO{Update this section to reflect AN:7.2}
 
 Not every event which should be detected by CMS is. Some events are lost at
 each stage of event selection and reconstruction. These lost events must be
@@ -831,8 +849,19 @@ reconstructed level quantities in the MC. The efficiency in each \phistar bin
 is calculated by counting the number of events in the ``final selection set''
 in a bin, and dividing by the number of events in the same bin in the
 ``acceptance set''. This gives us an average efficiency composed of all the
-efficiencies of the events in the bin.
+efficiencies of the events in the bin. The main advantage of using this average
+efficiency instead of correcting each event's efficiency individually is that
+any correlations between the various efficiencies are automatically taken into
+account in this process. The average efficiencies in each bin as calculated with
+both \MADGRAPH and \POWHEG are shown in \FIG~\ref{fig:average_efficiencies}.
 
-The main advantage of using this average efficiency instead of correcting each
-event's efficiency individually is that any correlations between the various
-efficiencies are automatically taken into account in this process.
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/EventEff.pdf}
+    \caption{
+        The ratio of \Ztoee events generated with \MADGRAPH (circles) and
+        \POWHEG (squares) which pass our event selection over the number of
+        events in our fiducial region as a function of the generated \phistar.
+    }
+    \label{fig:average_efficiencies}
+\end{figure}
