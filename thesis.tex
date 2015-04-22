@@ -42,29 +42,31 @@
 \begin{document}
 \bibliographystyle{hunsrt} % style of bibliography
 
-% Title and other sections that come before the body of the document
+% Title, copyright, etc.
 \include{chapters/title}
 
-% Now lets include the body of the document...
+% Introduction
 \include{chapters/intro}
 
-%Base Chapters
+% Theory
 \include{chapters/theory}
-\include{chapters/experiment}
 
-%Software Chapters
+% The experiment, and how we use it
+\include{chapters/experiment}
 \include{chapters/reconstruction}
 
-%Analysis Chapters
+% The data and simulation we use
 \include{chapters/data_and_mc}
+
+% Analysis
 \include{chapters/event_selection}
 \include{chapters/analysis}
 \include{chapters/results}
 
-%Conclusion
+% Conclusion
 \include{chapters/conclusion}
 
-% Bibliography, uncomment for final version
+% Bibliography
 \bibliography{thesis}
 
 % Appendices
@@ -72,5 +74,5 @@
 \include{chapters/app_qcd_fits}
 \include{chapters/app_glossary}
 
-% End the Document
+% End of the Document
 \end{document}
