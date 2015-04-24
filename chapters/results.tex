@@ -14,6 +14,28 @@ generally around 0.3\% for both the normalized and absolute cross section
 measurement, but reaches 1.2\% in the highest \phistar bins. It is one of the
 dominant uncertainties for the normalized cross section measurements.
 
+\subsection{Statistical Uncertainties from the Monte Carlo Samples}
+\label{ssec:mc_stat_uncertainty}
+
+The \MADGRAPH signal MC sample has fewer events which pass our final selection
+than there are data events. As this sample is used to unfold the data, its
+statistical uncertainty affects the final measurement.
+
+The affect of the statistical uncertainty on the bin migration matrix is
+propagated through the use of toy MC, detailed in
+\SEC~\ref{ssec:unfolding_statistical_uncertainties}. The uncertainty found with
+this method is about 0.1 to 0.2\% for both the normalized and absolute cross
+section measurement.
+
+In addition to affecting the unfolding, the low number of events in the MC
+affects the efficiency correction discussed in \SEC~\ref{ssec:eff_correction}
+and shown in \FIG~\ref{fig:average_efficiencies}. These uncertainties are about
+0.3\%, but rise to 1.4\% in the highest \phistar bins.
+
+These two sources of uncertainty are measured separately. The finally
+uncertainty due to the statistical uncertainties from the \MADGRAPH signal MC
+sample is the sum in quadrature of both sources.
+
 \subsection{Electron Angular Position Uncertainty}
 
 Since \phistar depends on the angles between the two electrons, it is sensitive
