@@ -127,6 +127,31 @@ that bin.} The uncertainty due to the \pt scale for the absolute cross section
 measurement is 0.08 to 0.17\%, while the uncertainty for the normalized cross
 section measure is 0 to 0.10\%.
 
+\subsection{Trigger, Reconstruction, and Identification Scale Factors Uncertainty}
+\label{scale_factor_uncertainty}
+
+Differences between the MC and data are corrected for using scale factors.
+Three different sets of scale factors are used to reweight the MC samples:
+trigger scale factors (discussed in \SEC~\ref{ssec:sf_trigger}), reconstruction
+scale factors (discussed in \SEC~\ref{ssec:sf_reconstruction}), and
+identification scale factors (discussed in \SEC~\ref{ssec:sf_id}).
+
+In all three cases, the uncertainties on the scale factors are propagated
+through to the final measurement using 500 toy MC variations. In this method,
+every toy is constructed by drawing each scale factor from a Gaussian
+probability distribution with its mean set to nominal value of the scale factor
+and its width set to the quadrature sum of the uncertainties on the scale
+factor. Each toy is then used to weight the MC samples used in this analysis,
+and the full analysis is performed with that newly weighted sample. The
+uncertainty on the final result due to one of the three types of scale factors
+is taken to be defined by the central 68.2\% of results from the toys.
+
+This procedure for propagating the uncertainty is performed independently for
+each of the three types of scale factors. The total uncertainty due to the
+scale factors is the quadrature sum of the three results. The uncertainty is
+small, $\le 0.02\%$, for both the absolute and normalized cross section
+measurements.
+
 \subsection{Electron Angular Position Uncertainty}
 
 Since \phistar depends on the angles between the two electrons, it is sensitive
