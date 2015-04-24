@@ -55,6 +55,23 @@ negligible compared to the background subtraction uncertainty (discussed in
 luminosity is the primary motivation behind making a normalized cross section
 measurement.
 
+\subsection{Pileup Uncertainty}
+\label{ssec:pileup_uncertainty}
+
+As discussed in \SEC~\ref{ssec:monte_carlo}, the high beam intensity at the LHC
+leads to multiple proton-proton interactions at each bunch crossing. This is
+modeled in MC by overlaying multiple simulated minimum-bias events on top of
+each simulated event. The distribution of pileup in MC is reweighted to match
+the data distribution based on the calculated instantaneous luminosity and the
+inelastic proton-proton cross section. The uncertainty due to this reweighting
+process is calculated by varying the inelastic cross section by plus and minus
+5\%, recalculating the data distribution of pileup, and reweighting to the MC
+samples to match this new distribution. The full analysis is then performed
+with these MC samples and the differences between the \phistar distributions is
+taken as a systematic uncertainty. The pileup uncertainty for the absolute
+cross section measurement is around 0.2 to 0.5\%, while the uncertainty for the
+normalized cross section measurement is between 0 and 0.7\%.
+
 \subsection{Electron Angular Position Uncertainty}
 
 Since \phistar depends on the angles between the two electrons, it is sensitive
