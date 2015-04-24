@@ -6,6 +6,7 @@ MAIN_TEX=$(MAIN).tex
 HELPER_FILES=makefile thesis.bib my_definitions.tex mnthesis.cls variables.tex
 CHAPTERS:=$(wildcard ./chapters/*.tex)
 FIGURES := $(wildcard figures/*.pdf)
+TABLES := $(wildcard tables/*.tex)
 QCD_FIGURES := $(wildcard figures/qcd_fits/*.pdf)
 
 all: $(MAIN_PDF)
@@ -14,7 +15,7 @@ all: $(MAIN_PDF)
 .refresh:
 	touch .refresh
 
-$(MAIN_PDF): $(MAIN_TEX) $(HELPER_FILES) $(CHAPTERS) $(FIGURES) $(QCD_FIGURES) .refresh
+$(MAIN_PDF): $(MAIN_TEX) $(HELPER_FILES) $(CHAPTERS) $(FIGURES) $(QCD_FIGURES) $(TABLES) .refresh
 	$(LATEXMK) -pdf $(MAIN_TEX) 
 
 force:
