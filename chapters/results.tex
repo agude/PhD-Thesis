@@ -51,3 +51,33 @@ uncertainties with the \phistar distribution and so no systematic uncertainty
 is assigned for the angular position.
 
 \TODO{Plot of \phistar vs \phistarSC?}
+
+\subsection{Uncertainty from Four Vector Corrections}
+
+The \mee distribution in the \MADGRAPH signal MC sample does not precisely
+match the distribution in data, as seen in \FIG~\ref{fig:z_mass}. This
+discrepancy remains even after applying the various energy and momentum
+corrections to the electrons. In order to determine what effect this has on the
+final measurement, the \MADGRAPH signal MC sample is reweighted to remove this
+difference. The ratio between the nominal \phistar value and the value derived
+after this reweighting is shown in \FIG~\ref{fig:z_mass_reweighted}. The
+circular points show the ratio of the reconstructed \phistar distributions,
+while the square points show the ratio of the generated \phistar distributions.
+The errors are binomial. Most of the points are consistent with \num{1}, and so
+systematic uncertainty is assigned for this disagreement.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/ZMass_reweighed.pdf}
+    \caption[
+        The ratio of \phistar in \MADGRAPH before and after reweighting to
+        remove the differnce in the \mee distribution between MC and data.
+    ]{
+        The ratio of \phistar in \MADGRAPH before and after reweighting to
+        remove the difference in the \mee distribution between MC and data seen
+        in \FIG~\ref{fig:z_mass}. The circular points are this ratio in the
+        reconstructed quantity, while the square points are this ratio in the
+        generated quantity. The uncertainties are binomial.
+    }
+    \label{fig:z_mass_reweighted}
+\end{figure}
