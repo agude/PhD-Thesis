@@ -152,6 +152,21 @@ scale factors is the quadrature sum of the three results. The uncertainty is
 small, $\le 0.02\%$, for both the absolute and normalized cross section
 measurements.
 
+\subsection{Final State Radiation Uncertainties}
+
+FSR, where an electron radiates a photon, is discussed in
+\SEC~\ref{sec:electron_dressing}. These photons can affect the reconstruction
+of the \Z, but this is taken into account during the unfolding as discussed in
+\SEC~\ref{sec:unfolding}. Hence, uncertainties in the modeling of FSR affect
+the unfolding and the final measurement.
+
+The uncertainty is calculated using the \FSRWeightProducer, which augments the
+\PYTHIA QED calculation with exact $\BigO{\alpha}$ and $\alpha(\pt^{2})$
+couplings and reweights the MC sample as if it had been produced with these
+calculations from the start. The effect of this reweighting on the final
+\phistar distribution is $\le 0.8\%$ for the absolute cross section measurement
+and $\le 0.3\%$ for the normalized cross section measurement.
+
 \subsection{Electron Angular Position Uncertainty}
 
 Since \phistar depends on the angles between the two electrons, it is sensitive
