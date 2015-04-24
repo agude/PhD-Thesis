@@ -244,3 +244,87 @@ systematic uncertainty is assigned for this disagreement.
     }
     \label{fig:z_mass_reweighted}
 \end{figure}
+
+\section{Uncertainty Tables}
+
+Tables summarizing the values of the various uncertainties as well as the total
+uncertainty in each bin of \phistar for both the data and for the \MADGRAPH
+signal MC sample are given below. The data tables,
+\TABS~\ref{tab:sys_uncert_abs} and \ref{tab:sys_uncert_norm}, contain the
+following columns:
+
+\begin{description}[noitemsep]
+
+    \item[\phistar Range:] \hfill \\
+        The range of \phistar values included in the bin.
+
+    \item[Total Uncertainty (Total):] \hfill \\
+        The quadrature sum of the all of the uncertainties.
+
+    \item[Statistical Uncertainty (Stat.):] \hfill \\
+        The uncertainty due to the limited number of events in the data, as
+        discussed in \SEC~\ref{ssec:stat_uncertainty}.
+
+    \item[Total Systematic Uncertainty (Total Syst.):] \hfill \\
+        The quadrature sum of all of the systematic uncertainties including,
+        for the absolute distribution, the luminosity uncertainty of
+        \LumiUncertainty.
+
+    \item[Monte Carlo Statistical Uncertainty (MC Stat.):] \hfill \\
+        The uncertainty due to the limited number of events in the MC samples,
+        as discussed in \SEC~\ref{ssec:mc_stat_uncertainty}.
+
+    \item[Pileup Uncertainty (Pileup):] \hfill \\
+        The uncertainty due to the pileup reweighting, as discussed in
+        \SEC~\ref{ssec:pileup_uncertainty}.
+
+    \item[Background Subtraction Uncertainty (Bkg.):] \hfill \\
+        The uncertainty due to background subtraction, as discussed in
+        \SEC~\ref{ssec:background_subtraction_uncertainty}.
+
+    \item[\pt Scale Uncertainty (\pt Scale):] \hfill \\
+        The uncertainty due to \pt scale, as discussed in
+        \SEC~\ref{ssec:pt_scale_uncertainty}.
+
+    \item[Scale Factor Uncertainty (SF):] \hfill \\
+        The uncertainty due to the scale factors, as discussed in
+        \SEC~\ref{scale_factor_uncertainty}.
+
+\end{description}
+
+The MC tables, \TABS~\ref{tab:madgraph_uncert_abs} and
+\ref{tab:madgraph_uncert_norm}, have the following columns:
+
+\begin{description}[noitemsep]
+
+    \item[\phistar Range:] \hfill \\
+        The range of \phistar values included in the bin.
+
+    \item[Total Uncertainty (Total):] \hfill \\
+        The quadrature sum of the all of the uncertainties.
+
+    \item[Statistical Uncertainty (Stat.):] \hfill \\
+        The uncertainty due to the limited number of events in the MC sample.
+
+    %\item[Parton Density Function (PDF):] \hfill \\
+    %    The uncertainty due to choice of PDF used to generate the MC, as
+    %    discussed in \SEC~\ref{}. This
+    %    uncertainty is only used for \POWHEG.
+
+    \item[Theoretical Cross Section Uncertainty (Cross Section):] \hfill \\
+        The uncertainty in the theoretical cross section of the MC, as
+        discussed in \SEC~\ref{}.
+
+    \item[Final State Radiation Uncertainty (FSR):] \hfill \\
+        The uncertainty due to the modeling of FSR, as discussed in
+        \SEC~\ref{}.
+
+\end{description}
+
+% Absolute
+\input{tables/data_uncertainty_absolute.tex}
+\input{tables/madgraph_uncertainty_absolute.tex}
+
+% Normalized
+\input{tables/data_uncertainty_normalized.tex}
+\input{tables/madgraph_uncertainty_normalized.tex}
