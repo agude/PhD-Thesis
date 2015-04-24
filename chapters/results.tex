@@ -72,6 +72,42 @@ taken as a systematic uncertainty. The pileup uncertainty for the absolute
 cross section measurement is around 0.2 to 0.5\%, while the uncertainty for the
 normalized cross section measurement is between 0 and 0.7\%.
 
+\subsection{Background Subtraction Uncertainty}
+\label{ssec:background_subtraction_uncertainty}
+
+The background subtraction is discussed in \SEC~\ref{sec:background}. There are
+three categories of backgrounds, and the uncertainty in each category is
+determined with a different method. The uncertainties for all three categories
+are added in quadrature.
+
+The first category consists of the various backgrounds with two independent
+decay chains: $\ttbar$, $\W\W$, $\DYtotautau$, $t\W$, and $\tbar\W$. The
+contributions from these backgrounds are estimated by using an \emu control
+sample as discussed in \SEC~\ref{ssec:emu_sample}. The uncertainty from the
+scale factors derived using this method are propagated through to the final
+result using 500 toy MC variations. For each variation, the scale factors are
+randomly drawn from a Gaussian distribution with mean equal to the nominal
+value of that scale factor and width equal to the uncertainty on the scale
+factor. Each toy is then used to weight the background samples, the subtraction
+is performed, and the full analysis is performed with the newly subtracted data
+sample. The uncertainty due to the subtraction of this category of background
+for each bin in \phistar is defined by the spread of the central 68.2\% values
+obtained by this method.
+
+The second category consists of the backgrounds with a real \Z boson: $\Z\Z$
+and $\W\Z$. For these samples, the uncertainty is calculated by taking a
+correlated 20\% uncertainty on the theoretical cross section.
+
+The third and final category consists of the \QCDjets and \wjets
+backgrounds. The method of estimating this background is discussed in
+\SEC~\ref{ssec:qcd_background}. Instead of using the uncertainties from the
+fit, which would not account for any systematics in the method used, a
+conservative 100\% uncertainty is used.
+
+The uncertainty due to the background subtraction for both the absolute and
+normalized cross section measurements ranges from about 0.03 to 0.59\%, with
+the higher values in the highest \phistar bins.
+
 \subsection{Electron Angular Position Uncertainty}
 
 Since \phistar depends on the angles between the two electrons, it is sensitive
