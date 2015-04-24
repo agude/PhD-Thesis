@@ -224,6 +224,7 @@ show the lepton \pt plots, where \MADGRAPH is much better?}
 \end{figure}
 
 \section{Background Estimation}
+\label{sec:background}
 
 The distribution of background events is estimated using the MC samples
 discussed in \SEC~\ref{ssec:monte_carlo}, with the exception of the \QCDjets
@@ -286,6 +287,7 @@ fraction of events from each of the considered backgrounds is listed in
 %\end{figure}
 
 \subsection{\texorpdfstring{\emu}{Electron--Muon} Control Sample}
+\label{ssec:emu_sample}
 
 Many of the backgrounds---specifically $\ttbar$, $\W\W$, $\DYtotautau$, and
 $\ttbar$---produce leptons via independent decay chains. Therefore, the flavor
@@ -335,12 +337,12 @@ samples before and after this scale factor is applied is shown in
     \label{fig:emu_after_correction}
 \end{figure}
 
-\TODO{Does this go in the uncertainty section? "This method could not be used
-    to calibrate the $\Z\Z$ and $\Z\W$ background MC samples as they contain
-    actual \Z bosons. Instead a 20\% uncertainty is taken on their theoretical
-    cross-section."}
+This method could not be used to calibrate the $\Z\Z$ and $\Z\W$ background MC
+samples as they contain actual \Z bosons. Instead a 20\% uncertainty is taken
+on their theoretical cross-section.
 
 \subsection{QCD Background Estimation}
+\label{ssec:qcd_background}
 
 The centrally produced \QCDjets and \wjets MC samples do not have enough events
 to make accurate estimations of their respective background in this analysis so
@@ -883,6 +885,7 @@ data; these are discussed in \SEC~\ref{sec:scale_factors}. The uncertainties
 from these corrections are discussed in \SEC~\ref{sec:uncertainties}.
 
 \subsection{Efficiency Correction}
+\label{ssec:eff_correction}
 
 Not every event which should be detected by CMS is. Some events are lost at
 each stage of event selection and reconstruction. These lost events must be
