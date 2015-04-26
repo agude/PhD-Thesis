@@ -388,20 +388,20 @@ shown in \FIGS~\ref{fig:hcal_iso} and \ref{fig:ecal_iso}, respectively.
 A different isolation variable is defined for selection of events in this
 analysis that is more expensive to compute but takes advantage of the tracker
 as well as ECAL and HCAL. This isolation uses a
-\particleflow\cite{particle_flow_2010} technique which is a method of
-reconstructing jets that uses information for every subdetector and tries to
-reconstruct the individual particles in a jet by matching them to their
-responses in the various subdetectors. To keep the algorithm simple,
-\particleflow categorizes every particle into one of five types: photons,
+``particle flow'' \cite{particle_flow_2009}\cite{particle_flow_2010} technique which
+is a method of reconstructing jets that uses information for every subdetector
+and tries to reconstruct the individual particles in a jet by matching them to
+their responses in the various subdetectors. To keep the algorithm simple,
+particle flow categorizes every particle into one of five types: photons,
 electrons, muons, charged hadrons, and neutral hadrons. A photon is a particle
 with energy only deposited in ECAL. An electron is a particle with an ECAL
 energy deposit and a track. A muon is a track in the central tracker matched to
 a track in the muon system. A charged hadron is any energy cluster in HCAL with
-a possible matching ECAL cluster and track. A neutral hadron is any energy cluster in
-HCAL with a possible matching ECAL cluster without a matching track. These particle flow
-jets are used to calculate an energy density due to pileup, $\rho$, in the
-detector which is used to remove the pileup contribution from the isolation
-sum. The \particleflow isolation, $\PFISO$, is given by:
+a possible matching ECAL cluster and track. A neutral hadron is any energy
+cluster in HCAL with a possible matching ECAL cluster without a matching track.
+These particle flow jets are used to calculate an energy density due to pileup,
+$\rho$, in the detector which is used to remove the pileup contribution from
+the isolation sum. The particle flow isolation, $\PFISO$, is given by:
 
 \begin{equation}
     \PFISO = \DeltaRSum \frac{\left(\ptTrack + \EECAL + \EHCAL\right) - \ptElectron
@@ -412,7 +412,7 @@ sum. The \particleflow isolation, $\PFISO$, is given by:
 is the \pt of all tracks in the tracker, \ptElectron, which is the \pt of the
 electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
 around the electron due to pileup calculated from particle flow. The
-\particleflow isolation is normalized by the \pt of the electron. A comparison
+particle flow isolation is normalized by the \pt of the electron. A comparison
 of the \PFISO distributions between all electrons and for signal electrons is
 shown in \FIG~\ref{fig:pf_iso}.
 
