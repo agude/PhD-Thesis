@@ -1,0 +1,29 @@
+\begin{table}[h]
+    \centering
+    \spacerows{1.2}
+    \begin{center}
+        \begin{tabular}{@{}l l l r r@{}}
+            \toprule
+            Process                                & Requirements     & Generator   & $\sigma$ (pb) & Events $(\times 10^{6})$ \\
+            \midrule
+            \DYtoll                                & $\mll > 50 \GeV$ &  \MADGRAPH  & 3531.9 (NNLO) & 30.460 \\
+            \DYtoee                                & $\mll > 20 \GeV$ &  \POWHEG    & 1966.7        & 3.297  \\
+            \DYtotautau                            & $\mll > 20 \GeV$ &  \POWHEG    & 1966.7        & 3.297  \\
+            \ttbar                                 &                  &  \MADGRAPH  & 23.64         & 3.984  \\
+            $t \rightarrow \W+b \rightarrow X$     &                  &  \POWHEG    & 11.1          & 0.498  \\
+            $\tbar \rightarrow \W+b \rightarrow X$ &                  &  \POWHEG    & 11.1          & 0.493  \\
+            $\W\W$                                 &                  &  \PYTHIAsix & 54.84         & 10.000 \\
+            $\W\Z$                                 &                  &  \PYTHIAsix & 33.21         & 10.000 \\
+            $\Z\Z$                                 &                  &  \PYTHIAsix & 17.7          & 9.800  \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+    \caption[
+        Summary of MC samples.
+    ]{
+        Summary of the MC samples used in this analysis. The Drell-Yan MC samples
+        have mass requirements on the events while the other MC samples have none.
+        All cross sections are NLO unless otherwise stated.
+    }
+    \label{table:mc}
+\end{table}

@@ -37,29 +37,8 @@ objects---in January 2013, in order to make use of the most recent
 calibrations derived from the entire 2012 run. A summary of the datasets used
 is provided in \TAB~\ref{table:datasets}.
 
-\begin{table}[h]
-\centering
-\spacerows{1.2}
-\begin{center}
-    \begin{tabular}{@{}l l r@{}}
-    \toprule
-    Dataset Name                          & Run Dates                & Luminosity       \\
-    \midrule
-    /SingleElectron/Run2012A-22Jan2013-v1 & 2012-04-05 to 2012-05-08 & $876.225 \pbinv$ \\
-    /SingleElectron/Run2012B-22Jan2013-v1 & 2012-05-10 to 2012-06-18 & $4.412 \fbinv$   \\
-    /SingleElectron/Run2012C-22Jan2013-v1 & 2012-07-01 to 2012-09-27 & $7.055 \fbinv$   \\
-    /SingleElectron/Run2012D-22Jan2013-v1 & 2012-09-28 to 2012-12-06 & $7.369 \fbinv$   \\
-    \bottomrule
-    \end{tabular}
-\end{center}
-\caption[
-    Summary of datasets.
-]{
-    The name, run dates, and integrated luminosity of the datasets used in this
-    analysis
-}
-\label{table:datasets}
-\end{table}
+% table:datasets
+\input{tables/datasets.tex}
 
 Although there is a \DoubleElectron dataset which uses a trigger designed to
 find Z bosons, this analysis uses the \SingleElectron dataset selected with the
@@ -76,36 +55,8 @@ prescale a trigger means to apply a rate reduction by randomly throwing out a
 certain fraction of events in order to keep the total trigger rate manageable;
 as this trigger was unprescaled, no events were discarded in this manner.
 
-\begin{table}[h]
-\centering
-\spacerows{1.2}
-\begin{center}
-    \begin{tabular}{@{}l r r@{}}
-        \toprule
-        Value                      & EB     & EE     \\
-        \midrule
-        $|\eta| <$                 & 1.4791 & 2.65   \\
-        $\pt >$                    & 27     & 27     \\
-        $\sigmaietaieta <$         & 0.1    & 0.03   \\
-        $\HOverE <$                & 0.1    & 0.05   \\
-        $\ECALISO <$               & 0.15   & 0.1    \\
-        $\HCALISO <$               & 0.1    & 0.1    \\
-        Pixel Matching $\ge$       & 1      & 1      \\
-        $|\ooeoop| <$              & 0.05   & 0.05   \\
-        $|\detain| <$              & 0.007  & 0.007  \\
-        $|\dphiin| <$              & 0.06   & 0.03   \\
-        \bottomrule
-    \end{tabular}
-\end{center}
-\caption[
-    The selection requirements for the \SingleElectronTrigger trigger.
-]{
-    The selection requirements for the \SingleElectronTrigger trigger for
-    electrons which end up in the barrel region or the endcap region of ECAL.
-    The variables used are detailed in \SEC~\ref{sec:electron_variables}.
-}
-\label{table:wp80}
-\end{table}
+% table:wp80
+\input{tables/wp80.tex}
 
 The events from the \SingleElectron sample are further filtered for quality. A
 centrally-produced list of good luminosity segments is used to select only
@@ -148,35 +99,8 @@ and \POWHEG $\text{Drell-Yan} \to \ee$ MC samples \cite{was_2007}.}
 \TODO{Jeremy thinks I should add Hadronizers and tunes to this table, but
 they are very consistant, maybe I can just write them in the text?}
 
-\begin{table}[h]
-\centering
-\spacerows{1.2}
-\begin{center}
-    \begin{tabular}{@{}l l l r r@{}}
-    \toprule
-    Process                                & Requirements     & Generator   & $\sigma$ (pb) & Events $(\times 10^{6})$ \\
-    \midrule
-    \DYtoll                                & $\mll > 50 \GeV$ &  \MADGRAPH  & 3531.9 (NNLO) & 30.460 \\
-    \DYtoee                                & $\mll > 20 \GeV$ &  \POWHEG    & 1966.7        & 3.297  \\
-    \DYtotautau                            & $\mll > 20 \GeV$ &  \POWHEG    & 1966.7        & 3.297  \\
-    \ttbar                                 &                  &  \MADGRAPH  & 23.64         & 3.984  \\
-    $t \rightarrow \W+b \rightarrow X$     &                  &  \POWHEG    & 11.1          & 0.498  \\
-    $\tbar \rightarrow \W+b \rightarrow X$ &                  &  \POWHEG    & 11.1          & 0.493  \\
-    $\W\W$                                 &                  &  \PYTHIAsix & 54.84         & 10.000 \\
-    $\W\Z$                                 &                  &  \PYTHIAsix & 33.21         & 10.000 \\
-    $\Z\Z$                                 &                  &  \PYTHIAsix & 17.7          & 9.800  \\
-    \bottomrule
-    \end{tabular}
-\end{center}
-\caption[
-    Summary of MC samples.
-]{
-    Summary of the MC samples used in this analysis. The Drell-Yan MC samples
-    have mass requirements on the events while the other MC samples have none.
-    All cross sections are NLO unless otherwise stated.
-}
-\label{table:mc}
-\end{table}
+% table:mc
+\input{tables/mc.tex}
 
 After the generation step, MC is sent through a full detector simulation which
 uses \GEANTfour \cite{agostinelli2003} to mimic the detector response. This
@@ -273,7 +197,7 @@ The efficiency is computed in exactly the same way on the \MADGRAPH sample. The
 MC events are reweighted for pileup, reconstruction efficiency, and
 identification efficiency before the trigger efficiency is measured. The
 measured efficiencies for data and MC are listed in
-\TABS~\ref{trigger_eff_data} and \ref{trigger_eff_mc}, respectively.
+\TABS~\ref{table:trigger_eff_data} and \ref{table:trigger_eff_mc}, respectively.
 
 In the case of the trigger, because either electron could cause the event to
 pass, the scale factors can not be computed for each bin, but instead must be computed
@@ -299,61 +223,11 @@ electrons fired the trigger divided by the same quantity in MC. This equation
 assumes that the probability of one electron firing the trigger is uncorrelated
 with the probability of the other electron firing the trigger.
 
-% Data
-\begin{table}[h]
-\centering
-\spacerows{1.5}
-\begin{center}
-    \begin{tabular}{@{}l r r r r r@{}}
-    \toprule
-    $\eta$ & 30---40 \GeV & 40---50 \GeV & 50---70 \GeV & 70---250 \GeV  \\
-    \midrule
-    \numrange{-2.1}{-2} & $0.741^{+0.003}_{-0.003}$ & $0.773^{+0.003}_{-0.003}$ & $0.780^{+0.005}_{-0.005}$ & $0.79^{+0.01}_{-0.01}$  \\
-    \numrange{-2}{-1.556} & $0.734^{+0.001}_{-0.001}$ & $0.772^{+0.001}_{-0.001}$ & $0.786^{+0.002}_{-0.002}$ & $0.792^{+0.005}_{-0.005}$  \\
-    \numrange{-1.556}{-1.442} & $0.725^{+0.003}_{-0.003}$ & $0.821^{+0.002}_{-0.002}$ & $0.809^{+0.004}_{-0.004}$ & $0.848^{+0.010}_{-0.010}$  \\
-    \numrange{-1.442}{-0.8} & $0.8930^{+0.0005}_{-0.0005}$ & $0.9396^{+0.0003}_{-0.0004}$ & $0.9509^{+0.0006}_{-0.0006}$ & $0.966^{+0.001}_{-0.001}$  \\
-    \numrange{-0.8}{0} & $0.9213^{+0.0004}_{-0.0004}$ & $0.9528^{+0.0002}_{-0.0002}$ & $0.9601^{+0.0004}_{-0.0004}$ & $0.9692^{+0.0010}_{-0.0010}$  \\
-    \numrange{0}{0.8} & $0.9174^{+0.0004}_{-0.0004}$ & $0.9473^{+0.0003}_{-0.0003}$ & $0.9561^{+0.0004}_{-0.0004}$ & $0.963^{+0.001}_{-0.001}$  \\
-    \numrange{0.8}{1.442} & $0.8964^{+0.0005}_{-0.0005}$ & $0.9424^{+0.0003}_{-0.0003}$ & $0.9533^{+0.0006}_{-0.0006}$ & $0.966^{+0.001}_{-0.001}$  \\
-    \numrange{1.442}{1.556} & $0.714^{+0.003}_{-0.003}$ & $0.823^{+0.002}_{-0.002}$ & $0.827^{+0.004}_{-0.004}$ & $0.861^{+0.009}_{-0.010}$  \\
-    \numrange{1.556}{2} & $0.758^{+0.001}_{-0.001}$ & $0.800^{+0.001}_{-0.001}$ & $0.811^{+0.002}_{-0.002}$ & $0.823^{+0.005}_{-0.005}$  \\
-    \numrange{2}{2.1} & $0.764^{+0.003}_{-0.003}$ & $0.792^{+0.002}_{-0.002}$ & $0.797^{+0.005}_{-0.005}$ & $0.82^{+0.01}_{-0.01}$  \\
-    \bottomrule
-    \end{tabular}
-\end{center}
-\caption{
-    The electron trigger efficiency in data.
-}
-\label{trigger_eff_data}
-\end{table}
+% table:trigger_eff_data
+\input{tables/trigger_efficiency_data.tex}
 
-% MC
-\begin{table}[h]
-\centering
-\spacerows{1.5}
-\begin{center}
-    \begin{tabular}{@{}l r r r r r@{}}
-    \toprule
-    $\eta$ & 30---40 \GeV & 40---50 \GeV & 50---70 \GeV & 70---250 \GeV  \\
-    \midrule
-    \numrange{-2.1}{-2} & $0.734^{+0.004}_{-0.004}$ & $0.769^{+0.004}_{-0.004}$ & $0.771^{+0.008}_{-0.008}$ & $0.76^{+0.02}_{-0.02}$  \\
-    \numrange{-2}{-1.556} & $0.736^{+0.002}_{-0.002}$ & $0.768^{+0.002}_{-0.002}$ & $0.779^{+0.003}_{-0.003}$ & $0.789^{+0.008}_{-0.008}$  \\
-    \numrange{-1.556}{-1.442} & $0.791^{+0.004}_{-0.004}$ & $0.847^{+0.003}_{-0.003}$ & $0.850^{+0.006}_{-0.006}$ & $0.87^{+0.01}_{-0.02}$  \\
-    \numrange{-1.442}{-0.8} & $0.9395^{+0.0006}_{-0.0006}$ & $0.9612^{+0.0004}_{-0.0004}$ & $0.9690^{+0.0007}_{-0.0008}$ & $0.980^{+0.002}_{-0.002}$  \\
-    \numrange{-0.8}{0} & $0.9469^{+0.0005}_{-0.0005}$ & $0.9670^{+0.0003}_{-0.0003}$ & $0.9745^{+0.0005}_{-0.0005}$ & $0.982^{+0.001}_{-0.001}$  \\
-    \numrange{0}{0.8} & $0.9466^{+0.0005}_{-0.0005}$ & $0.9665^{+0.0003}_{-0.0003}$ & $0.9739^{+0.0005}_{-0.0006}$ & $0.982^{+0.001}_{-0.001}$  \\
-    \numrange{0.8}{1.442} & $0.9364^{+0.0007}_{-0.0007}$ & $0.9597^{+0.0004}_{-0.0004}$ & $0.9668^{+0.0008}_{-0.0008}$ & $0.979^{+0.002}_{-0.002}$  \\
-    \numrange{1.442}{1.556} & $0.779^{+0.004}_{-0.005}$ & $0.841^{+0.003}_{-0.003}$ & $0.842^{+0.006}_{-0.006}$ & $0.86^{+0.02}_{-0.02}$  \\
-    \numrange{1.556}{2} & $0.749^{+0.002}_{-0.002}$ & $0.786^{+0.002}_{-0.002}$ & $0.798^{+0.003}_{-0.003}$ & $0.810^{+0.008}_{-0.008}$  \\
-    \numrange{2}{2.1} & $0.737^{+0.004}_{-0.004}$ & $0.769^{+0.004}_{-0.004}$ & $0.779^{+0.007}_{-0.008}$ & $0.82^{+0.02}_{-0.02}$  \\
-    \bottomrule
-    \end{tabular}
-\end{center}
-\caption{
-    The electron trigger efficiency in \MADGRAPH MC.
-}
-\label{trigger_eff_mc}
-\end{table}
+% table:trigger_eff_mc
+\input{tables/trigger_efficiency_mc.tex}
 
 \subsection{Electron Reconstruction}
 \label{ssec:sf_reconstruction}
@@ -399,30 +273,8 @@ instead of a fit a simple counting of passing events was performed (as there is
 no background in MC). The resulting scale factors are given in
 \TAB~\ref{table:gsf_scale_factor}.
 
-\begin{table}[h]
-\centering
-\spacerows{1.5}
-\begin{center}
-    \begin{tabular}{@{}l r r r r@{}}
-    \toprule
-    $|\eta|$                 & 20--30 \GeV                        & 30--40 \GeV                        & 40--50 \GeV                        & $>$ 50 \GeV                        \\
-    \midrule
-    \numrange{0.0}{0.8}      & $\effstatsys{0.982}{0.003}{0.012}$ & $\effstatsys{0.988}{0.001}{0.008}$ & $\effstatsys{0.990}{0.001}{0.004}$ & $\effstatsys{0.990}{0.001}{0.004}$ \\
-    \numrange{0.8}{1.4442}   & $\effstatsys{0.993}{0.002}{0.012}$ & $\effstatsys{0.993}{0.001}{0.008}$ & $\effstatsys{0.993}{0.001}{0.004}$ & $\effstatsys{0.991}{0.001}{0.004}$ \\
-    \numrange{1.4442}{1.566} & $\effstatsys{1.016}{0.012}{0.020}$ & $\effstatsys{0.985}{0.004}{0.009}$ & $\effstatsys{0.987}{0.004}{0.004}$ & $\effstatsys{0.974}{0.009}{0.006}$ \\
-    \numrange{1.566}{2.0}    & $\effstatsys{0.988}{0.003}{0.012}$ & $\effstatsys{0.993}{0.002}{0.008}$ & $\effstatsys{0.992}{0.001}{0.004}$ & $\effstatsys{0.990}{0.003}{0.004}$ \\
-    \numrange{2.0}{2.5}      & $\effstatsys{1.002}{0.004}{0.012}$ & $\effstatsys{1.004}{0.002}{0.008}$ & $\effstatsys{1.005}{0.002}{0.004}$ & $\effstatsys{0.998}{0.004}{0.004}$ \\
-    \bottomrule
-    \end{tabular}
-\end{center}
-\caption[
-    Scale factors for GSF electron reconstruction.
-]{
-    Scale factors for GSF electron reconstruction. The upper uncertainty listed
-    is statistical, the lower is systematic.
-}
-\label{table:gsf_scale_factor}
-\end{table}
+% table:gsf_scale_factor
+\input{tables/gsf_scale_factors.tex}
 
 \subsection{Electron Identification}
 \label{ssec:sf_id}
@@ -459,46 +311,8 @@ used to derive an efficiency. A simple count of events is used for the MC
 efficiency instead of a fit. The resulting scale factors are given in
 \TABS~\ref{table:tight_scale_factor} and \ref{table:medium_scale_factor}.
 
-\begin{table}[h]
-\centering
-\spacerows{1.5}
-\begin{center}
-    \begin{tabular}{@{}l r r r r@{}}
-    \toprule
-    $|\eta|$                 & 20--30 \GeV               & 30--40 \GeV               & 40--50 \GeV               & 50--200 \GeV \\
-    \midrule
-    \numrange{0.0}{0.8}      & $0.960_{-0.003}^{+0.003}$ & $0.978_{-0.001}^{+0.001}$ & $0.981_{-0.001}^{+0.001}$ & $0.982_{-0.002}^{+0.002}$ \\
-    \numrange{0.8}{1.4442}   & $0.936_{-0.004}^{+0.004}$ & $0.958_{-0.002}^{+0.002}$ & $0.969_{-0.001}^{+0.001}$ & $0.969_{-0.002}^{+0.002}$ \\
-    \numrange{1.4442}{1.566} & $0.933_{-0.017}^{+0.015}$ & $0.907_{-0.008}^{+0.008}$ & $0.904_{-0.004}^{+0.004}$ & $0.926_{-0.011}^{+0.011}$ \\
-    \numrange{1.566}{2.0}    & $0.879_{-0.007}^{+0.007}$ & $0.909_{-0.003}^{+0.003}$ & $0.942_{-0.002}^{+0.002}$ & $0.957_{-0.004}^{+0.004}$ \\
-    \numrange{2.0}{2.5}      & $0.974_{-0.004}^{+0.004}$ & $0.987_{-0.004}^{+0.004}$ & $0.991_{-0.003}^{+0.003}$ & $0.999_{-0.005}^{+0.005}$ \\
-    \bottomrule
-    \end{tabular}
-\end{center}
-\caption{
-    Scale factors for \EGTIGHT electron ID.
-}
-\label{table:tight_scale_factor}
-\end{table}
+% table:tight_scale_factor
+\input{tables/tight_scale_factors.tex}
 
-\begin{table}[h]
-\centering
-\spacerows{1.5}
-\begin{center}
-    \begin{tabular}{@{}l r r r r@{}}
-    \toprule
-    $|\eta|$                 & 20--30 \GeV               & 30--40 \GeV               & 40--50 \GeV               & 50--200 \GeV \\
-    \midrule
-    \numrange{0.0}{0.8}      & $0.986_{-0.001}^{+0.002}$ & $1.002_{-0.001}^{+0.001}$ & $1.005_{-0.001}^{+0.001}$ & $1.004_{-0.001}^{+0.001}$ \\
-    \numrange{0.8}{1.4442}   & $0.959_{-0.003}^{+0.003}$ & $0.980_{-0.001}^{+0.001}$ & $0.988_{-0.001}^{+0.001}$ & $0.988_{-0.002}^{+0.002}$ \\
-    \numrange{1.4442}{1.566} & $0.967_{-0.013}^{+0.007}$ & $0.950_{-0.007}^{+0.006}$ & $0.958_{-0.005}^{+0.005}$ & $0.966_{-0.009}^{+0.009}$ \\
-    \numrange{1.566}{2.0}    & $0.941_{-0.005}^{+0.005}$ & $0.967_{-0.003}^{+0.003}$ & $0.992_{-0.002}^{+0.002}$ & $1.000_{-0.003}^{+0.003}$ \\
-    \numrange{2.0}{2.5}      & $1.020_{-0.003}^{+0.003}$ & $1.021_{-0.003}^{+0.003}$ & $1.019_{-0.002}^{+0.002}$ & $1.022_{-0.004}^{+0.004}$ \\
-    \bottomrule
-    \end{tabular}
-\end{center}
-\caption{
-    Scale factors for \EGMEDIUM electron ID.
-}
-\label{table:medium_scale_factor}
-\end{table}
+% table:medium_scale_factor
+\input{tables/medium_scale_factors.tex}
