@@ -158,20 +158,38 @@ scale factors is the sum in quadrature of the three results. This uncertainty
 is small, $\le 0.02\%$, for both the absolute and normalized cross section
 measurements.
 
-\subsection{PDF Uncertainties}
+\subsection{PDF and Cross Section Uncertainties}
+\label{ssec:pdf_uncertainties}
 
 As discussed in \TODO{\SEC~\ref{} Link to theory section}, the kinematics of
 the \Z boson depend on the internal composition and kinematics of the protons
 as they collide. The reconstructed \phistar distribution is therefore dependent
-on the PDFs used to generate the MC signal sample that is used for the
-unfolding procedure.
+on the PDFs used to generate the signal MC sample.
 
-\TODO{Didn't we change how we do this recently?}
+The uncertainty due to this choice of PDF is calculated following the
+recommendation of \PDFforLHC working group for the \POWHEG MC signal sample.
+\PDFWeightProducer is used to reweight the \POWHEG sample using the \CTten PDF
+set. A total of \num{26} different pairs of weights are used by the tool to
+fully account for the uncertainty inherent in the PDF set; these weights are
+provided by the \CTten collaboration specifically for this purpose. Each pair
+of weights consists of a variation of a PDF parameter, with one weight
+corresponding to adjusting the parameter up and the other weight to down. Each of
+these weights are used to reweight the \POWHEG sample, and the analysis is
+performed with this newly weighted sample.
+The uncertainty due to each weight is taken to be the difference with the
+nominal \phistar distribution. Two uncertainties are calculated: the
+one due to all of the upward parameter adjustments, and one to all the downward
+parameter adjustments added in quadrature. The largest of these for each
+\phistar bin is taken as the total uncertainty.
 
-\subsection{Theoretical Cross Section Uncertainties}
-\label{ssec:theoretical_cross_section_uncertainties}
-
-\TODO{Fill in this section}
+For the \MADGRAPH MC signal sample, which is an LO sample generated with a LO
+PDF, the uncertainties can not be calculated in this manner. Instead, the PDF
+includes an uncertainty on the cross section as calculated by \FEWZ which is
+used to scale the sample. This uncertainty is propagated through the analysis
+be reweighting the \MADGRAPH with this uncertainty both added and subtracted.
+The difference in the final \phistar distribution is taken as the uncertainty
+due to the \FEWZ cross section. This uncertainty is the dominant uncertainty
+from the \MADGRAPH sample.
 
 \subsection{Final State Radiation Uncertainties}
 \label{ssec:fsr_uncertainties}
@@ -319,8 +337,9 @@ following columns:
 
 \end{description}
 
-The MC tables, \TABS~\ref{tab:madgraph_uncert_abs} and
-\ref{tab:madgraph_uncert_norm}, have the following columns:
+The MC tables, \TABS~\ref{tab:madgraph_uncert_abs}, \ref{tab:powheg_uncer_abs},
+\ref{tab:madgraph_uncert_norm}, and \ref{tab:powheg_uncer_norm}, have the
+following columns:
 
 \begin{description}[noitemsep]
 
@@ -333,14 +352,13 @@ The MC tables, \TABS~\ref{tab:madgraph_uncert_abs} and
     \item[Statistical Uncertainty (Stat.):] \hfill \\
         The uncertainty due to the limited number of events in the MC sample.
 
-    %\item[Parton Density Function (PDF):] \hfill \\
-    %    The uncertainty due to choice of PDF used to generate the MC, as
-    %    discussed in \SEC~\ref{}. This
-    %    uncertainty is only used for \POWHEG.
+    \item[Parton Density Function (PDF):] \hfill \\
+        The uncertainty due to choice of PDF used to generate the \POWHEG MC,
+        as discussed in \SEC~\ref{ssec:pdf_uncertainties}.
 
     \item[Theoretical Cross Section Uncertainty (Cross Section):] \hfill \\
-        The uncertainty in the theoretical cross section of the MC, as
-        discussed in \SEC~\ref{ssec:theoretical_cross_section_uncertainties}.
+        The uncertainty in the theoretical cross section of the \MADGRAPH MC,
+        as discussed in \SEC~\ref{ssec:pdf_uncertainties}.
 
     \item[Final State Radiation Uncertainty (FSR):] \hfill \\
         The uncertainty due to the modeling of FSR, as discussed in
