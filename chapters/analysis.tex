@@ -4,13 +4,15 @@
 \section{Uncertainties}
 \label{sec:uncertainties}
 
+\TODO{Intro?}
+
 \subsection{Statistical Uncertainties}
 \label{ssec:stat_uncertainty}
 
 The statistical uncertainties due to the number of data events are propagated
 through the unfolding method, as discussed in
 \SEC~\ref{ssec:unfolding_statistical_uncertainties}. This uncertainty is
-ranges from 0.3 to 1.2\% for both the absolute and normalized cross section
+ranges from 0.26 to 1.21\% for both the absolute and normalized cross section
 measurement. It is one of the dominant uncertainties for the normalized cross
 section measurement.
 
@@ -29,7 +31,7 @@ measurements.
 In addition to affecting the unfolding, the low number of events in the MC
 affects the efficiency correction discussed in \SEC~\ref{ssec:eff_correction}
 and shown in \FIG~\ref{fig:average_efficiencies}. These uncertainties vary from
-0.3 to 1.4\% for both the absolute and normalized cross section measurements.
+0.3 to 1.3\% for both the absolute and normalized cross section measurements.
 
 These two sources of uncertainty are measured separately. The finally
 uncertainty due to the statistical uncertainties from the \MADGRAPH signal MC
@@ -72,8 +74,53 @@ process is calculated by varying the inelastic cross section by plus and minus
 samples to match this new distribution. The full analysis is then performed
 with these MC samples and the differences between the \phistar distributions is
 taken as a systematic uncertainty. The pileup uncertainty for the absolute
-cross section measurement ranges from 0.2 to 0.5\%, while the uncertainty for
-the normalized cross section measurement is between 0 and 0.7\%.
+cross section measurement ranges from 0.21 to 0.58\%, while the uncertainty for
+the normalized cross section measurement is between $< 0.01$ and 0.64\%.
+
+\subsection{Trigger, Reconstruction, and Identification Scale Factors Uncertainty}
+\label{scale_factor_uncertainty}
+
+Differences between the MC and data are corrected for using scale factors.
+Three different sets of scale factors are used to reweight the MC samples:
+trigger scale factors (discussed in \SEC~\ref{ssec:sf_trigger}), reconstruction
+scale factors (discussed in \SEC~\ref{ssec:sf_reconstruction}), and
+identification scale factors (discussed in \SEC~\ref{ssec:sf_id}).
+
+In all three cases, the uncertainties on the scale factors are propagated
+through to the final measurement using 500 toy MC variations. In this method,
+every toy is constructed by drawing each scale factor from a Gaussian
+probability distribution with its mean set to nominal value of the scale factor
+and its width set to the quadrature sum of the uncertainties on the scale
+factor. Each toy is then used to weight the MC samples used in this analysis,
+and the full analysis is performed with that newly weighted sample. The
+uncertainty on the final result due to one of the three types of scale factors
+is taken to be defined by the central 68.2\% of results from the toys.
+
+This procedure for propagating the uncertainty is performed independently for
+each of the three types of scale factors. The total uncertainty due to the
+scale factors is the sum in quadrature of the three results. For the absolute
+cross section measurement this uncertainty is about 0.4\%, while for the
+normalized cross section measurement it ranges from 0.02 to 0.35\%.
+
+\subsection{\texorpdfstring{\pt}{PT} Scale Uncertainty}
+\label{ssec:pt_scale_uncertainty}
+
+One of the advantages of the \phistar variable is that it is not computed using
+the momentum of the electrons and instead uses only the angles between them,
+which are generally better measured. This makes \phistar less sensitive to any
+potential problems with the \pt measurement of electrons.
+
+However, the measurement of the \pt of the electrons is used to determine which
+events are included in our sample. Therefore, a shift in the \pt scale of the
+detector will either add or remove events that have electrons near the \pt
+selection requirement boundaries. To determine the uncertainty due to the \pt
+scale, we vary the \pt values of all of the electron up and down by 0.3\%,
+which is a conservative estimate of the uncertainty on the \pt scale. The
+largest difference in each \phistar bin between the nominal result and the
+results with the modified \pt scale is taken as the uncertainty in that bin.
+The uncertainty due to the \pt scale for the absolute cross section measurement
+is 0.07 to 0.17\%, while the uncertainty for the normalized cross section
+measure is $< 0.01$ to 0.10\%.
 
 \subsection{Background Subtraction Uncertainty}
 \label{ssec:background_subtraction_uncertainty}
@@ -109,54 +156,9 @@ backgrounds. The method of estimating this background is discussed in
 fit, which would not account for any systematics in the method used, a
 conservative 100\% uncertainty is assigned to this category.
 
-The uncertainty due to the background subtraction for both the absolute and
-normalized cross section measurements ranges from 0.03 to 0.59\%, with the
-higher values in the highest \phistar bins.
-
-\subsection{\texorpdfstring{\pt}{PT} Scale Uncertainty}
-\label{ssec:pt_scale_uncertainty}
-
-One of the advantages of the \phistar variable is that it is not computed using
-the momentum of the electrons and instead uses only the angles between them,
-which are generally better measured. This makes \phistar less sensitive to any
-potential problems with the \pt measurement of electrons.
-
-However, the measurement of the \pt of the electrons is used to determine which
-events are included in our sample. Therefore, a shift in the \pt scale of the
-detector will either add or remove events that have electrons near the \pt
-selection requirement boundaries. To determine the uncertainty due to the \pt
-scale, we vary the \pt values of all of the electron up and down by 0.3\%,
-which is a conservative estimate of the uncertainty on the \pt scale. The
-largest difference in each \phistar bin between the nominal result and the
-results with the modified \pt scale is taken as the uncertainty in that bin.
-The uncertainty due to the \pt scale for the absolute cross section measurement
-is 0.08 to 0.17\%, while the uncertainty for the normalized cross section
-measure is 0 to 0.10\%.
-
-\subsection{Trigger, Reconstruction, and Identification Scale Factors Uncertainty}
-\label{scale_factor_uncertainty}
-
-Differences between the MC and data are corrected for using scale factors.
-Three different sets of scale factors are used to reweight the MC samples:
-trigger scale factors (discussed in \SEC~\ref{ssec:sf_trigger}), reconstruction
-scale factors (discussed in \SEC~\ref{ssec:sf_reconstruction}), and
-identification scale factors (discussed in \SEC~\ref{ssec:sf_id}).
-
-In all three cases, the uncertainties on the scale factors are propagated
-through to the final measurement using 500 toy MC variations. In this method,
-every toy is constructed by drawing each scale factor from a Gaussian
-probability distribution with its mean set to nominal value of the scale factor
-and its width set to the quadrature sum of the uncertainties on the scale
-factor. Each toy is then used to weight the MC samples used in this analysis,
-and the full analysis is performed with that newly weighted sample. The
-uncertainty on the final result due to one of the three types of scale factors
-is taken to be defined by the central 68.2\% of results from the toys.
-
-This procedure for propagating the uncertainty is performed independently for
-each of the three types of scale factors. The total uncertainty due to the
-scale factors is the sum in quadrature of the three results. This uncertainty
-is small, $\le 0.02\%$, for both the absolute and normalized cross section
-measurements.
+The uncertainty due to the background subtraction for the absolute cross
+section measurement varies from 0.02 to 0.64\%, and from 0.03 to 0.59\% in the
+normalized cross section measurement.
 
 \subsection{PDF and Cross Section Uncertainties}
 \label{ssec:pdf_uncertainties}
@@ -324,17 +326,17 @@ following columns:
         The uncertainty due to the pileup reweighting, as discussed in
         \SEC~\ref{ssec:pileup_uncertainty}.
 
-    \item[Background Subtraction Uncertainty (Bkg.):] \hfill \\
-        The uncertainty due to background subtraction, as discussed in
-        \SEC~\ref{ssec:background_subtraction_uncertainty}.
+    \item[Scale Factor Uncertainty (SF):] \hfill \\
+        The uncertainty due to the scale factors, as discussed in
+        \SEC~\ref{scale_factor_uncertainty}.
 
     \item[\pt Scale Uncertainty (\pt Scale):] \hfill \\
         The uncertainty due to \pt scale, as discussed in
         \SEC~\ref{ssec:pt_scale_uncertainty}.
 
-    \item[Scale Factor Uncertainty (SF):] \hfill \\
-        The uncertainty due to the scale factors, as discussed in
-        \SEC~\ref{scale_factor_uncertainty}.
+    \item[Background Subtraction Uncertainty (Bkg.):] \hfill \\
+        The uncertainty due to background subtraction, as discussed in
+        \SEC~\ref{ssec:background_subtraction_uncertainty}.
 
 \end{description}
 
