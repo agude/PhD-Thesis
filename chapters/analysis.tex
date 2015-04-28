@@ -11,10 +11,35 @@
 
 The statistical uncertainties due to the number of data events are propagated
 through the unfolding method, as discussed in
-\SEC~\ref{ssec:unfolding_statistical_uncertainties}. This uncertainty is
-ranges from 0.26 to 1.21\% for both the absolute and normalized cross section
-measurement. It is one of the dominant uncertainties for the normalized cross
-section measurement.
+\SEC~\ref{ssec:unfolding_statistical_uncertainties}. For the normalized cross
+section measurement, this uncertainty is corrected for the uncertainty on the
+total cross section as follows:
+
+\TODO{Understand this formula...}
+\begin{equation} \label{eq:stat}
+    \left( \errnorm_{i} \right)^{2}
+    =
+    \left[
+    \errabs_{i} \cdot
+        \left(
+            \frac{1}{\sigma} - \frac{1}{\sigma^{2}}
+        \right)
+    \right]^{2}
+    +
+    \sum_{i \ne j}
+    \left(
+        \errabs_{j} \cdot \frac{1}{\sigma^{2}}
+    \right)^{2}
+\end{equation}
+
+where $\errnorm_{i}$ is the statistical uncertainty for normalized bin $i$,
+$\errabs_{j}$ is the statistical uncertainty for bin $j$ in the absolute
+distribution, and $\sigma$ is the overall cross section given by the integral
+of the absolute distribution. The correction yielded by this formula is small.
+
+The statistical uncertainty ranges from 0.26 to 1.21\% for both the absolute
+and normalized cross section measurement. It is one of the dominant
+uncertainties for the normalized cross section measurement.
 
 \subsection{Statistical Uncertainties from the Monte Carlo Samples}
 \label{ssec:mc_stat_uncertainty}
