@@ -316,7 +316,35 @@ assigned for this disagreement.
     \label{fig:z_mass_reweighted}
 \end{figure}
 
-\TODO{Reweighting the \Z \pt plot?}
+Likewise, the \Z \rapidity distribution in \MADGRAPH does not match the
+distribution in data, as seen in \FIG~\ref{fig:z_rapidity}. The same
+reweighting procedure as is performed for the \mee case above is used here to
+force the distributions to agree. The ratio between the nominal \phistar value
+and the value derived after this reweighting is shown in
+\FIG~\ref{fig:z_mass_reweighted}.
+The circular points show the ratio of the
+reconstructed \phistar distributions, while the square points show the ratio of
+the generated \phistar distributions. The disagreement is on the order of
+0.05\% for most of the distribution, increasing to 0.4--0.5\% in the highest
+\phistar bins. Although this is larger than the effect seen in the \mee
+reweighting, it is much smaller than the statistical uncertainties and so is
+not included in the final results.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/ZY_reweighed.pdf}
+    \caption[
+        The ratio of \phistar in \MADGRAPH before and after reweighting to
+        remove the differnce in the \rapidity distribution between MC and data.
+    ]{
+        The ratio of \phistar in \MADGRAPH before and after reweighting to
+        remove the difference in the \rapidity distribution between MC and data
+        seen in \FIG~\ref{fig:z_rapidity}. The circular points are the ratio in
+        the reconstructed quantity, while the square points are the ratio in
+        the generated quantity. The uncertainties are binomial.
+    }
+    \label{fig:z_mass_reweighted}
+\end{figure}
 
 \section{Uncertainty Tables}
 
