@@ -387,3 +387,53 @@ following columns:
 \input{tables/madgraph_uncertainty_normalized.tex}
 % tab:powheg_uncert_norm
 \input{tables/powheg_uncertainty_normalized.tex}
+
+\section{Results}
+\label{sec:results}
+
+Presented below are our measurements of the differential \phistar cross section
+for \Z bosons decaying to an electron pair in the detector region defined in
+\SEC~\ref{sec:acceptance}. Both an absolute and a normalized cross section
+measurement are made.
+
+The data was unfolded using the generated \phistar distribution from the
+\MADGRAPH MC signal sample. This data distribution is compared to the
+distributions from both the \MADGRAPH MC signal sample and the \POWHEG MC
+signal sample. Additional results using \POWHEG to perform the unfolding are
+presented in \APP~\ref{app:powheg_analysis}.
+
+\subsection{Absolute Differential Cross Section}
+\label{ssec:results_abs}
+
+The absolute differential cross section measurement is shown in
+\FIG~\ref{fig:results_abs} and given in tabular form in
+\TAB~\ref{tab:results_abs}. The lower plot in \FIG~\ref{fig:results_abs} is
+shown in more detail in \FIG~\ref{fig:results_ratio_abs}. As previously
+discussed, the primary uncertainty on the data distribution is from the on the
+integrated luminosity. The primary uncertainty for the \MADGRAPH sample is the
+\FEWZ calculated overall cross section used to scale the distribution, while
+the primary uncertainty for the \POWHEG sample is the uncertainty calculated by
+varying the \CTten PDF weights.
+
+% fig:results_abs and fig:results_ratio_abs
+\input{packaged_figures/results_abs.tex}
+% tab:results_abs
+\input{tables/results_absolute.tex}
+
+\subsection{Normalized Differential Cross Section}
+\label{ssec:results_norm}
+
+The normalized differential cross section measurement is shown in
+\FIG~\ref{fig:results_norm} and given in tabular form in
+\TAB~\ref{tab:results_norm}.
+The lower plot in \FIG~\ref{fig:results_norm} is
+shown in more detail in \FIG~\ref{fig:results_ratio_norm}. As the luminosity
+has canceled out in the normalization, the primary uncertainty on the data is
+now the statistical uncertainty from the \MADGRAPH sample used to unfold the
+it. The limit number of events in the MC samples is also the primary
+uncertainty on the \MADGRAPH distribution and the \POWHEG distribution.
+
+% fig:results_norm and fig:results_ratio_norm
+\input{packaged_figures/results_norm.tex}
+% tab:results_norm
+\input{tables/results_normalized.tex}
