@@ -296,10 +296,10 @@ assigned for this disagreement.
 \section{Uncertainty Tables}
 
 Tables summarizing the values of the various uncertainties as well as the total
-uncertainty in each bin of \phistar for both the data and for the \MADGRAPH
-signal MC sample are given below. The data tables,
-\TABS~\ref{tab:sys_uncert_abs} and \ref{tab:sys_uncert_norm}, contain the
-following columns:
+uncertainty in each bin of \phistar for both the data and for both the
+\MADGRAPH and \POWHEG signal MC sample are given below. The tables with
+information about the uncertainty on the data, \TABS~\ref{tab:sys_uncert_abs}
+and \ref{tab:sys_uncert_norm}, contain the following columns:
 
 \begin{description}[noitemsep]
 
@@ -307,14 +307,14 @@ following columns:
         The range of \phistar values included in the bin.
 
     \item[Total Uncertainty (Total):] \hfill \\
-        The quadrature sum of the all of the uncertainties.
+        The sum in quadrature of the all of the uncertainties.
 
     \item[Statistical Uncertainty (Stat.):] \hfill \\
         The uncertainty due to the limited number of events in the data, as
         discussed in \SEC~\ref{ssec:stat_uncertainty}.
 
     \item[Total Systematic Uncertainty (Total Syst.):] \hfill \\
-        The quadrature sum of all of the systematic uncertainties including,
+        The sum in quadrature of all of the systematic uncertainties including,
         for the absolute distribution, the luminosity uncertainty of
         \LumiUncertainty.
 
@@ -340,7 +340,8 @@ following columns:
 
 \end{description}
 
-The MC tables, \TABS~\ref{tab:madgraph_uncert_abs}, \ref{tab:powheg_uncert_abs},
+The tables with information related to the uncertainty on the MC distributions,
+\TABS~\ref{tab:madgraph_uncert_abs}, \ref{tab:powheg_uncert_abs},
 \ref{tab:madgraph_uncert_norm}, and \ref{tab:powheg_uncert_norm}, have the
 following columns:
 
@@ -350,7 +351,7 @@ following columns:
         The range of \phistar values included in the bin.
 
     \item[Total Uncertainty (Total):] \hfill \\
-        The quadrature sum of the all of the uncertainties.
+        The sum in quadrature of the all of the uncertainties.
 
     \item[Statistical Uncertainty (Stat.):] \hfill \\
         The uncertainty due to the limited number of events in the MC sample.
@@ -377,7 +378,6 @@ following columns:
 \input{tables/madgraph_uncertainty_absolute.tex}
 % tab:powheg_uncert_abs
 \input{tables/powheg_uncertainty_absolute.tex}
-
 
 % Normalized
 
