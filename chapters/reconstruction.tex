@@ -124,6 +124,21 @@ and various run ranges using a likelihood maximization. In the EB
 pseudorapidity bins, there were enough events to bin in \ET and so these
 corrections are also \ET dependent.
 
+\section{Cut Based Identification}
+\label{sec:cut_based_id}
+
+There are several centrally-defined ``cut based identification'' requirements
+used to select high quality electrons at CMS. These requirements make use of
+the variables defined in \SEC~\ref{sec:electron_variables} in order to
+reject low quality and unisolation electrons. We use two of requirements,
+referred to as \EGMEDIUM and \EGTIGHT, with \EGTIGHT having stricter
+requirements than \EGMEDIUM. The exact definition of these requirements are
+given in
+\TAB~\ref{table:eg_cuts}.
+
+% table:eg_cuts
+\input{tables/medium_tight_cuts.tex}
+
 \section{Electron Variables}
 \label{sec:electron_variables}
 
@@ -430,17 +445,3 @@ shown in \FIG~\ref{fig:pf_iso}.
     }
     \label{fig:pf_iso}
 \end{figure}
-
-\section{Cut Based Identification}
-\label{sec:cut_based_id}
-
-There are several centrally-defined ``cut based identification'' requirements
-used to select high quality electrons at CMS. These requirements make use of
-the variables defined in \SEC~\ref{sec:electron_variables} in order to reject
-low quality and unisolation electrons. We use two of requirements, referred to
-as \EGMEDIUM and \EGTIGHT, with \EGTIGHT having stricter requirements than
-\EGMEDIUM. The exact definition of these requirements are given in
-\TAB~\ref{table:eg_cuts}.
-
-% table:eg_cuts
-\input{tables/medium_tight_cuts.tex}
