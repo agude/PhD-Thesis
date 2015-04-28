@@ -29,15 +29,14 @@ sum, and this is what the electron reconstruction algorithm attempts to do.
 \end{figure}
 
 The reconstruction of electrons with $\pt > 20 \GeV$ in CMS begins with a
-``seed'' cluster of energy deposits in ECAL that has the right \TODO{shape} to be an
-electron \cite{eg_reco_2010}. As an electron bends in the magnetic field, it
-takes a helictical path at constant $\eta$ but changing $\phi$. Any photons
-radiated by the electron will lie along this path. These photons must be added
-together with the electron in order to accurately measure its energy, and so
-additional clusters on the same path as the seed cluster are connected to form
-a ``supercluster'' \cite{baffioni_2007}. A supercluster, therefore, includes
-the energy deposit from the electron as well as the energy from its nearby
-photons at constant $\eta$.
+``seed'' cluster of energy deposits in ECAL \cite{eg_reco_2010}. As an electron
+bends in the magnetic field, it takes a helictical path at constant $\eta$ but
+changing $\phi$. Any photons radiated by the electron will lie along this path.
+These photons must be added together with the electron in order to accurately
+measure its energy, and so additional clusters on the same path as the seed
+cluster are connected to form a ``supercluster'' \cite{baffioni_2007}. A
+supercluster, therefore, includes the energy deposit from the electron as well
+as the energy from its nearby photons at constant $\eta$.
 
 From these superclusters, a volume in the tracker where the electron is likely
 to have come from is determined by propagating the energy-weighted mean
