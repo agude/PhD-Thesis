@@ -1,25 +1,29 @@
 % thesis.tex: Primary TeX control file for thesis.
 
 \documentclass[11pt, oneside]{mnthesis}
+
 \usepackage{epsfig,epic,eepic}
-\usepackage{hyperref}
 \usepackage{url}
 \usepackage{longtable}
 \usepackage{mathrsfs}
 \usepackage{multirow}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage{xspace}
+\usepackage{xspace} % \xspace
 \usepackage{amsmath}
-\usepackage{setspace}
-\usepackage{xcolor}
-\usepackage{subcaption}
-\usepackage[group-separator={,}]{siunitx}
+\usepackage{setspace} % Adjust spacing in captions
+\usepackage{xcolor} % Color text
+\usepackage{subcaption} % Allows subfigures
+\usepackage[group-separator={,}]{siunitx} % \num{} formatting
 \usepackage{booktabs}
+\usepackage{enumitem} % noitemsep on lists
+\usepackage[bookmarks=true]{hyperref} % Load last
 
+% Custom inputs for macros and variables
 \input{my_definitions}
 \input{variables}
 
+% Set the line spacing; 1.3 is one and a half, 1.6 is double spacing
 \linespread{1.3}
 
 % Compile only the chapters listed here
@@ -39,6 +43,10 @@
 
 \begin{document}
 \bibliographystyle{hunsrt} % style of bibliography
+
+% Make LaTeX care less about word spacing and more about not letting words run
+% into the margins
+%\sloppy
 
 % Title, copyright, etc.
 \include{chapters/title}
