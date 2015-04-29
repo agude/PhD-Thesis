@@ -64,11 +64,11 @@ electrons must be within $|\eta| < 2.1$ and it must also have $\pt > 30 \GeV$.
 
 A \CentralElectron in the event is required to pass \EGTIGHT and to be matched
 to one of the electrons that passed \SingleElectronTrigger with $\Delta R <
-0.3$. The other electron must pass \EGMEDIUM. If both electrons are
+0.3$. The other electron must pass \EGMEDIUM. The definitions of \EGMEDIUM and
+\EGTIGHT are discussed in \SEC~\ref{sec:cut_based_id}. If both electrons are
 \CentralElectrons, then only one of them need pass \EGTIGHT, but this same
 electron must also match the trigger; the other \CentralElectron need only pass
-\EGMEDIUM. The definitions of \EGMEDIUM and \EGTIGHT are discussed in
-\SEC~\ref{sec:cut_based_id}.
+\EGMEDIUM.
 
 No charge requirement is applied because the number of signal events removed by
 this selection is larger than the number of background events supressed.
@@ -120,7 +120,7 @@ The \Z boson decays too quickly to leave any direct signal in the detector, so
 it is reconstructed from its decay products: the two electrons whose selection
 is described in \SEC~\ref{ssec:electron_selection}. In events where the two
 electrons pass the selection, the \Z is constructed by taking the sum of the
-electrons four-vectors. The resulting invariant mass of the \Z must be within
+electron four-vectors. The resulting invariant mass of the \Z must be within
 the region set by the acceptance (\MassRange).
 
 The distributions of \mee, \Z \pt, and \Z \rapidity after these selection
@@ -130,7 +130,7 @@ requirements are applied are shown with \MADGRAPH signal MC in
 \ref{fig:z_rapidity_powheg}. As can be seen, even after applying the
 corrections discussed in \SEC~\ref{sec:corrections}, that the \MADGRAPH MC
 sample does not well approximate the data in either \mee distribution nor in
-the \Z \rapidity distribution. The effect this has one the final results is
+the \Z \rapidity distribution. The effect this has on the final results is
 considered in \SEC~\ref{four_vector_uncertainty}. The disagreement in the \Z
 \pt distribution is not considered as a source of uncertainty as \phistar is
 related to boson \pt, and hence the disagreement is motivation for the
@@ -234,7 +234,7 @@ number of events that survive the selection are taken as the number in our
 data, and are subtracted off from the data events.
 
 Overall, the selection requirements discussed in the previous sections leave a
-very pure sample of \Z boson events. 99.44\% of events are signal. The dominant
+very pure sample of \Z boson events: 99.44\% of events are signal. The dominant
 backgrounds are the diboson backgrounds and \ttbar. We define \Z bosons
 produced in association another weak boson as a background because of their
 different production mechanism as opposed to single \Z boson events. The
@@ -271,10 +271,10 @@ and $|\eta| < 2.1$. Events selected from the dataset provided by this trigger
 are required to have one muon with $\pt > 25 \GeV$ and $|\eta| < 2.1$ and one
 electron with $\pt > 20 \GeV$ and $|\eta| < 2.4$. In order to further suppress
 \Z decays, events are rejected if there is a third lepton of either flavor with
-$\pt > 20 \GeV$ and $|\eta| < 2.4$. \FIG~\ref{fig:emu_background_check} shows a
+$\pt > 20 \GeV$ and $|\eta| < 2.4$. Figure~\ref{fig:emu_background_check} shows a
 comparison of the MC and data in the control region. Although no deviations
 from \num{1} are seen, this ratio is taken as a scale factor to correct the
-previously listed backgrounds in each bin. A compairison of the \Ztomumu MC
+previously listed backgrounds in each bin. A comparison of the \Ztomumu MC
 samples before and after this scale factor is applied is shown in
 \FIG~\ref{fig:emu_after_correction}.
 
@@ -314,9 +314,9 @@ on their theoretical cross-section.
 \subsection{QCD Background Estimation}
 \label{ssec:qcd_background}
 
-The centrally produced \QCDjets and \wjets MC samples do not have enough events
+The centrally-produced \QCDjets and \wjets MC samples do not have enough events
 to make accurate estimations of their respective background in this analysis so
-instead a data driven method is employed. The same requirements as discussed in
+instead a data-driven method is employed. The same requirements as discussed in
 \SEC~\ref{ssec:electron_selection} are applied to both the data and the MC
 samples with the additional requirement that both electrons must have the same
 charge. This additional selection requirement removes most of the signal while
@@ -330,10 +330,9 @@ each data subsample is fit with a combination of an MC template and an analytic
 background function.
 
 The MC templates used in the fit are created by reweighting each MC sample to
-have the same luminosity as the data. All of these MC samples---both the
-\MADGRAPH signal sample and the various background samples---in each \phistar
-bin are added together, and their shape is used as the template in the fit with
-its amplitude as a free parameter.
+have the same luminosity as the data. The MC samples are summed and the
+resulting combined shape is used as the template in the fit with its amplitude
+as a free parameter.
 
 The analytic background function, $\BGFunc$, is the same function used by
 Haupt to model the \QCDjets and \wjets backgrounds in his \Ztoee shape
@@ -353,27 +352,13 @@ function is given by \EQ~\ref{eq:qcd_fit_function}.
 \end{equation}
 
 The background due to \QCDjets and \wjets in each \phistar bin is taken to be
-the integral of the analytic background component from \MassRange multiplied by
-two. The factor of two comes from the fact that the estimate was performed
-using only events containing same-charge electrons while the full analysis
-accepts both same- and opposite-charge events which are equally likely in the
-background. The estimated \QCDjets and \wjets backgrounds in each \phistar bin
-are showing in \FIG~\ref{fig:qcd_phistar}. Two example fits are shown in
-\FIG~\ref{fig:qcd_example_fits}. All of the fits are shown in
-\APP~\ref{app:qcd_fits}.
-
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=\textwidth]{figures/qcd_phistar.pdf}
-    \caption[
-        The integral of the analytic background function in each \phistar bin.
-    ]{
-        The integral of the analytic background function, \BGFunc, in each
-        \phistar bin. The number has been multiplied by two to account for the
-        fact that we accept both same- and opposite-charge events.
-    }
-    \label{fig:qcd_phistar}
-\end{figure}
+twice the integral of the analytic background component from \MassRange. The
+factor of two comes from the fact that the estimate was performed using only
+events containing same-charge electrons while the full analysis accepts both
+same- and opposite-charge events which are equally likely in the background.
+Two example fits are shown in \FIG~\ref{fig:qcd_example_fits}. All of the fits
+are shown in \APP~\ref{app:qcd_fits}. The estimated \QCDjets and \wjets
+backgrounds in each \phistar bin are showing in \FIG~\ref{fig:qcd_phistar}.
 
 \begin{figure}[!htbp]
     \centering
@@ -400,6 +385,15 @@ are showing in \FIG~\ref{fig:qcd_phistar}. Two example fits are shown in
        \APP~\ref{app:qcd_fits}.
     }
     \label{fig:qcd_example_fits}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figures/qcd_phistar.pdf}
+    \caption{
+        Estimate of the \QCDjets and \wjets background in each \phistar bin.
+    }
+    \label{fig:qcd_phistar}
 \end{figure}
 
 \section{Unfolding}
@@ -804,17 +798,16 @@ One of the advantages of the Bayesian unfolding method used in this analysis is
 that it, unlike a simpler bin-by-bin correction, is theoretically insensitive
 to the distribution of \phistar at the generator level. In fact, \DAgostini
 recommends using a flat generated distribution as one easy method of ensuring
-that there are enough generated events in each bin \cite{dagostini_1995}.
-\TODO{Cite twice in same chapter?} We use this recommendation as the basis for
-a test of the systematic uncertainty. The \phistar distribution at the
-generator level in the \MADGRAPH sample is inserted into a histogram with bin
-widths of $\phistar = 0.011$. Each bin is weighted with a weight equal to the
-inverse number of events in the bin so that the distribution is flattened. The
-full \POWHEG sample is then unfolded using this \MADGRAPH distribution. The
-response matrix from this modified \MADGRAPH distribution is show in
-\FIG~\ref{fig:unfolding_flat_bin_migration}. The ratio of the unfolded \POWHEG
-distribution over the generated distribution is shown in
-\FIG~\ref{fig:unfolding_flat_powheg_unfolded_with_madgraph}. This ratio uses
+that there are enough generated events in each bin \cite{dagostini_1995}. We
+use this recommendation as the basis for a test of the systematic uncertainty.
+The \phistar distribution at the generator level in the \MADGRAPH sample is
+inserted into a histogram with bin widths of $\phistar = 0.011$. Each bin is
+weighted with a weight equal to the inverse number of events in the bin so that
+the distribution is flattened. The full \POWHEG sample is then unfolded using
+this \MADGRAPH distribution. The response matrix from this modified \MADGRAPH
+distribution is show in \FIG~\ref{fig:unfolding_flat_bin_migration}. The ratio
+of the unfolded \POWHEG distribution over the generated distribution is shown
+in \FIG~\ref{fig:unfolding_flat_powheg_unfolded_with_madgraph}. This ratio uses
 only the uncertainties provided by \RooUnfold and so underestimates the total
 uncertainty. No deviations from \num{1} are seen, and so no systematic
 uncertainty is assigned for the shape of the generator level \phistar
@@ -876,6 +869,22 @@ efficiency instead of correcting each event's efficiency individually is that
 any correlations between the various efficiencies are automatically taken into
 account in this process. The average efficiencies in each bin as calculated with
 both \MADGRAPH and \POWHEG are shown in \FIG~\ref{fig:average_efficiencies}.
+
+The efficiency as a function of \phistar shows some interesting features. The
+first feature is that that the efficiency is approximately flat from $0 <
+\phistar < 0.1$. This indicates that, in this region, any differences seen
+between the various generator \phistar distributions and the data are not
+efficiency-induced. The second feature is the increase in the efficiency at
+high \phistar. This is due to the fact that those \Z bosons are boosted and so
+the electrons have additional energy leading to higher \pt. High \pt electrons
+are more efficiently triggered, reconstructed, and selected with ID and
+isolation cuts. The third feature is the dip in efficiency at $\phistar \approx
+0.2$. This dip is due to the fact that this \phistar region marks the
+transition between unboosted and boosted \Z bosons. Electrons from these \Z
+bosons can decay away from the direction of the boost and hence have lower
+momentum in the rest frame of the detector, giving them lower \pt. This puts
+them into the least efficiency bins in terms of trigger efficiency,
+reconstruction efficiency, and identification efficiency.
 
 \begin{figure}[!htbp]
     \centering
