@@ -350,20 +350,27 @@ not included in the final results.
 
 The values of the various uncertainty in each \phistar bin are presented in the
 figures that follow. Figure~\ref{fig:sys_uncert_abs} shows the fractional
-uncertainty in the absolute \phistar cross section in data, while
-\FIGS~\ref{fig:madgraph_uncert_abs} and \ref{fig:powheg_uncert_abs} show the
-uncertainty on the absolute \phistar cross section in \MADGRAPH and \POWHEG MC
+uncertainty in the absolute \phistar cross section in data unfolded with
+\MADGRAPH while \FIG~\ref{fig:sys_uncert_abs_powheg} shows the fractional
+uncertainty in data unfolded with \POWHEG. The uncertainty on the absolute
+\phistar cross section in \MADGRAPH and \POWHEG are shown in
+\FIGS~\ref{fig:madgraph_uncert_abs} and \ref{fig:powheg_uncert_abs},
 respectively. Figure~\ref{fig:sys_uncert_norm} shows the fractional uncertainty
-in the normalized \phistar cross section in data, while
-\FIGS~\ref{fig:madgraph_uncert_norm} and \ref{fig:powheg_uncert_norm} show the
-uncertainty on the normalized \phistar cross section in \MADGRAPH and \POWHEG
-MC respectively. These values are presented in tables in
+in the normalized \phistar cross section in data unfolded with \MADGRAPH while
+\FIG~\ref{fig:sys_uncert_norm_powheg} shows the fractional uncertainty in the
+data unfolded with \POWHEG. The uncertainty on the normalized \phistar cross
+section in \MADGRAPH and \POWHEG are shown in
+\FIGS~\ref{fig:madgraph_uncert_norm} and \ref{fig:powheg_uncert_norm},
+respectively. All of these values are presented in tables in
 \APP~\ref{app:uncertainty_tables}.
 
 % Absolute
 
 % fig:sys_uncert_abs
 \input{packaged_figures/data_uncertainty_absolute.tex}
+
+% fig:sys_uncert_abs_powheg
+\input{packaged_figures/data_uncertainty_absolute_powheg_unfolded.tex}
 
 % fig:madgraph_uncert_abs
 \input{packaged_figures/madgraph_uncertainty_absolute.tex}
@@ -376,6 +383,9 @@ MC respectively. These values are presented in tables in
 % fig:sys_uncert_norm
 \input{packaged_figures/data_uncertainty_normalized.tex}
 
+% fig:sys_uncert_norm_powheg
+\input{packaged_figures/data_uncertainty_normalized_powheg_unfolded.tex}
+
 % fig:madgraph_uncert_norm
 \input{packaged_figures/madgraph_uncertainty_normalized.tex}
 
@@ -387,20 +397,18 @@ MC respectively. These values are presented in tables in
 
 Presented below are our measurements of the differential \phistar cross section
 for \Z bosons decaying to an electron pair in the detector region defined in
-\SEC~\ref{sec:acceptance}. Both an absolute and a normalized cross section
-measurement are made.
-
-The data was unfolded using the generated \phistar distribution from the
-\MADGRAPH MC signal sample. This data distribution is compared to the
-distributions from both the \MADGRAPH MC signal sample and the \POWHEG MC
-signal sample. Additional results using \POWHEG to perform the unfolding are
-presented in \APP~\ref{app:powheg_analysis}.
+\SEC~\ref{sec:acceptance}. Two sets of data are used to make the measurement,
+one unfolded with \MADGRAPH and one unfolded with \POWHEG; these sets are
+otherwise identical. For each set, both an absolute and a normalized cross
+section measurement are made. The data distributions of \phistar are compared
+to the distributions from both the \MADGRAPH MC signal sample and the \POWHEG
+MC signal sample.
 
 \subsection{Absolute Differential Cross Section}
 \label{ssec:results_abs}
 
-The absolute differential cross section measurement is shown in
-\FIG~\ref{fig:results_abs} and given in tabular form in
+The absolute differential cross section measurement using data unfolded with
+\MADGRAPH is shown in \FIG~\ref{fig:results_abs} and given in tabular form in
 \TAB~\ref{tab:results_abs}. The lower plot in \FIG~\ref{fig:results_abs} is
 shown in more detail in \FIG~\ref{fig:results_ratio_abs}. As previously
 discussed, the primary uncertainty on the data distribution is from the on the
@@ -414,13 +422,25 @@ varying the \CTten PDF weights.
 % tab:results_abs
 \input{tables/results_absolute.tex}
 
+The absolute differential cross section measurement using data unfolded with
+\POWHEG is shown in \FIG~\ref{fig:results_abs_powheg} and given in tabular form
+in \TAB~\ref{tab:results_abs_powheg}. The lower plot in
+\FIG~\ref{fig:results_abs_powheg} is shown in more detail in
+\FIG~\ref{fig:results_ratio_abs_powheg}. The primary uncertainty on the data
+distribution is still from the on the integrated luminosity, although the MC
+statistical uncertainty is larger in the highest \phistar bins.
+
+% fig:results_abs_powheg and fig:results_ratio_abs_powheg
+\input{packaged_figures/results_abs_powheg.tex}
+% tab:results_abs_powheg
+\input{tables/results_absolute_powheg_unfolded.tex}
+
 \subsection{Normalized Differential Cross Section}
 \label{ssec:results_norm}
 
-The normalized differential cross section measurement is shown in
-\FIG~\ref{fig:results_norm} and given in tabular form in
-\TAB~\ref{tab:results_norm}.
-The lower plot in \FIG~\ref{fig:results_norm} is
+The normalized differential cross section measurement using data unfolded with
+\MADGRAPH is shown in \FIG~\ref{fig:results_norm} and given in tabular form in
+\TAB~\ref{tab:results_norm}. The lower plot in \FIG~\ref{fig:results_norm} is
 shown in more detail in \FIG~\ref{fig:results_ratio_norm}. As the luminosity
 has canceled out in the normalization, the primary uncertainty on the data is
 now the statistical uncertainty from the \MADGRAPH sample used to unfold the
@@ -431,3 +451,16 @@ uncertainty on the \MADGRAPH distribution and the \POWHEG distribution.
 \input{packaged_figures/results_norm.tex}
 % tab:results_norm
 \input{tables/results_normalized.tex}
+
+The normalized differential cross section measurement using data unfolded with
+\POWHEG is shown in \FIG~\ref{fig:results_norm_powheg} and given in tabular
+form in \TAB~\ref{tab:results_norm_powheg}. The lower plot in
+\FIG~\ref{fig:results_norm_powheg} is shown in more detail in
+\FIG~\ref{fig:results_ratio_norm_powheg}. The primary uncertainty on the data
+is now the statistical uncertainty from the \POWHEG sample used to unfold the
+it.
+
+% fig:results_norm_powheg and fig:results_ratio_norm_powheg
+\input{packaged_figures/results_norm_powheg.tex}
+% tab:results_norm_powheg
+\input{tables/results_normalized_powheg_unfolded.tex}
