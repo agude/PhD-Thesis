@@ -1,0 +1,119 @@
+\chapter{Uncertainty Tables}
+\label{app:uncertainty_tables}
+
+The fractional uncertainty on the absolute cross section measurement is shown
+in \FIGS~\ref{fig:sys_uncert_abs}, \ref{fig:madgraph_uncert_abs}, and
+\ref{fig:powheg_uncert_abs}, and for the normalized cross section measurement
+in \FIGS~\ref{fig:sys_uncert_norm}, \ref{fig:madgraph_uncert_norm}, and
+\ref{fig:powheg_uncert_norm}. In this appendix, the values of these
+uncertainties are presented in tabular form.
+
+\section{Explanation of the Columns}
+
+The tables with information about the uncertainty on the data,
+\TABS~\ref{tab:sys_uncert_abs} and \ref{tab:sys_uncert_norm}, contain the
+following columns:
+
+\begin{description}[noitemsep]
+
+    \item[\phistar Range:] \hfill \\
+        The range of \phistar values included in the bin.
+
+    \item[Total Uncertainty (Total):] \hfill \\
+        The sum in quadrature of the all of the uncertainties.
+
+    \item[Statistical Uncertainty (Stat.):] \hfill \\
+        The uncertainty due to the limited number of events in the data, as
+        discussed in \SEC~\ref{ssec:stat_uncertainty}.
+
+    \item[Total Systematic Uncertainty (Total Syst.):] \hfill \\
+        The sum in quadrature of all of the systematic uncertainties including,
+        for the absolute distribution, the luminosity uncertainty of
+        \LumiUncertainty.
+
+    \item[Monte Carlo Statistical Uncertainty (MC Stat.):] \hfill \\
+        The uncertainty due to the limited number of events in the MC samples,
+        as discussed in \SEC~\ref{ssec:mc_stat_uncertainty}.
+
+    \item[Pileup Uncertainty (Pileup):] \hfill \\
+        The uncertainty due to the pileup reweighting, as discussed in
+        \SEC~\ref{ssec:pileup_uncertainty}.
+
+    \item[Scale Factor Uncertainty (SF):] \hfill \\
+        The uncertainty due to the scale factors, as discussed in
+        \SEC~\ref{scale_factor_uncertainty}.
+
+    \item[\pt Scale Uncertainty (\pt Scale):] \hfill \\
+        The uncertainty due to \pt scale, as discussed in
+        \SEC~\ref{ssec:pt_scale_uncertainty}.
+
+    \item[Background Subtraction Uncertainty (Bkg.):] \hfill \\
+        The uncertainty due to background subtraction, as discussed in
+        \SEC~\ref{ssec:background_subtraction_uncertainty}.
+
+\end{description}
+
+The tables with information related to the uncertainty on the MC distributions,
+\TABS~\ref{tab:madgraph_uncert_abs}, \ref{tab:powheg_uncert_abs},
+\ref{tab:madgraph_uncert_norm}, and \ref{tab:powheg_uncert_norm}, have the
+following columns:
+
+\begin{description}[noitemsep]
+
+    \item[\phistar Range:] \hfill \\
+        The range of \phistar values included in the bin.
+
+    \item[Total Uncertainty (Total):] \hfill \\
+        The sum in quadrature of the all of the uncertainties.
+
+    \item[Statistical Uncertainty (Stat.):] \hfill \\
+        The uncertainty due to the limited number of events in the MC sample.
+
+    \item[Parton Density Function (PDF):] \hfill \\
+        The uncertainty due to choice of PDF used to generate the \POWHEG MC,
+        as discussed in \SEC~\ref{ssec:pdf_uncertainties}.
+
+    \item[Theoretical Cross Section Uncertainty (Cross Section):] \hfill \\
+        The uncertainty in the theoretical cross section of the \MADGRAPH MC,
+        as discussed in \SEC~\ref{ssec:pdf_uncertainties}.
+
+    \item[Final State Radiation Uncertainty (FSR):] \hfill \\
+        The uncertainty due to the modeling of FSR, as discussed in
+        \SEC~\ref{ssec:fsr_uncertainties}.
+
+\end{description}
+
+\section{Tables}
+
+The values of the various uncertainty in each \phistar bin are presented in the
+tables that follow. Table~\ref{tab:sys_uncert_abs} presents the fractional
+uncertainty in the absolute \phistar cross section in data, while
+\TABS~\ref{tab:madgraph_uncert_abs} and \ref{tab:powheg_uncert_abs} present the
+uncertainty on the absolute \phistar cross section in \MADGRAPH and \POWHEG MC
+respectively. Table~\ref{tab:sys_uncert_norm} present the fractional
+uncertainty in the normalized \phistar cross section in data, while
+\TABS~\ref{tab:madgraph_uncert_norm} and \ref{tab:powheg_uncert_norm} present
+the uncertainty on the normalized \phistar cross section in \MADGRAPH and
+\POWHEG MC respectively.
+
+% Absolute
+
+% tab:sys_uncert_abs
+\input{tables/data_uncertainty_absolute.tex}
+
+% tab:madgraph_uncert_abs
+\input{tables/madgraph_uncertainty_absolute.tex}
+
+% tab:powheg_uncert_abs
+\input{tables/powheg_uncertainty_absolute.tex}
+
+% Normalized
+
+% tab:sys_uncert_norm
+\input{tables/data_uncertainty_normalized.tex}
+
+% tab:madgraph_uncert_norm
+\input{tables/madgraph_uncertainty_normalized.tex}
+
+% tab:powheg_uncert_norm
+\input{tables/powheg_uncertainty_normalized.tex}
