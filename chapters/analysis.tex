@@ -10,7 +10,7 @@
 \label{ssec:stat_uncertainty}
 
 The statistical uncertainties due to the number of data events are propagated
-through the unfolding method, as discussed in
+through the unfolding method using toy MC, as discussed in
 \SEC~\ref{ssec:unfolding_statistical_uncertainties}. For the normalized cross
 section measurement, this uncertainty is corrected for the uncertainty on the
 total cross section as follows:
@@ -44,35 +44,36 @@ uncertainties for the normalized cross section measurement.
 \subsection{Statistical Uncertainties from the Monte Carlo Samples}
 \label{ssec:mc_stat_uncertainty}
 
-The \MADGRAPH signal MC sample has fewer events which pass our final selection
-than there are events in the data. This sample is used to unfold the data and
-so its statistical uncertainty affects the final measurement. The affect of the
-statistical uncertainty on the bin migration matrix is propagated through to
-the final result via the use of toy MC, detailed in
-\SEC~\ref{ssec:unfolding_statistical_uncertainties}. The uncertainty found with
-this method is 0.1 to 0.2\% for both the absolute and normalized cross section
-measurements.
+The \MADGRAPH and \POWHEG signal MC sample have fewer events which pass our
+final selection than there are events in the data. These samples are used to
+unfold the data and so their statistical uncertainty affects the final
+measurement. The affect of the statistical uncertainty on the bin migration
+matrix is propagated through to the final result via the use of toy MC as
+detailed in \SEC~\ref{ssec:unfolding_statistical_uncertainties}. The
+uncertainty from using this method with the \MADGRAPH sample is 0.1 to 0.2\%
+for both the absolute and normalized cross section measurements.
 
 In addition to affecting the unfolding, the low number of events in the MC
 affects the efficiency correction discussed in \SEC~\ref{ssec:eff_correction}
 and shown in \FIG~\ref{fig:average_efficiencies}. These uncertainties vary from
 0.3 to 1.3\% for both the absolute and normalized cross section measurements.
+These uncertainties are calculated in the same manner for \POWHEG, but the
+effect is larger as there are fewer events in that sample.
 
 These two sources of uncertainty are measured separately. The finally
-uncertainty due to the statistical uncertainties from the \MADGRAPH signal MC
-sample is the sum in quadrature of both sources. This combined uncertainty is
-the dominant uncertainty for the normalized cross section measurement, having a
-slightly larger effect in each \phistar bin than the statistical uncertainty
-due to the data.
+uncertainty due to using a specific signal MC sample is the sum in quadrature
+of both of these sources. This combined uncertainty is the dominant uncertainty
+for the normalized cross section measurement, having a slightly larger effect
+in each \phistar bin than the statistical uncertainty due to the data.
 
 \subsection{Luminosity Uncertainty}
 \label{ssec:lumi_uncertainty}
 
-The integrated luminosity is measured at CMS using the occupancy in the
-pixel detector during minimum-bias events \cite{cms_lumi_2013}. This luminosity
+The integrated luminosity is measured at CMS using the occupancy in the pixel
+detector during minimum-bias events \cite{cms_lumi_2013}. This luminosity
 measurement is calibrated by using van der Meer scans---a method to measure the
-beam size in which the two beams are displaced and then ``swept'' across each
-other as the offset is reduced \cite{vandermeer_1968}.
+beam size in which the two beams are offset and then ``swept'' across each
+other as that offset is reduced \cite{vandermeer_1968}.
 
 The integrated luminosity for the run period considered in this analysis is
 known to \LumiUncertainty. This uncertainty is taken to be fully correlated
@@ -95,7 +96,7 @@ each simulated event. The distribution of pileup in MC is reweighted to match
 the data distribution based on the calculated instantaneous luminosity and the
 inelastic proton-proton cross section. The uncertainty due to this reweighting
 process is calculated by varying the inelastic cross section by plus and minus
-5\%, recalculating the data distribution of pileup, and reweighting to the MC
+5\%, recalculating the data distribution of pileup, and reweighting the MC
 samples to match this new distribution. The full analysis is then performed
 with these MC samples and the differences between the \phistar distributions is
 taken as a systematic uncertainty. The pileup uncertainty for the absolute
@@ -117,7 +118,7 @@ every toy is constructed by drawing each scale factor from a Gaussian
 probability distribution with its mean set to nominal value of the scale factor
 and its width set to the quadrature sum of the uncertainties on the scale
 factor. Each toy is then used to weight the MC samples used in this analysis,
-and the full analysis is performed with that newly weighted sample. The
+and the full analysis is performed with that newly weighted samples. The
 uncertainty on the final result due to one of the three types of scale factors
 is taken to be defined by the central 68.2\% of results from the toys.
 
@@ -165,15 +166,16 @@ using this method are propagated through to the final result using 500 toy MC
 variations. For each variation, the scale factors are randomly drawn from a
 Gaussian distribution with mean equal to the nominal value of that scale factor
 and width equal to the uncertainty on the scale factor. Each toy is then used
-to weight the background MC samples and the full which are then used to perform
-the background subtraction. The full analysis is then run with the newly
+to weight the background MC samples  which are then used to perform the
+background subtraction. The full analysis is then run with the newly
 background-subtracted data samples. The uncertainty due to the subtraction of
 this category of background for each bin in \phistar is defined by the spread
 of the central 68.2\% values obtained by the toys.
 
 The second category consists of the backgrounds with a real \Z boson: $\Z\Z$
-and $\W\Z$. For these samples, the uncertainty is calculated by taking a
-correlated 20\% uncertainty on the theoretical cross section.
+and $\W\Z$. For these samples we can not use the \emu control sample so the
+uncertainty is calculated by taking a correlated 20\% uncertainty on the
+theoretical cross section and propagating this through to the final result.
 
 The third and final category consists of the \QCDjets and \wjets
 backgrounds. The method of estimating this background is discussed in
@@ -194,29 +196,30 @@ as they collide. The reconstructed \phistar distribution is therefore dependent
 on the PDFs used to generate the signal MC sample.
 
 The uncertainty due to this choice of PDF is calculated following the
-recommendation of \PDFforLHC working group for the \POWHEG MC signal sample.
-\PDFWeightProducer is used to reweight the \POWHEG sample using the \CTten PDF
-set. A total of \num{26} different pairs of weights are used by the tool to
-fully account for the uncertainty inherent in the PDF set; these weights are
-provided by the \CTten collaboration specifically for this purpose. Each pair
-of weights consists of a variation of a PDF parameter, with one weight
-corresponding to adjusting the parameter up and the other weight to down. Each of
-these weights are used to reweight the \POWHEG sample, and the analysis is
-performed with this newly weighted sample.
-The uncertainty due to each weight is taken to be the difference with the
-nominal \phistar distribution. Two uncertainties are calculated: the
-one due to all of the upward parameter adjustments, and one to all the downward
-parameter adjustments added in quadrature. The largest of these for each
-\phistar bin is taken as the total uncertainty.
+recommendation of \PDFforLHC working group for the \POWHEG MC signal sample
+\cite{botje_2011}. \PDFWeightProducer is used to reweight the \POWHEG sample
+using the \CTten PDF set. A total of \num{26} different pairs of weights are
+used by the tool to fully account for the uncertainty inherent in the PDF set;
+these weights are provided by the \CTten collaboration specifically for this
+purpose. Each pair of weights consists of a variation of a PDF parameter, with
+one weight corresponding to adjusting the parameter up and the other weight to
+down. Each of these weights are used to reweight the \POWHEG sample, and the
+analysis is performed with this newly weighted sample. The uncertainty due to
+each weight is taken to be the difference with the nominal \phistar
+distribution. Two uncertainties are calculated: the one due to all of the
+upward parameter adjustments, and one to all the downward parameter
+adjustments, where in each case the uncertainties are added in quadrature. The
+largest of these two uncertainties for each \phistar bin is taken as the total
+uncertainty.
 
 For the \MADGRAPH MC signal sample, which is an LO sample generated with a LO
 PDF, the uncertainties can not be calculated in this manner. Instead, the PDF
-includes an uncertainty on the cross section as calculated by \FEWZ which is
-used to scale the sample. This uncertainty is propagated through the analysis
-be reweighting the \MADGRAPH with this uncertainty both added and subtracted.
-The difference in the final \phistar distribution is taken as the uncertainty
-due to the \FEWZ cross section. This uncertainty is the dominant uncertainty
-from the \MADGRAPH sample.
+includes an uncertainty on the cross section which is used to scale the sample
+as calculated by \FEWZ. This uncertainty is propagated through the analysis be
+reweighting the \MADGRAPH with this uncertainty both added and subtracted from
+the theoretical cross section. The difference in the final \phistar
+distribution is taken as the uncertainty due to the \FEWZ cross section. This
+uncertainty is the dominant uncertainty from the \MADGRAPH sample.
 
 \subsection{Final State Radiation Uncertainties}
 \label{ssec:fsr_uncertainties}
@@ -411,11 +414,11 @@ The absolute differential cross section measurement using data unfolded with
 \MADGRAPH is shown in \FIG~\ref{fig:results_abs} and given in tabular form in
 \TAB~\ref{tab:results_abs}. The lower plot in \FIG~\ref{fig:results_abs} is
 shown in more detail in \FIG~\ref{fig:results_ratio_abs}. As previously
-discussed, the primary uncertainty on the data distribution is from the on the
-integrated luminosity. The primary uncertainty for the \MADGRAPH sample is the
-\FEWZ calculated overall cross section used to scale the distribution, while
-the primary uncertainty for the \POWHEG sample is the uncertainty calculated by
-varying the \CTten PDF weights.
+discussed in this chapter, the primary uncertainty on the data distribution is
+from the on the integrated luminosity. The primary uncertainty for the
+\MADGRAPH sample is the \FEWZ calculated overall cross section used to scale
+the distribution, while the primary uncertainty for the \POWHEG sample is the
+uncertainty calculated by varying the \CTten PDF weights.
 
 % fig:results_abs and fig:results_ratio_abs
 \input{packaged_figures/results_abs.tex}
@@ -427,7 +430,7 @@ The absolute differential cross section measurement using data unfolded with
 in \TAB~\ref{tab:results_abs_powheg}. The lower plot in
 \FIG~\ref{fig:results_abs_powheg} is shown in more detail in
 \FIG~\ref{fig:results_ratio_abs_powheg}. The primary uncertainty on the data
-distribution is still from the on the integrated luminosity, although the MC
+distribution is still from the integrated luminosity, although the MC
 statistical uncertainty is larger in the highest \phistar bins.
 
 % fig:results_abs_powheg and fig:results_ratio_abs_powheg
@@ -443,9 +446,9 @@ The normalized differential cross section measurement using data unfolded with
 \TAB~\ref{tab:results_norm}. The lower plot in \FIG~\ref{fig:results_norm} is
 shown in more detail in \FIG~\ref{fig:results_ratio_norm}. As the luminosity
 has canceled out in the normalization, the primary uncertainty on the data is
-now the statistical uncertainty from the \MADGRAPH sample used to unfold the
-it. The limit number of events in the MC samples is also the primary
-uncertainty on the \MADGRAPH distribution and the \POWHEG distribution.
+now the statistical uncertainty from the \MADGRAPH sample used to unfold it.
+The limit number of events in the MC samples is also the primary uncertainty on
+the \MADGRAPH distribution and the \POWHEG distribution.
 
 % fig:results_norm and fig:results_ratio_norm
 \input{packaged_figures/results_norm.tex}
@@ -457,8 +460,7 @@ The normalized differential cross section measurement using data unfolded with
 form in \TAB~\ref{tab:results_norm_powheg}. The lower plot in
 \FIG~\ref{fig:results_norm_powheg} is shown in more detail in
 \FIG~\ref{fig:results_ratio_norm_powheg}. The primary uncertainty on the data
-is now the statistical uncertainty from the \POWHEG sample used to unfold the
-it.
+is now the statistical uncertainty from the \POWHEG sample used to unfold it.
 
 % fig:results_norm_powheg and fig:results_ratio_norm_powheg
 \input{packaged_figures/results_norm_powheg.tex}
