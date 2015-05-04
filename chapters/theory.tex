@@ -301,7 +301,40 @@ fermions, but for \spinone bosons a similar term is not Lorentz invariant. In
 order to solve this, a \spinzero field that fills all space is introduced.
 \TODO{Read some Ho-kim and Pham to figure out the rest.}
 
-\section{Electron Dressing}
+\section{\texorpdfstring{\Z}{Z} Boson Transverse Momentum}
+
+\subsection{The Proton Parton Model}
+\label{ssec:parton_model}
+
+At the very high energies of the LHC (\rootseight in 2012), a proton is no
+longer well described by assuming that it is composed of only three valence
+quarks. Instead, it is described by a parton model---a model in which there are
+three valence quarks, but also numerous gluons and ``sea-quarks'', where the
+sea-quarks are a superposition of quark and antiquark same-flavor pairs. These
+constituents of the protons are referred to as ``partons''.
+
+When two protons collide at the LHC, it is a parton from each that interacts in
+the hard scattering process. This parton-parton interaction can be considered
+as independent of the other partons as they interaction timescale is short
+compared to the size of the proton. Each of the partons that takes place in the
+interaction will carry only a faction of their parent proton's total momentum.
+This fraction is given by the Bjorken \BjorkenX variable, defined as
+$\BjorkenX P = p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is the
+momentum of a parton.
+
+The \BjorkenX value of a parton is not a fixed value, but is instead a
+probability distribution that is dependent on the flavor of the parton and the
+energy scale ($Q^{2}$) of the interaction. Collections of these distributions
+for the various flavors are called parton distribution functions (PDFs). PDFs
+can not currently be calculated from QCD, and it is not known if doing so is
+even possible. Instead, PDFs are created by fitting data and extrapolating to
+new interaction scales using perturbative QCD. An example set of PDFs from the
+MSTW collaboration\cite{martin_2009} is shown in \FIG~\ref{fig:mstw_pdf}.
+
+% fig:mstw_pdf
+\input{packaged_figures/mstw_pdfs.tex}
+
+\subsection{Final State Radiation}
 \label{sec:electron_dressing}
 
 \begin{figure}[!htbp]
