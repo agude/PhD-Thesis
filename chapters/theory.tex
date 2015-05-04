@@ -40,6 +40,13 @@ electrodynamics (QED), a fully relativistic and self-consistent theory of
 electromagnetic interactions
 \cite{tomonaga1946}\cite{schwinger1948}\cite{feynman1949}\cite{dyson1949}.
 
+QED is a perturbation theory with expansions performed in terms of the fine
+structure constant, \fsc. As $\fsc \approx 7.297 \cdot 10^{-3}$, the higher
+order terms contribute only small corrections and so only a few orders need to
+be computed to make very accurate predictions. For example, the anomalous
+magnetic moment of the electron is calculated to $\fsc^{4}$, and agrees with
+experiment to more than 10 significant figures.
+
 \subsection{The Weak Force}
 \label{subsection:weak_force}
 
@@ -112,6 +119,22 @@ weakly at high energies but strongly at low energies
 quantum chromodynamics (QCD). QCD was used to predict the existence of the
 charm quark, and upon its success was incorporated with electroweak theory to
 form the full \SUthreeSUtwoUone symmetry group of the standard model.
+
+QCD, like QED, can also be expanded in terms of a coupling constant,
+\alphastrong. However, unlike \fsc in QED, the value of \alphastrong is
+dependent on the energy of the interaction as follows:
+
+\begin{equation}\label{eq:alpha_strong}
+    \alphastrong \left( Q \right)
+    \approx
+    \frac{1}{
+        \logn \left( Q / \LambdaQCD \right)
+    }
+\end{equation}
+
+where \LambdaQCD is the QCD scale and $Q$ is the interaction energy. This means
+that QCD can be expanded perturbatively for large $Q$, but not for low energy
+interactions.
 
 \subsection{Experimental Verification}
 
