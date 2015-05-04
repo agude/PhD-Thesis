@@ -318,11 +318,11 @@ the hard scattering process. This parton-parton interaction can be considered
 as independent of the other partons as they interaction timescale is short
 compared to the size of the proton. Each of the partons that takes place in the
 interaction will carry only a faction of their parent proton's total momentum.
-This fraction is given by the Bjorken \BjorkenX variable, defined as
-$\BjorkenX P = p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is the
+This fraction is given by the Bjorken \BjorkenX{i} variable, defined as
+$\BjorkenX{i} P = p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is the
 momentum of a parton.
 
-The \BjorkenX value of a parton is not a fixed value, but is instead a
+The \BjorkenX{i} value of a parton is not a fixed value, but is instead a
 probability distribution that is dependent on the flavor of the parton and the
 energy scale ($Q^{2}$) of the interaction. Collections of these distributions
 for the various flavors are called parton distribution functions (PDFs). PDFs
@@ -342,14 +342,45 @@ two quarks \cite{drell_1970}\cite{drell_1970a}. The Feynman diagram of this
 process is shown in \FIG~\ref{fig:feyn_drell_yan_s_channel}. This is an
 \sChannel process. The two quarks will have near $\pt \approx 0$ as most of the
 proton's momentum (and hence, the parton's momentum) is along the beamline, and
-so the \Z will also have $\pt \approx 0$. However, there are other diagrams
-that contribute with non-zero \pt. The simplest of these is the \tChannel
-process, shown in \FIG~\ref{fig:feyn_drell_yan_t_channel}. In this interaction,
-a quark and a gluon interact to lead to a \Z and quark final state. These two
-final state particles will have equal and opposite momentum, and so the \Z can
-be produced with with significant \pt. The \tChannel is dominant at the LHC as
-there is a larger probability of gluon being present than an antiquark. This is
-true even though it is of higher order in \alphastrong.
+so the \Z will also have $\pt \approx 0$. The cross section for the \DrellYan
+process is, in terms of the \BjorkenX{i} variables of the incoming partons, is:
+
+\begin{equation}\label{eq:drell_yan_cross_section}
+    \frac{\dirSquare{\sigma}}
+    {\dir{\BjorkenX{1}} \dir{\BjorkenX{2}}}
+    =
+    \frac{4 \pi \fsc^{2}}
+    {9 \BjorkenX{1} \BjorkenX{2} s}
+    f \left( \BjorkenX{1}, \BjorkenX{2} \right)
+\end{equation}
+
+\begin{equation}\label{eq:fx}
+    f \left( \BjorkenX{1}, \BjorkenX{2} \right)
+    =
+    \sum_{a}
+    Q^{2}_{a}
+    \left[
+        \PDF{a}{1}{\BjorkenX{1}}
+        \PDF{\bar{a}}{2}{\BjorkenX{2}}
+        +
+        \PDF{\bar{a}}{1}{\BjorkenX{1}}
+        \PDF{a}{2}{\BjorkenX{2}}
+    \right]
+\end{equation}
+
+where \BjorkenX{i} is the momentum fraction carried by the parton from the
+$i$th proton, \PDF{a}{i}{\BjorkenX{i}} is the individual PDF for a quark of
+flavor $a$ from the $i$th proton, $s$ is the Mandelstam variable that is
+the square of the center-of-mass energy, and the sum is over quark flavors.
+
+In addition to the lowest-order contribution described above, there are other
+diagrams that contribute with non-zero \pt. The simplest of these is the
+\tChannel process, shown in \FIG~\ref{fig:feyn_drell_yan_t_channel}. In this
+interaction, a quark and a gluon interact to lead to a \Z and quark final
+state. These two final state particles will have equal and opposite momentum,
+and so the \Z can be produced with with significant \pt. The \tChannel is
+dominant at the LHC as there is a larger probability of gluon being present
+than an antiquark.
 
 % fig:feyn_drell_yan_s_channel, fig:feyn_drell_yan_t_channel, and
 % fig:feyn_s_t_channel
@@ -371,7 +402,7 @@ decreases, and so ISR often introduces a small amount of \bosonpt.
 \subsection{Final State Radiation}
 \label{sec:electron_dressing}
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=0.65\textwidth]{figures/fsr.pdf}
     \caption{

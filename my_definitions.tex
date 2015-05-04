@@ -77,7 +77,7 @@
 % Momentums
 \newcommand{\momentum}{p}
 \newcommand{\pt}{\ensuremath{p_{\mathrm{T}}}\xspace}
-\newcommand{\bosonpt}{\ensuremath{q_{\mathrm{T}}}\xspace}
+\newcommand{\bosonpt}{\pt}
 \newcommand{\keVc}{\ensuremath{{\,\text{ke\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
 \newcommand{\MeVc}{\ensuremath{{\,\text{Me\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
 \newcommand{\GeVc}{\ensuremath{{\,\text{Ge\hspace{-.08em}V\hspace{-0.16em}/\hspace{-0.08em}}c}}\xspace}
@@ -244,10 +244,11 @@
 \newcommand{\err}{\ensuremath{\varepsilon}\xspace}
 \newcommand{\errnorm}{\ensuremath{\err^{\text{Norm.}}}\xspace}
 \newcommand{\errabs}{\ensuremath{\err^{\text{Abs.}}}\xspace}
-\newcommand{\BjorkenX}{\ensuremath{x_{i}}\xspace}
+\newcommand{\BjorkenX}[1]{\ensuremath{x_{#1}}\xspace}
 \newcommand{\fsc}{\ensuremath{\alpha}\xspace}
 \newcommand{\alphastrong}{\ensuremath{\alpha_{\text{s}}}\xspace}
 \newcommand{\LambdaQCD}{\ensuremath{\Lambda_{\text{QCD}}}\xspace}
+\newcommand{\PDF}[3]{\ensuremath{f^{#1}_{#2} \left( #3 \right)}\xspace}
 
 % Physics Names
 \newcommand{\Cherenkov}{Cherenkov\xspace}
@@ -306,6 +307,8 @@
 \newcommand{\logn}{{\mathrm{ln}}}
 \newcommand{\erfc}{{\mathrm{erfc}}}
 \newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\!\left( #1 \right)}\xspace}
+\newcommand{\dir}[1]{\ensuremath{\text{d}#1}\xspace}
+\newcommand{\dirSquare}[1]{\ensuremath{\text{d}^{2}#1}\xspace}
 
 \newcommand{\CONT}{\noindent}
 \newcommand{\FIG}{Fig.}
