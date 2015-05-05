@@ -339,11 +339,11 @@ MSTW collaboration\cite{martin_2009} is shown in \FIG~\ref{fig:mstw_pdf}.
 
 The \DrellYan process is the production of two leptons from the annihilation of
 two quarks \cite{drell_1970}\cite{drell_1970a}. The Feynman diagram of this
-process is shown in \FIG~\ref{fig:feyn_drell_yan_s_channel}. This is an
-\sChannel process. The two quarks will have near $\pt \approx 0$ as most of the
-proton's momentum (and hence, the parton's momentum) is along the beamline, and
-so the \Z will also have $\pt \approx 0$. The cross section for the \DrellYan
-process is, in terms of the \BjorkenX{i} variables of the incoming partons, is:
+process is shown in \FIG~\ref{fig:feyn_s_channel}. The two quarks will have
+near $\pt \approx 0$ as most of the proton's momentum (and hence, the parton's
+momentum) is along the beamline, and so the \Z will also have $\pt \approx 0$.
+The cross section for the \DrellYan process is, in terms of the \BjorkenX{i}
+variables of the incoming partons, is:
 
 \begin{equation}\label{eq:drell_yan_cross_section}
     \frac{\dirSquare{\sigma}}
@@ -373,31 +373,34 @@ $i$th proton, \PDF{a}{i}{\BjorkenX{i}} is the individual PDF for a quark of
 flavor $a$ from the $i$th proton, $s$ is the Mandelstam variable that is
 the square of the center-of-mass energy, and the sum is over quark flavors.
 
-In addition to the lowest-order contribution described above, there are other
-diagrams that contribute with non-zero \pt. The simplest of these is the
-\tChannel process, shown in \FIG~\ref{fig:feyn_drell_yan_t_channel}. In this
-interaction, a quark and a gluon interact to lead to a \Z and quark final
-state. These two final state particles will have equal and opposite momentum,
-and so the \Z can be produced with with significant \pt. The \tChannel is
-dominant at the LHC as there is a larger probability of gluon being present
-than an antiquark.
+% fig:feyn_s_channel
+\input{packaged_figures/feyn_drell_yan_s_channel.tex}
 
-% fig:feyn_drell_yan_s_channel, fig:feyn_drell_yan_t_channel, and
-% fig:feyn_s_t_channel
-\input{packaged_figures/feyn_drell_yan_s_t_channel.tex}
+\subsection{Higher Order Production}
 
-\subsection{Initial State Radiation}
+In addition to the \DrellYan process discussed previously, there are higher
+order terms in \alphastrong that contribute to \Z boson production. Some of
+these terms are shown in \FIG~\ref{fig:higher_order_z_diagrams}.
 
-In addition to the methods discussed previously, there are higher order terms
-in \alphastrong that contribute to \Z boson production. Some of these terms,
-shown in \FIG~\ref{fig:feyn_isr.tex}, are referred to as Initial State
-Radiation (ISR). These diagrams contain gluon radiation from the incoming
-quark which causes the quark to gain momentum equal and opposite to that of the
-gluon. This quark will then have some \pt to pass on to the \Z boson. The
-probability of radiating a gluon increases as the energy radiated as gluons
-decreases, and so ISR often introduces a small amount of \bosonpt.
+There are two distinct types of terms. The first type, shown in
+\FIGS~\ref{fig:feyn_qqbar_to_zg} and \ref{fig:feyn_qbarq_to_zg}, is known as
+initial state radiation (ISR). These diagrams contain gluon radiation from the
+incoming quark which causes the quark to gain momentum equal and opposite to
+that of the gluon. This quark will then have some \pt to pass on to the \Z
+boson. The probability of radiating a gluon increases as the energy radiated as
+gluons decreases, and so ISR often introduces a small amount of \bosonpt.
 
-\TODO{Make ISR diagrams. \label{fig:feyn_isr.tex}}
+The second type, shown in \FIGS~\ref{fig:feyn_qg_to_zq} and
+\ref{fig:feyn_qg_to_q_to_zq}, is also radiation but in this case the quark
+interacts with a gluon from the other proton and radiates a \Z boson. These
+terms, although of order \alphastrong, dominate at that LHC as there is a
+larger probability of gluon being present than an antiquark because the
+antiquarks must come from the sea-quarks.
+
+% fig:higher_order_z_diagrams
+% fig:feyn_qqbar_to_zg, fig:feyn_qbarq_to_zg, fig:feyn_qg_to_zq,
+% fig:feyn_qg_to_q_to_zq
+\input{packaged_figures/feyn_isr_and_quarks.tex}
 
 \subsection{Final State Radiation}
 \label{sec:electron_dressing}
