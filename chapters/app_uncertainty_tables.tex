@@ -1,17 +1,17 @@
 \chapter{Uncertainty Tables}
 \label{app:uncertainty_tables}
 
-The fractional uncertainty on the absolute cross section measurement is shown
-in \FIGS~\ref{fig:sys_uncert_abs}, \ref{fig:madgraph_uncert_abs}, and
-\ref{fig:powheg_uncert_abs}, and for the normalized cross section measurement
-in \FIGS~\ref{fig:sys_uncert_norm}, \ref{fig:madgraph_uncert_norm}, and
-\ref{fig:powheg_uncert_norm}. In this appendix, the values of these
+The fractional uncertainty on the normalized cross section measurement in
+\FIGS~\ref{fig:sys_uncert_norm}, \ref{fig:madgraph_uncert_norm}, and
+\ref{fig:powheg_uncert_norm}, and for the absolute cross section measurement is
+shown in \FIGS~\ref{fig:sys_uncert_abs}, \ref{fig:madgraph_uncert_abs}, and
+\ref{fig:powheg_uncert_abs}. In this appendix, the values of these
 uncertainties are presented in tabular form.
 
 \section{Explanation of the Columns}
 
 The tables with information about the uncertainty on the data,
-\TABS~\ref{tab:sys_uncert_abs} and \ref{tab:sys_uncert_norm}, contain the
+\TABS~\ref{tab:sys_uncert_norm} and \ref{tab:sys_uncert_abs}, contain the
 following columns:
 
 \begin{description}[noitemsep]
@@ -54,8 +54,8 @@ following columns:
 \end{description}
 
 The tables with information related to the uncertainty on the MC distributions,
-\TABS~\ref{tab:madgraph_uncert_abs}, \ref{tab:powheg_uncert_abs},
-\ref{tab:madgraph_uncert_norm}, and \ref{tab:powheg_uncert_norm}, have the
+\TABS~\ref{tab:madgraph_uncert_norm}, \ref{tab:powheg_uncert_norm},
+\ref{tab:madgraph_uncert_abs}, and \ref{tab:powheg_uncert_abs}, have the
 following columns:
 
 \begin{description}[noitemsep]
@@ -86,31 +86,17 @@ following columns:
 \section{Tables}
 
 The values of the various uncertainty in each \phistar bin are presented in the
-tables that follow. Tables~\ref{tab:sys_uncert_abs} and
-\ref{tab:sys_uncert_abs_powheg} presents the fractional uncertainty in the
-absolute \phistar cross section in data unfolded with \MADGRAPH and with
-\POWHEG. Tables~\ref{tab:madgraph_uncert_abs} and \ref{tab:powheg_uncert_abs}
-present the uncertainty on the absolute \phistar cross section in \MADGRAPH and
-\POWHEG MC, respectively. Tables~\ref{tab:sys_uncert_norm} and
+tables that follow. Tables~\ref{tab:sys_uncert_norm} and
 \ref{tab:sys_uncert_norm_powheg} present the fractional uncertainty in the
 normalized \phistar cross section in data unfolded with \MADGRAPH and with
 \POWHEG. Tables~\ref{tab:madgraph_uncert_norm} and \ref{tab:powheg_uncert_norm}
 present the uncertainty on the normalized \phistar cross section in \MADGRAPH
-and \POWHEG MC, respectively.
-
-% Absolute
-
-% tab:sys_uncert_abs
-\input{tables/data_uncertainty_absolute.tex}
-
-% tab:sys_uncert_abs_powheg
-\input{tables/data_uncertainty_absolute_powheg_unfolded.tex}
-
-% tab:madgraph_uncert_abs
-\input{tables/madgraph_uncertainty_absolute.tex}
-
-% tab:powheg_uncert_abs
-\input{tables/powheg_uncertainty_absolute.tex}
+and \POWHEG MC, respectively. Tables~\ref{tab:sys_uncert_abs} and
+\ref{tab:sys_uncert_abs_powheg} presents the fractional uncertainty in the
+absolute \phistar cross section in data unfolded with \MADGRAPH and with
+\POWHEG. Tables~\ref{tab:madgraph_uncert_abs} and \ref{tab:powheg_uncert_abs}
+present the uncertainty on the absolute \phistar cross section in \MADGRAPH and
+\POWHEG MC, respectively.
 
 % Normalized
 
@@ -125,3 +111,17 @@ and \POWHEG MC, respectively.
 
 % tab:powheg_uncert_norm
 \input{tables/powheg_uncertainty_normalized.tex}
+
+% Absolute
+
+% tab:sys_uncert_abs
+\input{tables/data_uncertainty_absolute.tex}
+
+% tab:sys_uncert_abs_powheg
+\input{tables/data_uncertainty_absolute_powheg_unfolded.tex}
+
+% tab:madgraph_uncert_abs
+\input{tables/madgraph_uncertainty_absolute.tex}
+
+% tab:powheg_uncert_abs
+\input{tables/powheg_uncertainty_absolute.tex}
