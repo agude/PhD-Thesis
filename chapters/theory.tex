@@ -267,37 +267,7 @@ There are four gauge bosons that mediate the electroweak interaction: the photon
 the \SUtwoUone group, but are instead linear combinations of these fields
 created through combination with the Higgs mechanism. The \W participates in
 interactions that change quark and lepton flavor, for example \ttoWb or
-\mutoWnu.
-
-The \Z boson acts as an excellent probe of precision physics as its well
-measured mass (\Zmass) and its sharp width (\Zwidth) make it easy to identify
-from its decay products \cite{pdg2014}. In a hadron collider the most common
-\Ztoqq decay mode is difficult to select as there are many hadronic jets in the
-each event, and so \Ztoll decay modes are preferred. In this analysis we look
-at the \Ztoee decay mode. A few common decay modes and their branching fraction
-are listed in \TAB~\ref{table:z_decays}.
-
-\begin{table}[h]
-\centering
-\spacerows{1.2}
-\begin{center}
-    \begin{tabular}{@{}l  r@{}}
-        \toprule
-        Mode & Fraction $\left( \Gamma_{i} / \Gamma \right)$ \\
-        \midrule
-        $\Ztoqq$ & $69.91 \pm 0.06\%$ \\
-        $\Ztoee$ & $3.363 \pm 0.004\%$ \\
-        $\Ztomumu$ & $3.366 \pm 0.007\%$ \\
-        $\Ztotautau$ & $3.370 \pm 0.008\%$ \\
-        $\Ztonunu$ & $20.00 \pm 0.06\%$ \\
-        \bottomrule
-    \end{tabular}
-    \caption{
-        Selected decay modes of the \Z boson.
-    }
-\label{table:z_decays}
-\end{center}
-\end{table}
+\mutoWnu, while the \Z does not.
 
 The final piece of the standard model, the Higgs boson, gives mass to the weak
 bosons through interactions with the Higgs field. In the Lagrangian of the
@@ -307,6 +277,33 @@ symmetry is spontaneously broken leading to the \W and \Z masses and the
 appearance of a \spinzero boson, the Higgs.
 
 \section{\texorpdfstring{\Z}{Z} Boson Transverse Momentum}
+
+The \Z boson is an excellent probe of precision physics as its well
+measured mass (\Zmass) and its sharp width (\Zwidth) make it easy to identify
+from its decay products \cite{pdg2014}. In a hadron collider the most common
+\Ztoqq decay mode is difficult to select as there are many hadronic jets in the
+each event, and so \Ztoll decay modes are preferred. In this analysis we look
+at the \Ztoee decay mode. A few common decay modes and their branching fraction
+are listed in \TAB~\ref{table:z_decays}.
+
+% table:z_decays
+\include{tables/z_decay_modes.tex}
+
+The leptonic decays of the \Z are an especially good probe of QCD as neither
+the \Z nor the leptons carry color charge. This means that there is no color
+flow between the initial and final states, and so the only QCD signature
+encoded in the decay of the \Z is that of the initial interaction. One
+particularly useful variable for probing QCD is the transverse momentum of the
+\Z boson, \bosonpt, where transverse is defined relative to the beamline in the
+collider. As the beam protons have near-zero momentum transverse to the
+beamline, the \pt of the \Z boson comes from QCD process like initial state
+radiation, which are discussed in \SEC~\ref{ssec:higher_order}.
+
+\section{Production of \texorpdfstring{\Z}{Z} Bosons In Proton-Proton Collisions}
+
+In order to understand where the transverse momentum of a \Z boson comes from,
+it is important to understand how they are produced in the Large Hadron
+Collider (LHC).
 
 \subsection{The Proton Parton Model}
 \label{ssec:parton_model}
@@ -382,6 +379,7 @@ the square of the center-of-mass energy, and the sum is over quark flavors.
 \input{packaged_figures/feyn_drell_yan_s_channel.tex}
 
 \subsection{Higher Order Production}
+\label{ssec:higher_order}
 
 In addition to the \DrellYan process discussed previously, there are higher
 order terms in \alphastrong that contribute to \Z boson production. Some of
