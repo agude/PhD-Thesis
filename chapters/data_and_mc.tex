@@ -75,8 +75,8 @@ the final measurement.
 
 There are multiple MC generators, each of which makes its own assumptions about
 the behavior of the various particles and interactions it simulates. In
-generally, the process of generating a simulated a proton-proton collision
-event is broken up into multiple steps. These steps can all be performed by one
+generally, the process of generating a simulated proton-proton collision
+events is broken up into multiple steps. These steps can all be performed by one
 program, but in general are handled by several. These steps are summarized
 below:
 
@@ -95,41 +95,42 @@ below:
         radiation. These shower initiators are given non-zero \pt to account
         for the primordial transverse momentum of the partons in the proton.
 
-    \item[Hard scattering process:] In the hard scattering the two partons
-        collide and a set of out going particles is generated based on the
-        matrix element level calculations.
+    \item[Hard scattering process:] In the hard scattering process, the two
+        partons collide and a set of out going particles is generated based on
+        the matrix element level calculations.
 
     \item[Resonances and decays:] Some of the outgoing particles may be
-        resonances (like the \W and \Z) which decay, while others may be stable
-        (but which may still radiate, for example, $e \to e \photon$). In
-        either case, these particles and their decay chains are simulated in
-        detail.
+        resonances (like the \W and \Z) or otherwise unstable particles which
+        decay, while others may be stable (but which may still radiate, for
+        example, $e \to e \photon$). In either case, these particles and their
+        decay chains are simulated in detail until all the remaining particles
+        are stable or long-lived enough to escape the simulation volume.
 
     \item[Multiple interactions and the underlying event:] In addition to the
         hard scattering, there are further interactions from other partons in
         the shower. After the partons from these interaction are removed from
         the protons, what is left are ``beam remnants'' that may have internal
         color and charge. Additionally, these remnants can have non-zero \pt as
-        the shower initiators had non-zero \pt. These remnants are still color
-        connected to the hard interaction, and must decay accordingly.
+        the extracted partons have non-zero \pt. The remnants are still color
+        connected to the hard interaction and must decay accordingly.
 
-    \item[Hadronization:] Bare quarks and gluons can not be observed, so the
-        must be combined into colorless objects. The exact manner in which this
-        happens is not understood from QCD, and so the different MC software
-        suites use different internally developed models to perform
-        hadronization.
+    \item[Hadronization:] Bare quarks and gluons can not be observed so they
+        must be combined into colorless objects in a process known as
+        hadronization. The exact manner in which this happens is not understood
+        from QCD, and so the different MC software suites use different
+        internally developed models to do so.
 
     \item[Detector Simulation:] After the event is generated and all of the
         particles decayed, the event is run through a simulation of the
-        detector which particle interactions with mater are simulated along
+        detector in which particle interactions with mater are simulated along
         with the response of the detector. This step is almost always done by a
         stand alone program as the job of simulating a detector is very
-        different (and almost wholly separable from) simulating a collision and
+        different (and almost wholly separable) from simulating a collision and
         the resulting event.
 
 \end{description}
 
-In the MC samples that we use, that parton distributions, initial state shower,
+In the MC samples that we use, the parton distributions, initial state shower,
 hard scattering, and resonances and decays are handled by \MADGRAPH, \POWHEG,
 and \PYTHIAsix, as indicated in \TAB~\ref{table:mc}. All of the samples use
 \PYTHIAsix for the underlying event and hadronization. The CMS detector is
@@ -137,11 +138,10 @@ simulated using \GEANTfour.
 
 MC programs have multiple different parameters that control their behavior in
 each of these steps. As not all of these parameters can be derived from QCD,
-and so many of them must be ``tuned'' to best fit the data. The parameters are
-correlated and so need to be fit together. One such example of tuned parameters
-are the various PDF inputs, which are generally produced by theory groups by
+many of them must be ``tuned'' to best fit the data. One such example of tuned
+parameters are the various PDF inputs, which theory groups generally produce by
 fitting their parton models to collider data. Parameters that control
-hadronization and final-state showers are fit using data from \LEP, as it
+hadronization and final-state showers are fit using data from \LEP, which
 offers the cleanest environment as the incoming electrons have no color charge.
 Parameters that control multiparton interactions and initial state radiation
 are fit using earlier LHC data.
