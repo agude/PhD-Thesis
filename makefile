@@ -13,15 +13,8 @@ QCD_FIGURES := $(wildcard figures/qcd_fits/*.pdf)
 all: $(MAIN_PDF)
 
 # Update the time stamp on the dummy file to force recompilation
-.refresh:
-	touch .refresh
-
-$(MAIN_PDF): $(MAIN_TEX) $(HELPER_FILES) $(CHAPTERS) $(FIGURES) $(PACKAGED_FIGURES) $(QCD_FIGURES) $(TABLES) .refresh
-	$(LATEXMK) -pdf $(MAIN_TEX) 
-
-force:
-	touch .refresh
-	$(MAKE) $(MAIN_PDF)
+$(MAIN_PDF): force $(MAIN_TEX) $(HELPER_FILES) $(CHAPTERS) $(FIGURES) $(PACKAGED_FIGURES) $(QCD_FIGURES) $(TABLES)
+	$(LATEXMK) -pdf $(MAIN_TEX)
 
 .PHONY: clean force all tidy
 
