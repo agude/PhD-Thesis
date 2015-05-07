@@ -33,7 +33,6 @@
 %\phd			(if invoked then \phdtrue is set.)
 %\degree{degree type}	(Default "Master of Science")
 %
-%\words{words in abstract}
 %\abstract{the body of the abstract}
 %\acknowledgements{the body of the acknowledgments}
 %\dedication{the body of the dedication}
@@ -220,10 +219,8 @@
 \def\initials#1{\gdef\@initials{#1}}
 \def\degree#1{\phdfalse\gdef\@degree{#1}}
 \def\program#1{\gdef\@program{#1}}
-\def\words#1{\gdef\@words{#1}}
 \def\campus#1{\gdef\@campus{#1}}
 \def\director#1{\gdef\@director{#1}}
-\def\words#1{\gdef\@words{#1}}
 \def\approvals#1{\gdef\@approvals{#1}}
 \def\submissionmonth#1{\gdef\@month{#1}}
 \def\submissionyear#1{\gdef\@year{#1}}
@@ -235,9 +232,7 @@
 \def\@title{}
 \def\@author{}
 \def\@program{}
-\def\@words{34}
 \def\@director{}
-\def\@words{}
 \def\@month{
   \ifcase\the\month\or
   January\or February\or March\or April\or May\or June\or
