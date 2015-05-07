@@ -266,7 +266,18 @@ The efficiency is computed in exactly the same way on the \MADGRAPH sample. The
 MC events are reweighted for pileup, reconstruction efficiency, and
 identification efficiency before the trigger efficiency is measured. The
 measured efficiencies for data and MC are listed in
-\TABS~\ref{table:trigger_eff_data} and \ref{table:trigger_eff_mc}, respectively.
+\TABS~\ref{table:trigger_eff_data} and \ref{table:trigger_eff_mc},
+respectively. The ratio of the data efficiency to the MC efficiency is shown in
+\FIG~\ref{fig:trigger_eff_ratio}.
+
+% table:trigger_eff_data
+\input{tables/trigger_efficiency_data.tex}
+
+% table:trigger_eff_mc
+\input{tables/trigger_efficiency_mc.tex}
+
+% fig:trigger_eff_ratio
+\input{packaged_figures/trigger_eff_ratio.tex}
 
 In the case of the trigger, because either electron could cause the event to
 pass, the scale factors can not be computed for each bin, but instead must be computed
@@ -292,12 +303,6 @@ electrons fired the trigger divided by the same quantity in MC. This equation
 assumes that the probability of one electron firing the trigger is uncorrelated
 with the probability of the other electron firing the trigger.
 
-% table:trigger_eff_data
-\input{tables/trigger_efficiency_data.tex}
-
-% table:trigger_eff_mc
-\input{tables/trigger_efficiency_mc.tex}
-
 Although the agreement between the efficiency in data and in MC is good, the
 ratio of these efficiencies is not identically one, as might be expected if the
 selection used in \TnP was strictly tighter than the trigger. There are several
@@ -307,9 +312,7 @@ reasons for this. First, the trigger requires a lower value of \HOverE than
 the trigger (which ran in 2012) and the reconstructed data (reconstructed in
 2013 using the data from the 2012 to calibrate) are different. Forth and
 finally, any differences in the MC simulation of the trigger or the detector
-would lead to differences in the efficiencies. 
-
-\TODO{Show ratio of data/mc in plot form}
+would lead to differences in the efficiencies.
 
 \subsection{Electron Reconstruction}
 \label{ssec:sf_reconstruction}
