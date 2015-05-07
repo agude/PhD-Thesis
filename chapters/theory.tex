@@ -234,32 +234,8 @@ color-octet. This number comes from the number of generators of \SUthree. Such
 octets are not unique, but a commonly used definition is listed in
 \TAB~\ref{table:gluon_color}.
 
-\begin{table}[h]
-\centering
-\spacerows{1.2}
-\begin{center}
-    \begin{tabular}{c  c}
-        %\toprule
-        $\left( \xxbar{r}{b} + \xxbar{b}{r} \right) / \sqrt{2}$ &
-        $-i \left( \xxbar{r}{b} - \xxbar{b}{r} \right) / \sqrt{2}$ \\
-        $\left( \xxbar{r}{g} + \xxbar{g}{r} \right) / \sqrt{2}$ &
-        $-i \left( \xxbar{r}{g} - \xxbar{g}{r} \right) / \sqrt{2}$ \\
-        $\left( \xxbar{b}{g} + \xxbar{g}{b} \right) / \sqrt{2}$ &
-        $-i \left( \xxbar{b}{g} - \xxbar{g}{b} \right) / \sqrt{2}$ \\
-        $\left( \xxbar{r}{r} - \xxbar{b}{b} \right) / \sqrt{2}$ &
-        $\left( \xxbar{r}{r} - 2\xxbar{b}{b} + \xxbar{g}{g} \right) / \sqrt{6}$ \\
-        %\bottomrule
-    \end{tabular}
-    \caption[
-        One possible QCD color-octet.
-    ]{
-        One of the possible color-octets. The colors are red ($r$), blue ($b$),
-        green ($g$), and their anti-colors ($\overline{r}$, $\overline{b}$, and
-        $\overline{g}$) .
-    }
-\label{table:gluon_color}
-\end{center}
-\end{table}
+% table:gluon_color
+\input{tables/color_octet.tex}
 
 There are four gauge bosons that mediate the electroweak interaction: the photon
 (\photon), the \Z, and the \Wpm. The photon and the \Z are uncharged, while the
@@ -276,18 +252,20 @@ that is gauge invariant. The Higgs mechanism adds a complex scalar field whose
 symmetry is spontaneously broken leading to the \W and \Z masses and the
 appearance of a \spinzero boson, the Higgs.
 
-\section{\texorpdfstring{\Z}{Z} Boson Transverse Momentum}
+\section{The \texorpdfstring{\Z}{Z} Boson}
 
-The \Z boson is an excellent probe of precision physics as its well
-measured mass (\Zmass) and its sharp width (\Zwidth) make it easy to identify
-from its decay products \cite{pdg2014}. In a hadron collider the most common
-\Ztoqq decay mode is difficult to select as there are many hadronic jets in the
-each event, and so \Ztoll decay modes are preferred. In this analysis we look
-at the \Ztoee decay mode. A few common decay modes and their branching fraction
-are listed in \TAB~\ref{table:z_decays}.
+The \Z boson is an excellent probe of precision physics as its well measured
+mass (\Zmass) and its sharp width (\Zwidth) make it easy to identify from its
+decay products \cite{pdg2014}. In a hadron collider the most common \Ztoqq
+decay mode is difficult to select as there are many hadronic jets in the each
+event, and so \Ztoll decay modes are preferred. In this analysis we look at the
+\Ztoee decay mode. A few common decay modes and their branching fraction are
+listed in \TAB~\ref{table:z_decays}.
 
 % table:z_decays
-\include{tables/z_decay_modes.tex}
+\input{tables/z_decay_modes.tex}
+
+\subsection{\texorpdfstring{\Z}{Z} Boson Transverse Momentum}
 
 The leptonic decays of the \Z are an especially good probe of QCD as neither
 the \Z nor the leptons carry color charge. This means that there is no color
@@ -296,8 +274,85 @@ encoded in the decay of the \Z is that of the initial interaction. One
 particularly useful variable for probing QCD is the transverse momentum of the
 \Z boson, \bosonpt, where transverse is defined relative to the beamline in the
 collider. As the beam protons have near-zero momentum transverse to the
-beamline, the \pt of the \Z boson comes from QCD process like initial state
-radiation, which are discussed in \SEC~\ref{ssec:higher_order}.
+beamline, the \bosonpt of the \Z boson comes from QCD process like initial
+state radiation, which are discussed in \SEC~\ref{ssec:higher_order}. Low
+values of \bosonpt probe the non-perturbative regions of QCD as, due to
+asymptotic freedom, it is these low momentum transfer interactions where
+\alphastrong is larger.
+
+In addition aiding in the understanding of QCD processes, measuring the \Z
+\bosonpt spectrum helps improve measurements of the \W mass. The \W \bosonpt
+distribution is a source of uncertainty in the final measurement, and it can be
+constrained by measuring the \Z \bosonpt spectrum.
+
+%\cite{bozzi_2011},
+%\cite{mantry_2011}, and \cite{becher_2011}.
+
+\subsection{A New Variable: \texorpdfstring{\phistar}{Phistar}}
+
+In the low \bosonpt region---the region which contains most of the \Z
+events---the measurement is dominated by the systematic uncertainties and the
+experimental resolution. Theorists have proposed a new variable, \phistar, that
+depends only on the direction of the leptons and not on their energy in order
+to reduce the systematic uncertainties associated with the measurement
+\cite{banfi_2011}. \phistar is correlated to $\bosonpt / \mll$, where $\mll$ is
+the invariant mass of the two leptons, so it probes the same physics as
+\bosonpt. This variable is less susceptible to detector resolution effects as
+the energy and momentum resolutions of a detector are, in general, worse than
+the position resolution. This is due to the fact that the position of leptons
+is measured with a very fine-grained tracking device whereas the energy is
+measured with a calorimeter.
+
+The definition of \phistar is:
+
+\begin{equation}\label{eq:phistar}
+    \phistar = \COT \frac{\Delta \phi}{2} \SECH \frac{\Delta \eta}{2}
+\end{equation}
+
+where $\Delta \phi$ is the azimuthal opening angle between the leptons,
+and $\Delta \eta$ is a measure of the scattering angle of the leptons with
+respect to the beam direction in the rest frame of the dilepton system.
+
+\ATLAS, one of the other experiments on the LHC, has measured \phistar at a
+center-of-mass energy of $7 \TeV$ (\rootsseven) \cite{atlas_phistar}. \DZERO
+has also measured \phistar at the Tevatron at \rootsTevatron
+\cite{d0_phistar_2011}\cite{d0_phistar_2014}. This thesis presents the first
+measurement of \phistar at \rootseight.
+
+\subsection{\texorpdfstring{\Z}{Z} Boson Differential Cross Section}
+
+The measurement of \phistar that will be performed in this analysis is a
+differential cross section measurement. A cross section is, at its heart, a
+probability measurement. The cross section of a process, $\Z$ production for
+instance, is given by:
+
+\begin{equation}\label{eq:xsec}
+    \sigma \left( \Z \right) = \frac{N_{\Z}}{\luminosity}
+\end{equation}
+
+where $N_{\Z}$ is the number of \Z bosons that were created and $\luminosity$
+is the integrated luminosity of the data which is a measurement of how many
+interaction opportunities took place. A differential cross section is used to
+measure the cross section of a process as a function of a variable, for
+instance \bosonpt. Then the cross section becomes:
+
+\begin{equation}\label{eq:differ_xsec}
+    \frac{\dir{\sigma \left( \Z \right)}}{\dir{\bosonptk} }
+    =
+    \frac{N_{\Z_{\bosonptk}}}{\Delta \bosonptk \cdot \luminosity}
+\end{equation}
+
+where $\bosonptk$ is a range of \bosonptk, $N_{\Z_{\bosonptk}}$ is the number
+of \Z events that fall within that range, and $\Delta \bosonptk$ is size of
+that range. This measurement is still dependent on the luminosity, which can be
+difficult to accurately measure. This dependency can be removed by dividing by
+the total cross section:
+
+\begin{equation}\label{eq:normaized_differ_xsec}
+    \frac{1}{\sigma \left( \Z \right)} \frac{\dir{\sigma \left( \Z \right)}}{\dir{\bosonptk} }
+    =
+    \frac{N_{\Z_{\bosonptk}}}{\Delta \bosonptk \cdot \luminosity}
+\end{equation}
 
 \section{Production of \texorpdfstring{\Z}{Z} Bosons In Proton-Proton Collisions}
 
@@ -310,10 +365,12 @@ Collider (LHC).
 
 At the very high energies of the LHC (\rootseight in 2012), a proton is no
 longer well described by assuming that it is composed of only three valence
-quarks. Instead, it is described by a parton model---a model in which there are
-three valence quarks, but also numerous gluons and ``sea-quarks'', where the
-sea-quarks are a superposition of quark and antiquark same-flavor pairs. These
-constituents of the protons are referred to as ``partons''.
+quarks as the energy of the proton is much higher than its own binding energy
+($\approx 1 \GeV$). Instead, it is described by a parton model---a model in
+which there are three valence quarks, but also numerous gluons and
+``sea-quarks'', where the sea-quarks are a superposition of quark and antiquark
+same-flavor pairs. These constituents of the protons are referred to as
+``partons''.
 
 When two protons collide at the LHC, it is a parton from each that interacts in
 the hard scattering process. This parton-parton interaction can be considered
@@ -321,15 +378,18 @@ as independent of the other partons as their interaction timescale is short
 compared to the size of the proton. Each of the partons that takes place in the
 interaction will carry only a faction of their parent proton's total momentum.
 This fraction is given by the Bjorken \BjorkenX{i} variable, defined as
-$\BjorkenX{i} P = p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is the
-momentum of a parton.
+$\BjorkenX{i} P = p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is
+the momentum of a parton. Most of this momentum is in the same direction as the
+beam, but a small fraction of it, less than the proton binding energy of
+$\approx 1 \GeV$, is transverse to the beamline due to the motion of the
+partons inside the proton.
 
-The \BjorkenX{i} value of a parton is not a fixed value, but is instead a
-probability distribution that is dependent on the flavor of the parton and the
-energy scale ($Q^{2}$) of the interaction. Collections of these distributions
-for the various flavors are called parton distribution functions (PDFs). PDFs
-can not currently be calculated from QCD, and it is not known if doing so is
-even possible. Instead, PDFs are created by fitting data and extrapolating to
+The \BjorkenX{i} value of a parton is not fixed, but is instead a probability
+distribution that is dependent on the flavor of the parton and the energy scale
+($Q^{2}$) of the interaction. Collections of these distributions for the
+various flavors are called parton distribution functions (PDFs). PDFs can not
+currently be calculated from QCD, and it is not known if doing so is even
+possible. Instead, PDFs are models which are fit to data and extrapolated to
 new interaction scales using perturbative QCD. An example set of PDFs from the
 MSTW collaboration\cite{martin_2009} is shown in \FIG~\ref{fig:mstw_pdf}.
 
@@ -341,11 +401,11 @@ MSTW collaboration\cite{martin_2009} is shown in \FIG~\ref{fig:mstw_pdf}.
 
 The \DrellYan process is the lowest order in \alphastrong way of producing
 dilepton pairs via the \Z boson \cite{drell_1970}\cite{drell_1970a}. The
-Feynman diagram of this process is shown in \FIG~\ref{fig:feyn_s_channel}. The
-two quarks will have $\pt \approx 0$ as most of the proton's momentum (and
-hence, the parton's momentum) is along the beamline, and so the \Z will also
-have $\pt \approx 0$. The cross section for the \DrellYan process, in terms of
-the \BjorkenX{i} variables of the incoming partons, is:
+Feynman diagram of this process is shown in \FIG~\ref{fig:feyn_s_channel}. As
+discussed previously, the two quarks will have $\pt \approx 0$ as most of the
+proton's momentum (and hence, the parton's momentum) is along the beamline, and
+so the \Z will also have $\pt \approx 0$. The cross section for the \DrellYan
+process, in terms of the \BjorkenX{i} variables of the incoming partons, is:
 
 \begin{equation}\label{eq:drell_yan_cross_section}
     \frac{\dirSquare{\sigma}}
@@ -386,9 +446,9 @@ order terms in \alphastrong that contribute to \Z boson production. Some of
 these terms are shown in \FIG~\ref{fig:higher_order_z_diagrams}.
 
 The first type of term, shown in \FIGS~\ref{fig:feyn_qqbar_to_zg} and
-\ref{fig:feyn_qbarq_to_zg}, is known as initial state radiation (ISR). These
-diagrams contain gluon radiation from the incoming quark which causes the quark
-to gain momentum equal and opposite to that of the gluon. This quark will then
+\ref{fig:feyn_qbarq_to_zg}, contains initial state radiation (ISR). These
+diagrams have a gluon radiating from the incoming quark. This causes the quark
+to gain momentum equal and opposite to that of the gluon. The quark will then
 have some \pt to pass on to the \Z boson. The probability of radiating a gluon
 increases as the energy of the radiated gluon decreases, and so ISR often
 introduces a small amount of \bosonpt.
