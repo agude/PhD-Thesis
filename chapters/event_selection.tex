@@ -9,6 +9,8 @@ we correct for selection and detector effects through unfolding.
 \section{Acceptance}
 \label{sec:acceptance}
 
+\TODO{Plot of acceptance in Phi*: all cuts / Mee cut}
+
 The acceptance region is a definition of what events, assuming that there are
 no limitations due to the detector design, are include in the analysis. The
 acceptance region is what the final result of this analysis will be corrected
@@ -30,9 +32,9 @@ into a joint measurement. The pseudorapidity limit was selected to match the
 most efficient region of CMS's single muon trigger, while the transverse
 momentum threshold was dictated by threshold on single electron trigger. The
 pseudorapidity limit on the \ExtendedElectron was chosen to keep all of the
-electrons within the region covered by the tracker (which allows a better
-angular measurement than ECAL alone), while the transverse momentum threshold
-was selected because for $\pt < 20 \GeV$ the rate of fake electrons increases.
+muons within the region covered by the muon system, while the transverse
+momentum threshold was selected because for $\pt < 20 \GeV$ the rate of fake
+electrons increases.
 
 There are other particles, like the \jpsi, that decay to \ee pairs as shown in
 \FIG~\ref{fig:ee_spectrum}. Fortunately, none of these other particles are near
@@ -123,17 +125,19 @@ electrons pass the selection, the \Z is constructed by taking the sum of the
 electron four-vectors. The resulting invariant mass of the \Z must be within
 the region set by the acceptance (\MassRange).
 
-The distributions of \mee, \Z \pt, and \Z \rapidity after these selection
+The distributions of \mee, \Z \bosonpt, and \Z \rapidity after these selection
 requirements are applied are shown with \MADGRAPH signal MC in
 \FIGS~\ref{fig:z_mass}, \ref{fig:z_pt}, and \ref{fig:z_rapidity}, and with
 \POWHEG signal MC in \FIGS~\ref{fig:z_mass_powheg}, \ref{fig:z_pt_powheg}, and
-\ref{fig:z_rapidity_powheg}. As can be seen, even after applying the
-corrections discussed in \SEC~\ref{sec:corrections}, that the \MADGRAPH MC
-sample does not well approximate the data in either \mee distribution nor in
-the \Z \rapidity distribution. The effect this has on the final results is
-considered in \SEC~\ref{four_vector_uncertainty}. The disagreement in the \Z
-\pt distribution is not considered as a source of uncertainty as \phistar is
-related to boson \pt, and hence the disagreement is motivation for the
+\ref{fig:z_rapidity_powheg}. The MC samples have had all of the
+corrections discussed in \SEC~\ref{sec:corrections} applied, as well as the scale
+factors discussed in \SEC~\ref{sec:scale_factors}. Even so, the \MADGRAPH
+sample does not reproduce the distributions seen in data.
+
+The effect of these disagreements is considered in
+\SEC~\ref{four_vector_uncertainty}. The disagreement in the \Z \bosonpt
+distribution is not considered as a source of uncertainty as \phistar is
+related to boson \bosonpt, and hence the disagreement is motivation for the
 measurement, not something to be corrected for.
 
 \begin{figure}[!htbp]
@@ -224,7 +228,7 @@ measurement, not something to be corrected for.
 The distribution of background events is estimated using the MC samples
 discussed in \SEC~\ref{ssec:monte_carlo}, with the exception of the \QCDjets
 and \wjets backgrounds, which are computed using data. The various MC samples
-are reweighed so that they have equivalent luminosity to the data. The MC
+are reweighted so that they have equivalent luminosity to the data. The MC
 datasets also have various corrections applied which are discussed in
 \SEC~\ref{sec:scale_factors}. These scale factors are applied as weights to
 each MC event in order to make them better match the data.
