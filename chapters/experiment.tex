@@ -280,6 +280,8 @@ very much light ($30 \photon / \MeV$) and so sensitive photodetectors that can
 operate within a strong magnetic field are required. In the barrel avalanche
 photodiodes are used, and in the endcaps vacuum phototriodes are used.
 
+\subsubsection{Electromagnetic Calorimeter Barrel}
+
 The ECAL barrel detector (EB) has an inner radius of 129\centimeters and covers
 a pseudorapidity range from $0 < |\eta| < 1.479$. It is composed of 36
 identical ``supermodules'' each covering half the barrel's length and 1/18th of
@@ -290,6 +292,8 @@ crystals are tilted with their axis 3\degrees off from the vertex region in
 order to obscure the small gaps between crystals from particles leaving the
 interaction point.
 
+\subsubsection{Electromagnetic Calorimeter Endcap}
+
 The ECAL endcap detectors (EE) are located with their front face at
 $|z|=314\centimeters$ and cover a pseudorapidity range of $1.479 < |\eta| <
 3.0$. Each endcap is composed of two ``Dees'' consisting of semi-circular
@@ -298,6 +302,8 @@ a front face cross-section of $28.6 \times 28.6\millimeters^{2}$ and a length
 of 220\millimeters. Unlike in EB, where the crystals are arranged in an
 \coordetaphi~grid, the crystals in EE are arranged in an \coordxy~grid. Like
 the EB crystals, the EE crystals also off-point from the vertex region.
+
+\subsubsection{Electromagnetic Calorimeter Preshower}
 
 In addition to EB and EE, there is a smaller subdetector, the preshower (ES),
 placed in front of EE. It is made of lead and silicon and has higher
@@ -322,7 +328,7 @@ The layout of ECAL is shown in \FIG~\ref{fig:ecal_layout}.
     \label{fig:hcal_layout}
 \end{figure}
 
-The hadronic calorimeter (HCAL) in CMS is built around ECAL and inside the
+The hadron calorimeter (HCAL) in CMS is built around ECAL and inside the
 solenoid. HCAL's primary purpose is to measure the energy of the various
 strongly-interacting particles created by the collision. HCAL must have good
 containment of hadronic particles so that the missing transverse energy, \MET,
@@ -440,7 +446,9 @@ the primary magnetic field provided inside the solenoid.
 The muon systems must cover a very large surface area, $25,000\meters^{2}$, and
 so gaseous detectors are used in order to keep the cost down. Three types of
 gaseous detectors are used in the muon system: drift tube (DT) chambers,
-cathode strip chambers (CSC), and resistive plate chambers (RPC).
+resistive plate chambers (RPC), and cathode strip chambers (CSC),
+
+\subsubsection{Drift Tubes}
 
 DTs are gas ionization detectors with an anode wire strung down the center of
 each tube which act as the cathode. The wire collects the ionization charged
@@ -450,12 +458,16 @@ measurement, the DTs can achieve a point resolution of $\approx
 and a direction measurement good to approximately 1\millirads. The maximum
 drift length in the DTs is 2\centimeters.
 
+\subsubsection{Resistive Plate Chambers}
+
 The RPCs are constructed of two parallel high-voltage plates. When a muon
 passes through it causes an electron cascade that is collected on the anode,
 which is divided into strips to allow the position of the cascade to be
 measured. RPCs have worse position resolution than the DTs, but are much
 faster because they have a shorter drift length, with a timing response of
 $\approx 1\ns$.
+
+\subsubsection{Cathode Strip Chambers}
 
 The CSCs are flat gas chambers with parallel anode wires running the length on
 one side, and cathode wires on the other side running orthogonal to the anodes.
@@ -465,6 +477,8 @@ anode signal is used in triggering at \Lone while the cathodes are used for
 final reconstruction. The spatial resolution of $\approx 200\micrometers$
 ($100\micrometers$ in the first ring of the first endcap disk) and the angular
 resolution in $\phi$ is $\approx 2\millirads$.
+
+\subsubsection{Muon System Barrel}
 
 In the barrel region ($|\eta| < 1.2$) DTs are used because the induced neutron
 background is low, the muon rate is low, and the magnetic field is low. RPCs
@@ -479,6 +493,8 @@ and \coordz, while the 4th layer measures only in \coordrphi. Each chamber
 consists of 12 planes of DTs with 2 RPCs---1 on the front and 1 on the
 back---in the first two layers, and 1 RPC---on the front---for the second two
 layers.
+
+\subsubsection{Muon System Endcap}
 
 In the endcap region the higher magnetic field, neutron background, and muon
 flux make DTs ineffective and so CSCs are used instead. There are three disks
