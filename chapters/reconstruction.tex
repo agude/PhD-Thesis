@@ -8,7 +8,7 @@ Reconstruction of electrons in CMS is complicated by the fact that the tracker
 contains a large amount of material and so electrons must pass through up to
 two radiation lengths of material before reaching ECAL. Information about the
 material in front of ECAL is given in
-\FIG~\ref{fig:tracker_material}\cite{cms_tracker_2014}. Electrons emit photons
+\cref{fig:tracker_material}\cite{cms_tracker_2014}. Electrons emit photons
 when they interact with matter in a process known as bremsstrahlung. These
 photons are then separated from the electron as they do not bend in the
 magnetic field while the electron does. In order to accurately reconstruct the
@@ -59,7 +59,7 @@ the interaction point.
 Although the measurement of \phistar is relatively insensitive to the energy of
 the electrons, the energy still plays a role in determining the electron \pt
 and hence whether an event passes the selection criteria used in this analysis
-(discussed in \SEC~\ref{ssec:electron_selection}). Therefore, it is important
+(discussed in \cref{ssec:electron_selection}). Therefore, it is important
 to accurately measure this quantity, even if it does not directly change the
 final observable. To this end, two sets of energy and momentum corrections,
 centrally produced by the CMS collaboration, are applied to both the
@@ -103,7 +103,7 @@ The scale correction is both time dependent and $\eta$ dependent and so fits
 were performed separately in four pseudorapidity bins in various run ranges.
 The peak of the CB function in data and MC were compared with the relative
 shift taken as the scale correction, $\Delta P$, given by
-\EQ~\ref{eq:scale_correction}.
+\cref{eq:scale_correction}.
 
 \begin{equation} \label{eq:scale_correction}
     \Delta P = \frac{\Delta m_{\text{data}} - \Delta m_{\text{MC}}}{\MZ}
@@ -128,12 +128,12 @@ corrections are also \ET dependent.
 
 There are several centrally-defined ``cut based identification'' requirements
 used to select high quality electrons at CMS. These requirements make use of
-the variables defined in \SEC~\ref{sec:electron_variables} in order to
+the variables defined in \cref{sec:electron_variables} in order to
 reject low quality and unisolation electrons. We use two of requirements,
 referred to as \EGMEDIUM and \EGTIGHT, with \EGTIGHT having stricter
 requirements than \EGMEDIUM. The exact definition of these requirements are
 given in
-\TAB~\ref{table:eg_cuts}.
+\cref{table:eg_cuts}.
 
 % table:eg_cuts
 \input{tables/medium_tight_cuts.tex}
@@ -199,7 +199,7 @@ the shower in $\eta$ is characterized by \sigmaietaieta. Charge exchange events
 often have a higher \sigmaietaieta than real electrons because the proton is
 can be knocked loose by the interaction and leaves a broader shower.
 Comparisons of the \sigmaietaieta distributions between all electrons and for
-signal electrons for both EB and EE are shown in \FIG~\ref{fig:sieie}.
+signal electrons for both EB and EE are shown in \cref{fig:sieie}.
 
 \begin{figure}[!htbp]
     \centering
@@ -228,7 +228,7 @@ around the hit in HCAL over the energy around the hit in ECAL, \HOverE, is also
 used to parameterize the shower shape. Charge exchange events often have higher
 \HOverE than electrons because the loose proton can escape and enter HCAL. A
 comparison of the \HOverE distributions between all electrons and for signal
-electrons is shown in \FIG~\ref{fig:he}.
+electrons is shown in \cref{fig:he}.
 
 \begin{figure}[!htbp]
     \centering
@@ -249,7 +249,7 @@ given by \dphiin and \detain. Real electrons have small values of \dphiin and
 coincidence events are equally as likely to have a large track separation as a
 small one because each element comes from an independent object. Comparisons of
 the \dphiin and \detain distributions between all electrons and for signal
-electrons are shown in \FIGS~\ref{fig:deta} and \ref{fig:dphi}, respectively.
+electrons are shown in \cref{fig:deta,fig:dphi}, respectively.
 
 \begin{figure}[!htbp]
     \centering
@@ -283,7 +283,7 @@ interaction and hence after the proton has carried away some of the energy.
 Coincidence events, because the energy and momentum are measured from
 independent objects, can take both positive and negative values of \ooeoop. A
 comparison of the \ooeoop distributions between all electrons and for signal
-electrons is shown in \FIG~\ref{fig:ooeoop}.
+electrons is shown in \cref{fig:ooeoop}.
 
 \begin{figure}[!htbp]
     \centering
@@ -308,7 +308,7 @@ the raw distance of the track from the primary vertex, there is also a fit
 probability, \pvtx, which indicates the probability that a track came from the
 primary vertex. This variable is also used to reject conversions. Comparisons
 of the \dzero and \dz distributions between all electrons and for signal
-electrons are shown in \FIGS~\ref{fig:d0} and \ref{fig:dz}, respectively.
+electrons are shown in \cref{fig:d0,fig:dz}, respectively.
 
 \begin{figure}[!htbp]
     \centering
@@ -335,7 +335,7 @@ electrons are shown in \FIGS~\ref{fig:d0} and \ref{fig:dz}, respectively.
 Conversions generally happen after the photon passes through several layers of
 the tracker and so their tracks will have missing layers, the number of which
 is given by \nmiss. A comparison of the \nmiss distributions between all
-electrons and for signal electrons is shown in \FIG~\ref{fig:nmiss}.
+electrons and for signal electrons is shown in \cref{fig:nmiss}.
 
 \begin{figure}[!htbp]
     \centering
@@ -377,7 +377,7 @@ the ECAL isolation sum. No subtraction is applied to the HCAL isolation as we
 expect all of the electron's energy to be contained in ECAL. Both isolation
 values are normalized by the \et of the electron. Comparisons of the \HCALISO
 and \ECALISO distributions between all electrons and for signal electrons are
-shown in \FIGS~\ref{fig:hcal_iso} and \ref{fig:ecal_iso}, respectively.
+shown in \cref{fig:hcal_iso,fig:ecal_iso}, respectively.
 
 \begin{figure}[!htbp]
     \centering
@@ -430,7 +430,7 @@ electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
 around the electron due to pileup calculated from particle flow. The
 particle flow isolation is normalized by the \pt of the electron. A comparison
 of the \PFISO distributions between all electrons and for signal electrons is
-shown in \FIG~\ref{fig:pf_iso}.
+shown in \cref{fig:pf_iso}.
 
 \begin{figure}[!htbp]
     \centering

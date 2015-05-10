@@ -184,7 +184,7 @@ There are two types of particles in the standard model: fermions---with half
 integer spin---and bosons---with integer spin. The fermions, which make up all
 of the matter in the universe, are further subdivided into two groups, leptons
 and quarks, while the bosons are divided into gauge bosons and the Higgs.  The
-various particles are show schematically in \FIG~\ref{fig:standard_model}.
+various particles are show schematically in \cref{fig:standard_model}.
 
 Leptons have \spinhalf and have charge $q=-1 \text{ or } 1$ for the massive
 leptons, or 0 for the neutrinos. They interact electromagnetically (if they
@@ -233,7 +233,7 @@ gluons to interact not only with quarks but with other gluons. Gluons can have
 any one of eight different possible color-anticolor superpositions that form a
 color-octet. This number comes from the number of generators of \SUthree. Such
 octets are not unique, but a commonly used definition is listed in
-\TAB~\ref{table:gluon_color}.
+\cref{table:gluon_color}.
 
 % table:gluon_color
 \input{tables/color_octet.tex}
@@ -262,7 +262,7 @@ decay mode is difficult to select as there are many hadronic jets in the each
 event, and so \Ztoll decay modes are preferred. In this analysis we look at the
 \Ztoee decay mode; our collaborators are working on performing a similar
 measurement with \Ztomumu decays instead. A few common decay modes and their
-branching fraction are listed in \TAB~\ref{table:z_decays}.
+branching fraction are listed in \cref{table:z_decays}.
 
 % table:z_decays
 \input{tables/z_decay_modes.tex}
@@ -277,7 +277,7 @@ particularly useful variable for probing QCD is the transverse momentum of the
 \Z boson, \bosonpt, where transverse is defined relative to the beamline in the
 collider. As the beam protons have near-zero momentum transverse to the
 beamline, the \bosonpt of the \Z boson comes from QCD process like initial
-state radiation, which are discussed in \SEC~\ref{ssec:higher_order}. Low
+state radiation, which are discussed in \cref{ssec:higher_order}. Low
 values of \bosonpt probe the non-perturbative regions of QCD as, due to
 asymptotic freedom, it is these low momentum transfer interactions where
 \alphastrong is large.
@@ -394,7 +394,7 @@ various flavors are called parton distribution functions (PDFs). PDFs can not
 currently be calculated from QCD, and it is not known if doing so is even
 possible. Instead, PDFs are models which are fit to data and extrapolated to
 new interaction scales using perturbative QCD. An example set of PDFs from the
-MSTW collaboration\cite{martin_2009} is shown in \FIG~\ref{fig:mstw_pdf}. In
+MSTW collaboration\cite{martin_2009} is shown in \cref{fig:mstw_pdf}. In
 the low interaction energy case, shown on the left plot, the u and the d quark
 distributions have peaks at high \BjorkenX{i}, as the valence quarks carry most
 of the momentum. In the high interaction energy case, shown on the right plot,
@@ -409,7 +409,7 @@ sea quarks and gluons also carry a large amount of the total momentum.
 
 The \DrellYan process is the lowest order in \alphastrong process of producing
 dilepton pairs via the \Z boson \cite{drell_1970}\cite{drell_1970a}. The
-Feynman diagram of this process is shown in \FIG~\ref{fig:feyn_s_channel}. As
+Feynman diagram of this process is shown in \cref{fig:feyn_s_channel}. As
 discussed previously, the two quarks will have $\pt \approx 0$ as most of the
 proton's momentum (and hence, the parton's momentum) is along the beamline, and
 so the \Z will also have $\bosonpt \approx 0$. The cross section for the
@@ -452,22 +452,22 @@ the square of the center-of-mass energy, and the sum is over quark flavors.
 
 In addition to the \DrellYan process discussed previously, there are higher
 order terms in \alphastrong that contribute to \Z boson production. Some of
-these terms are shown in \FIG~\ref{fig:higher_order_z_diagrams}.
+these terms are shown in \cref{fig:higher_order_z_diagrams}.
 
-The first type of term, shown in \FIGS~\ref{fig:feyn_qqbar_to_zg} and
-\ref{fig:feyn_qbarq_to_zg}, contains initial state radiation (ISR). These
-diagrams have a gluon radiating from the incoming quark. This causes the quark
-to gain momentum equal and opposite to that of the gluon. The quark will then
-have some \pt to pass on to the \Z boson. The probability of radiating a gluon
-increases as the energy of the radiated gluon decreases, and so ISR often
-introduces a small amount of \bosonpt.
+The first type of term, shown in
+\cref{fig:feyn_qqbar_to_zg,fig:feyn_qbarq_to_zg}, contains initial state
+radiation (ISR). These diagrams have a gluon radiating from the incoming quark.
+This causes the quark to gain momentum equal and opposite to that of the gluon.
+The quark will then have some \pt to pass on to the \Z boson. The probability
+of radiating a gluon increases as the energy of the radiated gluon decreases,
+and so ISR often introduces a small amount of \bosonpt.
 
-The second type of term, shown in \FIGS~\ref{fig:feyn_qg_to_zq} and
-\ref{fig:feyn_qg_to_q_to_zq}, is one where the quark interacts with a gluon
-from the other proton and radiates a \Z boson. These terms, although of order
-\alphastrong, dominate at that LHC as there is a larger probability of a gluon
-being present than an antiquark because the antiquarks must come from the
-sea quarks.
+The second type of term, shown in
+\cref{fig:feyn_qg_to_zq,fig:feyn_qg_to_q_to_zq}, is one where the quark
+interacts with a gluon from the other proton and radiates a \Z boson. These
+terms, although of order \alphastrong, dominate at that LHC as there is a
+larger probability of a gluon being present than an antiquark because the
+antiquarks must come from the sea quarks.
 
 % fig:higher_order_z_diagrams
 % fig:feyn_qqbar_to_zg, fig:feyn_qbarq_to_zg, fig:feyn_qg_to_zq,
@@ -488,7 +488,7 @@ sea quarks.
 
 After the \Ztoee decay, the decay electrons can radiate photons in a process
 known as final state radiation (FSR). The diagram of this process is shown
-in \FIG~\ref{fig:fsr_diagram}. Different measurements and theories treat FSR
+in \cref{fig:fsr_diagram}. Different measurements and theories treat FSR
 differently, and so we define three types of generator level electron that each
 account for FSR in a different manner: \born, \bare, and \dressed.
 
@@ -509,13 +509,13 @@ measured using a calorimeter which also integrates the nearby photons into the
 measurement.
 
 Whenever generator level quantities are used, for example when performing the
-unfolding as discussed in \CHP~\ref{sec:unfolding}, \dressed electrons are
+unfolding as discussed in \cref{sec:unfolding}, \dressed electrons are
 used.
 
 \TODO{We are not going to have bare and born results ready}
 
 \TODO{Whenever generator level quantities are used, for example when performing the
-unfolding as discussed in \CHP~\ref{sec:unfolding}, all three definitions
+unfolding as discussed in \cref{sec:unfolding}, all three definitions
 of generator level electron are used. This allows three final results to be
 computed, one with each definition, allowing easy comparison of our results to
 other experiments and theoretical models.}

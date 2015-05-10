@@ -13,7 +13,7 @@ their impact on the final result.
 
 The statistical uncertainties due to the number of data events are propagated
 through the unfolding method using toy MC, as discussed in
-\SEC~\ref{ssec:unfolding_statistical_uncertainties}. For the normalized cross
+\cref{ssec:unfolding_statistical_uncertainties}. For the normalized cross
 section measurement, this uncertainty is corrected for the uncertainty on the
 total cross section as follows:
 
@@ -51,13 +51,13 @@ final selection than there are events in the data. These samples are used to
 unfold the data and so their statistical uncertainty affects the final
 measurement. The affect of the statistical uncertainty on the bin migration
 matrix is propagated through to the final result via the use of toy MC as
-detailed in \SEC~\ref{ssec:unfolding_statistical_uncertainties}. The
+detailed in \cref{ssec:unfolding_statistical_uncertainties}. The
 uncertainty from using this method with the \MADGRAPH sample is 0.1 to 0.2\%
 for both the absolute and normalized cross section measurements.
 
 In addition to affecting the unfolding, the low number of events in the MC
-affects the efficiency correction discussed in \SEC~\ref{ssec:eff_correction}
-and shown in \FIG~\ref{fig:average_efficiencies}. These uncertainties vary from
+affects the efficiency correction discussed in \cref{ssec:eff_correction}
+and shown in \cref{fig:average_efficiencies}. These uncertainties vary from
 0.3 to 1.3\% for both the absolute and normalized cross section measurements.
 These uncertainties are calculated in the same manner for \POWHEG, but the
 effect is larger as there are fewer events in that sample.
@@ -84,14 +84,14 @@ by far the dominant uncertainty. The luminosity cancels in the normalized
 cross section measurement and so the uncertainty only affects the background
 subtraction. This effect is negligible compared to the uncertainty already
 present due to the background subtraction, which is discussed in
-\SEC~\ref{ssec:background_subtraction_uncertainty}. The large uncertainty on
+\cref{ssec:background_subtraction_uncertainty}. The large uncertainty on
 the luminosity is the primary motivation behind making a normalized cross
 section measurement.
 
 \subsection{Pileup Uncertainty}
 \label{ssec:pileup_uncertainty}
 
-As discussed in \SEC~\ref{ssec:monte_carlo}, the high beam intensity at the LHC
+As discussed in \cref{ssec:monte_carlo}, the high beam intensity at the LHC
 leads to multiple proton-proton interactions at each bunch crossing. This is
 modeled in MC by overlaying multiple simulated minimum-bias events on top of
 each simulated event. The distribution of pileup in MC is reweighted to match
@@ -110,9 +110,9 @@ the normalized cross section measurement is between $< 0.01$ and 0.64\%.
 
 Differences between the MC and data are corrected for using scale factors.
 Three different sets of scale factors are used to reweight the MC samples:
-trigger scale factors (discussed in \SEC~\ref{ssec:sf_trigger}), reconstruction
-scale factors (discussed in \SEC~\ref{ssec:sf_reconstruction}), and
-identification scale factors (discussed in \SEC~\ref{ssec:sf_id}).
+trigger scale factors (discussed in \cref{ssec:sf_trigger}), reconstruction
+scale factors (discussed in \cref{ssec:sf_reconstruction}), and
+identification scale factors (discussed in \cref{ssec:sf_id}).
 
 In all three cases, the uncertainties on the scale factors are propagated
 through to the final measurement using 500 toy MC variations. In this method,
@@ -153,7 +153,7 @@ measure is $< 0.01$ to 0.10\%.
 \subsection{Background Subtraction Uncertainty}
 \label{ssec:background_subtraction_uncertainty}
 
-The background subtraction, which is discussed in \SEC~\ref{sec:background},
+The background subtraction, which is discussed in \cref{sec:background},
 deals with three separate categories of backgrounds. The uncertainty in
 each category is determined with a different method, and these uncertainties
 are added in quadrature to determine the total uncertainty due to the
@@ -163,7 +163,7 @@ The first category consists of the various backgrounds with two independent
 decay chains each of which can produce a lepton: $\ttbar$, $\W\W$,
 $\DYtotautau$, $t\W$, and $\tbar\W$. The contributions from these backgrounds
 are estimated by using an \emu control sample as discussed in
-\SEC~\ref{ssec:emu_sample}. The uncertainty from the scale factors derived
+\cref{ssec:emu_sample}. The uncertainty from the scale factors derived
 using this method are propagated through to the final result using 500 toy MC
 variations. For each variation, the scale factors are randomly drawn from a
 Gaussian distribution with mean equal to the nominal value of that scale factor
@@ -181,7 +181,7 @@ theoretical cross section and propagating this through to the final result.
 
 The third and final category consists of the \QCDjets and \wjets
 backgrounds. The method of estimating this background is discussed in
-\SEC~\ref{ssec:qcd_background}. Instead of taking the uncertainties from the
+\cref{ssec:qcd_background}. Instead of taking the uncertainties from the
 fit, which would not account for any systematics in the method used, a
 conservative 100\% uncertainty is assigned to this category.
 
@@ -192,7 +192,7 @@ normalized cross section measurement.
 \subsection{PDF and Cross Section Uncertainties}
 \label{ssec:pdf_uncertainties}
 
-As discussed in \SEC~\ref{ssec:parton_model}, the kinematics of the \Z boson
+As discussed in \cref{ssec:parton_model}, the kinematics of the \Z boson
 depend on the internal composition and kinematics of the protons as they
 collide. The reconstructed \phistar distribution is therefore dependent on the
 PDFs used to generate the signal MC sample.
@@ -227,9 +227,9 @@ uncertainty is the dominant uncertainty from the \MADGRAPH sample.
 \label{ssec:fsr_uncertainties}
 
 FSR, where an electron radiates a photon, is discussed in
-\SEC~\ref{sec:electron_dressing}. These photons can affect the reconstruction
+\cref{sec:electron_dressing}. These photons can affect the reconstruction
 of the \Z, but this is taken into account during the unfolding as discussed in
-\SEC~\ref{sec:unfolding}. Hence, uncertainties in the modeling of FSR affect
+\cref{sec:unfolding}. Hence, uncertainties in the modeling of FSR affect
 the unfolding and the final measurement.
 
 The uncertainty is calculated using the \FSRWeightProducer, which augments the
@@ -243,7 +243,7 @@ measurement and $\le 0.03\%$ for the normalized cross section measurement.
 %
 %Since \phistar depends on the angles between the two electrons, it is sensitive
 %to mismeasurement of these angles. As discussed in
-%\SEC~\ref{sec:electron_reconstruction}, the position of a reconstructed
+%\cref{sec:electron_reconstruction}, the position of a reconstructed
 %electron comes from the tracker, and therefore misalignment of the tracker
 %would lead to a systematic uncertainty on the angle measurement. The magnitude
 %of this systematic is estimated by using the position of the ECAL supercluster
@@ -256,10 +256,10 @@ measurement and $\le 0.03\%$ for the normalized cross section measurement.
 %the pretense of the field, $\phi$ is changed. A correction is applied to $\phi$
 %to find the angle at the interaction point, $\phizero$, based on the angle of
 %the supercluster, $\phisc$. This correction is given by
-%\EQ~\ref{eq:b_field_correction} where $q$ is the charge of the electron, \pt is
+%\cref{eq:b_field_correction} where $q$ is the charge of the electron, \pt is
 %the transverse momentum of the electron, $B$ is the magnitude of the magnetic
 %field, and \Reffective is the effective radius of ECAL as a function of $\eta$
-%and $\theta$ as given in \EQ~\ref{eq:effective_radius}. The charge and momentum
+%and $\theta$ as given in \cref{eq:effective_radius}. The charge and momentum
 %come from the electron matched to the supercluster, and although they are
 %determined in combination with the tracker, they are far less susceptible to
 %the small scale misalignments of the tracker that we are considering.
@@ -289,13 +289,13 @@ measurement and $\le 0.03\%$ for the normalized cross section measurement.
 \label{four_vector_uncertainty}
 
 The \mee distribution in the \MADGRAPH signal MC sample does not precisely
-match the distribution in data, as seen in \FIG~\ref{fig:z_mass}. This
+match the distribution in data, as seen in \cref{fig:z_mass}. This
 discrepancy remains even after applying the various energy and momentum
-corrections to the electrons discussed in \SEC~\ref{sec:corrections}. In order
+corrections to the electrons discussed in \cref{sec:corrections}. In order
 to determine the effect this has on the final measurement, the \MADGRAPH signal
 MC sample is reweighted to remove this difference. The ratio between the
 nominal \phistar value and the value derived after this reweighting is shown in
-\FIG~\ref{fig:z_mass_reweighted}. The circular points show the ratio of the
+\cref{fig:z_mass_reweighted}. The circular points show the ratio of the
 reconstructed \phistar distributions, while the square points show the ratio of
 the generated \phistar distributions. The errors are binomial. Most of the
 points are consistent with \num{1}, and so no systematic uncertainty is
@@ -310,7 +310,7 @@ assigned for this disagreement.
     ]{
         The ratio of \phistar in \MADGRAPH before and after reweighting to
         remove the difference in the \mee distribution between MC and data seen
-        in \FIG~\ref{fig:z_mass}. The circular points are the ratio in the
+        in \cref{fig:z_mass}. The circular points are the ratio in the
         reconstructed quantity, while the square points are the ratio in the
         generated quantity. The uncertainties are binomial.
     }
@@ -318,11 +318,11 @@ assigned for this disagreement.
 \end{figure}
 
 Likewise, the \Z \rapidity distribution in \MADGRAPH does not match the
-distribution in data, as seen in \FIG~\ref{fig:z_rapidity}. The same
+distribution in data, as seen in \cref{fig:z_rapidity}. The same
 reweighting procedure as is performed for the \mee case above is used here to
 force the distributions to agree. The ratio between the nominal \phistar value
 and the value derived after this reweighting is shown in
-\FIG~\ref{fig:z_rapidity_reweighted}.
+\cref{fig:z_rapidity_reweighted}.
 The circular points show the ratio of the
 reconstructed \phistar distributions, while the square points show the ratio of
 the generated \phistar distributions. The disagreement is on the order of
@@ -340,7 +340,7 @@ not included in the final results.
     ]{
         The ratio of \phistar in \MADGRAPH before and after reweighting to
         remove the difference in the \rapidity distribution between MC and data
-        seen in \FIG~\ref{fig:z_rapidity}. The circular points are the ratio in
+        seen in \cref{fig:z_rapidity}. The circular points are the ratio in
         the reconstructed quantity, while the square points are the ratio in
         the generated quantity. The uncertainties are binomial.
     }
@@ -350,16 +350,16 @@ not included in the final results.
 \section{Uncertainty Figures}
 
 The values of the various uncertainty in each \phistar bin are presented in the
-figures that follow. Figure~\ref{fig:sys_uncert_norm} shows the fractional
+figures that follow. \Cref{fig:sys_uncert_norm} shows the fractional
 uncertainty in the normalized \phistar cross section in data unfolded with
-\MADGRAPH while \FIG~\ref{fig:sys_uncert_norm_powheg} shows the fractional
+\MADGRAPH while \cref{fig:sys_uncert_norm_powheg} shows the fractional
 uncertainty in the data unfolded with \POWHEG. The uncertainty on the
 normalized \phistar cross section in \MADGRAPH and \POWHEG are shown in
-\FIGS~\ref{fig:madgraph_uncert_norm} and \ref{fig:powheg_uncert_norm},
+\cref{fig:madgraph_uncert_norm,fig:powheg_uncert_norm},
 respectively. All of these values are presented in tables in
-\APP~\ref{app:uncertainty_tables}. Figures showing the uncertainty for the
+\cref{app:uncertainty_tables}. Figures showing the uncertainty for the
 absolute \phistar cross sections are presented in
-\APP~\ref{app:dressed_measurements}.
+\cref{app:dressed_measurements}.
 
 % Normalized
 
@@ -380,8 +380,8 @@ absolute \phistar cross sections are presented in
 
 Presented below are our normalized cross section measurements of the
 differential \phistar cross section for \Z bosons decaying to an electron pair
-in the detector region defined in \SEC~\ref{sec:acceptance}. Absolute cross
-sections are presented in \APP~\ref{app:dressed_measurements}. Two sets of data
+in the detector region defined in \cref{sec:acceptance}. Absolute cross
+sections are presented in \cref{app:dressed_measurements}. Two sets of data
 are used to make the measurement, one unfolded with \MADGRAPH and one unfolded
 with \POWHEG; these sets are otherwise identical. The data distributions of
 \phistar are compared to the distributions from both the \MADGRAPH MC signal
@@ -391,9 +391,9 @@ sample and the \POWHEG MC signal sample.
 \label{ssec:results_norm}
 
 The normalized differential cross section measurement using data unfolded with
-\MADGRAPH is shown in \FIG~\ref{fig:results_norm} and given in tabular form in
-\TAB~\ref{tab:results_norm}. The lower plot in \FIG~\ref{fig:results_norm} is
-shown in more detail in \FIG~\ref{fig:results_ratio_norm}. As the luminosity
+\MADGRAPH is shown in \cref{fig:results_norm} and given in tabular form in
+\cref{tab:results_norm}. The lower plot in \cref{fig:results_norm} is
+shown in more detail in \cref{fig:results_ratio_norm}. As the luminosity
 has canceled out in the normalization, the primary uncertainty on the data is
 now the statistical uncertainty from the \MADGRAPH sample used to unfold it.
 The limit number of events in the MC samples is also the primary uncertainty on
@@ -405,10 +405,10 @@ the \MADGRAPH distribution and the \POWHEG distribution.
 \input{tables/results_normalized.tex}
 
 The normalized differential cross section measurement using data unfolded with
-\POWHEG is shown in \FIG~\ref{fig:results_norm_powheg} and given in tabular
-form in \TAB~\ref{tab:results_norm_powheg}. The lower plot in
-\FIG~\ref{fig:results_norm_powheg} is shown in more detail in
-\FIG~\ref{fig:results_ratio_norm_powheg}. The primary uncertainty on the data
+\POWHEG is shown in \cref{fig:results_norm_powheg} and given in tabular
+form in \cref{tab:results_norm_powheg}. The lower plot in
+\cref{fig:results_norm_powheg} is shown in more detail in
+\cref{fig:results_ratio_norm_powheg}. The primary uncertainty on the data
 is now the statistical uncertainty from the \POWHEG sample used to unfold it.
 
 % fig:results_norm_powheg and fig:results_ratio_norm_powheg
