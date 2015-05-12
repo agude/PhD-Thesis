@@ -335,37 +335,49 @@ dividing by the total cross section:
 
 At the very high energies of the LHC (\rootseight in 2012), a proton is not
 well described by assuming that it is composed of only three valence quarks as
-the energy of the proton is much higher than its own binding energy ($\approx 1
-\GeV$). Instead, it is described by a parton model---a model in which there are
-three valence quarks, but also numerous gluons and ``sea quarks'', where the
-sea quarks are a superposition of quark and antiquark same-flavor pairs. These
-constituents of the protons are referred to as ``partons''.
+the energy of the proton is much higher than its own binding energy
+($\ProtonMass \approx 1 \GeV$). Instead, it is described by a parton model---a
+model in which there are three valence quarks, but also numerous gluons and
+``sea quarks'', where the sea quarks are a superposition of quark and antiquark
+same-flavor pairs. These constituents of the protons are referred to as
+``partons''. The parton model is formulated in the infinite momentum frame, a
+frame where the proton has very high energy compared to its rest mass ($\Energy
+\gg \ProtonMass$). In this frame the mass of the proton can be neglected.
 
 When two protons collide at the LHC, it is a parton from each that interacts in
 the hard scattering process. This parton-parton interaction can be considered
-as independent of the other partons as the interaction timescale is short
-compared to the size of the proton. Each of the partons that takes place in the
-interaction will carry only a faction of their parent proton's total momentum.
-This fraction is parameterized by the Bjorken \BjorkenX{i} variable, defined as
-$\BjorkenX{i} P = p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is
-the momentum of a parton. Most of this momentum is in the same direction as the
-beam, but a small fraction of it, less than the proton binding energy of
-$1 \GeV$, is transverse to the beamline due to the motion of the partons inside
-the proton.
+as independent of the other partons because the internal quantum state of a
+proton in the infinite momentum frame is ``frozen'' due to relativistic time
+dilation. Each of the partons that takes place in the interaction will carry
+only a faction of their parent proton's total momentum. This fraction is
+parameterized by the Bjorken \BjorkenX{i} variable, defined as $\BjorkenX{i} P
+= p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is the momentum of
+a parton. In this frame work, all of the momentum is along the beamline as the
+only possible source of \pt is from the binding energy of the proton, which is
+approximately \ProtonMass which we have neglected.
 
 The \BjorkenX{i} value of a parton is not fixed, but is instead a probability
 distribution that is dependent on the flavor of the parton and the energy scale
-($Q^{2}$) of the interaction. Collections of these distributions for the
-various flavors are called parton distribution functions (PDFs). PDFs can not
-currently be calculated from QCD, and it is not known if doing so is even
-possible. Instead, PDFs are models which are fit to data and extrapolated to
-new interaction scales using perturbative QCD. An example set of PDFs from the
-MSTW collaboration\cite{martin_2009} is shown in \cref{fig:mstw_pdf}. In
-the low interaction energy case, shown on the left plot, the u and the d quark
+(\InteractionEnergy) of the interaction. If there were only three,
+non-interacting quarks within the proton, then the PDF function would simply be
+a Dirac delta-function at $\BjorkenX{i} = 1/3$, but as the quarks are strongly
+interacting they are constantly exchanging momentum with the other quarks via
+gluons. The gluons carry some of the momentum, and so the delta function for
+each quark is smeared out. Additionally, higher order processes tend to enhance
+the lowest momentum regions, causing the distributions to rise at low
+\BjorkenX{i}.
+
+Collections of these distributions for the various flavors are called parton
+distribution functions (PDFs). PDFs can not currently be calculated from QCD,
+and it is not known if doing so is even possible. Instead, PDFs are models
+which are fit to data and extrapolated to new interaction scales using
+perturbative QCD. An example set of PDFs from the MSTW
+collaboration\cite{martin_2009} is shown in \cref{fig:mstw_pdf}. In the low
+interaction energy case, shown on the left plot, the u and the d quark
 distributions have peaks at high \BjorkenX{i}, as the valence quarks carry most
 of the momentum. In the high interaction energy case, shown on the right plot,
-a small peak is still seen in the u and d quark distributions, but the
-sea quarks and gluons also carry a large amount of the total momentum.
+a small peak is still seen in the u and d quark distributions, but the sea
+quarks and gluons also carry a large amount of the total momentum.
 
 % fig:mstw_pdf
 \input{packaged_figures/mstw_pdfs.tex}
@@ -400,7 +412,7 @@ partons, is:
     f \left( \BjorkenX{1}, \BjorkenX{2} \right)
     =
     \sum_{a}
-    Q^{2}_{a}
+    \InteractionEnergy_{a}
     \left[
         \PDF{a}{1}{\BjorkenX{1}}
         \PDF{\bar{a}}{2}{\BjorkenX{2}}
