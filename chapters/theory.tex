@@ -8,8 +8,8 @@ Our current understanding of how matter interacts at high energies is entirely
 described by the Standard Model as constructed by Weinberg, Glashow, and
 Salam \cite{glashow1961}\cite{weinberg1967}\cite{salam1968}. The model combines
 three of the four fundamental forces (leaving out only gravity, which is so
-weak as to be negligible) and is the most accurate and best tested scientific
-theory ever formulated.
+weak as to be negligible) and is the most accurate scientific theory ever
+formulated.
 
 \subsection{The Electromagnetic Force}
 \label{subsection:electronmagnetic_force}
@@ -31,9 +31,9 @@ in a cloud chamber \cite{anderson1933}.
 
 As microwave technology improved in the 1940s, more accurate measurements of
 the energy level shifts in hydrogen were made, resulting in the discovery of
-the Lamb shift by Lamb and Rutherford \cite{lamb1947}. This discovery pointed
-to discrepancies in the theory. Bethe would resolve these discrepancies by
-showing that the theory could account for the Lamb shift using non-relativistic
+the Lamb shift by Lamb and Rutherford \cite{lamb1947}. This shift was not
+immediately explainable, but Bethe would resolve this discrepancies by showing
+that the theory could account for the Lamb shift using non-relativistic
 calculations \cite{bethe1947}. Bethe's work inspired multiple other physicist
 including Dyson, Feynman, Schwinger, and Tomonaga to work along similar lines.
 They created quantum electrodynamics (QED), a fully relativistic and
@@ -44,8 +44,8 @@ QED is a perturbation theory with expansions performed in terms of the fine
 structure constant, \fsc. As $\fsc \approx 7.297 \cdot 10^{-3}$, the higher
 order terms contribute smaller and smaller corrections and so only a few orders
 need to be computed to make very accurate predictions. For example, the
-anomalous magnetic moment of the electron is calculated to $\fsc^{4}$, and
-agrees with experiment to more than 10 significant figures.
+anomalous magnetic moment of the electron is calculated to $\BigO{\fsc^{4}}$,
+and agrees with experiment to more than \num{10} significant figures.
 
 \subsection{The Weak Force}
 \label{subsection:weak_force}
@@ -56,10 +56,11 @@ in 1914, in Chadwick's discovery that the energy spectrum of electrons ejected
 in beta decay was continuous instead of a delta function as would be expected
 for a two-body decay \cite{chadwick1914}. While some proposed that this
 discovery indicated that momentum and energy were not conserved, Pauli proposed
-an alternative: there was a neutral and invisible particle that carried away
-some of the energy---the neutrino \cite{pauli1930}. Fermi began working on this
-idea and invented a four fermion contact interaction in which a neutron decayed
-into a proton, an electron, and a neutrino \cite{fermi1934}.
+an alternative: that there was a neutral and invisible particle that carried
+away some of the energy \cite{pauli1930}. This particle was the neutrino. Fermi
+began working on this idea and invented a four fermion contact interaction in
+which a neutron decayed into a proton, an electron, and a neutrino
+\cite{fermi1934}.
 
 In 1947, Rochester and Butler discovered a particle that decayed to two pions
 which they called the $\theta$; in 1949, Brown and Powell discovered a particle
@@ -76,15 +77,16 @@ Lederman, and Weinrich in 1957, who studied \pitomunu decays in a storage ring
 
 In 1954, Yang and Mills replaced Fermi's contact interaction with a non-Abelian
 gauge theory that contained a spin-1 boson to mediate the force
-\cite{yang1954}. However, this boson was massless, and so the weak force's
-range would have been infinite. In 1960, Glashow was able to modify Yang and
-Mill's theory by adding Sudarshan and Marshak's vector minus axial ($V-A$)
-model to produce a unified electroweak force described by the \SUtwoUone gauge
-group \cite{glashow1961}\cite{sudarshan1958}. \SUtwo is a left-handed
-interaction and so violates parity as expected. Weinberg and Salamn finished up
-the model in 1967 when they added the Brout, Englert, and Higgs mechanism which
-gave the vector bosons mass and so explained the short ranged nature of the
-weak interaction
+\cite{yang1954}. However, this boson was massless, which if true would have
+given the weak force infinite range, a feature that was not observed. In 1960,
+Glashow was able to modify Yang and Mill's theory by adding Sudarshan and
+Marshak's vector minus axial ($V-A$) model to produce a unified electroweak
+force described by the \SUtwoUone gauge group
+\cite{glashow1961}\cite{sudarshan1958}. \SUtwo is a left-handed interaction and
+so violates parity as expected. Weinberg and Salamn finished up the model in
+1967 when they added the Brout, Englert, and Higgs mechanism which gave the
+vector bosons mass and so explained the short ranged nature of the weak
+interaction
 \cite{weinberg1967}\cite{salam1968}\cite{englert1964}\cite{higgs1964}.
 
 \subsection{The Strong Force}
@@ -113,12 +115,14 @@ Gell-Mann and Ne'eman to come up with a classification scheme for mesons and
 baryons based on the \SUthree group which Gell-Mann named the Eightfold Way. In
 1964, Gell-Mann and Zweig realized that the Eightfold Way implied that mesons
 were composed of sub-atomic particles which became known as quarks
-\cite{gellmann1964}\cite{zweig1964}. Their model was modified in 1973 by Gross,
+\cite{gellmann1964}\cite{zweig1964}. Their model explained both isospin and the
+``strangeness'' observed earlier as consequnces of the existance of three
+quarks, the up, down, and strange. Their model was modified in 1973 by Gross,
 Wilczek, and Politzer to include asymptotic freedom in which quarks interact
 weakly at high energies but strongly at low energies
 \cite{gross_1973}\cite{politzer_1973}. This new combined model became known as
 quantum chromodynamics (QCD). QCD was used to predict the existence of the
-charm quark, and upon its success was incorporated with electroweak theory to
+charm quark and, upon its success, was incorporated with electroweak theory to
 form the full \SUthreeSUtwoUone symmetry group of the Standard Model.
 
 QCD, like QED, can also be expanded in terms of a coupling constant,
@@ -154,12 +158,12 @@ wait until 1995 to be discovered by the CDF and D0 experiments running at the
 Tevatron at FNAL \cite{cdf1995}\cite{d01995}.
 
 The \W and \Z bosons were discovered at CERN in 1983 at the UA1 and UA2
-experiments running Super Proton Synchrotron
+experiments running on the Super Proton Synchrotron
 \cite{ua1_w}\cite{ua2_w}\cite{ua1_z}\cite{ua2_z}. These bosons were an
 excellent test of the Standard Model as their masses could be very exactly
-calculated. The discovered bosons matched the calculated masses to high
-precision. The final piece of the Standard Model, the Higgs bosons, was
-discovered by ATLAS and CMS in 2012 using the LHC at CERN
+calculated, and the newly discovered bosons had masses that matched the
+calculations to high precision. The final piece of the Standard Model, the
+Higgs bosons, was discovered by ATLAS and CMS in 2012 using the LHC at CERN
 \cite{atlas_higgs}\cite{cms_higgs}. Although precision measurements of the
 Higgs are still ongoing, it so far precisely matches the predictions of the
 Standard Model.
@@ -188,23 +192,24 @@ various particles are show schematically in \cref{fig:standard_model}.
 
 Leptons have \spinhalf and have charge $q=-1 \text{ or } 1$ for the massive
 leptons, or 0 for the neutrinos. They interact electromagnetically (if they
-have a non-zero charge) and weakly. There are three generations of leptons and
-each generation consists of a charged, massive lepton, and an uncharged, nearly
-massless neutrino. The lightest of the charged lepton generations is the
-electron, which is stable. The next two generations contain the muon and the
-tau, which are unstable and eventually decay to electrons. The tau, being very
-heavy, decays quickly, while the muon is stable long enough to escape a
-particle detector. Massive leptons are important in particle detection as they
-provide a very clean decay signature. Neutrinos are very difficult to detect in
-particle detectors, and so their presence is inferred from the missing energy
-in the vector sum of all particles in the collision. This analysis uses
-electrons to make its measurement.
+have a non-zero charge) and weakly. There are three generations, or flavors, of
+leptons and each generation consists of a charged, massive lepton, and an
+uncharged, nearly massless neutrino. The lightest of the charged lepton
+generations is the electron, which is stable. The next two generations contain
+the muon and the tau, which are unstable and eventually decay to electrons. The
+tau, being very heavy, decays quickly, while the muon is stable long enough to
+escape a particle detector. Massive leptons are important in particle detection
+as they provide a very clean decay signature. Neutrinos are very difficult to
+detect in particle detectors, and so their presence is inferred from the
+missing energy in the vector sum of all particles in the collision. This
+analysis uses electrons to make its measurement.
 
 Quarks also have \spinhalf although, unlike the leptons, their charge is
 fractional and so takes values of $q = 2/3 \text{ or } -1/3$. They interact
 strongly, electromagnetically, and weakly. There are three generations of
-quarks, with each successive generation having higher mass constituents. The
-first generation consists of the up and down (u and d) quarks. These quarks are
+quarks, with each successive generation having higher mass constituents. There
+are six flavors of quarks, with each generation containing two. The first
+generation consists of the up and down (u and d) quarks. These quarks are
 stable and make up protons and neutrons, as well as pions. The next generation
 of quarks contains the charm and the strange (c and s). They form heavier
 states that decay quickly like the \jpsi and kaons. The final generation
@@ -212,16 +217,16 @@ consist of the heavy bottom (b), and the exteriorly heavy top (t)---the most
 massive particle in the Standard Model. Bottom quarks can form bound states,
 but top quarks are so heavy they decay before any bound states can form.
 
-Quarks carry color charge, of which there are three: red (r),
-blue (b), and green (g). Strongly interacting objects obey confinement, which
-means that only color neutral (colorless) states are allowed. Because of
-confinement, quarks bind together into colorless composite particles. These
-particles are called mesons---with two quarks (\qqbar)---and baryons---with
-three quarks (\baryon). When an object containing quarks breaks up, the
-individual colored fragments will create additional colored objects to maintain
-their colorless state. This leads to the formation of ``jets'' which are sprays
-of high energy particles that originate from one of these fragments as it tries
-to maintain its colorless state.
+Quarks carry color charge, of which there are three: red (r), blue (b), and
+green (g). Strongly interacting objects obey confinement, which means that only
+color neutral (colorless) states are allowed. Because of confinement, quarks
+bind together into colorless composite particles. These particles are called
+mesons---with two quarks (\qqbar)---and baryons---with three quarks (\baryon).
+When an object containing quarks breaks up, the individual colored fragments
+will create additional colored objects to remain color neutral. This leads to
+the formation of ``jets'' which are sprays of high energy particles that
+originate from one of these fragments as it tries to maintain its colorless
+state.
 
 Bosons are the second type of particle in the Standard Model. They are further
 subdivided into gauge bosons---which mediate the three forces---and the Higgs
@@ -267,18 +272,17 @@ appearance of a \spinzero boson, the Higgs.
 
 \section{\texorpdfstring{\Z}{Z} Boson Transverse Momentum}
 
-The leptonic decays of the \Z are an excellent probe of QCD as neither
-the \Z nor the leptons carry color charge. This means that there is no color
-flow between the initial and final states, and so the only QCD signature
-encoded in the decay of the \Z is that of the initial interaction. One
-particularly useful variable for probing QCD is the transverse momentum of the
-\Z boson, \bosonpt, where transverse is defined relative to the beamline in the
-collider. As the beam protons have near-zero momentum transverse to the
-beamline, the \bosonpt of the \Z boson comes from QCD process like initial
-state radiation, which are discussed in \cref{ssec:higher_order}. Low
-values of \bosonpt probe the non-perturbative regions of QCD as, due to
-asymptotic freedom, it is these low momentum transfer interactions where
-\alphastrong is large.
+The leptonic decays of the \Z are an excellent probe of QCD as neither the \Z
+nor the leptons carry color charge. This means that there is no color flow
+between the initial and final states, and so the only QCD signature encoded in
+the decay of the \Z is that of the initial interaction. One particularly useful
+variable for probing QCD is the transverse momentum of the \Z boson, \bosonpt,
+where transverse is defined relative to the beamline in the collider. As the
+beam protons have near-zero momentum transverse to the beamline, the \bosonpt
+of the \Z boson comes from QCD process like initial state radiation, which are
+discussed in \cref{sec:z_production}. Low values of \bosonpt probe the
+non-perturbative regions of QCD as, due to asymptotic freedom, it is these low
+momentum transfer interactions where \alphastrong is large.
 
 In addition aiding in the understanding of QCD processes, measuring the \Z
 \bosonpt spectrum helps improve measurements of the \W mass. At a hadron
@@ -354,7 +358,7 @@ parameterized by the Bjorken \BjorkenX{i} variable, defined as $\BjorkenX{i} P
 = p_{i}$ where $P$ is the total proton momentum and $p_{i}$ is the momentum of
 a parton. In this frame work, all of the momentum is along the beamline as the
 only possible source of \pt is from the binding energy of the proton, which is
-approximately \ProtonMass which we have neglected.
+approximately \ProtonMass, and so negligibly small. 
 
 The \BjorkenX{i} value of a parton is not fixed, but is instead a probability
 distribution that is dependent on the flavor of the parton and the energy scale
@@ -383,9 +387,10 @@ quarks and gluons also carry a large amount of the total momentum.
 \input{packaged_figures/mstw_pdfs.tex}
 
 \section{Production of \texorpdfstring{\Z}{Z} Bosons In Proton-Proton Collisions}
+\label{sec:z_production}
 
 In order to understand where the transverse momentum of a \Z boson comes from,
-it is important to understand how they are produced in the LHC.
+it is important to understand how they are produced at the LHC.
 
 \subsection{\DrellYan Production}
 \label{ssec:dy_production}
@@ -444,12 +449,13 @@ their quarks interacting through multiple gluon exchanges. When a collision
 happens, one of the partons is ``removed'' from the proton, leaving a ``beam
 remnant'' behind that is unbalanced in both momentum and energy. This most
 often tears the remnant apart, leading to colored objects escaping and
-hadronizing. These colored objects become the ISR. These diagrams have a gluon
-radiating from the incoming quark, one of the lowest order ISR processes. The
-quark can be left with some non-zero \pt as it gains momentum opposite that of
-the gluon, and so it may impart some \bosonpt on the \Z. The probability of
-radiating a gluon increases as the energy of the radiated gluon decreases, and
-so ISR often introduces a small amount of \bosonpt.
+hadronizing. These colored objects are ISR. The diagrams shown here have a
+gluon radiating from the incoming quark, one of the lowest order in
+\alphastrong ISR processes. The quark can be left with some non-zero \pt as it
+gains momentum opposite that of the gluon, and so it may impart some \bosonpt
+on the \Z. The probability of radiating a gluon increases as the energy of the
+radiated gluon decreases, and so ISR often introduces a small amount of
+\bosonpt.
 
 The second type of term, shown in
 \cref{fig:feyn_qg_to_zq,fig:feyn_qg_to_q_to_zq}, is one where the quark
@@ -479,7 +485,7 @@ generate higher \pt \Z bosons.
 Although the \Ztoee decay is a very clean decay with no color interaction,
 there is one final state process that can impact the measurement of \Z
 \bosonpt. In this process, known as final state radiation (FSR),  the decay
-leptons can radiate photons.  The diagram of this process is shown in
+leptons radiate photons.  The diagram of this process is shown in
 \cref{fig:fsr_diagram}. Measurements and theories treat FSR differently and so
 we define three types of generator level electron that each account for FSR in
 a different manner: \born, \bare, and \dressed. Generator level refers to the
