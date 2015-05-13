@@ -300,9 +300,9 @@
   \begin{center}
   \bf\large\copyright\ \@author\ \ \@year\
   \\[0.25cm]
-  \includegraphics[width=1cm]{cc_icons/by.eps}
-  \includegraphics[width=1cm]{cc_icons/cc.eps}
-  \includegraphics[width=1cm]{cc_icons/sa.eps}
+  \includegraphics[width=1cm]{cc_icons/by.pdf}
+  \includegraphics[width=1cm]{cc_icons/cc.pdf}
+  \includegraphics[width=1cm]{cc_icons/sa.pdf}
   \\
   The text of this work is licensed under a
   \href{https://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
