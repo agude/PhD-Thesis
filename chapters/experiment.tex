@@ -134,15 +134,16 @@ interaction point at the center of CMS, the \xaxis is defined to point to the
 center of the LHC ring, the \yaxis is defined as vertically up, and the \zaxis
 points counter-clockwise and tangent to the LHC ring such that it forms a
 right-handed coordinate system with the \xaxis and \yaxis. CMS uses a
-cylindrical coordinate system with coordinates ($\eta$, $\phi$). The azimuthal
-angel $\phi$ is in the \xyplane measured from the \xaxis so that $\phi=\pi/2$
-at that \xaxis, while $\eta$ is the pseudorapidity defined by
+cylindrical coordinate system with coordinates (\coordeta, \coordphi). The
+azimuthal angel \coordphi is in the \xyplane measured from the \xaxis so that
+$\coordphi=\pi/2$ at that \xaxis, while \coordeta is the pseudorapidity defined
+by:
 
 \begin{equation}
-    \eta = -\logn \tan \frac{\theta}{2}
+    \coordeta = -\logn \tan \frac{\coordtheta}{2}
 \end{equation}
 
-where $\theta$ is the polar angle with respects to the \zaxis. The magnetic
+where \coordtheta is the polar angle with respects to the \zaxis. The magnetic
 field points along the \zaxis.
 
 \subsection{Inner Tracking System}
@@ -275,16 +276,16 @@ hard.
 In order to meet the three design goals, ECAL is made out of \num{75848}
 scintillating lead tungstate (\leadtungstate) crystals: \num{61200} in the
 barrel, and \num{7324} in each of the two endcaps. The radiation length in lead
-tungstate is short ($\radlength = \SI{0.89}{\centi\meter}$) allowing ECAL to be
-compact (a necessity since it must fit within the solenoid) but still contain
-$\approx 25\radlength$ of scintillator. The \Moliere radius is also small
-(\SI{2.2}{\centi\meter}) allowing showers to be contained within each crystal.
-Lead tungstate is also radiation hard (up to 10\megarads). While lead tungstate
-has a fast response (80\% of light is given off within \SI{25}{\nano\second}),
-it does not produce very much light ($30 \photon / \MeV$) and so sensitive
-photodetectors that can operate within a strong magnetic field are required. In
-the barrel avalanche photodiodes are used, and in the endcaps vacuum
-phototriodes are used.
+tungstate is short ($\radiationlength = \SI{0.89}{\centi\meter}$) allowing ECAL
+to be compact (a necessity since it must fit within the solenoid) but still
+contain $\approx 25\radiationlength$ of scintillator. The \Moliere radius is
+also small (\SI{2.2}{\centi\meter}) allowing showers to be contained within
+each crystal. Lead tungstate is also radiation hard (up to 10\megarads). While
+lead tungstate has a fast response (80\% of light is given off within
+\SI{25}{\nano\second}), it does not produce very much light ($30 \photon /
+\MeV$) and so sensitive photodetectors that can operate within a strong
+magnetic field are required. In the barrel avalanche photodiodes are used, and
+in the endcaps vacuum phototriodes are used.
 
 \subsubsection{Electromagnetic Calorimeter Barrel}
 

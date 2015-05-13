@@ -1,0 +1,112 @@
+% General
+\newcommand{\Particle}[1]{\ensuremath{#1}\xspace}
+
+\newcommand{\xxbar}[2]{\ensuremath{#1 \overline{#2}}\xspace}
+\newcommand{\xxpm}[2]{\ensuremath{#1^{+} #2^{-}}\xspace}
+
+% Leptons
+\newcommand{\lepton}{\Particle{\ell}}
+\newcommand{\neutrino}{\Particle{\nu}}
+\newcommand{\electron}{\Particle{e}}
+\newcommand{\muon}{\Particle{\mu}}
+\newcommand{\tauon}{\Particle{\tau}}
+\newcommand{\ee}{\xxpm{\electron}{\electron}}
+
+\newcommand{\mutoWnu}{\ensuremath{\mu \to \W \neutrino_{\mu}}\xspace}
+
+% Quarks
+\newcommand{\quark}{\Particle{q}}
+\newcommand{\upquark}{\Particle{u}}
+\newcommand{\downquark}{\Particle{d}}
+\newcommand{\charmquark}{\Particle{c}}
+\newcommand{\strangequark}{\Particle{s}}
+\newcommand{\topquark}{\Particle{t}}
+\newcommand{\bottomquark}{\Particle{b}}
+
+\newcommand{\tbar}{\overline{\topquark}\xspace}
+\newcommand{\bbar}{\overline{\bottomquark}\xspace}
+
+\newcommand{\QuarkColor}[1]{\ensuremath{#1}\xspace}
+\newcommand{\red}{\QuarkColor{r}}
+\newcommand{\green}{\QuarkColor{g}}
+\newcommand{\blue}{\QuarkColor{b}}
+
+% Mesons
+\newcommand{\qqbar}{\xxbar{q}{q}\xspace}
+\newcommand{\meson}{\qqbar}
+
+%% Pions
+\newcommand{\pion}{\Particle{\pi}}
+\newcommand{\pionplus}{\Particle{\pion^{+}}}
+\newcommand{\pionminus}{\Particle{\pion^{-}}}
+\newcommand{\pionzero}{\Particle{\pion^{0}}}
+
+\newcommand{\ChargeExchange}{\ensuremath{\pionplus + \neutron \to \pionzero + \proton}\xspace}
+\newcommand{\pitogammagamma}{\ensuremath{\pionzero \to \photon \photon}\xspace}
+\newcommand{\pitomunu}{\ensuremath{\pionplus \to \mu^{+} + \neutrino}\xspace}
+
+%% JPsi
+\newcommand{\jpsi}{\Particle{\text{J}\hspace{-.08em}/\hspace{-.14em}\psi}}
+
+% Baryons
+\newcommand{\baryon}{\ensuremath{\quark \quark \quark}\xspace}
+\newcommand{\proton}{\Particle{p}}
+\newcommand{\neutron}{\Particle{n}}
+
+% Bosons
+
+%% Photon
+\newcommand{\photon}{\Particle{\gamma}}
+\newcommand{\PhotonConversion}{\ensuremath{\photon \to \xxpm{\electron}{\electron}}\xspace}
+
+%% W
+\newcommand{\W}{\Particle{W}}
+\newcommand{\Wpm}{\Particle{\W^{\pm}}}
+\newcommand{\Wp}{\Particle{\W^{+}}}
+\newcommand{\Wm}{\Particle{\W^{-}}}
+
+\newcommand{\Wtoqq}{{\ensuremath{\W \to \xxbar{\quark}{\quark}}}\xspace}
+\newcommand{\Wtolnu}{{\ensuremath{\W \to \lepton \neutrino}}\xspace}
+
+%% Z
+\newcommand{\Z}{\Particle{Z}}
+\newcommand{\DY}{\ensuremath{\text{DY}}\xspace}
+
+\newcommand{\Zto}[1]{\ensuremath{\Z \to #1}\xspace}
+\newcommand{\Ztoqq}{\ensuremath{\Zto{\qqbar}}\xspace}
+\newcommand{\Ztoll}{\ensuremath{\Zto{\xxpm{\lepton}{\lepton}}}\xspace}
+\newcommand{\Ztoee}{\ensuremath{\Zto{\xxpm{\electron}{\electron}}}\xspace}
+\newcommand{\Ztomumu}{\ensuremath{\Zto{\xxpm{\muon}{\muon}}}\xspace}
+\newcommand{\Ztotautau}{\ensuremath{\Zto{\xxpm{\tauon}{\tauon}}}\xspace}
+\newcommand{\Ztonunu}{\ensuremath{\Zto{\xxbar{\neutrino}{\neutrino}}}\xspace}
+
+\newcommand{\DYto}[1]{\ensuremath{\DY \to #1}\xspace}
+\newcommand{\DYtoqq}{\ensuremath{\DYto{\qqbar}}\xspace}
+\newcommand{\DYtoll}{\ensuremath{\DYto{\xxpm{\lepton}{\lepton}}}\xspace}
+\newcommand{\DYtoee}{\ensuremath{\DYto{\xxpm{\electron}{\electron}}}\xspace}
+\newcommand{\DYtomumu}{\ensuremath{\DYto{\xxpm{\muon}{\muon}}}\xspace}
+\newcommand{\DYtotautau}{\ensuremath{\DYto{\xxpm{\tauon}{\tauon}}}\xspace}
+\newcommand{\DYtonunu}{\ensuremath{\DYto{\xxbar{\neutrino}{\neutrino}}}\xspace}
+
+%% Higgs
+\newcommand{\higgs}{\Particle{\mathrm{H}}}
+\newcommand{\higgstogammagamma}{\ensuremath{\higgs \to \photon \photon}\xspace}
+\newcommand{\higgstoZZ}{\ensuremath{\higgs \to \Z \Z}\xspace}
+
+% Backgrounds
+\newcommand{\ttbar}{\ensuremath{\topquark \tbar}\xspace}
+\newcommand{\tW}{\ensuremath{\topquark \W}\xspace}
+\newcommand{\tbarW}{\ensuremath{\tbar \W}\xspace}
+\newcommand{\ZZ}{\ensuremath{\Z \Z}\xspace}
+\newcommand{\WZ}{\ensuremath{\W \Z}\xspace}
+\newcommand{\WW}{\ensuremath{\W \W}\xspace}
+%\DYtotautau
+\newcommand{\wjets}{\ensuremath{\W + \text{jets}}\xspace}
+\newcommand{\QCDjets}{\text{QCD multi-jet}\xspace}
+
+%% Expanded tW decays
+\newcommand{\tWdecay}{\ensuremath{\topquark \to \W \bottomquark}\xspace}
+\newcommand{\tbarWdecay}{\ensuremath{\tbar \to \W \bbar}\xspace}
+
+%% Control Sample
+\newcommand{\emu}{\ensuremath{\electron\text{--}\mu}\xspace}

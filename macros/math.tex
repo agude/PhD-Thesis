@@ -1,0 +1,52 @@
+% Theory
+\newcommand{\GroupShort}[2]{\ensuremath{\text{#1}(#2)}\xspace}
+\newcommand{\Group}[3]{\ensuremath{\GroupShort{#1}{#2}_{\text{#3}}}\xspace}
+\newcommand{\SUthree}{\Group{SU}{3}{C}}
+\newcommand{\SUtwo}{\Group{SU}{2}{L}}
+\newcommand{\Uone}{\GroupShort{U}{1}}
+\newcommand{\SUtwoUone}{\ensuremath{\SUtwo \times \Uone}\xspace}
+\newcommand{\SUthreeSUtwoUone}{\ensuremath{\SUthree \times \SUtwoUone}\xspace}
+
+% Coordinates
+\newcommand{\Coord}[1]{\ensuremath{#1}\xspace}
+\newcommand{\TwoCoord}[2]{\ensuremath{#1\text{--}#2}\xspace}
+\newcommand{\Axis}[1]{\ensuremath{#1\text{-axis}}\xspace}
+\newcommand{\Plane}[1]{\ensuremath{#1\text{~plane}}\xspace}
+
+\newcommand{\coordx}{\Coord{x}}
+\newcommand{\coordy}{\Coord{y}}
+\newcommand{\coordz}{\Coord{z}}
+
+\newcommand{\xaxis}{\Axis{\coordx}}
+\newcommand{\yaxis}{\Axis{\coordy}}
+\newcommand{\zaxis}{\Axis{\coordz}}
+
+\newcommand{\coordxy}{\TwoCoord{\coordx}{\coordy}}
+\newcommand{\xyplane}{\Plane{\coordxy}}
+
+\newcommand{\coordr}{\Coord{r}}
+\newcommand{\coordphi}{\Coord{\phi}}
+\newcommand{\coordeta}{\Coord{\eta}}
+\newcommand{\coordtheta}{\Coord{\theta}}
+
+\newcommand{\coordrphi}{\TwoCoord{\coordr}{\coordphi}}
+\newcommand{\rphiplane}{\Plane{\coordrphi}}
+
+\newcommand{\rzplane}{\Plane{\TwoCoord{\coordr}{\coordz}}}
+\newcommand{\coordetaphi}{\TwoCoord{\coordeta}{\coordphi}}
+
+\newcommand{\phisc}{\Coord{\phi_{\text{SC}}}}
+\newcommand{\phizero}{\Coord{\phi_{0}}}
+\newcommand{\Reffective}{\Coord{R_{\text{effective}}}}
+
+% Trig
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\logn}{ln}
+\DeclareMathOperator{\erfc}{erfc}
+
+% Big O
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\!\left( #1 \right)}\xspace}
+
+% Derivatives
+\newcommand{\dir}[1]{\ensuremath{\text{d}#1}\xspace}
+\newcommand{\dirSquare}[1]{\ensuremath{\text{d}^{2}#1}\xspace}
