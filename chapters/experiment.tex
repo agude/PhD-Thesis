@@ -18,13 +18,13 @@
 
 The Large Hadron Collider (LHC) is the world's highest energy and largest
 particle accelerator with a maximum design center-of-mass energy of 14\TeV and
-a radius of 2804\meters \cite{bruning2004}. It collides protons on protons, as
-well as protons on ionized lead (\lead) and \lead on \lead. In 2012, when LHC
-most recently produced collisions, it had a center of mass energy of 8\TeV;
-when it turns back on in 2015 after upgrades, it will run at 13\TeV. The LHC is
-located near Geneva, Switzerland, although it is so large that most of the
-accelerator (including \pointfive, where the CMS detector is located) is in
-France.
+a radius of \SI{2804}{\meter} \cite{bruning2004}. It collides protons on
+protons, as well as protons on ionized lead (\lead) and \lead on \lead. In
+2012, when LHC most recently produced collisions, it had a center of mass
+energy of 8\TeV; when it turns back on in 2015 after upgrades, it will run at
+13\TeV. The LHC is located near Geneva, Switzerland, although it is so large
+that most of the accelerator (including \pointfive, where the CMS detector is
+located) is in France.
 
 A number of smaller accelerators are used together in series to accelerate
 protons to the energies necessary to be injected into the LHC. The first step
@@ -46,14 +46,15 @@ accelerator chain is shown in \cref{fig:lhc_layout}.
 
 The beams are steered around the accelerator ring by a series of
 superconducting, dipole magnets. When running at a center-of-mass energy of
-8\TeV, these magnets operate at roughly 7.5\Tesla. There are also quadrapoles
-to focus the beam and some higher order magnets around the ring to correct for
-lattice defects. The bunches of protons are accelerated by 16 superconducting
-radio frequency cavities. These cavities accelerate slower protons while
-slowing faster ones, thereby keeping the proton bunches compact in both real
-and momentum space. There is room for 2808 bunches in LHC separated by 25\ns,
-although in 2012 50\ns spacing was used and so there were only 1374 bunches of
-which 1368 were brought into collision at CMS and \ATLAS.
+8\TeV, these magnets operate at roughly \SI{7.5}{\tesla}. There are also
+quadrapoles to focus the beam and some higher order magnets around the ring to
+correct for lattice defects. The bunches of protons are accelerated by \num{16}
+superconducting radio frequency cavities. These cavities accelerate slower
+protons while slowing faster ones, thereby keeping the proton bunches compact
+in both real and momentum space. There is room for 2808 bunches in LHC
+separated by \SI{25}{\nano\second}, although in 2012 \SI{50}{\nano\second}
+spacing was used and so there were only \num{1374} bunches of which \num{1368}
+were brought into collision at CMS and \ATLAS.
 
 The LHC is also the highest luminosity collider in the world. The instantaneous
 luminosity is given by
@@ -89,11 +90,11 @@ become noisy. This forces the detectors to replace their components more
 frequently.
 
 In 2012, the optimal luminosity was achieved by running with bunches spaced by
-50\ns instead of the design nominal bunch spacing of 25\ns. This larger bunch
-spacing was chosen because at smaller spacing the bunches were destabilized by
-electron clouds---clouds of electrons knocked out of the beam pipe by the
-beam's synchrotron radiation, as well as secondary electrons freed when the
-photoelectrons impact their surroundings.
+\SI{50}{\nano\second} instead of the design nominal bunch spacing of
+\SI{25}{\nano\second}. This larger bunch spacing was chosen because at smaller
+spacing the bunches were destabilized by electron clouds---clouds of electrons
+knocked out of the beam pipe by the beam's synchrotron radiation, as well as
+secondary electrons freed when the photoelectrons impact their surroundings.
 
 \section{The Compact Muon Solenoid}
 \label{sec:cms}
@@ -117,8 +118,8 @@ which the detector can detect particles. Efficiency is the probability that a
 particle in CMS's acceptance region is properly measured. In order to have a
 high acceptance and efficiency, CMS must be both large---to cover a large area
 of physical space---and dense---to cover a large area in momentum and energy
-space. CMS is 21.6\meters in length, 14.6\meters in diameter, and weighs
-14\kilotonne.
+space. CMS is \SI{21.6}{\meter} in length, \SI{14.6}{\meter} in diameter, and
+weighs \SI{14}{\kilo\tonne}.
 
 CMS is built as a series of nested, finite cylinders, where each cylinder is a
 separate subdetector. The beams enter the detector along the axis of the
@@ -173,20 +174,21 @@ particle flux is the highest and hence the finest granularity is needed. Their
 primary purpose is to very accurately locate the primary and secondary vertices
 in a collision.
 
-There are three barrel layers of the pixel tracker at radii of of 4.3, 7.3, and
-10.2\centimeters, each with a length of 53\centimeters. At each end, there are
-two endcap annular disks as well placed at $|\coordz|=$ 34.5 and
-46.5\centimeters. Each of these disks has an inner radius of 6\centimeters and
-an outer radius of 15\centimeters.
+There are three barrel layers of the pixel tracker at radii of
+\SIlist{4.3;7.3;10.2}{\centi\meter}, each with a length of
+\SI{53}{\centi{\meter}}. At each end, there are two endcap annular disks as well
+placed at $|\coordz|=$ \SIlist{34.5;46.5}{\centi{\meter}}. Each of these disks
+has an inner radius of \SI{6}{\centi{\meter}} and an outer radius of
+\SI{15}{\centi{\meter}}.
 
-Each pixel has an area of $100 \times 150 \micrometers^{2}$, but the resolution
-of the tracker is better than that because of charge sharing. If a charged
-particle ionizes multiple pixels, then a weighted average of the charges can be
-used to get sub-pixel resolution on the location of the hit. In order to
-increase the charge sharing, a large Lorentz angle (23\degrees) is used. The
-blades which make up the endcap disks are fanned out in a turbine-like geometry
-with a rotation of 20\degrees to benefit from the same effect. The layout of
-the pixel detector is shown in \cref{fig:pixel_layout}.
+Each pixel has an area of $100 \times 150 \si{\micro\meter\squared}$, but the
+resolution of the tracker is better than that because of charge sharing. If a
+charged particle ionizes multiple pixels, then a weighted average of the
+charges can be used to get sub-pixel resolution on the location of the hit. In
+order to increase the charge sharing, a large Lorentz angle (\ang{23}) is
+used. The blades which make up the endcap disks are fanned out in a
+turbine-like geometry with a rotation of \ang{20} to benefit from the same
+effect. The layout of the pixel detector is shown in \cref{fig:pixel_layout}.
 
 \subsubsection{Strip Tracker}
 
@@ -200,11 +202,11 @@ the pixel detector is shown in \cref{fig:pixel_layout}.
 \end{figure}
 
 The silicon strips are used further from the beam pipe than the pixels and
-cover a much large radius from the beam pipe. The strip tracker has 200 times
-the area of the pixel tracker, and so it was not economically feasible to use
-the more expensive pixel detectors in this region. The strips' primary purpose
-is to measure the momentum and curvature of the charged particles by extending
-the tracker's coverage over a larger radius.
+cover a much large radius from the beam pipe. The strip tracker has \num{200}
+times the area of the pixel tracker, and so it was not economically feasible to
+use the more expensive pixel detectors in this region. The strips' primary
+purpose is to measure the momentum and curvature of the charged particles by
+extending the tracker's coverage over a larger radius.
 
 Although the strips provide only two points in space to locate a hit (as
 compared to three for the pixels), this coarser geometry is adequate because of
@@ -214,34 +216,37 @@ and so the strips are aligned parallel to the magnetic field.
 
 The strip tracker is itself divided into multiple components. In the barrel
 there is the TIB (Tracker Inner Barrel) and the TOB (Tracker Outer Barrel). The
-TIB consists of four layers and has coverage up to $|\coordz|<$ 65\centimeters.
-The silicon sensors making up the TIB have a strip pitch which varies between
-80 to 120\micrometers and have a thickness of 320\micrometers. The first two
-layers are constructed with a double layer of modules with a stereo angle of
-100\millirads, providing information about the location of the hit in both the
-\coordrphi and \rzplane. The TOB consists of six layers and has coverage up to
-$|\coordz|<$ 110\centimeters. The TOB has a strip pitch which varies between
-120 and 180\micrometers and have a thickness of 500\micrometers. The thicker
-sensors are able to be used in this region because the radiation levels are
-lower. Having a thicker sensors helps to maintain a high signal-to-noise ratio.
-Just like the TIB, the first two layers of the TOB are also built with a double
-layer of modules with a stereo angle of 100\millirads.
+TIB consists of four layers and has coverage up to $|\coordz|<$
+\SI{65}{\centi\meter}. The silicon sensors making up the TIB have a strip pitch
+which varies between \SIrange{80}{120}{\micro\meter} and have a thickness of
+\SI{320}{\micro\meter}. The first two layers are constructed with a double
+layer of modules with a stereo angle of \SI{100}{\milli\radian}, providing
+information about the location of the hit in both the \coordrphi and \rzplane.
+The TOB consists of six layers and has coverage up to $|\coordz|<$
+\SI{110}{\centi\meter}. The TOB has a strip pitch which varies from
+\SIrange{120}{180}{\micro\meter} and have a thickness of
+\SI{500}{\micro\meter}. The thicker sensors are able to be used in this region
+because the radiation levels are lower. Having a thicker sensors helps to
+maintain a high signal-to-noise ratio. Just like the TIB, the first two layers
+of the TOB are also built with a double layer of modules with a stereo angle of
+\SI{100}{\milli\radian}.
 
 The ends of the strip tracker consists of the TEC (Tracker Endcap) and the TID
 (Tracker Inner Disk). The TEC consists of nine disks in the region
-120\centimeters $< |\coordz| <$ 280\centimeters. The TID consists of three
-disks in between the end of the TIB and the start of the TEC. The TEC and TID
-consist of modules arrayed in rings around the beam line, with the face of each
-module pointed towards the interaction point so that they have varying
+\SI{120}{\centi\meter} $< |\coordz| <$ \SI{280}{\centi\meter}. The TID consists
+of three disks in between the end of the TIB and the start of the TEC. The TEC
+and TID consist of modules arrayed in rings around the beam line, with the face
+of each module pointed towards the interaction point so that they have varying
 orientations depending on their distance from the interaction point. The first
 two rings of the TID and the first, second, and fifth rings of the TEC are
 built with double layer of modules. The modules in the TID and the first three
-disks of the TEC have a thickness of 320\micrometers while the rest of the
-modules in the TEC have a thickness of 500\micrometers. The strip pitch in the
-TID and the first three disks of the TEC have a strip pitch which varies
-between 97 and 143\micrometers while the rest of the modules in the TEC have a
-strip pitch between 143 and 183\micrometers. The layout of the entire tracker,
-including the strip tracker, is shown in \cref{fig:strip_layout}.
+disks of the TEC have a thickness of \SI{320}{\micro\meter} while the rest of
+the modules in the TEC have a thickness of \SI{500}{\micro\meter}. The strip
+pitch in the TID and the first three disks of the TEC have a strip pitch which
+varies from \SIrange{97}{143}{\micro\meter} while the rest of the modules in
+the TEC have a strip pitch from \SIrange{143}{183}{\micro\meter}. The layout of
+the entire tracker, including the strip tracker, is shown in
+\cref{fig:strip_layout}.
 
 \subsection{Electromagnetic Calorimeter}
 \label{ssec:ecal}
@@ -267,41 +272,43 @@ order to separate the highly boosted photons, ECAL needed to have fine
 granularity. Due to the high luminosity of the LHC, ECAL had to be radiation
 hard.
 
-In order to meet the three design goals, ECAL is made out of 75848
-scintillating lead tungstate (\leadtungstate) crystals: 61200 in the barrel,
-and 7324 in each of the two endcaps. The radiation length in lead tungstate is
-short ($\radlength = 0.89\centimeters$) allowing ECAL to be compact (a
-necessity since it must fit within the solenoid) but still contain $\approx
-25\radlength$ of scintillator. The \Moliere radius is also small
-(2.2\centimeters) allowing showers to be contained within each crystal. Lead
-tungstate is also radiation hard (up to 10\megarads). While lead tungstate has
-a fast response (80\% of light is given off within 25\ns), it does not produce
-very much light ($30 \photon / \MeV$) and so sensitive photodetectors that can
-operate within a strong magnetic field are required. In the barrel avalanche
-photodiodes are used, and in the endcaps vacuum phototriodes are used.
+In order to meet the three design goals, ECAL is made out of \num{75848}
+scintillating lead tungstate (\leadtungstate) crystals: \num{61200} in the
+barrel, and \num{7324} in each of the two endcaps. The radiation length in lead
+tungstate is short ($\radlength = \SI{0.89}{\centi\meter}$) allowing ECAL to be
+compact (a necessity since it must fit within the solenoid) but still contain
+$\approx 25\radlength$ of scintillator. The \Moliere radius is also small
+(\SI{2.2}{\centi\meter}) allowing showers to be contained within each crystal.
+Lead tungstate is also radiation hard (up to 10\megarads). While lead tungstate
+has a fast response (80\% of light is given off within \SI{25}{\nano\second}),
+it does not produce very much light ($30 \photon / \MeV$) and so sensitive
+photodetectors that can operate within a strong magnetic field are required. In
+the barrel avalanche photodiodes are used, and in the endcaps vacuum
+phototriodes are used.
 
 \subsubsection{Electromagnetic Calorimeter Barrel}
 
-The ECAL barrel detector (EB) has an inner radius of 129\centimeters and covers
-a pseudorapidity range from $0 < |\eta| < 1.479$. It is composed of 36
+The ECAL barrel detector (EB) has an inner radius of \SI{129}{\centi\meter} and
+covers a pseudorapidity range from $0 < |\eta| < 1.479$. It is composed of 36
 identical ``supermodules'' each covering half the barrel's length and 1/18th of
-the barrel's circumference. The crystals used in the EB have a front face
-cross section of $22 \times 22\millimeters^{2}$ and a length of
-230\millimeters. They cover 1\degrees in $\Delta \eta$ and $\Delta \phi$. The
-crystals are tilted with their axis 3\degrees off from the vertex region in
+the barrel's circumference. The crystals used in the EB have a front face cross
+section of $22 \times 22 \si{\milli\meter\squared}$ and a length of
+\SI{230}{\milli\meter}. They cover \ang{1} in $\Delta \eta$ and $\Delta \phi$.
+The crystals are tilted with their axis \ang{3} off from the vertex region in
 order to obscure the small gaps between crystals from particles leaving the
 interaction point.
 
 \subsubsection{Electromagnetic Calorimeter Endcap}
 
 The ECAL endcap detectors (EE) are located with their front face at
-$|z|=314\centimeters$ and cover a pseudorapidity range of $1.479 < |\eta| <
-3.0$. Each endcap is composed of two ``Dees'' consisting of semi-circular
-aluminum plates with crystals mounted on them. The crystals used in the EE have
-a front face cross section of $28.6 \times 28.6\millimeters^{2}$ and a length
-of 220\millimeters. Unlike in EB, where the crystals are arranged in an
-\coordetaphi~grid, the crystals in EE are arranged in an \coordxy~grid. Like
-the EB crystals, the EE crystals also off-point from the vertex region.
+$|z|=\SI{314}{\centi\meter}$ and cover a pseudorapidity range of $1.479 <
+|\eta| < 3.0$. Each endcap is composed of two ``Dees'' consisting of
+semi-circular aluminum plates with crystals mounted on them. The crystals used
+in the EE have a front face cross section of $28.6 \times 28.6
+\si{\milli\meter\squared}$ and a length of \SI{220}{\milli\meter}. Unlike in
+EB, where the crystals are arranged in an \coordetaphi~grid, the crystals in EE
+are arranged in an \coordxy~grid. Like the EB crystals, the EE crystals also
+off-point from the vertex region.
 
 \subsubsection{Electromagnetic Calorimeter Preshower}
 
@@ -363,13 +370,13 @@ on the outside of the solenoid before the muon systems begin. It serves as a
 ``tail catcher'' by measuring the hadronic energy leaking through HCAL and
 interacting with the magnet.
 
-%HB consists of 72 segments of 32 towers with each segment covering a
+%HB consists of \num{72} segments of \num{32} towers with each segment covering a
 %pseudorapidity range from $0 < |\eta| < 1.4$. The size of each tower is $\Delta
 %\eta \times \Delta \phi = 0.087 \times 0.087$. In HB there are 15 brass plates,
-%each with a thickness of 5\centimeters and two stainless steel plates, one on
+%each with a thickness of \SI{5}{\centi\meter} and two stainless steel plates, one on
 %the inner face and one on the outer face to add mechanical strength. The first
-%scintillator plate has a thickness of 9\millimeters, all others have a
-%thickness of 3.7\millimeters. HE, unlike EE, is constructed to form a grid in
+%scintillator plate has a thickness of \SI{9}{\milli\meter}, all others have a
+%thickness of \SI{3.7}{\milli\meter}. HE, unlike EE, is constructed to form a grid in
 %\coordetaphi. It covers a rapidity region from $1.3 < |\eta| < 3$. For the
 %lowest values of $\eta$ its channel size roughly matches the barrel, but this
 %size grows at higher $\eta$.
@@ -378,18 +385,18 @@ interacting with the magnet.
 
 The hadron forward (HF) calorimeter is the most forward of of the detectors
 that make up HCAL, and the one of the most forward detectors in CMS. HF is
-located 11.2\meters from the interaction point. It covers a pseudorapidity
+located \SI{11.2}{\meter} from the interaction point. It covers a pseudorapidity
 range of $3 < |\eta| < 5$ and so receives a very high particle flux. HF must be
 very radiation hard in order to survive in this environment. HF is constructed
 of steel and quartz. The signal in HF originates from \Cherenkov light in the
 quartz.
 
-The steel absorb is 1.65\meters thick. Placed within the absorber are quartz
-fibers which are 0.6\millimeters in diameter and oriented parallel to the
-\zaxis. These fibers are arranged in a square grid 5\millimeters apart. There
-are two lengths of fibers: ``long'' 1.65\meters ones and ``short'' 1.43\meters
-ones. These different lengths allow HF to sample showers at two different
-depths.
+The steel absorb is \SI{1.65}{\meter} thick. Placed within the absorber are
+quartz fibers which are \SI{0.6}{\milli\meter} in diameter and oriented
+parallel to the \zaxis. These fibers are arranged in a square grid
+\SI{5}{\milli\meter} apart. There are two lengths of fibers: ``long''
+\SI{1.65}{\meter} ones and ``short'' \SI{1.43}{\meter} ones. These different
+lengths allow HF to sample showers at two different depths.
 
 The layout of HCAL is shown in \cref{fig:hcal_layout}.
 
@@ -407,16 +414,17 @@ fringing fields are collected and returned by the iron return yokes which also
 support the muon chambers. In this way a field is provided for the muon
 chambers without requiring an additional magnet.
 
-The solenoid is 12.9\meters long with an inner bore of 5.9\meters. It generates
-a 3.8\tesla field using 2168 turns of conductor which carry 19.5\kiloamps. The
-total stored energy is 2.7\gigajoules. The solenoid is encased in aluminum to
-help dissipate heat and add strength. This entire assembly is enclosed in a
-stainless steel cryostat. The cryostat must be exceptionally strong because it
-not only supports the solenoid, but also all of the barrel subdetectors (HCAL,
-ECAL, and the tracker) that are mounted within it. The calorimeters and the
-tracker are mounted within the solenoid in order minimize the un-instrumented
-mass---where particles could lose energy due to interactions---between the
-calorimeters and the collision region.
+The solenoid is \SI{12.9}{\meter} long with an inner bore of \SI{5.9}{\meter}.
+It generates a \SI{3.8}{\tesla} field using \num{2168} turns of conductor which
+carry \SI{19.5}{\kilo\ampere}. The total stored energy is
+\SI{2.7}{\giga\joule}. The solenoid is encased in aluminum to help dissipate
+heat and add strength. This entire assembly is enclosed in a stainless steel
+cryostat. The cryostat must be exceptionally strong because it not only
+supports the solenoid, but also all of the barrel subdetectors (HCAL, ECAL, and
+the tracker) that are mounted within it. The calorimeters and the tracker are
+mounted within the solenoid in order minimize the un-instrumented mass---where
+particles could lose energy due to interactions---between the calorimeters and
+the collision region.
 
 \subsection{Muon System}
 
@@ -443,10 +451,11 @@ measurement because of the increased lever arm provided by the muon system. The
 muon chambers are built within the iron return yokes and as such are outside
 the primary magnetic field provided inside the solenoid.
 
-The muon systems must cover a very large surface area, $25,000\meters^{2}$, and
-so gaseous detectors are used in order to keep the cost down. Three types of
-gaseous detectors are used in the muon system: drift tube (DT) chambers,
-resistive plate chambers (RPC), and cathode strip chambers (CSC),
+The muon systems must cover a very large surface area,
+\SI{25000}{\meter\squared}, and so gaseous detectors are used in order to keep
+the cost down. Three types of gaseous detectors are used in the muon system:
+drift tube (DT) chambers, resistive plate chambers (RPC), and cathode strip
+chambers (CSC),
 
 \subsubsection{Drift Tubes}
 
@@ -454,9 +463,10 @@ DTs are gas ionization detectors with an anode wire strung down the center of
 each tube which act as the cathode. The wire collects the ionization charged
 caused by a muon passing through the tube. By using a timing and pulse shape
 measurement, the DTs can achieve a point resolution of $\approx
-200\micrometers$ leading to a position resolution in $\phi$ of 100\micrometers
-and a direction measurement good to approximately 1\millirads. The maximum
-drift length in the DTs is 2\centimeters.
+\SI{200}{\micro\meter}$ leading to a position resolution in $\phi$ of
+\SI{100}{\micro\meter} and a direction measurement good to approximately
+\SI{1}{\milli\radian}. The maximum drift length in the DTs is
+\SI{2}{\centi\meter}.
 
 \subsubsection{Resistive Plate Chambers}
 
@@ -465,7 +475,7 @@ passes through it causes an electron cascade that is collected on the anode,
 which is divided into strips to allow the position of the cascade to be
 measured. RPCs have worse position resolution than the DTs, but are much
 faster because they have a shorter drift length, with a timing response of
-$\approx 1\ns$.
+$\approx \SI{1}{\nano\second}$.
 
 \subsubsection{Cathode Strip Chambers}
 
@@ -474,9 +484,10 @@ one side, and cathode wires on the other side running orthogonal to the anodes.
 A prompt signal is provided by the anode wires, while a weighted average of the
 image charge on the cathode provides a slower but more precise location. The
 anode signal is used in triggering at \Lone while the cathodes are used for
-final reconstruction. The spatial resolution of $\approx 200\micrometers$
-($100\micrometers$ in the first ring of the first endcap disk) and the angular
-resolution in $\phi$ is $\approx 2\millirads$.
+final reconstruction. The spatial resolution of $\approx
+\SI{200}{\micro\meter}$ (\SI{100}{\micro\meter} in the first ring of the first
+endcap disk) and the angular resolution in $\phi$ is $\approx
+\SI{2}{\milli\radian}$.
 
 \subsubsection{Muon System Barrel}
 
@@ -484,15 +495,15 @@ In the barrel region ($|\eta| < 1.2$) DTs are used because the induced neutron
 background is low, the muon rate is low, and the magnetic field is low. RPCs
 are also used in the barrel to augment the DTs. The barrel consists of four
 layers of muon stations in five wheels corresponding to the five wheels making
-up the iron return yoke. Each wheel has 12 sectors that cover 30\degrees. The
-chambers are staggered such that a high energy muon produced near the boundary
-must cross 3 of the 4 layers. Of the three inner layers has 12 chambers, and
-the 4th layer has 2 chambers in the bottom and top sectors, and so has 14
-chambers in total. The first three layers are aligned to measure in \coordrphi
-and \coordz, while the 4th layer measures only in \coordrphi. Each chamber
-consists of 12 planes of DTs with 2 RPCs---1 on the front and 1 on the
-back---in the first two layers, and 1 RPC---on the front---for the second two
-layers.
+up the iron return yoke. Each wheel has \num{12} sectors that cover \ang{30}.
+The chambers are staggered such that a high energy muon produced near the
+boundary must cross \num{3} of the \num{4} layers. Of the three inner layers
+has \num{12} chambers, and the 4th layer has \num{2} chambers in the bottom and
+top sectors, and so has \num{14} chambers in total. The first three layers are
+aligned to measure in \coordrphi and \coordz, while the 4th layer measures only
+in \coordrphi. Each chamber consists of \num{12} planes of DTs with \num{2}
+RPCs---\num{1} on the front and \num{1} on the back---in the first two layers,
+and \num{1} RPC---on the front---for the second two layers.
 
 \subsubsection{Muon System Endcap}
 
@@ -500,7 +511,7 @@ In the endcap region the higher magnetic field, neutron background, and muon
 flux make DTs ineffective and so CSCs are used instead. There are three disks
 of CSCs chambers with RPCs sandwiched between disks of the iron return yoke in
 the rapidity range $|\eta| < 1.6$. After that range there are only CSCs
-chambers. There are 6 CSCs per chamber.
+chambers. There are \num{6} CSCs per chamber.
 
 The layout of the muon system is shown in \cref{fig:muon_layout}.
 
@@ -509,27 +520,28 @@ The layout of the muon system is shown in \cref{fig:muon_layout}.
 
 The trigger's job is to select the interesting physics events from all of the
 collisions happening in CMS. The trigger must be able to handle the full bunch
-crossing rate at the LHC of 40\megahertz (although it only ran at 20\megahertz
-in 2012). The trigger accomplishes this by using a two level design. The first
-level, the \Lone (L1) trigger, consists of custom hardware cuts the
-20\megahertz of collisions down to about 100\kilohertz. These events are then
-passed to the second level of the trigger, the high-level trigger (HLT), which
-uses software running on commodity hardware to select 1\kilohertz of events.
+crossing rate at the LHC of \SI{40}{\mega\hertz} (although it only ran at
+\SI{20}{\mega\hertz} in 2012). The trigger accomplishes this by using a two
+level design. The first level, the \Lone (L1) trigger, consists of custom
+hardware cuts the \SI{20}{\mega\hertz} of collisions down to about
+\SI{100}{\kilo\hertz}. These events are then passed to the second level of the
+trigger, the high-level trigger (HLT), which uses software running on commodity
+hardware to select \SI{1}{\kilo\hertz} of events.
 
 \subsubsection{The \Lone Trigger}
 
 The L1 trigger is implemented in custom hardware because it must be incredibly
-fast. Each event is given just 3.2\microseconds to travel from the detector to
-the service cavern and be accepted or rejected by the L1 trigger. Of this time,
-less than 1\microseconds is given for the L1 trigger to make its decision. The
-L1 trigger only uses information from the muon system and the calorimeters; it
-does not use information from the tracker as it takes too long for this
-data to be assembled and transfered. From the calorimeters the L1 trigger gets
-the sum of energy in a fixed array of \fivebyfive crystals in ECAL as well as
-the energy behind each array in HCAL. From the muon chambers the L1 trigger
-gets a short vector from each detector indication the location of a hit in the
-chamber and the direction the particle was traveling in. The L1 trigger also
-makes use of a few global sums including \ET and \MET.
+fast. Each event is given just \SI{3.2}{\micro\second} to travel from the
+detector to the service cavern and be accepted or rejected by the L1 trigger.
+Of this time, less than \SI{1}{\micro\second} is given for the L1 trigger to
+make its decision. The L1 trigger only uses information from the muon system
+and the calorimeters; it does not use information from the tracker as it takes
+too long for this data to be assembled and transfered. From the calorimeters
+the L1 trigger gets the sum of energy in a fixed array of \fivebyfive crystals
+in ECAL as well as the energy behind each array in HCAL. From the muon chambers
+the L1 trigger gets a short vector from each detector indication the location
+of a hit in the chamber and the direction the particle was traveling in. The L1
+trigger also makes use of a few global sums including \ET and \MET.
 
 While a decision is being made, the data from the collision are stored in a
 hardware buffer. If the L1 trigger selects the event, the data are moved from
@@ -549,6 +561,6 @@ first, with more sophisticated---and hence computationally expensive---triggers
 running later if needed.
 
 HLT runs on a server farm consisting of commodity hardware. There are currently
-around 10,000 processor cores in the HLT farm. By using commodity server
+around \num{10000} processor cores in the HLT farm. By using commodity server
 hardware, HLT benefits from the rapid speed and power advances that are being
 made in commercial computing.

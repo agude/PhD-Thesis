@@ -14,11 +14,17 @@
 \usepackage{setspace} % Adjust spacing in captions
 \usepackage{xcolor} % Color text
 \usepackage{subcaption} % Allows subfigures
-\usepackage[group-separator={,}]{siunitx} % \num{} formatting
+\usepackage{siunitx} % \num{} formatting and SI unit formatting
 \usepackage{booktabs}
 \usepackage{enumitem} % noitemsep on lists
 \usepackage[bookmarks=true]{hyperref} % Load last
 \usepackage[noabbrev]{cleveref} % Automatically fill in fig., table, etc.
+
+% Configure the siunitx package
+\sisetup{
+    group-separator = {,}, % Use , to separate groups of digits, like 12,345
+    list-final-separator = {, and } % Always use the serial comma in \SIlist
+}
 
 % Custom inputs for macros and variables
 \input{my_definitions}
