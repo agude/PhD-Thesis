@@ -453,7 +453,9 @@ migration.
         \caption{}
         \label{fig:bin_migration_matrix}
     \end{subfigure}
-    \caption{
+    \caption[
+        Reconstruction resolution and bin migration.
+    ]{
         The \phistar reconstruction resolution (left) and bin migration (right)
         for events generated with \MADGRAPH passing our event selection.
     }
@@ -489,7 +491,9 @@ in \cref{fig:unfolding_madgraph_with_madgraph}, while the result for
         \caption{}
         \label{fig:unfolding_powheg_with_powheg}
     \end{subfigure}
-    \caption{
+    \caption[
+        The ratio of unfolded reconstructed over generated \phistar in MC.
+    ]{
         The ratio between the unfolded reconstructed and generated \phistar
         distributions using the \MADGRAPH sample (left) and \POWHEG sample
         (right) for events passing our event selection. The unfolding was done
@@ -517,7 +521,10 @@ compared to each other. The result of this test for \MADGRAPH is shown in
         \caption{}
         \label{fig:unfolding_powheg_with_powheg_halves}
     \end{subfigure}
-    \caption{
+    \caption[
+        The ratio of reconstructed over generated \phistar in MC unfolded with
+        independent samples.
+    ]{
         The ratio between the unfolded reconstructed and generated \phistar
         distributions in two (circular and square points) statistically
         independent samples events generated with \MADGRAPH (left) and \POWHEG
@@ -547,7 +554,10 @@ and vice versa. The result of unfolding \POWHEG with \MADGRAPH is shown in
         \caption{}
         \label{fig:unfolding_madgraph_with_powheg}
     \end{subfigure}
-    \caption{
+    \caption[
+        The ratio of reconstructed over generated \phistar in MC unfolded with
+        the other generator sample.
+    ]{
         On the left is shown the ratio between the unfolded reconstructed and
         generated \phistar distributions in the \POWHEG sample unfolded with a
         flat \MADGRAPH sample. On the right is show the same ratio but for
@@ -590,7 +600,10 @@ provided by \RooUnfold. Both methods lead to identical results.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=\SideBySidePlotWidth]{figures/BinM_MP_ALL.pdf}
-    \caption{
+    \caption[
+        A comparison of \RooUnfold uncertainties and toy MC based
+        uncertainties in unfolding.
+    ]{
         A comparison of the simplified \RooUnfold uncertainties and toy MC
         based uncertainties. The ratio between the unfolded reconstructed and
         generated \phistar distributions for the \POWHEG sample unfolded with
@@ -896,7 +909,10 @@ reconstruction efficiency, and identification efficiency.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/EventEff.pdf}
-    \caption{
+    \caption[
+        The fraction of \Ztoee events generated with \MADGRAPH and \POWHEG that
+        pass our selection criteria.
+    ]{
         The ratio of \Ztoee events generated with \MADGRAPH (circles) and
         \POWHEG (squares) which pass our event selection over the number of
         events in our fiducial region as a function of the generated \phistar.
