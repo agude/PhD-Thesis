@@ -8,6 +8,9 @@
 % Add space between rows of tables
 \newcommand{\spacerows}[1]{\renewcommand{\arraystretch}{#1}}
 
+% Table header GeV ranges
+\newcommand{\GeVRange}[2]{\SIrange[range-units=single,range-phrase=--]{#1}{#2}{\GeV}}
+
 % Gloassary and acronym table entries
 \newcommand{\GlossaryEntry}[2]{\item \textbf{#1:} #2}
 \newcommand{\AcronymEntry}[2]{#1 & #2 \\}

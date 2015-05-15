@@ -19,7 +19,8 @@
 % Configure the siunitx package
 \sisetup{
     group-separator = {,}, % Use , to separate groups of digits, like 12,345
-    list-final-separator = {, and } % Always use the serial comma in \SIlist
+    list-final-separator = {, and }, % Always use the serial comma in \SIlist
+    separate-uncertainty = true, % Use (Val +- err) instead of Val(err)
 }
 
 % Configure the hyperref package

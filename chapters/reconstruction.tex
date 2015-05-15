@@ -28,7 +28,7 @@ sum, and this is what the electron reconstruction algorithm attempts to do.
     \label{fig:tracker_material}
 \end{figure}
 
-The reconstruction of electrons with $\pt > 20 \GeV$ in CMS begins with a
+The reconstruction of electrons with $\pt > \SI{20}{\GeV}$ in CMS begins with a
 ``seed'' cluster of energy deposits in ECAL \cite{eg_reco_2010}. As an electron
 bends in the magnetic field, it takes a helictical path at constant $\eta$ but
 changing $\phi$. Any photons radiated by the electron will lie along this path.
@@ -46,8 +46,8 @@ are searched for starting at the innermost layer and working outward. In order
 to account for the changing shape of the track as the electron loses energy
 from interacting with the tracker material, a ``Gaussian Sum Filter'' (GSF)
 \cite{adam_2005} is used rather than the simpler Kalman filter used for muons
-and hadrons. Low energy electrons ($\ET < 15 \GeV$) are constructed with \pt
-from the tracker and \ET from ECAL. For higher energy electrons, the ECAL
+and hadrons. Low energy electrons ($\ET < \SI{15}{\GeV}$) are constructed with
+\pt from the tracker and \ET from ECAL. For higher energy electrons, the ECAL
 energy is used without the tracker \pt to avoid issues introduced by the
 possible poor fits in the tracker. The $\eta$ and $\phi$ of all electron
 candidates, regardless of energy, is taken from the track by projecting back to
@@ -77,8 +77,8 @@ EB. The algorithm was trained separately for EB and EE electrons. In order to
 prevent over-training the MC samples were split in half, with one half used for
 training and the other half used for validation. Electrons used in the
 regression were required to have low radiated energy fraction ($< 0.01$) as
-determined by the generator level MC and $\pt > 7 \GeV$. The target variable
-was the ratio of the generator level \bare electron energy over the
+determined by the generator level MC and $\pt > \SI{7}{\GeV}$. The target
+variable was the ratio of the generator level \bare electron energy over the
 reconstructed energy. This correction was applied to both the data and the
 reconstructed MC electrons used in this analysis.
 
@@ -179,7 +179,7 @@ decays. These variables are broken down into three categories:
 The following subsections contain plots of some of the most important electron
 variables as well as a discussion of their use in selecting electrons from
 \Ztoee decays. The data shown on the plots consists of every electron candidate
-in the \SingleMuon dataset with $|\eta| < 2.4$ and $\pt > 20 \GeV$. This
+in the \SingleMuon dataset with $|\eta| < 2.4$ and $\pt > \SI{20}{\GeV}$. This
 dataset was used because the trigger that selects events for it makes no
 selection on the electron variables and therefore the electron candidates in
 the set represent a sample of minimally-biased electrons. The MC electrons are
@@ -217,8 +217,8 @@ signal electrons for both EB and EE are shown in \cref{fig:sieie}.
         Distributions of $\sigmaietaieta$ in EB and EE in data and MC.
     ]{
         The $\sigmaietaieta$ variable distribution in EB (top) and EE (bottom)
-        for all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
-        events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
+        for all electrons with $\pt > \SI{20}{\GeV}$ and $|\eta| < 2.4$ in a
+        set of events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:sieie}
 \end{figure}
@@ -236,9 +236,9 @@ electrons is shown in \cref{fig:he}.
     \caption[
         Distributions of \HOverE in data and MC.
     ]{
-        The \HOverE distributions for all electrons with $\pt > 20 \GeV$ and
-        $|\eta| < 2.4$ in a set of events selected with a muon trigger and in
-        \MADGRAPH \Ztoee MC.
+        The \HOverE distributions for all electrons with $\pt > \SI{20}{\GeV}$
+        and $|\eta| < 2.4$ in a set of events selected with a muon trigger and
+        in \MADGRAPH \Ztoee MC.
     }
     \label{fig:he}
 \end{figure}
@@ -267,7 +267,7 @@ electrons are shown in \cref{fig:deta,fig:dphi}, respectively.
         Distributions of $\detain$ and $\dphiin$ in data and MC.
     ]{
         The $\detain$ (top) and $\dphiin$ (bottom) variable distributions for
-        all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
+        all electrons with $\pt > \SI{20}{\GeV}$ and $|\eta| < 2.4$ in a set of
         events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:dtrack}
@@ -291,9 +291,9 @@ electrons is shown in \cref{fig:ooeoop}.
     \caption[
         Distributions of \ooeoop in data and MC.
     ]{
-        The \ooeoop distributions for all electrons with $\pt > 20 \GeV$ and
-        $|\eta| < 2.4$ in a set of events selected with a muon trigger and in
-        \MADGRAPH \Ztoee MC.
+        The \ooeoop distributions for all electrons with $\pt > \SI{20}{\GeV}$
+        and $|\eta| < 2.4$ in a set of events selected with a muon trigger and
+        in \MADGRAPH \Ztoee MC.
     }
     \label{fig:ooeoop}
 \end{figure}
@@ -326,8 +326,8 @@ electrons are shown in \cref{fig:d0,fig:dz}, respectively.
         Distributions of \dzero and \dz in data and MC.
     ]{
         The \dzero (top) and \dz (bottom) variable distributions for all
-        electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of events
-        selected with a muon trigger and in \MADGRAPH \Ztoee MC.
+        electrons with $\pt > \SI{20}{\GeV}$ and $|\eta| < 2.4$ in a set of
+        events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:d0_dz}
 \end{figure}
@@ -343,9 +343,9 @@ electrons and for signal electrons is shown in \cref{fig:nmiss}.
     \caption[
         Distributions of \nmiss in data and MC.
     ]{
-        The \nmiss distribution for all electrons with $\pt > 20 \GeV$ and
-        $|\eta| < 2.4$ in a set of events selected with a muon trigger and in
-        \MADGRAPH \Ztoee MC.
+        The \nmiss distribution for all electrons with $\pt > \SI{20}{\GeV}$
+        and $|\eta| < 2.4$ in a set of events selected with a muon trigger and
+        in \MADGRAPH \Ztoee MC.
     }
     \label{fig:nmiss}
 \end{figure}
@@ -395,7 +395,7 @@ shown in \cref{fig:hcal_iso,fig:ecal_iso}, respectively.
         Distributions of HCAL and ECAL isolation variables in data and MC.
     ]{
         The HCAL (top) and ECAL (bottom) isolation variable distributions for
-        all electrons with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of
+        all electrons with $\pt > \SI{20}{\GeV}$ and $|\eta| < 2.4$ in a set of
         events selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:hcal_ecal_isos}
@@ -439,8 +439,8 @@ shown in \cref{fig:pf_iso}.
         Distributions of particle flow isolation variables in data and MC.
     ]{
         The particle flow isolation variable distribution for all electrons
-        with $\pt > 20 \GeV$ and $|\eta| < 2.4$ in a set of events selected
-        with a muon trigger and in \MADGRAPH \Ztoee MC.
+        with $\pt > \SI{20}{\GeV}$ and $|\eta| < 2.4$ in a set of events
+        selected with a muon trigger and in \MADGRAPH \Ztoee MC.
     }
     \label{fig:pf_iso}
 \end{figure}

@@ -323,34 +323,34 @@ would lead to differences in the efficiencies.
 
 Electron reconstruction begins with the assembly of a supercluster in ECAL and
 ends with the matching of a supercluster to a track in the tracker. The details
-of electron reconstruction are described in
-\cref{sec:electron_reconstruction}. The efficiency of an electron with $\pt
-> 20 \GeV$ depositing enough energy in ECAL to be reconstructed into a
-supercluster is very high, although the exact efficiency must be measured in
-MC as there is no more basic object with which to perform \TnP to measure it in
-data. Failure to form superclusters is generally due to dead crystals in ECAL,
-which are accounted for in the detector response simulation. Scale factors for
-matching a track given that a supercluster has already been found were measured
-centrally by the CMS collaboration using \TnP \cite{gsf_scale_factors_2013}. A
-summary of their method follows.
+of electron reconstruction are described in \cref{sec:electron_reconstruction}.
+The efficiency of an electron with $\pt > \SI{20}{\GeV}$ depositing enough
+energy in ECAL to be reconstructed into a supercluster is very high, although
+the exact efficiency must be measured in MC as there is no more basic object
+with which to perform \TnP to measure it in data. Failure to form superclusters
+is generally due to dead crystals in ECAL, which are accounted for in the
+detector response simulation. Scale factors for matching a track given that a
+supercluster has already been found were measured centrally by the CMS
+collaboration using \TnP \cite{gsf_scale_factors_2013}. A summary of their
+method follows.
 
-The events used to measure the reconstruction scale factors are selected with the
-dedicated electron \TnP Trigger: \TnPTrigger. This trigger requires one
-electron with $\pt > 20 \GeV$ which must also pass very tight isolation and ID
-requirements while requiring only a low energy ($\et > 4 \GeV$) supercluster as
-the other leg. The trigger rate is kept down by requiring that the invariant
-mass of these two objects is greater than $50 \GeV$.
+The events used to measure the reconstruction scale factors are selected with
+the dedicated electron \TnP Trigger: \TnPTrigger. This trigger requires one
+electron with $\pt > \SI{20}{\GeV}$ which must also pass very tight isolation
+and ID requirements while requiring only a low energy ($\et > \SI{4}{\GeV}$)
+supercluster as the other leg. The trigger rate is kept down by requiring that
+the invariant mass of these two objects is greater than $\SI{50}{\GeV}$.
 
 The events selected by the trigger are further required to pass a set of
 selection requirements. The tag electron is required to pass \EGTIGHT, have
-$\pt > 25 \GeV$, and $|\eta| < 2.5$. Electrons are rejected if they fall in the
-seam between EB and EE ($1.4442 < |\eta| < 1.566$). The tag must also be
+$\pt > \SI{25}{\GeV}$, and $|\eta| < 2.5$. Electrons are rejected if they fall
+in the seam between EB and EE ($1.4442 < |\eta| < 1.566$). The tag must also be
 matched to the tight leg of the \TnP trigger. The probe supercluster has
 minimal requirements applied; it is required to have tracker isolation $<
 0.15$. For the MC sample, the tag is required to be matched to a generator
 level electron with $\Delta R < 0.2$. Additionally, the event is required to
-have low particle flow missing energy $\PFMET < 20 \GeV$ in order to reject
-poorly reconstructed events.
+have low particle flow missing energy $\PFMET < \SI{20}{\GeV}$ in order to
+reject poorly reconstructed events.
 
 The events were binned in terms of probe's $\pt$ and $\eta$ as well as whether
 the probe passed or failed. In each bin, the \mee distribution was constructed
@@ -377,20 +377,20 @@ A summary of their method follows.
 
 The events used for this measurement were selected using two triggers: \\
 \TnPTrigger, which is described above, and \TnPTriggerSecond, which requires
-one electron with $\pt > 17 \GeV$ and tight isolation and ID requirements while
-also requiring a reconstructed second electron (as opposed to a supercluster as
-required by the first trigger) with $\pt > 8 \GeV$. It further requires a
-dielectron invariant mass of $\mee > 50 \GeV$.
+one electron with $\pt > \SI{17}{\GeV}$ and tight isolation and ID requirements
+while also requiring a reconstructed second electron (as opposed to a
+supercluster as required by the first trigger) with $\pt > \SI{8}{\GeV}$. It
+further requires a dielectron invariant mass of $\mee > \SI{50}{\GeV}$.
 
-The tag electrons are required to pass \EGTIGHT, have $\pt > 25 \GeV$, and
-$|\eta| < 2.5$; they are rejected if they fall in the seem between EB and EE
-($1.4442 < |\eta| < 1.566$). The tag is not required to match the trigger.
+The tag electrons are required to pass \EGTIGHT, have $\pt > \SI{25}{\GeV}$,
+and $|\eta| < 2.5$; they are rejected if they fall in the seem between EB and
+EE ($1.4442 < |\eta| < 1.566$). The tag is not required to match the trigger.
 Probe electrons have the same $\eta$ requirements as tags, but are only
-required to have $\pt > 10 \GeV$. Passing probes pass the ID criteria under
-investigation, failing probes fail the ID criteria. The invariant mass of the
-tag and probe pair is required to be near the \Z mass peak (\MassRange). The
-electrons are required to have charges of opposite sign. In MC, the probe is
-only required to be matched to a generator electron with $\Delta R < 0.2$.
+required to have $\pt > \SI{10}{\GeV}$. Passing probes pass the ID criteria
+under investigation, failing probes fail the ID criteria. The invariant mass of
+the tag and probe pair is required to be near the \Z mass peak (\MassRange).
+The electrons are required to have charges of opposite sign. In MC, the probe
+is only required to be matched to a generator electron with $\Delta R < 0.2$.
 
 The efficiencies are then calculated by fitting the \mee distributions using a
 template constructed with a \Ztoee MC sample and an exponential background. The
