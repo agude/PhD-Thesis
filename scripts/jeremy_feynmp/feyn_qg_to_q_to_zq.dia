@@ -2,7 +2,7 @@
 \begin{fmfgraph*}(300,200)
 \fmfleft{i1,i2} \fmfright{o1,o2,o3}
 
-\fmflabel{$\bar{q}$}{i1}
+\fmflabel{$g$}{i1}
 \fmflabel{$q$}{i2}
 
 \fmf{fermion}{i2,v1}

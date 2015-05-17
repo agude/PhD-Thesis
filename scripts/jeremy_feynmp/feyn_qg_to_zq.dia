@@ -2,13 +2,13 @@
 \begin{fmfgraph*}(300,200)
 \fmfleft{i1,i2} \fmfright{o1,o2,o3}
 
-\fmflabel{$\bar{q}$}{i1}
+\fmflabel{$g$}{i1}
 \fmflabel{$q$}{i2}
 
 \fmf{fermion}{i2,v1}
-\fmf{fermion}{v1,v2}
+\fmf{fermion,label=$q$}{v1,v2}
 
-\fmf{gluon,label=$q$}{v2,i1}
+\fmf{gluon}{v2,i1}
 
 \fmf{boson,label=$Z/\gamma*$}{v1,v4}
 \fmf{fermion}{v4,o2}
