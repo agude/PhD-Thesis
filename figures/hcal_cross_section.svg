@@ -16,7 +16,7 @@
    height="234.53973"
    sodipodi:docname="hcal_cross_section.svg">
   <title
-     id="title5132">CMS HCAL Cross Sectional View</title>
+     id="title9488">CMS HCAL Cross Section View</title>
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>CMS HCAL Cross Sectional View</dc:title>
+        <dc:title>CMS HCAL Cross Section View</dc:title>
         <dc:date>2015-02-28</dc:date>
         <dc:creator>
           <cc:Agent>
@@ -59,23 +59,8 @@
           </cc:Agent>
         </dc:contributor>
         <cc:license
-           rdf:resource="https://creativecommons.org/licenses/by/4.0/" />
+           rdf:resource="" />
       </cc:Work>
-      <cc:License
-         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Reproduction" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#Distribution" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Notice" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#Attribution" />
-        <cc:permits
-           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
-        <cc:requires
-           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
-      </cc:License>
     </rdf:RDF>
   </metadata>
   <defs
@@ -130,13 +115,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1301"
-     inkscape:window-height="744"
+     inkscape:window-width="1615"
+     inkscape:window-height="1026"
      id="namedview4"
      showgrid="false"
      inkscape:snap-global="false"
      inkscape:zoom="1.6005418"
-     inkscape:cx="80.273333"
+     inkscape:cx="-34.06295"
      inkscape:cy="85.398509"
      inkscape:window-x="65"
      inkscape:window-y="24"
