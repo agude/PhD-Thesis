@@ -1,0 +1,25 @@
+\Large
+\begin{fmfgraph*}(300,200)
+\fmfleft{i1,i2} \fmfright{o1,o2,o3}
+
+\fmflabel{$\overline{q}$}{i1}
+\fmflabel{$q$}{i2}
+
+\fmf{fermion}{i2,v1}
+\fmf{fermion}{v1,i1}
+
+\fmf{boson,label=$Z/\gamma*$}{v1,v2}
+
+\fmf{fermion}{o1,v2}
+\fmf{fermion}{v2,v3}
+\fmf{fermion}{v3,o3}
+
+\fmflabel{$e^{+}$}{o1}
+\fmflabel{$e^{-}$}{o3}
+
+\fmffreeze
+
+\fmf{boson}{v3,o2}
+\fmflabel{$\gamma$}{o2}
+
+\end{fmfgraph*}
