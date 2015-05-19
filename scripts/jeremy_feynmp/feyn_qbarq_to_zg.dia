@@ -1,22 +1,34 @@
 \Large
 \begin{fmfgraph*}(300,200)
-\fmfleft{i1,i2} \fmfright{o1,o2,o3}
 
-\fmflabel{$\bar{q}$}{i1}
-\fmflabel{$q$}{i2}
+    % Set up the endpoints
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmfbottom{b1}
 
-\fmf{fermion,tension=3.5}{i2,v1}
-\fmf{fermion,tension=3.5}{v1,v2}
-\fmf{fermion,tension=3.5}{v2,i1}
+    % Draw phantom particles to fix the skeleton of the diagram
+    \fmf{phantom}{i2,v1,i1}
+    \fmf{phantom}{v1,v3}
+    \fmf{phantom}{o1,v3,o2}
 
-\fmf{gluon,tension=0}{v2,o1}
+    \fmffreeze
 
-\fmf{boson,label=$Z/\gamma*$}{v1,v4}
-\fmf{fermion}{v4,o2}
-\fmf{fermion}{o3,v4}
+    % The incoming quarks
+    \fmf{fermion}{i2,v1,v2,i1}
+    \fmflabel{$\overline{q}$}{i1}
+    \fmflabel{$q$}{i2}
 
-\fmflabel{$e^{+}$}{o3}
-\fmflabel{$e^{-}$}{o2}
-\fmflabel{$g$}{o1}
+    % The Z and outgoing electrons
+    \fmf{boson,label=$Z/\gamma*$}{v1,v3}
+    \fmf{fermion}{o1,v3,o2}
+    \fmflabel{$e^{+}$}{o1}
+    \fmflabel{$e^{-}$}{o2}
+
+    % Fix the graph before any other radiation
+    \fmffreeze
+
+    % The radiated gluon off the antiquark
+    \fmf{gluon}{v2,b1}
+    \fmflabel{$g$}{b1}
 
 \end{fmfgraph*}

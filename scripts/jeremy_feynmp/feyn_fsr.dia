@@ -1,25 +1,32 @@
 \Large
 \begin{fmfgraph*}(300,200)
-\fmfleft{i1,i2} \fmfright{o1,o2,o3}
 
-\fmflabel{$\overline{q}$}{i1}
-\fmflabel{$q$}{i2}
+    % Set up the endpoints
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2,o3}
 
-\fmf{fermion}{i2,v1}
-\fmf{fermion}{v1,i1}
+    % Draw phantom particles to fix the skeleton of the diagram
+    \fmf{phantom}{i1,v1,i2}
+    \fmf{phantom}{v1,v2}
+    \fmf{phantom}{o1,v2,o3}
 
-\fmf{boson,label=$Z/\gamma*$}{v1,v2}
+    \fmffreeze
 
-\fmf{fermion}{o1,v2}
-\fmf{fermion}{v2,v3}
-\fmf{fermion}{v3,o3}
+    % The incoming quarks
+    \fmf{fermion}{i2,v1,i1}
+    \fmflabel{$\overline{q}$}{i1}
 
-\fmflabel{$e^{+}$}{o1}
-\fmflabel{$e^{-}$}{o3}
+    % The Z and outgoing electrons
+    \fmf{boson,label=$Z/\gamma*$}{v1,v2}
+    \fmf{fermion}{o1,v2,v3,o3}
+    \fmflabel{$e^{+}$}{o1}
+    \fmflabel{$e^{-}$}{o3}
 
-\fmffreeze
+    % Fix the graph before any other radiation
+    \fmffreeze
 
-\fmf{boson}{v3,o2}
-\fmflabel{$\gamma$}{o2}
+    % The radiated photon off the electron
+    \fmf{boson}{v3,o2}
+    \fmflabel{$\gamma$}{o2}
 
 \end{fmfgraph*}
