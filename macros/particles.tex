@@ -1,15 +1,16 @@
 % General
-\newcommand{\Particle}[1]{\ensuremath{#1}\xspace}
+\newcommand{\Particle}[1]{\ensuremath{\text{#1}}\xspace}
+\newcommand{\ParticleMath}[1]{\ensuremath{#1}\xspace}
 
 \newcommand{\xxbar}[2]{\ensuremath{#1 \overline{#2}}\xspace}
 \newcommand{\xxpm}[2]{\ensuremath{#1^{+} #2^{-}}\xspace}
 
 % Leptons
-\newcommand{\lepton}{\Particle{\ell}}
-\newcommand{\neutrino}{\Particle{\nu}}
+\newcommand{\lepton}{\ParticleMath{\ell}}
+\newcommand{\neutrino}{\ParticleMath{\nu}}
 \newcommand{\electron}{\Particle{e}}
-\newcommand{\muon}{\Particle{\mu}}
-\newcommand{\tauon}{\Particle{\tau}}
+\newcommand{\muon}{\ParticleMath{\mu}}
+\newcommand{\tauon}{\ParticleMath{\tau}}
 \newcommand{\ee}{\xxpm{\electron}{\electron}}
 
 \newcommand{\mutoWnu}{\ensuremath{\mu \to \W \neutrino_{\mu}}\xspace}
@@ -32,21 +33,21 @@
 \newcommand{\blue}{\QuarkColor{b}}
 
 % Mesons
-\newcommand{\qqbar}{\xxbar{q}{q}\xspace}
+\newcommand{\qqbar}{\xxbar{\quark}{\quark}\xspace}
 \newcommand{\meson}{\qqbar}
 
 %% Pions
-\newcommand{\pion}{\Particle{\pi}}
-\newcommand{\pionplus}{\Particle{\pion^{+}}}
-\newcommand{\pionminus}{\Particle{\pion^{-}}}
-\newcommand{\pionzero}{\Particle{\pion^{0}}}
+\newcommand{\pion}{\ParticleMath{\pi}}
+\newcommand{\pionplus}{\ParticleMath{\pion^{+}}}
+\newcommand{\pionminus}{\ParticleMath{\pion^{-}}}
+\newcommand{\pionzero}{\ParticleMath{\pion^{0}}}
 
 \newcommand{\ChargeExchange}{\ensuremath{\pionplus + \neutron \to \pionzero + \proton}\xspace}
 \newcommand{\pitogammagamma}{\ensuremath{\pionzero \to \photon \photon}\xspace}
 \newcommand{\pitomunu}{\ensuremath{\pionplus \to \mu^{+} + \neutrino}\xspace}
 
 %% JPsi
-\newcommand{\jpsi}{\Particle{\text{J}\hspace{-.08em}/\hspace{-.14em}\psi}}
+\newcommand{\jpsi}{\ensuremath{\Particle{J}\hspace{-.08em}/\hspace{-.14em}\psi}\xspace}
 
 % Baryons
 \newcommand{\baryon}{\ensuremath{\quark \quark \quark}\xspace}
@@ -56,21 +57,21 @@
 % Bosons
 
 %% Photon
-\newcommand{\photon}{\Particle{\gamma}}
+\newcommand{\photon}{\ParticleMath{\ensuremath{\gamma}}}
 \newcommand{\PhotonConversion}{\ensuremath{\photon \to \xxpm{\electron}{\electron}}\xspace}
 
 %% W
 \newcommand{\W}{\Particle{W}}
-\newcommand{\Wpm}{\Particle{\W^{\pm}}}
-\newcommand{\Wp}{\Particle{\W^{+}}}
-\newcommand{\Wm}{\Particle{\W^{-}}}
+\newcommand{\Wpm}{\ParticleMath{\W^{\pm}}}
+\newcommand{\Wp}{\ParticleMath{\W^{+}}}
+\newcommand{\Wm}{\ParticleMath{\W^{-}}}
 
 \newcommand{\Wtoqq}{{\ensuremath{\W \to \xxbar{\quark}{\quark}}}\xspace}
 \newcommand{\Wtolnu}{{\ensuremath{\W \to \lepton \neutrino}}\xspace}
 
 %% Z
 \newcommand{\Z}{\Particle{Z}}
-\newcommand{\DY}{\ensuremath{\text{DY}}\xspace}
+\newcommand{\DY}{\Particle{DY}\xspace}
 
 \newcommand{\Zto}[1]{\ensuremath{\Z \to #1}\xspace}
 \newcommand{\Ztoqq}{\ensuremath{\Zto{\qqbar}}\xspace}
@@ -89,7 +90,7 @@
 \newcommand{\DYtonunu}{\ensuremath{\DYto{\xxbar{\neutrino}{\neutrino}}}\xspace}
 
 %% Higgs
-\newcommand{\higgs}{\Particle{\mathrm{H}}}
+\newcommand{\higgs}{\Particle{H}}
 \newcommand{\higgstogammagamma}{\ensuremath{\higgs \to \photon \photon}\xspace}
 \newcommand{\higgstoZZ}{\ensuremath{\higgs \to \Z \Z}\xspace}
 
