@@ -1,0 +1,19 @@
+\Large
+\begin{fmfgraph*}(300,200)
+
+    % Set up the endpoints
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+
+    % The incoming quarks
+    \fmf{fermion}{i2,v1,i1}
+    \fmflabel{$\overline{q}$}{i1}
+    \fmflabel{$q$}{i2}
+
+    % The Z and outgoing electrons
+    \fmf{boson,label=$Z/\gamma*$}{v1,v2}
+    \fmf{fermion}{o1,v2,o2}
+    \fmflabel{$e^{+}$}{o1}
+    \fmflabel{$e^{-}$}{o2}
+
+\end{fmfgraph*}

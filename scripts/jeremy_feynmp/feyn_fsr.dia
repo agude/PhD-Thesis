@@ -15,6 +15,7 @@
     % The incoming quarks
     \fmf{fermion}{i2,v1,i1}
     \fmflabel{$\overline{q}$}{i1}
+    \fmflabel{$q$}{i2}
 
     % The Z and outgoing electrons
     \fmf{boson,label=$Z/\gamma*$}{v1,v2}
