@@ -24,20 +24,21 @@ total cross section as follows:
     \left[
     \errabs_{i} \cdot
         \left(
-            \frac{1}{\sigma} - \frac{1}{\sigma^{2}}
+            \frac{1}{\AllBinN} - \frac{\BinN_{i}}{\AllBinN^{2}}
         \right)
     \right]^{2}
     +
     \sum_{i \ne j}
     \left(
-        \errabs_{j} \cdot \frac{1}{\sigma^{2}}
+        \errabs_{j} \cdot \frac{\BinN_{i}}{\AllBinN^{2}}
     \right)^{2}
 \end{equation}
 
 where $\errnorm_{i}$ is the statistical uncertainty for normalized bin $i$,
 $\errabs_{j}$ is the statistical uncertainty for bin $j$ in the absolute
-distribution, and $\sigma$ is the overall cross section given by the integral
-of the absolute distribution. The correction yielded by this formula is small.
+distribution, $\BinN_{i}$ is the number of events in bin $i$ in the absolute
+distribution, and $\AllBinN$ is the number of events given by the integral of
+the absolute distribution. The correction yielded by this formula is small.
 
 The statistical uncertainty ranges from 0.26 to 1.21\% for both the absolute
 and normalized cross section measurement. It is one of the dominant
