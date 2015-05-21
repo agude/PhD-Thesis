@@ -159,7 +159,7 @@ for i in column_to_histo:
 
         # Set the axis titles
         histo.GetXaxis().SetTitle("#phi *")
-        histo.GetYaxis().SetTitle("Fractional Error")
+        histo.GetYaxis().SetTitle("Percent Uncertainty")
         histo.GetYaxis().SetTitleOffset(1.3)
 
         histo.Draw()
