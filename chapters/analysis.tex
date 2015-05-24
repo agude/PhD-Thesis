@@ -40,9 +40,9 @@ distribution, $\BinN_{i}$ is the number of events in bin $i$ in the absolute
 distribution, and $\AllBinN$ is the number of events given by the integral of
 the absolute distribution. The correction yielded by this formula is small.
 
-The statistical uncertainty ranges from 0.26 to 1.21\% for both the absolute
-and normalized cross section measurement. It is one of the dominant
-uncertainties for the normalized cross section measurement.
+The statistical uncertainty ranges from \SIrange{0.26}{1.21}{\percent} for both
+the absolute and normalized cross section measurement. It is one of the
+dominant uncertainties for the normalized cross section measurement.
 
 \subsection{Statistical Uncertainties from the Monte Carlo Samples}
 \label{ssec:mc_stat_uncertainty}
@@ -52,16 +52,17 @@ final selection than there are events in the data. These samples are used to
 unfold the data and so their statistical uncertainty affects the final
 measurement. The affect of the statistical uncertainty on the bin migration
 matrix is propagated through to the final result via the use of toy MC as
-detailed in \cref{ssec:unfolding_statistical_uncertainties}. The
-uncertainty from using this method with the \MADGRAPH sample is 0.1 to 0.2\%
-for both the absolute and normalized cross section measurements.
+detailed in \cref{ssec:unfolding_statistical_uncertainties}. The uncertainty
+from using this method with the \MADGRAPH sample is
+\SIrange{0.1}{0.2}{\percent} for both the absolute and normalized cross section
+measurements.
 
 In addition to affecting the unfolding, the low number of events in the MC
-affects the efficiency correction discussed in \cref{ssec:eff_correction}
-and shown in \cref{fig:average_efficiencies}. These uncertainties vary from
-0.3 to 1.3\% for both the absolute and normalized cross section measurements.
-These uncertainties are calculated in the same manner for \POWHEG, but the
-effect is larger as there are fewer events in that sample.
+affects the efficiency correction discussed in \cref{ssec:eff_correction} and
+shown in \cref{fig:average_efficiencies}. These uncertainties vary from
+\SIrange{0.3}{1.3}{\percent} for both the absolute and normalized cross section
+measurements. These uncertainties are calculated in the same manner for
+\POWHEG, but the effect is larger as there are fewer events in that sample.
 
 These two sources of uncertainty are measured separately. The finally
 uncertainty due to using a specific signal MC sample is the sum in quadrature
@@ -99,12 +100,13 @@ each simulated event. The distribution of pileup in MC is reweighted to match
 the data distribution based on the calculated instantaneous luminosity and the
 inelastic proton-proton cross section. The uncertainty due to this reweighting
 process is calculated by varying the inelastic cross section by plus and minus
-5\%, recalculating the data distribution of pileup, and reweighting the MC
-samples to match this new distribution. The full analysis is then performed
-with these MC samples and the differences between the \phistar distributions is
-taken as a systematic uncertainty. The pileup uncertainty for the absolute
-cross section measurement ranges from 0.21 to 0.58\%, while the uncertainty for
-the normalized cross section measurement is between $< 0.01$ and 0.64\%.
+\SI{5}{\percent}, recalculating the data distribution of pileup, and
+reweighting the MC samples to match this new distribution. The full analysis is
+then performed with these MC samples and the differences between the \phistar
+distributions is taken as a systematic uncertainty. The pileup uncertainty for
+the absolute cross section measurement ranges from
+\SIrange{0.21}{0.58}{\percent}, while the uncertainty for the normalized cross
+section measurement varies from $< \SI{0.01}{\percent}$ to \SI{0.64}{\percent}.
 
 \subsection{Trigger, Reconstruction, and Identification Scale Factors Uncertainty}
 \label{scale_factor_uncertainty}
@@ -123,13 +125,15 @@ and its width set to the quadrature sum of the uncertainties on the scale
 factor. Each toy is then used to weight the MC samples used in this analysis,
 and the full analysis is performed with that newly weighted samples. The
 uncertainty on the final result due to one of the three types of scale factors
-is taken to be defined by the central 68.2\% of results from the toys.
+is taken to be defined by the central \SI{68.2}{\percent} of results from the
+toys.
 
 This procedure for propagating the uncertainty is performed independently for
 each of the three types of scale factors. The total uncertainty due to the
 scale factors is the sum in quadrature of the three results. For the absolute
-cross section measurement this uncertainty is about 0.4\%, while for the
-normalized cross section measurement it ranges from 0.02 to 0.35\%.
+cross section measurement this uncertainty is about \SI{0.4}{\percent}, while
+for the normalized cross section measurement it ranges from
+\SIrange{0.02}{0.35}{\percent}.
 
 \subsection{\texorpdfstring{\pt}{PT} Scale Uncertainty}
 \label{ssec:pt_scale_uncertainty}
@@ -143,13 +147,14 @@ However, the measurement of the \pt of the electrons is used to determine which
 events are included in our sample. Therefore, a shift in the \pt scale of the
 detector will either add or remove events that have electrons near the \pt
 selection requirement boundaries. To determine the uncertainty due to the \pt
-scale, we vary the \pt values of all of the electron up and down by 0.3\%,
-which is a conservative estimate of the uncertainty on the \pt scale. The
-largest difference in each \phistar bin between the nominal result and the
-results with the modified \pt scale is taken as the uncertainty in that bin.
-The uncertainty due to the \pt scale for the absolute cross section measurement
-is 0.07 to 0.17\%, while the uncertainty for the normalized cross section
-measure is $< 0.01$ to 0.10\%.
+scale, we vary the \pt values of all of the electron up and down by
+\SI{0.3}{\percent}, which is a conservative estimate of the uncertainty on the
+\pt scale. The largest difference in each \phistar bin between the nominal
+result and the results with the modified \pt scale is taken as the uncertainty
+in that bin. The uncertainty due to the \pt scale for the absolute cross
+section measurement is \SIrange{0.07}{0.17}{\percent}, while the uncertainty
+for the normalized cross section measurement varies from $<
+\SI{0.01}{\percent}$ to \SI{0.10}{\percent}.
 
 \subsection{Background Subtraction Uncertainty}
 \label{ssec:background_subtraction_uncertainty}
@@ -173,22 +178,23 @@ to weight the background MC samples  which are then used to perform the
 background subtraction. The full analysis is then run with the newly
 background-subtracted data samples. The uncertainty due to the subtraction of
 this category of background for each bin in \phistar is defined by the spread
-of the central 68.2\% values obtained by the toys.
+of the central \SI{68.2}{\percent} values obtained by the toys.
 
-The second category consists of the backgrounds with a real \Z boson: $\Z\Z$
-and $\W\Z$. For these samples we can not use the \emu control sample so the
-uncertainty is calculated by taking a correlated 20\% uncertainty on the
-theoretical cross section and propagating this through to the final result.
+The second category consists of the backgrounds with a real \Z boson: \ZZ and
+\WZ. For these samples we can not use the \emu control sample so the
+uncertainty is calculated by taking a correlated \SI{20}{\percent} uncertainty
+on the theoretical cross section and propagating this through to the final
+result.
 
-The third and final category consists of the \QCDjets and \wjets
-backgrounds. The method of estimating this background is discussed in
-\cref{ssec:qcd_background}. Instead of taking the uncertainties from the
-fit, which would not account for any systematics in the method used, a
-conservative 100\% uncertainty is assigned to this category.
+The third and final category consists of the \QCDjets and \wjets backgrounds.
+The method of estimating this background is discussed in
+\cref{ssec:qcd_background}. Instead of taking the uncertainties from the fit,
+which would not account for any systematics in the method used, a conservative
+\SI{100}{\percent} uncertainty is assigned to this category.
 
 The uncertainty due to the background subtraction for the absolute cross
-section measurement varies from 0.02 to 0.64\%, and from 0.03 to 0.59\% in the
-normalized cross section measurement.
+section measurement varies from \SIrange{0.02}{0.64}{\percent}, and from
+\SIrange{0.03}{0.59}{\percent} in the normalized cross section measurement.
 
 \subsection{PDF and Cross Section Uncertainties}
 \label{ssec:pdf_uncertainties}
@@ -237,8 +243,9 @@ The uncertainty is calculated using the \FSRWeightProducer, which augments the
 \PYTHIA QED calculation with exact $\BigO{\alpha}$ and $\alpha(\pt^{2})$
 couplings and reweights the MC sample as if it had been produced with these
 calculations from the start. The effect of this reweighting on the final
-\phistar distribution is $\le 0.34\%$ for the absolute cross section
-measurement and $\le 0.03\%$ for the normalized cross section measurement.
+\phistar distribution is $\le \SI{0.34}{\percent}$ for the absolute cross
+section measurement and $\le \SI{0.03}{\percent}$ for the normalized cross
+section measurement.
 
 %\subsection{Electron Angular Position Uncertainty}
 %
@@ -319,18 +326,17 @@ assigned for this disagreement.
 \end{figure}
 
 Likewise, the \Z \rapidity distribution in \MADGRAPH does not match the
-distribution in data, as seen in \cref{fig:z_rapidity}. The same
-reweighting procedure as is performed for the \mee case above is used here to
-force the distributions to agree. The ratio between the nominal \phistar value
-and the value derived after this reweighting is shown in
-\cref{fig:z_rapidity_reweighted}.
-The circular points show the ratio of the
+distribution in data, as seen in \cref{fig:z_rapidity}. The same reweighting
+procedure as is performed for the \mee case above is used here to force the
+distributions to agree. The ratio between the nominal \phistar value and the
+value derived after this reweighting is shown in
+\cref{fig:z_rapidity_reweighted}. The circular points show the ratio of the
 reconstructed \phistar distributions, while the square points show the ratio of
 the generated \phistar distributions. The disagreement is on the order of
-0.05\% for most of the distribution, increasing to 0.4--0.5\% in the highest
-\phistar bins. Although this is larger than the effect seen in the \mee
-reweighting, it is much smaller than the statistical uncertainties and so is
-not included in the final results.
+\SI{0.05}{\percent} for most of the distribution, increasing to
+\SI{0.5}{\percent} in the highest \phistar bins. Although this is larger than
+the effect seen in the \mee reweighting, it is much smaller than the
+statistical uncertainties and so is not included in the final results.
 
 \begin{figure}[!htbp]
     \centering
@@ -426,24 +432,24 @@ decaying to electron pairs in terms of \phistar was performed using
 measurement was compared to the predictions from the \MADGRAPH and \POWHEG
 generators.
 
-The prediction from \MADGRAPH is everywhere within 5\% of the distribution
-measured in data unfolded with \MADGRAPH. The generator underestimates the
-cross section in both the low and high \phistar bins, but agrees in the very
-lowest bin and the three highest bins. In the intermediate region, \MADGRAPH
-switches from underestimating to overestimating the cross section, but does so
-smoothly. Surprisingly, the prediction from \MADGRAPH agrees better with the
-data unfolded with \POWHEG, and not just because the uncertainty is larger. The
-central value of the prediction from \MADGRAPH is closer to the data even
-disregarding the uncertainty.
+The prediction from \MADGRAPH is everywhere within \SI{5}{\percent} of the
+distribution measured in data unfolded with \MADGRAPH. The generator
+underestimates the cross section in both the low and high \phistar bins, but
+agrees in the very lowest bin and the three highest bins. In the intermediate
+region, \MADGRAPH switches from underestimating to overestimating the cross
+section, but does so smoothly. Surprisingly, the prediction from \MADGRAPH
+agrees better with the data unfolded with \POWHEG, and not just because the
+uncertainty is larger. The central value of the prediction from \MADGRAPH is
+closer to the data even disregarding the uncertainty.
 
 The prediction from \POWHEG is significantly worse than the prediction from
 \MADGRAPH. Compared to the \MADGRAPH unfolded data, \POWHEG's prediction
-underestimate the cross section by 10\% in the low \phistar region, 15\% in the
-high \phistar region, and overestimates the cross section by 10\% in the
-intermediate region. In fact \POWHEG is only consistent with the data in five
-bins, although four of these are grouped together around $\phistar \approx
-0.15$. \POWHEG does equally poorly when compared with the data unfolded with
-\POWHEG.
+underestimate the cross section by \SI{10}{\percent} in the low \phistar
+region, \SI{15}{\percent} in the high \phistar region, and overestimates the
+cross section by \SI{10}{\percent} in the intermediate region. In fact \POWHEG
+is only consistent with the data in five bins, although four of these are
+grouped together around $\phistar \approx 0.15$. \POWHEG does equally poorly
+when compared with the data unfolded with \POWHEG.
 
 The \phistar variable, as expected, had very limited dependence on the \pt
 scale uncertainty of the detector, which was the smallest of the systematic
