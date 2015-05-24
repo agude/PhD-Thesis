@@ -85,42 +85,10 @@ The distributions of electron \pt and $\eta$ for the highest \pt electron and
 the second highest \pt electron after all selection requirements are applied
 are shown in \cref{fig:e_pt,fig:e_eta}.
 
-\begin{figure}[p]
-    \centering
-    \begin{subfigure}[b]{0.65\textwidth}
-        \includegraphics[width=\textwidth]{figures/e0_pt.pdf}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.65\textwidth}
-        \includegraphics[width=\textwidth]{figures/e1_pt.pdf}
-    \end{subfigure}
-    \caption[
-        The \pt distribution of electrons in data.
-    ]{
-        The \pt distribution of the higher (top) and lower (bottom) \pt
-        electrons in data (points) and \MADGRAPH signal MC and the background
-        MC samples (histograms) for events passing the full analysis selection.
-    }
-    \label{fig:e_pt}
-\end{figure}
-
-\begin{figure}[p]
-    \vspace*{\fill}
-    \centering
-    \begin{subfigure}[b]{0.65\textwidth}
-        \includegraphics[width=\textwidth]{figures/e0_eta.pdf}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.65\textwidth}
-        \includegraphics[width=\textwidth]{figures/e1_eta.pdf}
-    \end{subfigure}
-    \caption[
-        The $\eta$ distribution of electrons in data.
-    ]{
-        The $\eta$ distribution of the higher (top) and lower (bottom) \pt
-        electrons in data (points) and \MADGRAPH signal MC and the background
-        MC samples (histograms) for events passing the full analysis selection.
-    }
-    \label{fig:e_eta}
-\end{figure}
+% fig:e_pt
+\input{packaged_figures/e_pt.tex}
+% fig:e_eta
+\input{packaged_figures/e_eta.tex}
 
 \subsection{\Z Selection}
 
@@ -145,87 +113,18 @@ distribution is not considered as a source of uncertainty as \phistar is
 related to boson \bosonpt, and hence the disagreement is motivation for the
 measurement, not something to be corrected for.
 
-\begin{figure}[p]
-    \centering
-    \includegraphics[width=\textwidth]{figures/z_mass_fine.pdf}
-    \caption[
-        The \mee distribution of events in data and MC with \MADGRAPH signal MC.
-    ]{
-        The \mee distribution of all events passing the final selection in data
-        (points) and \MADGRAPH signal MC and the background MC samples
-        (histograms).
-    }
-    \label{fig:z_mass}
-\end{figure}
-
-\begin{figure}[p]
-    \centering
-    \includegraphics[width=\textwidth]{figures/z_mass_fine_powheg.pdf}
-    \caption[
-        The \mee distribution of events in data and MC with \POWHEG signal MC.
-    ]{
-        The \mee distribution of all events passing the final selection in data
-        (points) and \POWHEG signal MC and the background MC samples
-        (histograms).
-    }
-    \label{fig:z_mass_powheg}
-\end{figure}
-
-\begin{figure}[p]
-    \centering
-    \includegraphics[width=\textwidth]{figures/z_pt.pdf}
-    \caption[
-        The $\pt$ distribution of \Z bosons in data and MC with \MADGRAPH
-        signal MC.
-    ]{
-        The $\pt$ distribution of \Z bosons for all events passing the final
-        selection in data (points) and \MADGRAPH signal MC and the background
-        MC samples (histograms).
-    }
-    \label{fig:z_pt}
-\end{figure}
-
-\begin{figure}[p]
-    \centering
-    \includegraphics[width=\textwidth]{figures/z_pt_powheg.pdf}
-    \caption[
-        The $\pt$ distribution of \Z bosons in data and MC with \POWHEG signal
-        MC.
-    ]{
-        The $\pt$ distribution of \Z bosons for all events passing the final
-        selection in data (points) and \POWHEG signal MC and the background
-        MC samples (histograms).
-    }
-    \label{fig:z_pt_powheg}
-\end{figure}
-
-\begin{figure}[p]
-    \centering
-    \includegraphics[width=\textwidth]{figures/z_rapidity.pdf}
-    \caption[
-        The $\rapidity$ distribution of \Z bosons in data and MC with \MADGRAPH
-        signal MC.
-    ]{
-        The $\rapidity$ distribution of \Z bosons for all events passing the
-        final selection in data (points) and \MADGRAPH signal MC and the
-        background MC samples (histograms).
-    }
-    \label{fig:z_rapidity}
-\end{figure}
-
-\begin{figure}[p]
-    \centering
-    \includegraphics[width=\textwidth]{figures/z_rapidity_powheg.pdf}
-    \caption[
-        The $\rapidity$ distribution of \Z bosons in data and MC with \POWHEG
-        signal MC.
-    ]{
-        The $\rapidity$ distribution of \Z bosons for all events passing the
-        final selection in data (points) and \POWHEG signal MC and the
-        background MC samples (histograms).
-    }
-    \label{fig:z_rapidity_powheg}
-\end{figure}
+%fig:z_mass
+\input{packaged_figures/z_mass.tex}
+%fig:z_mass_powheg
+\input{packaged_figures/z_mass_powheg.tex}
+%fig:z_pt
+\input{packaged_figures/z_pt.tex}
+%fig:z_pt_powheg
+\input{packaged_figures/z_pt_powheg.tex}
+%fig:z_rapidity
+\input{packaged_figures/z_rapidity.tex}
+%fig:z_rapidity_powheg
+\input{packaged_figures/z_rapidity_powheg.tex}
 
 \section{Background Estimation}
 \label{sec:background}
