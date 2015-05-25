@@ -47,7 +47,7 @@ dominant uncertainties for the normalized cross section measurement.
 \subsection{Statistical Uncertainties from the Monte Carlo Samples}
 \label{ssec:mc_stat_uncertainty}
 
-The \MADGRAPH and \POWHEG signal MC sample have fewer events which pass our
+The \MADGRAPH and \POWHEG signal MC samples have fewer events which pass our
 final selection than there are events in the data. These samples are used to
 unfold the data and so their statistical uncertainty affects the final
 measurement. The affect of the statistical uncertainty on the bin migration
@@ -360,7 +360,7 @@ The values of the various uncertainties in each \phistar bin are presented in
 the figures that follow. \Cref{fig:sys_uncert_norm} shows the uncertainties in
 the normalized \phistar cross section in data unfolded with \MADGRAPH while
 \cref{fig:sys_uncert_norm_powheg} shows the uncertainties in the data unfolded
-with \POWHEG. The uncertainties on the normalized \phistar cross section in
+with \PPsixZtwo. The uncertainties on the normalized \phistar cross section in
 \MADGRAPH and \POWHEG are shown in
 \cref{fig:madgraph_uncert_norm,fig:powheg_uncert_norm}, respectively. All of
 these values are presented in tables in \cref{app:uncertainty_tables}. Figures
@@ -389,9 +389,11 @@ differential \phistar cross section for \Z bosons decaying to an electron pair
 in the detector region defined in \cref{sec:acceptance}. Absolute cross
 sections are presented in \cref{app:dressed_measurements}. Two sets of data
 are used to make the measurement, one unfolded with \MADGRAPH and one unfolded
-with \POWHEG; these sets are otherwise identical. The data distributions of
-\phistar are compared to the distributions from both the \MADGRAPH MC signal
-sample and the \POWHEG MC signal sample.
+with \PPsixZtwo; these datasets are otherwise identical. The data distributions
+of \phistar are compared to distributions from the \MADGRAPH MC signal sample
+and the \PPsixZtwo MC signal sample, as well as the two custom \POWHEG samples
+discussed in \cref{ssec:custom_samples}. The uncertainties on the two custom
+\POWHEG samples are the same as for the centrally produced sample.
 
 \subsection{Normalized Differential Cross Section}
 \label{ssec:results_norm}
@@ -403,7 +405,7 @@ shown in more detail in \cref{fig:results_ratio_norm}. As the luminosity
 has canceled out in the normalization, the primary uncertainty on the data is
 now the statistical uncertainty from the \MADGRAPH sample used to unfold it.
 The limit number of events in the MC samples is also the primary uncertainty on
-the \MADGRAPH distribution and the \POWHEG distribution.
+the \MADGRAPH distribution and the three \POWHEG distributions.
 
 % fig:results_norm and fig:results_ratio_norm
 \input{packaged_figures/results_norm.tex}
@@ -411,11 +413,11 @@ the \MADGRAPH distribution and the \POWHEG distribution.
 \input{tables/results_normalized.tex}
 
 The normalized differential cross section measurement using data unfolded with
-\POWHEG is shown in \cref{fig:results_norm_powheg} and given in tabular
-form in \cref{tab:results_norm_powheg}. The lower plot in
+\PPsixZtwo is shown in \cref{fig:results_norm_powheg} and given in tabular form
+in \cref{tab:results_norm_powheg}. The lower plot in
 \cref{fig:results_norm_powheg} is shown in more detail in
-\cref{fig:results_ratio_norm_powheg}. The primary uncertainty on the data
-is now the statistical uncertainty from the \POWHEG sample used to unfold it.
+\cref{fig:results_ratio_norm_powheg}. The primary uncertainty on the data is
+now the statistical uncertainty from the \POWHEG sample used to unfold it.
 
 % fig:results_norm_powheg and fig:results_ratio_norm_powheg
 \input{packaged_figures/results_norm_powheg.tex}
@@ -429,8 +431,8 @@ is now the statistical uncertainty from the \POWHEG sample used to unfold it.
 A measurement of the normalized differential cross section of the \Z boson
 decaying to electron pairs in terms of \phistar was performed using
 \GoodLumiNumber of \rootseight data collected with the CMS detector. This
-measurement was compared to the predictions from the \MADGRAPH and \POWHEG
-generators.
+measurement was compared to the predictions from \MGsixZtwo, \PPsixZtwo,
+\PPeightTTfive, and \PPeightTTfourteen.
 
 The prediction from \MADGRAPH is everywhere within \SI{5}{\percent} of the
 distribution measured in data unfolded with \MADGRAPH. The generator
@@ -438,18 +440,46 @@ underestimates the cross section in both the low and high \phistar bins, but
 agrees in the very lowest bin and the three highest bins. In the intermediate
 region, \MADGRAPH switches from underestimating to overestimating the cross
 section, but does so smoothly. Surprisingly, the prediction from \MADGRAPH
-agrees better with the data unfolded with \POWHEG, and not just because the
+agrees better with the data unfolded with \PPsixZtwo, and not just because the
 uncertainty is larger. The central value of the prediction from \MADGRAPH is
 closer to the data even disregarding the uncertainty.
 
-The prediction from \POWHEG is significantly worse than the prediction from
-\MADGRAPH. Compared to the \MADGRAPH unfolded data, \POWHEG's prediction
-underestimate the cross section by \SI{10}{\percent} in the low \phistar
-region, \SI{15}{\percent} in the high \phistar region, and overestimates the
-cross section by \SI{10}{\percent} in the intermediate region. In fact \POWHEG
-is only consistent with the data in five bins, although four of these are
-grouped together around $\phistar \approx 0.15$. \POWHEG does equally poorly
-when compared with the data unfolded with \POWHEG.
+The prediction from the \PPsixZtwo sample is significantly worse than the
+prediction from \MADGRAPH. Compared to the \MADGRAPH unfolded data, \POWHEG's
+prediction underestimate the cross section by \SI{10}{\percent} in the low
+\phistar region, \SI{15}{\percent} in the high \phistar region, and
+overestimates the cross section by \SI{10}{\percent} in the intermediate
+region. In fact \POWHEG is only consistent with the data in five bins, although
+four of these are grouped together around $\phistar \approx 0.15$. \PPsixZtwo
+does equally poorly when compared with the data unfolded with \PPsixZtwo.
+
+The prediction from the \PPeightTTfive and \PPeightTTfourteen samples are as
+poor as the prediction from the \PPsixZtwo sample, although in a different
+manner. Unlike the previous two samples, these two overestimate the cross
+section by \SI{10}{\percent} in the lowest \phistar bins and then underestimate
+by \SI{15}{\percent} in the highest \phistar bins. The two distributions are
+roughly compatible in the low \phistar bins, but deviate from each other
+significantly in the highest bins.
+
+While none of the simulated samples well matches the data, it is interesting to
+note how varied the predictions are. The samples created with \MGsixZtwo and
+\PPsixZtwo use different generators but the same hadronizer and tune. However,
+their shape is still very different, indicating that the generator is
+responsible for much of the disagreement. The samples created with \PPsixZtwo
+and with \PPeightTTfive and \PPeightTTfourteen use the same generator but
+different hadronizers and tunes. Again, the distributions are very different,
+even more so then when comparing the \MADGRAPH distribution to \POWHEG one.
+This indicates the hadronizer and tune play a very large roll in determining
+the \phistar distribution. Finally, the samples created with \PPeightTTfive and
+\PPeightTTfourteen use the same generator and the same hadronizer but different
+tunes. While the agreement between these two samples is the closest, many bins
+still disagree indicating that the tune alone can have an impact on the final
+distribution.
+
+In the future, the measurement presented in this thesis can be used to optimize
+MC generation by adjusting the generator, hadronizer, and tune to achieve the
+best agreement possible. The MC samples created from this optimized simulation
+could then be used to make the templates used in the \MassW measurement.
 
 The \phistar variable, as expected, had very limited dependence on the \pt
 scale uncertainty of the detector, which was the smallest of the systematic

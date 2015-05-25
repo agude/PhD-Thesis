@@ -23,3 +23,12 @@
 \newcommand{\CTten}{\ParameterSet{CT10}}
 \newcommand{\TunePPfive}{\ParameterSet{Tunepp5}}
 \newcommand{\TunePPfourteen}{\ParameterSet{Tunepp14}}
+
+% Combined Generators plus Pythia
+\newcommand{\MGsixZtwo}{\ensuremath{\MADGRAPH+\PYTHIAsix} (\ZTwoStar)\xspace}
+
+\newcommand{\POWHEGPlus}[2]{\ensuremath{\POWHEG+#1} (#2)\xspace}
+
+\newcommand{\PPsixZtwo}{\POWHEGPlus{\PYTHIAsix}{\ZTwoStar}}
+\newcommand{\PPeightTTfive}{\POWHEGPlus{\PYTHIAeight}{\TunePPfive}}
+\newcommand{\PPeightTTfourteen}{\POWHEGPlus{\PYTHIAeight}{\TunePPfourteen}}
