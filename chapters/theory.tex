@@ -263,8 +263,23 @@ The final piece of the Standard Model, the Higgs boson, gives mass to the weak
 bosons through interactions with the Higgs field. In the Lagrangian of the
 Standard Model it is not possible to write a mass term for the bosons that is
 gauge invariant. The Higgs mechanism adds a complex scalar field whose symmetry
-is spontaneously broken leading to the \W and \Z masses and the appearance of a
-\spinzero boson, the Higgs.
+is spontaneously broken leading to the \W and \Z masses. This rotates the
+primordial vector boson plane consisting of the massless \PrimordialB and
+\PrimordialW fields into the \Z boson and the photon. The angle of this
+rotation is called the Weinberg angle, \WeinbergAngle. This symmetry breaking
+also produces a \spinzero boson, the Higgs.
+
+The Weinberg angle is defined by the mass of the \Z and \W bosons as follows:
+
+\begin{equation}
+\label{eq:weinberg_angle}
+    \sin \WeinbergAngle \equiv \frac{\MassW}{\MZ}
+\end{equation}
+
+This angle is present in many terms of the electroweak Lagrangian, and so
+controls the rates of electromagnetic decays as well as the couplings of the
+Higgs to the vector bosons. It can not be calculated and so must be measured
+experimentally via the masses of the vector bosons.
 
 \section{\texorpdfstring{\Z}{Z} Boson Transverse Momentum}
 
@@ -282,28 +297,37 @@ regions of QCD as, due to asymptotic freedom, it is these low momentum transfer
 interactions where \alphastrong is large.
 
 In addition to aiding in the understanding of QCD processes, measuring the \Z
-\bosonpt spectrum helps improve measurements of the \W mass (\MassW). With the
-discovery of the Higgs boson at the LHC, every observable parameter of the
-electroweak sector of the Standard Model has been experimentally measured. A
-subset of these measurements can be used with the Standard Model to predict the
-values of the parameters excluded from the subset; performing such a fit to
-determine \MassW leads to a theory result that is better constrained then the
-experimental measurement \cite{baak_2014}. There is some tension between the
-fit and the measurement of \MassW, as shown in \cref{fig:gfitter_mw}, which
-could be indicative of new physics, but the comparison is inconclusive; a
-better measurement is needed to resolve the issue. % Current pull: 1.4
-
-At a hadron collider, the best decay channel for measuring \MassW is $\Wtolnu$
-because the more common $\Wtoqq$ decays are impossible to trigger on. This
-leaves a single detected lepton and an undetected neutrino, forcing a fit to be
-done for the \pt spectrum of the lepton. Any \bosonpt from the \W adds
-uncertainty to this fit, so an accurate measurement of the \W \bosonpt spectrum
-is needed. As the \W is subject to the same processes described below for the
-\Z, the measurement of the \Z \bosonpt spectrum constrains the \W \bosonpt
-spectrum.
+\bosonpt spectrum helps improve measurements of the \W mass (\MassW). The \W
+mass is an interesting quantity to measure because of the role it plays in
+determining the Weinberg angle and because it can be calculated once all the
+other inputs to the Standard Model are known. With the discovery of the Higgs,
+it is now possible to compared the measured value of \MassW with the
+theoretical value. Performing such a fit to determine \MassW leads to a theory
+result that is better constrained then the experimental measurement
+\cite{baak_2014}. There is some disagreement between the fit and the
+measurement of \MassW, as shown in \cref{fig:gfitter_mw}, which could be
+indicative of new physics, but the comparison is inconclusive; a better
+measurement is needed to resolve the issue. % Current pull: 1.4
 
 % fig:gfitter_mw
 \input{packaged_figures/gfitter_mw.tex}
+
+The \W mass is difficult to measure. In an electron collider like \LEP, \Z
+bosons are easy to produce at rest as the \eetoZ channel is available allowing
+a high precision mass measurement. Unfortunately, it is not possible to build a
+high luminosity collider to produce \W bosons at rest through the \enutoW
+channel, and so instead the \qqtoW channel is used at hadron colliders like the
+LHC. However, because of the large numbers of hadronic jets at a hadron
+collider, only the \Wtolnu decay modes can be selected, and so the mass must be
+measured using the single observable lepton because the neutrino escapes
+unseen. This is done with simulate date samples---colloquially referred to as
+Monte Carlo (MC)---which are used to create a template. This template is then
+used to fit for the mass to be done from lepton's momentum. As both the
+\bosonpt of the \W and the \W mass affect the lepton's momentum, any
+uncertainty in the \bosonpt distribution of the simulation translates to an
+uncertainty on the final mass measurement. As the \W is subject to the same
+processes described below for the \Z, the measurement of the \Z \bosonpt
+spectrum constrains the \W \bosonpt spectrum.
 
 \subsection{\texorpdfstring{\Z}{Z} Boson Differential Cross Section}
 
