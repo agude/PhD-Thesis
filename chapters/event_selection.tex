@@ -12,7 +12,7 @@
 \TODO{Plot of acceptance in Phi*: all cuts / Mee cut}
 
 The acceptance region is a definition of what events, assuming that there are
-no limitations due to the detector design, are include in the analysis. The
+no limitations due to the detector design, are included in the analysis. The
 acceptance region is what the final result of this analysis will be corrected
 to, ensuring that other measurements and theoretical predictions can be
 compared to our results without having to account for the detector response.
@@ -144,9 +144,9 @@ data, and are subtracted off from the data events.
 Overall, the selection requirements discussed in the previous sections leave a
 very pure sample of \Z boson events: \SI{99.44}{\percent} of events are signal.
 The dominant backgrounds are the diboson backgrounds and \ttbar. We define \Z
-bosons produced in association another weak boson as a background because of
-their different production mechanism as opposed to single \Z boson events. The
-fraction of events from each of the considered backgrounds is listed in
+bosons produced in association with another weak boson as a background because
+of their different production mechanism as opposed to single \Z boson events.
+The fraction of events from each of the considered backgrounds is listed in
 \cref{table:bg_percentages}.
 
 % table:bg_percentages
@@ -235,12 +235,10 @@ charge of the two leptons.
 The data and MC are divided into subsamples with each subsample corresponding
 to a bin in the \phistar distribution. The \mee distribution of the events in
 each data subsample is fit with a combination of an MC template and an analytic
-background function.
-
-The MC templates used in the fit are created by reweighting each MC sample to
-have the same luminosity as the data. The MC samples are summed and the
-resulting combined shape is used as the template in the fit with its amplitude
-as a free parameter.
+background function. The MC templates used in the fits are created by
+reweighting each MC sample to have the same luminosity as the data and then
+summing the samples together. The shape of the resulting distribution is the
+template with its amplitude fit as a free parameter.
 
 The analytic background function, $\BGFunc$, is the same function used by
 Haupt to model the \QCDjets and \wjets backgrounds in his \Ztoee shape
@@ -474,8 +472,8 @@ and vice versa. The result of unfolding \POWHEG with \MADGRAPH is shown in
 
 In most cases the results are consistent within the assigned statistical error
 bars. However, in the case of the \MADGRAPH sample unfolded with \POWHEG, there
-is disagreement between in the low \phistar bins. This is due \RooUnfold under
-estimating the uncertainties, as discussed in
+is disagreement between in the low \phistar bins. This is due to \RooUnfold
+under estimating the uncertainties, as discussed in
 \cref{ssec:unfolding_statistical_uncertainties}.
 
 \subsubsection{Statistical Uncertainties}
@@ -758,13 +756,13 @@ distribution.
     ]{
         The ratio between the unfolded reconstructed and generated \phistar
         distributions in the \POWHEG sample unfolded with a flat \MADGRAPH
-        sample. The bin migration matrix for the reweighed \MADGRAPH sample is
+        sample. The bin migration matrix for the reweighted \MADGRAPH sample is
         shown on the right.
     }
     \label{fig:flat_unfolding}
 \end{figure}
 
-Differences in the resolution can arises due to differences in how the
+Differences in the resolution can arise due to differences in how the
 detector is simulated and how the detector responds in reality. Various
 corrections are applied to the MC in order to make it more closely match the
 data; these are discussed in \cref{sec:scale_factors}. The uncertainties

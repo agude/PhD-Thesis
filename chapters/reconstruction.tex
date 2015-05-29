@@ -30,7 +30,7 @@ is what the electron reconstruction algorithm attempts to do.
 
 The reconstruction of electrons with $\pt > \SI{20}{\GeV}$ in CMS begins with a
 ``seed'' cluster of energy deposits in ECAL \cite{eg_reco_2010}. As an electron
-bends in the magnetic field, it takes a helictical path at constant $\eta$ but
+bends in the magnetic field, it takes a helical path at constant $\eta$ but
 changing $\phi$. Any photons radiated by the electron will lie along this path.
 These photons must be added together with the electron in order to accurately
 measure its energy, and so additional clusters on the same path as the seed
@@ -369,8 +369,8 @@ follows:
 \begin{equation}
     \ECALISO = \frac{\DeltaRSum \EECAL - \ESC}{\etElectron}
 \end{equation}
-
-\noindent where \DeltaRSum is a sum on the energy in a $\Delta R < 0.3$ cone around the
+%
+where \DeltaRSum is a sum on the energy in a $\Delta R < 0.3$ cone around the
 supercluster location, \EHCAL is the energy in HCAL, \EECAL is the energy in
 ECAL, and \ESC is the energy of the supercluster, which is subtracted out of
 the ECAL isolation sum. No subtraction is applied to the HCAL isolation as we
@@ -405,7 +405,7 @@ A different isolation variable is defined for selection of events in this
 analysis that is more expensive to compute but takes advantage of the tracker
 as well as ECAL and HCAL. This isolation uses a ``particle flow''
 \cite{particle_flow_2009,particle_flow_2010} technique which is a method of
-reconstructing jets that uses information for every subdetector and tries to
+reconstructing jets that uses information from every subdetector and tries to
 reconstruct the individual particles in a jet by matching them to their
 responses in the various subdetectors. To keep the algorithm simple, particle
 flow categorizes every particle into one of five types: photons, electrons,
@@ -423,8 +423,8 @@ sum. The particle flow isolation, $\PFISO$, is given by:
     \PFISO = \DeltaRSum \frac{\left(\ptTrack + \EECAL + \EHCAL\right) - \ptElectron
     - \ESC - 0.3^{2} \pi \rho}{\ptElectron}
 \end{equation}
-
-\noindent where the variables are the same as above, with the addition of \ptTrack, which
+%
+where the variables are the same as above, with the addition of \ptTrack, which
 is the \pt of all tracks in the tracker, \ptElectron, which is the \pt of the
 electron's track, and $\left(0.3^{2} \pi \rho\right)$, which is the energy
 around the electron due to pileup calculated from particle flow. The

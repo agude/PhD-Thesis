@@ -58,10 +58,12 @@ spacing was used and so there were only \num{1374} bunches of which \num{1368}
 were brought into collision at CMS and \ATLAS.
 
 The LHC is also the highest luminosity collider in the world. The instantaneous
-luminosity is given by
+luminosity is given by:
+
 \begin{equation}
     \luminosity = f n \frac{N^{2}}{\sigma}
 \end{equation}
+%
 where $f$ is the frequency of interaction (which is fixed by the LHC's
 circumference), $n$ is the number of bunches in a beam, $N$ is the number of
 protons per bunch (with the $N^{2}$ coming from the assumption that there are
@@ -126,9 +128,9 @@ CMS is built as a series of nested, finite cylinders, where each cylinder is a
 separate subdetector. The beams enter the detector along the axis of the
 cylinder. The collision point is in the center. There are a pair of endcaps on
 either side of the cylinder to increase the acceptance of the detector. The
-endcaps and central region of the cylinder (call the barrel) overlap to prevent
-particles from escaping undetected through the crack. A cutaway of the detector
-is shown in \cref{fig:cms_cutaway}.
+endcaps and central region of the cylinder (called the barrel) overlap to
+prevent particles from escaping undetected through the crack. A cutaway of the
+detector is shown in \cref{fig:cms_cutaway}.
 
 The coordinate system used by CMS is as follows: the origin is the nominal
 interaction point at the center of CMS, the \xaxis is defined to point to the
@@ -143,7 +145,7 @@ by:
 \begin{equation}
     \coordeta = -\logn \tan \frac{\coordtheta}{2}
 \end{equation}
-
+%
 where \coordtheta is the polar angle with respects to the positive \zaxis. The
 magnetic field points along the \zaxis.
 
@@ -154,7 +156,7 @@ closest to the interaction point. The tracker's primary purpose is to measure
 the charge of particles, the momentum of these same particles, and the location
 of interaction vertices---both the primary vertex, the various additional
 proton-proton vertices from pileup, and the vertices of long-lived particles
-like b mesons. The tracker consists two types of silicon detectors: silicon
+like b mesons. The tracker consists of two types of silicon detectors: silicon
 pixels and silicon strips. The tracker covers a pseudorapidity range of $|\eta|
 < 2.4$. The pseudorapidity coverage of the tracker is the determining factor
 behind the $|\eta|$ bounds used in our acceptance definition, discussed in
@@ -228,7 +230,7 @@ The TOB consists of six layers and has coverage up to $|\coordz|<$
 \SI{110}{\centi\meter}. The TOB has a strip pitch which varies from
 \SIrange{120}{180}{\micro\meter} and have a thickness of
 \SI{500}{\micro\meter}. The thicker sensors are able to be used in this region
-because the radiation levels are lower. Having a thicker sensors helps to
+because the radiation levels are lower. Having thicker sensors helps to
 maintain a high signal-to-noise ratio. Just like the TIB, the first two layers
 of the TOB are also built with a double layer of modules with a stereo angle of
 \SI{100}{\milli\radian}.
@@ -241,14 +243,13 @@ and TID consist of modules arrayed in rings around the beam line, with the face
 of each module pointed towards the interaction point so that they have varying
 orientations depending on their distance from the interaction point. The first
 two rings of the TID and the first, second, and fifth rings of the TEC are
-built with double layer of modules. The modules in the TID and the first three
-disks of the TEC have a thickness of \SI{320}{\micro\meter} while the rest of
-the modules in the TEC have a thickness of \SI{500}{\micro\meter}. The strip
-pitch in the TID and the first three disks of the TEC have a strip pitch which
-varies from \SIrange{97}{143}{\micro\meter} while the rest of the modules in
-the TEC have a strip pitch from \SIrange{143}{183}{\micro\meter}. The layout of
-the entire tracker, including the strip tracker, is shown in
-\cref{fig:strip_layout}.
+built with a double layer of modules. The modules in the TID and the first
+three disks of the TEC have a thickness of \SI{320}{\micro\meter} while the
+rest of the modules in the TEC have a thickness of \SI{500}{\micro\meter}. The
+TID and the first three disks of the TEC have a strip pitch which varies from
+\SIrange{97}{143}{\micro\meter} while the rest of the modules in the TEC have a
+strip pitch from \SIrange{143}{183}{\micro\meter}. The layout of the entire
+tracker, including the strip tracker, is shown in \cref{fig:strip_layout}.
 
 \subsection{Electromagnetic Calorimeter}
 \label{ssec:ecal}
@@ -347,13 +348,13 @@ non-interacting particles like neutrinos, dark matter, or other long-lived
 exotic particles.
 
 HCAL is a sampling calorimeter which is appealing because that allowed it to be
-made compact (and HCAL must fit within the magnet), cheap (ECAL was expensive,
-so savings elsewhere were necessary), and with good enough resolution, since
-the resolution is dominated by the hadronic over electromagnetic (\HOverE)
-correction anyway. This correction arises from the fact that the detector
-response from electromagnetic interactions is different than for hadronic
-interactions, and from the fact that there are statistical fluctuations in the
-number of neutral pions---which decay to two photons and so interact
+made compact (HCAL must fit within the magnet), cheap (ECAL was expensive, so
+savings elsewhere were necessary), and with good enough resolution, since the
+resolution is dominated by the hadronic over electromagnetic (\HOverE)
+correction. This correction arises from the fact that the detector response
+from electromagnetic interactions is different than for hadronic interactions,
+and from the fact that there are statistical fluctuations in the number of
+neutral pions---which decay to two photons and so interact
 electromagnetically---and charged pions---which interact hadronically---which
 make up a hadronic shower in HCAL on an event-by-event basis. These differences
 are corrected for in aggregate, with the effect of broadening the calorimeter's
@@ -501,19 +502,19 @@ are also used in the barrel to augment the DTs. The barrel consists of four
 layers of muon stations in five wheels corresponding to the five wheels making
 up the iron return yoke. Each wheel has \num{12} sectors that cover \ang{30}.
 The chambers are staggered such that a high energy muon produced near the
-boundary must cross \num{3} of the \num{4} layers. Of the three inner layers
-has \num{12} chambers, and the 4th layer has \num{2} chambers in the bottom and
-top sectors, and so has \num{14} chambers in total. The first three layers are
-aligned to measure in \coordrphi and \coordz, while the 4th layer measures only
-in \coordrphi. Each chamber consists of \num{12} planes of DTs with \num{2}
-RPCs---\num{1} on the front and \num{1} on the back---in the first two layers,
-and \num{1} RPC---on the front---for the second two layers.
+boundary must cross \num{3} of the \num{4} layers. The inner three layers have
+\num{12} chambers, while the fourth layer has an additional chamber in both the
+bottom and top sectors, for a total \num{14} chambers in that layer. The first
+three layers are aligned to measure in \coordrphi and \coordz, while the 4th
+layer measures only in \coordrphi. Each chamber consists of \num{12} planes of
+DTs with \num{2} RPCs---\num{1} on the front and \num{1} on the back---in the
+first two layers, and \num{1} RPC---on the front---for the second two layers.
 
 \subsubsection{Muon System Endcap}
 
-In the endcap region the higher magnetic field, neutron background, and muon
+In the endcap region, the higher magnetic field, neutron background, and muon
 flux make DTs ineffective and so CSCs are used instead. There are three disks
-of CSCs chambers with RPCs sandwiched between disks of the iron return yoke in
+of CSC chambers with RPCs sandwiched between disks of the iron return yoke in
 the rapidity range $|\eta| < 1.6$. After that range there are only CSCs
 chambers. There are \num{6} CSCs per chamber.
 
@@ -555,14 +556,14 @@ up HLT.
 
 \subsubsection{The High-Level Trigger}
 
-The HLT is implemented in the same software that is used for offline analyses.
-Running the same analysis software as is used offline allows HLT to access the
-full range of data from every part of the detector and use any reconstruction
-or selection algorithm available offline. This allows very sophisticated
-triggers to be written, and additionally allows triggers to be easily modified
-as conditions change. The HLT is designed so that the simplest triggers are run
-first, with more sophisticated---and hence computationally expensive---triggers
-running later if needed.
+The HLT is implemented using the same software that is used for offline
+analyses. Running the same analysis software as is used offline allows HLT to
+access the full range of data from every part of the detector and use any
+reconstruction or selection algorithm available offline. This allows very
+sophisticated triggers to be written, and additionally allows triggers to be
+easily modified as conditions change. The HLT is designed so that the simplest
+triggers are run first, with more sophisticated---and hence computationally
+expensive---triggers running later if needed.
 
 HLT runs on a server farm consisting of commodity hardware. There are currently
 around \num{10000} processor cores in the HLT farm. By using commodity server

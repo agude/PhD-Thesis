@@ -79,10 +79,9 @@ referred to as Monte Carlo, or MC.
 
 There are multiple MC generators, each of which makes its own assumptions about
 the behavior of the various particles and interactions it simulates. In
-generally, the process of generating a simulated proton-proton collision
-events is broken up into multiple steps. These steps can all be performed by one
-program, but in general are handled by several. These steps are summarized
-below:
+general, the process of generating a simulated proton-proton collision event is
+broken up into multiple steps. These steps can all be performed by one program,
+but in general are handled by several. These steps are summarized below:
 
 \begin{description}
 
@@ -94,18 +93,18 @@ below:
         PDF sets. PDFs are discussed in detail in \cref{ssec:parton_model}.
 
     \item[Initial state shower:] A shower-initiating parton from each beam of
-        protons initiates a sequence of parton branchings (for example, $q \to
-        qg$). One parton from each of these showers will go on to interact in
-        the hard scattering process, the others will become initial state
-        radiation. These shower initiators are given non-zero \pt to account
-        for the primordial transverse momentum of the partons in the proton.
-        The amount of \pt given to the shower initiator is one of the
+        protons initiates a sequence of parton branchings (for example, $\quark
+        \to \quark\gluon$). One parton from each of these showers will go on to
+        interact in the hard scattering process, the others will become initial
+        state radiation. These shower initiators are given non-zero \pt to
+        account for the primordial transverse momentum of the partons in the
+        proton. The amount of \pt given to the shower initiator is one of the
         parameters that can be set in the MC software; it is often set to be
         larger than would be expected physically (about the same order as the
         proton mass) in order to account for other hard-to-model processes.
 
     \item[Hard scattering process:] In the hard scattering process, the two
-        partons collide and a set of out going particles is generated based on
+        partons collide and a set of outgoing particles is generated based on
         the matrix element level calculations.
 
     \item[Resonances and decays:] Some of the outgoing particles may be
@@ -117,7 +116,7 @@ below:
 
     \item[Multiple interactions and the underlying event:] In addition to the
         hard scattering, there are further interactions from other partons in
-        the shower. After the partons from these interaction are removed from
+        the shower. After the partons from these interactions are removed from
         the protons, what is left are ``beam remnants'' that may have internal
         color and charge. Additionally, these remnants can have non-zero \pt as
         the extracted partons have non-zero \pt. The remnants are still color
@@ -210,7 +209,7 @@ them because they are used only for comparison to the final result.
 The detector response to various signals is not always perfectly simulated in
 MC and so the efficiencies of various selection requirements are not the same
 in data and MC. In order to correct for this difference, each event in MC is
-reweighed with a series of scale factors which are the efficiency of some
+reweighted with a series of scale factors which are the efficiency of some
 selection requirement in data divided by the same efficiency as measured on MC,
 as follows:
 
@@ -218,7 +217,7 @@ as follows:
     \label{eq:sf}
     \text{SF} = \frac{\effdata}{\effmc}
 \end{equation}
-
+%
 Three scale factors are applied to each event: trigger, reconstruction, and
 identification. The trigger scale factors were measured by us and are detailed
 in \cref{ssec:sf_trigger} while the reconstruction and identification scale
@@ -300,8 +299,8 @@ the data efficiency to the MC efficiency is shown in
 In the case of the trigger, because either electron could cause the event to
 pass, the scale factors can not be computed for each bin, but instead must be computed
 for each pair of bins. If only one electron in the event has $\pt > 30$ and
-$|\eta| < 2.1$ than the scale factor is simply that given by \cref{eq:sf}, but if both
-electrons pass the requirements than either could have fired the trigger and so
+$|\eta| < 2.1$ then the scale factor is simply that given by \cref{eq:sf}, but if both
+electrons pass the requirements then either could have fired the trigger and so
 the scale factor is given by:
 
 \begin{equation} \label{eq:sf_double}
@@ -313,8 +312,8 @@ the scale factor is given by:
         1 - \left( 1 - \effmc_{0} \right) \left( 1 - \effmc_{1} \right)
     }
 \end{equation}
-
-Where $\effdata_{0,1}$ is the efficiency as measured in data for the 0th and
+%
+where $\effdata_{0,1}$ is the efficiency as measured in data for the 0th and
 1st electrons, and $\effmc_{0,1}$ is the efficiency as measured in MC.
 \Cref{eq:sf_double} is just the probability that one or both of the
 electrons fired the trigger divided by the same quantity in MC. This equation
@@ -325,12 +324,13 @@ Although the agreement between the efficiency in data and in MC is good, the
 ratio of these efficiencies is not identically one, as might be expected if the
 selection used in \TnP was strictly tighter than the trigger. There are several
 reasons for this. First, the trigger requires a lower value of \HOverE than
-\EGTIGHT does. Second, the trigger uses simplified isolation variables and
+\EGTIGHT does. Second, the trigger uses simplified isolation variables while
 \EGTIGHT uses particle flow isolation. Third, the detector calibrations used in
-the trigger (which ran in 2012) and the reconstructed data (reconstructed in
-2013 using the data from the 2012 to calibrate) are different. Forth and
-finally, any differences in the MC simulation of the trigger or the detector
-would lead to differences in the efficiencies.
+the trigger (which ran in 2012 and so was calibrated with 2011 data) and the
+reconstructed data (reconstructed in 2013 using the data from the 2012 to
+calibrate) are different. Fourth and finally, any differences in the MC
+simulation of the trigger or the detector would lead to differences in the
+efficiencies.
 
 \subsection{Electron Reconstruction}
 \label{ssec:sf_reconstruction}
