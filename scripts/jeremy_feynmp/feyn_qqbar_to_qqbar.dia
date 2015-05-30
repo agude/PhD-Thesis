@@ -1,0 +1,20 @@
+\Large
+\begin{fmfgraph*}(300,200)
+
+    % Set up the endpoints
+    \fmfleft{i1,i2}
+    \fmfright{o1,o2}
+    \fmftop{t1}
+
+    % The incoming quarks
+    \fmf{fermion}{i2,v1,i1}
+    \fmflabel{$\overline{q}$}{i1}
+    \fmflabel{$q$}{i2}
+
+    % The gluon
+    \fmf{gluon,label=$g$}{v1,v2}
+    \fmf{fermion}{o2,v2,o1}
+    \fmflabel{$\overline{q}$}{o1}
+    \fmflabel{$q$}{o2}
+
+\end{fmfgraph*}
