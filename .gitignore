@@ -22,6 +22,7 @@ Session.vim
 ##Github Linux Ignore
 .*
 !.gitignore
+!.github
 *~
 
 ##Github Archives Ignore
